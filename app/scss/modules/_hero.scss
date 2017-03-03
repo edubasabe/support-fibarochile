@@ -1,0 +1,22 @@
+.hero {
+  background: url('../images/hero.jpg') no-repeat;
+  background-size: cover;
+  display: flex;
+
+  @include md-device {
+    height: 35rem;
+  }
+
+  &__title {
+    color: $blanco;
+	  font-weight: 300;
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 4.2rem;
+  }
+
+  @include md-device {
+    font-size: 4.2rem;
+  }
+}

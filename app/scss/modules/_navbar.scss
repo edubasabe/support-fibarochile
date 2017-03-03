@@ -1,0 +1,67 @@
+.navbar {
+
+  &__logo-text {
+    font-weight: 700;
+    color: $negro;
+    font-size: 3.2rem;
+    // line-height: 8rem;
+    letter-spacing: -1px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: red;
+  }
+
+  &-default {
+    .navbar-brand {
+      color: $negro;
+
+      &:hover {
+        color: $negro;
+      }
+    }
+  }
+
+  &-brand {
+
+    height: auto;
+    line-height: normal;
+    display: flex;
+
+    @include xxs-device {
+      padding: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    @include md-device {
+      padding: 2rem 1.5rem;
+
+    }
+  }
+
+  &__logo-subtext {
+    color: $negro;
+    position: relative;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    letter-spacing: normal;
+    align-self: center;
+    margin-left: 1rem;
+    padding-left: 1.5rem;
+
+    @include xxs-device {
+      font-size: 1.4rem;
+    }
+
+    @include md-device {
+       font-size: 2rem;
+    }
+
+
+    &:before {
+      content: '|';
+      position:absolute;
+      top: -2px;
+      left: 0;
+    }
+  }
+}
