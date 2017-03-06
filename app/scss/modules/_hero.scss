@@ -3,20 +3,30 @@
   background-size: cover;
   display: flex;
 
+  @include xxs-device {
+    min-height: 20rem;
+  }
+
   @include md-device {
     height: 35rem;
   }
 
   &__title {
+    align-self: center;
     color: $blanco;
 	  font-weight: 300;
-    align-self: center;
-    text-align: center;
     margin: 0 auto;
-    font-size: 4.2rem;
+    text-align: center;
+
+    @include xxs-device {
+      font-size: 3rem;
+    }
+
+    @include md-device {
+      font-size: 4.2rem;
+    }
   }
 
-  @include md-device {
-    font-size: 4.2rem;
-  }
+
+
 }

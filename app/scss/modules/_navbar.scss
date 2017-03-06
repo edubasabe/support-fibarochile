@@ -1,13 +1,18 @@
 .navbar {
 
   &__logo-text {
-    font-weight: 700;
     color: $negro;
-    font-size: 3.2rem;
-    // line-height: 8rem;
-    letter-spacing: -1px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: red;
+    font-weight: 700;
+    letter-spacing: -1px;
+
+    @include xxs-device {
+      font-size: 1.8rem;
+    }
+
+    @include sm-device {
+      font-size: 3.2rem;
+    }
   }
 
   &-default {
@@ -21,13 +26,12 @@
   }
 
   &-brand {
-
+    display: flex;
     height: auto;
     line-height: normal;
-    display: flex;
 
     @include xxs-device {
-      padding: 1rem 0;
+      padding: 1.4rem 0;
       padding-left: 1.5rem;
     }
 
@@ -38,15 +42,15 @@
   }
 
   &__logo-subtext {
+    align-self: center;
     color: $negro;
-    position: relative;
     display: inline-block;
     font-family: 'Open Sans';
     font-weight: 300;
     letter-spacing: normal;
-    align-self: center;
     margin-left: 1rem;
     padding-left: 1.5rem;
+    position: relative;
 
     @include xxs-device {
       font-size: 1.4rem;
@@ -57,11 +61,11 @@
     }
 
 
-    &:before {
+    &::before {
       content: '|';
-      position:absolute;
-      top: -2px;
       left: 0;
+      position: absolute;
+      top: -2px;
     }
   }
 }

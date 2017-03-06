@@ -1,0 +1,42 @@
+.page-section {
+  @include xxs-device {
+    padding: 6rem 0;
+  }
+  @include md-device {
+    padding: 10rem 0;
+  }
+
+  &__soluciones {
+    .thumbnail {
+      border: transparent;
+
+      h3 {
+        font-size: 3.2rem;
+      }
+    }
+
+    .link {
+      border-bottom: 1px solid transparent;
+      font-size: 2rem;
+      font-weight: 300;
+      text-decoration: none;
+      transition: border-bottom 250ms;
+
+      &:hover {
+        border-bottom: 1px solid $azul;
+        transition: border-bottom 250ms;
+      }
+
+      &::after {
+        background-color: transparent;
+        border-right: 1px solid $azul;
+        border-top: 1px solid $azul;
+        content: '';
+        display: inline-block;
+        height: 8px;
+        transform: rotate(45deg) translate(1px, -2px);
+        width: 8px;
+      }
+    }
+  }
+}
