@@ -1,42 +1,216 @@
 .page-section {
-  @include xxs-device {
-    padding: 6rem 0;
-  }
-  @include md-device {
-    padding: 10rem 0;
-  }
-
-  &__soluciones {
-    .thumbnail {
-      border: transparent;
-
-      h3 {
-        font-size: 3.2rem;
-      }
+    @include xxs-device {
+        padding: 7rem 0;
+    }
+    @include sm-device {
+        padding: 4rem 0;
+    }
+    @include md-device {
+        padding: 10rem 0;
     }
 
-    .link {
-      border-bottom: 1px solid transparent;
-      font-size: 2rem;
-      font-weight: 300;
-      text-decoration: none;
-      transition: border-bottom 250ms;
+    //-- Soluciones Basicas
+    &--soluciones {
+        .row {
+            &:nth-child(2) {
+                .col-sm-4 {
+                    &:first-child {
+                        .thumbnail {
+                            @include xxs-device {
+                                margin-top: 0;
+                            }
+                            @include md-device {
+                                margin-bottom: 6rem;
+                            }
+                        }
+                    }
+                }
+            }
 
-      &:hover {
-        border-bottom: 1px solid $azul;
-        transition: border-bottom 250ms;
-      }
+            &:nth-child(3) {
+                .col-sm-4 {
+                    &:first-child {
+                        .thumbnail {
+                            @include md-device {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
 
-      &::after {
-        background-color: transparent;
-        border-right: 1px solid $azul;
-        border-top: 1px solid $azul;
-        content: '';
-        display: inline-block;
-        height: 8px;
-        transform: rotate(45deg) translate(1px, -2px);
-        width: 8px;
-      }
+                    &:nth-child(2) {
+                        .thumbnail {
+                            // border: 1px dashed green;
+                            @include md-device {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    &:last-child {
+                        .thumbnail {
+                            @include xxs-device {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .thumbnail {
+            border: transparent;
+            @include xxs-device {
+                margin-bottom: 6rem;
+            }
+
+            h3 {
+                @include xxs-device {
+                    font-size: 2.4rem;
+                }
+                @include md-device {
+                    font-size: 3.2rem;
+                }
+            }
+        }
+
+        &__link {
+            @include sm-device {
+                font-size: 2rem;
+            }
+        }
     }
-  }
+
+    //--Software
+    &--software {
+        .col-sm-6 {
+            @include xxs-device {
+                margin-bottom: 4rem;
+            }
+
+            &:first-child {
+                @include xxs-device {
+                    margin-top: 3rem;
+                }
+                @include md-device {
+                    margin-bottom: 0;
+                }
+            }
+
+            &:last-child {
+                @include sm-device {
+                    margin-top: 3rem;
+                }
+                @include xxs-device {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__descarga--img {
+            @include xxs-device {
+                margin-bottom: 3rem;
+            }
+        }
+
+        &__descarga {
+            color: $azul;
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 300;
+            position: relative;
+            @include xxs-device {
+                padding-left: 3rem;
+            }
+            @include md-device {
+                padding-left: 3rem;
+            }
+
+            &::before {
+                background: url('../images/cloud-download-simple-line-icons@3x.png') no-repeat center center;
+                background-size: contain;
+                // border: 1px solid red;
+                content: '';
+                display: block;
+                height: 2rem;
+                left: 0;
+                position: absolute;
+                top: .5rem;
+                width: 2rem;
+            }
+        }
+    }
+
+    //-- Ayuda
+    &--ayuda {
+        &__phone {
+            display: inline-flex;
+            margin-right: 1rem;
+        }
+
+        &__text {
+            color: $azul;
+            display: inline-flex;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        &__contenedor {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__aligner {
+            display: inline-flex;
+        }
+    }
+
+    //-- Garantia
+    &--garantia {
+        &__icon {
+            flex: 1;
+            @include xxs-device {
+                flex: 1;
+            }
+        }
+
+        &__info {
+            flex: 4;
+            @include xxs-device {
+                flex: 5;
+            }
+            @include md-device {
+                flex: 4;
+            }
+        }
+
+        &__text {
+            font-weight: 300;
+            @include xxs-device {
+                font-size: 1.8rem;
+                margin-bottom: 0;
+                padding-left: 1rem;
+            }
+            @include md-device {
+                font-size: 2rem;
+                padding-left: initial;
+            }
+        }
+
+        &__link {
+            font-weight: 300;
+            @include xxs-device {
+                font-size: 1.8rem;
+                padding-left: 1rem;
+            }
+            @include md-device {
+                font-size: 2rem;
+                padding-left: initial;
+            }
+        }
+
+        &__contenedor {
+            display: flex;
+            justify-content: center;
+        }
+    }
 }

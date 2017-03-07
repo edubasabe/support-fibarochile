@@ -35,23 +35,15 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <!--div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#soluciones-basicas">Soluciones Básicas</a></li>
+                    <li><a class="page-scroll" href="#software">Software</a></li>
+                    <li><a class="page-scroll" href="#ayuda">Ayuda</a></li>
+                    <li><a class="page-scroll" href="#garantia">Garantía</a></li>
                 </ul>
-            </div-->
+            </div>
 
         </div>
         <!-- /.container -->
@@ -62,7 +54,7 @@
       <h1 class="hero__title">¿Cómo podemos ayudarte?</h1>
     </div>
 
-    <section class="page-section page-section__soluciones">
+    <section class="page-section page-section--soluciones page-scroll" id="soluciones-basicas">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -75,7 +67,7 @@
               <img src="./images/icon-chatbubbles.svg" alt="">
               <h3>FAQ</h3>
               <p class="lead">Soluciones para problemas frecuentes</p>
-              <a href="#" class="link">Ir a FAQ</a>
+              <a href="#" class="page-section--soluciones__link link link--arrow">Ir a FAQ</a>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
@@ -83,7 +75,7 @@
               <img src="./images/icon-manuals.svg" alt="">
               <h3>Manuales</h3>
               <p class="lead">Fácil y rápido acceso a la documentación de los dispositivos FIBARO</p>
-              <a href="#" class="link">Ver manuales</a>
+              <a href="#" class="page-section--soluciones__link link link--arrow">Ver manuales</a>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
@@ -91,7 +83,7 @@
               <img src="./images/icon-elearning.svg" alt="">
               <h3>E-learning</h3>
               <p class="lead">Aprende más sobre el sistema FIBARO y sus productos</p>
-              <a href="#" class="link">Ver cursos</a>
+              <a href="#" class="page-section--soluciones__link link link--arrow">Ver cursos</a>
             </div>
           </div>
         </div>
@@ -101,7 +93,7 @@
               <img src="./images/icon-warranty.svg" alt="">
               <h3>Garantía</h3>
               <p class="lead">Las cláusulas de garantía para los dispositivos de FIBARO</p>
-              <a href="#" class="link">Ver cláusulas</a>
+              <a href="#" class="page-section--soluciones__link link link--arrow">Ver cláusulas</a>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
@@ -109,7 +101,7 @@
               <img src="./images/icon-forum.svg" alt="">
               <h3>Foro</h3>
               <p class="lead">El foro oficial de FIBARO para sus usuarios, instaladores y fans</p>
-              <a href="#" class="link">Ver foro</a>
+              <a href="#" class="page-section--soluciones__link link link--arrow">Ver foro</a>
             </div>
           </div>
           <div class="col-xs-12 col-sm-4">
@@ -117,17 +109,93 @@
               <img src="./images/icon-elearning.svg" alt="">
               <h3>Videotutoriales</h3>
               <p class="lead">Los manuales y tutoriales unidos en una lista de reproducción</p>
-              <a href="#" class="link">Ver los videos</a>
+              <a href="#" class="page-section--soluciones__link link link--arrow">Ver los videos</a>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <hr class="divider">
+    <section class="page-section page-section--software" id="software">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+              <h2 class="headline headline--nomargin text-center">FIBARO Software</h2>
+              <p href="#" class="lead text-center headline--subheadline">Descarga el software diseñado para tu sistema operativo</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 text-center">
+            <img src="./images/icon-maclaptop.svg" alt="" class="page-section--software__descarga--img img-responsive center-block">
+            <a class="page-section--software__descarga text-center center-block link">Descargar la versión para macOS</a>
+          </div>
+          <div class="col-xs-12 col-sm-6 text-center">
+            <img src="./images/icon-winlaptop.svg" alt="" class="page-section--software__descarga--img img-responsive center-block">
+            <a href="#" class="page-section--software__descarga text-center center-block link">Descargar la versión para Windows</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="page-section page-section--ayuda" id="ayuda">
+     <div class="container">
+       <div class="row">
+         <div class="col-xs-12">
+           <h2 class="headline text-center">¿Aún necesitas ayuda?</h2>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+           <div class="page-section--ayuda__contenedor center-block">
+             <div class="page-section--ayuda__aligner">
+               <img src="./images/icon-phonecall.svg" alt="Phone" class="img-responsive page-section--ayuda__phone">
+               <span class="page-section--ayuda__text">Horario de atención<br>09:00 - 17:00 UTC-3</span>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </section>
+
+    <section class="page-section page-section--garantia" id="garantia">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+              <h2 class="headline headline--nomargin text-center">Servicio de garantía</h2>
+              <p class="lead text-center headline--subheadline">Contáctanos si quieres enviar a FIBARO dispositivos para servicio de atención al cliente.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+            <div class="page-section--garantia__contenedor center-block">
+                <div class="page-section--garantia__icon">
+                  <img src="./images/icon-servicedesk.svg" alt="Mail" class="img-responsive page-section--garantia__mail">
+                </div>
+                <div class="page-section--garantia__info">
+                  <h4 class="page-section--garantia__text">Servicio de atención al cliente</h4>
+                  <a  class="page-section--garantia__link link"href="mailto:servicedesk@tamed.cl">servicedesk@tamed.cl</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="divider">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <span class="footer__copyright">© 2017 TAMED® SpA - Distribuidor Oficial de FIBARO® en Chile, Perú y Sudamérica. Todos los derechos reservados. <a href="#" class="footer__copyright__cookies link">Política de cookies</a></span>
+
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- build:js scripts.js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- endbuild -->
     <script type="text/javascript" src="./js/main.js"></script>
   </body>

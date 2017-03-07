@@ -1,0 +1,29 @@
+.footer {
+  background-color: $grisclaro;
+
+  @include xxs-device {
+    padding: 1.5rem 0;
+  }
+
+  @include md-device {
+    padding: 3rem 0;
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+
+    @include xxs-device {
+      text-align: center;
+    }
+
+    &__cookies {
+      @include xxs-device {
+        float: none;
+        text-align: center;
+      }
+      @include md-device {
+        float: right;
+      }
+    }
+  }
+}

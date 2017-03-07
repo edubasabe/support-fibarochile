@@ -4,5 +4,29 @@
 
   @include xxs-device {
     font-size: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 0;
+  }
+
+  @include md-device {
+    font-size: 4.2rem;
+    margin-bottom: 9rem;
+  }
+
+  &--nomargin {
+    margin: 0;
+  }
+
+  &--subheadline {
+    margin-top: 1rem;
+    text-align: center;
+
+    @include xxs-device {
+      margin-bottom: 1rem;
+    }
+
+    @include md-device {
+      margin-bottom: 8rem;
+    }
   }
 }

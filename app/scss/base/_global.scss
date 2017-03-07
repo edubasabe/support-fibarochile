@@ -3,10 +3,10 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Helvetica, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Helvetica,"Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased
 }
 
 a {
@@ -16,4 +16,46 @@ a {
   &:hover {
     color: $azul;
   }
+}
+
+.divider {
+  border-top: 1px solid $grisclaro;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  @include xxs-device {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.link {
+    border-bottom: 1px solid transparent;
+    font-weight: 300;
+    text-decoration: none;
+    transition: border-bottom 250ms;
+
+    &:hover {
+        border-bottom: 1px solid $azul;
+        text-decoration: none;
+        transition: border-bottom 250ms;
+    }
+
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &--arrow {
+      &::after {
+          background-color: transparent;
+          border-right: 1px solid $azul;
+          border-top: 1px solid $azul;
+          content: '';
+          display: inline-block;
+          height: 8px;
+          transform: rotate(45deg) translate(1px, -2px);
+          width: 8px;
+      }
+    }
 }

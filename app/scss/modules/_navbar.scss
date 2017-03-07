@@ -16,11 +16,64 @@
   }
 
   &-default {
+    background-color: $blanco;
+
+    .navbar-nav {
+      & > {
+
+        li > {
+          a {
+            color: $negro;
+            transition: color 250ms;
+
+            &:hover {
+              color: $azul;
+              transition: color 250ms;
+            }
+          }
+        }
+
+        .active > {
+          a {
+            background: transparent;
+            color: $negro;
+
+            &:focus {
+              color: $azul;
+
+              @include xxs-device {
+                background: rgba($azul, .1);
+              }
+
+              @include sm-device {
+                background: transparent;
+              }
+            }
+
+            &:hover {
+              background: transparent;
+              color: $azul;
+            }
+
+          }
+        }
+      }
+
+    }
+
     .navbar-brand {
       color: $negro;
 
       &:hover {
         color: $negro;
+      }
+    }
+
+    .navbar-toggle {
+      border-color: transparent;
+
+      .icon-bar {
+        background-color: $azul;
       }
     }
   }
