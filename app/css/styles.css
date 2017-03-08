@@ -378,89 +378,120 @@ a:focus, a:hover {
   width: 2rem;
 }
 
-.page-section--ayuda__phone {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-right: 1rem;
+.page-section--ayuda {
+  padding-bottom: 2rem;
+}
+
+.page-section--ayuda__img {
+  float: left;
+  height: 5rem;
+  margin-right: 1.5rem;
+  width: 5rem;
+}
+
+.page-section--ayuda__text-azul {
+  color: #0090ff;
 }
 
 .page-section--ayuda__text {
-  color: #0090ff;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  font-size: 2rem;
   font-weight: 300;
-}
-
-.page-section--ayuda__contenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.page-section--ayuda__aligner {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.page-section--garantia__icon {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  margin-top: 0;
 }
 
 @media only screen and (min-width: 320px) {
-  .page-section--garantia__icon {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-}
-
-.page-section--garantia__info {
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
-}
-
-@media only screen and (min-width: 320px) {
-  .page-section--garantia__info {
-    -webkit-box-flex: 5;
-        -ms-flex: 5;
-            flex: 5;
+  .page-section--ayuda__text {
+    font-size: 1.8rem;
+    margin-bottom: 0;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .page-section--garantia__info {
-    -webkit-box-flex: 4;
-        -ms-flex: 4;
-            flex: 4;
+  .page-section--ayuda__text {
+    font-size: 2.2rem;
   }
+}
+
+.page-section--ayuda__align {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--ayuda__align {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+  }
+}
+
+.page-section--ayuda__link {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--ayuda__link {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-section--ayuda__link {
+    font-size: 2rem;
+    margin-bottom: 6rem;
+  }
+}
+
+.page-section--garantia__img {
+  float: left;
+  height: 5rem;
+  margin-right: 1.5rem;
+  width: 5rem;
+}
+
+.page-section--garantia__text-azul {
+  color: #0090ff;
 }
 
 .page-section--garantia__text {
   font-weight: 300;
+  margin-top: 0;
 }
 
 @media only screen and (min-width: 320px) {
   .page-section--garantia__text {
     font-size: 1.8rem;
     margin-bottom: 0;
-    padding-left: 1rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .page-section--garantia__text {
-    font-size: 2rem;
-    padding-left: initial;
+    font-size: 2.2rem;
+  }
+}
+
+.page-section--garantia__align {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--garantia__align {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
   }
 }
 
@@ -471,24 +502,14 @@ a:focus, a:hover {
 @media only screen and (min-width: 320px) {
   .page-section--garantia__link {
     font-size: 1.8rem;
-    padding-left: 1rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .page-section--garantia__link {
     font-size: 2rem;
-    padding-left: initial;
+    margin-bottom: 6rem;
   }
-}
-
-.page-section--garantia__contenedor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .headline {

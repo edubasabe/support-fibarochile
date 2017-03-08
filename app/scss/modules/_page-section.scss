@@ -142,57 +142,43 @@
 
     //-- Ayuda
     &--ayuda {
-        &__phone {
-            display: inline-flex;
-            margin-right: 1rem;
+      padding-bottom: 2rem;
+
+        &__img {
+          float: left;
+          height: 5rem;
+          margin-right: 1.5rem;
+          width: 5rem;
         }
 
-        &__text {
+        &__text-azul {
             color: $azul;
-            display: inline-flex;
-            font-size: 2rem;
-            font-weight: 300;
-        }
-
-        &__contenedor {
-            display: flex;
-            justify-content: center;
-        }
-
-        &__aligner {
-            display: inline-flex;
-        }
-    }
-
-    //-- Garantia
-    &--garantia {
-        &__icon {
-            flex: 1;
-            @include xxs-device {
-                flex: 1;
-            }
-        }
-
-        &__info {
-            flex: 4;
-            @include xxs-device {
-                flex: 5;
-            }
-            @include md-device {
-                flex: 4;
-            }
         }
 
         &__text {
             font-weight: 300;
+            margin-top: 0;
+
             @include xxs-device {
                 font-size: 1.8rem;
                 margin-bottom: 0;
-                padding-left: 1rem;
+                // padding-left: 1rem;
             }
             @include md-device {
-                font-size: 2rem;
-                padding-left: initial;
+                font-size: 2.2rem;
+                // padding-left: initial;
+            }
+        }
+
+        &__align {
+          align-items: center;
+          display: inline-flex;
+          flex-wrap: wrap;
+          text-align: left;
+
+            @include sm-device {
+              margin-bottom: 4rem;
+              margin-top: 3rem;
             }
         }
 
@@ -200,17 +186,69 @@
             font-weight: 300;
             @include xxs-device {
                 font-size: 1.8rem;
-                padding-left: 1rem;
+                // padding-left: 1rem;
             }
             @include md-device {
                 font-size: 2rem;
-                padding-left: initial;
+                margin-bottom: 6rem;
+                // padding-left: initial;
             }
         }
+    }
 
-        &__contenedor {
-            display: flex;
-            justify-content: center;
-        }
+    //-- Garantia
+    &--garantia {
+
+      &__img {
+        float: left;
+        height: 5rem;
+        margin-right: 1.5rem;
+        width: 5rem;
+      }
+
+      &__text-azul {
+          color: $azul;
+      }
+
+      &__text {
+          font-weight: 300;
+          margin-top: 0;
+
+          @include xxs-device {
+              font-size: 1.8rem;
+              margin-bottom: 0;
+              // padding-left: 1rem;
+          }
+          @include md-device {
+              font-size: 2.2rem;
+              // padding-left: initial;
+          }
+      }
+
+      &__align {
+        align-items: center;
+        display: inline-flex;
+        flex-wrap: wrap;
+        text-align: left;
+
+          @include sm-device {
+            margin-bottom: 4rem;
+            margin-top: 3rem;
+          }
+      }
+
+      &__link {
+          font-weight: 300;
+          @include xxs-device {
+              font-size: 1.8rem;
+              // padding-left: 1rem;
+          }
+          @include md-device {
+              font-size: 2rem;
+              margin-bottom: 6rem;
+              // padding-left: initial;
+          }
+      }
+
     }
 }
