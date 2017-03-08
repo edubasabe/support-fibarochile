@@ -192,6 +192,11 @@ a:focus, a:hover {
   top: -2px;
 }
 
+.nav-pills > li {
+  display: inline-block;
+  float: none;
+}
+
 .hero {
   background: url("../images/hero.jpg") no-repeat;
   background-size: cover;
@@ -590,4 +595,22 @@ a:focus, a:hover {
   .footer__copyright__cookies {
     float: right;
   }
+}
+
+.panel {
+  border: transparent;
+  box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.panel-title a {
+  text-decoration: none;
+}
+
+.panel-group {
+  margin-bottom: 0;
 }

@@ -122,3 +122,10 @@
     }
   }
 }
+
+.nav-pills {
+  & > li {
+    display: inline-block;
+    float: none;
+  }
+}
