@@ -197,6 +197,21 @@ a:focus, a:hover {
   float: none;
 }
 
+.nav-pills > li.active a {
+  background-color: #0090ff;
+  -webkit-transition: background 250ms;
+  transition: background 250ms;
+}
+
+.nav-pills > li.active a:hover, .nav-pills > li.active a:focus, .nav-pills > li.active a:active {
+  background-color: #111;
+}
+
+.nav li a {
+  -webkit-transition: background-color 250ms;
+  transition: background-color 250ms;
+}
+
 .hero {
   background: url("../images/hero.jpg") no-repeat;
   background-size: cover;
@@ -613,4 +628,8 @@ a:focus, a:hover {
 
 .panel-group {
   margin-bottom: 0;
+}
+
+.panel-heading {
+  padding-left: .5rem;
 }

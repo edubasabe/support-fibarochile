@@ -127,5 +127,27 @@
   & > li {
     display: inline-block;
     float: none;
+
+
+    &.active {
+      a {
+        background-color: $azul;
+        transition: background 250ms;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $negro;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  li {
+    a {
+      transition: background-color 250ms;
+    }
   }
 }
