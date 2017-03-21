@@ -213,7 +213,6 @@ a:focus, a:hover {
 }
 
 .hero {
-  background: url("../images/hero.jpg") no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -222,14 +221,34 @@ a:focus, a:hover {
 
 @media only screen and (min-width: 320px) {
   .hero {
-    min-height: 20rem;
+    background: url("../images/hero-mobile.jpg") no-repeat;
+    background-size: contain;
+    min-height: 17.9rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background: url("../images/hero.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .hero {
+    background: url("../images/hero.jpg") no-repeat;
+    background-size: cover;
     height: 35rem;
   }
+}
+
+.hero__container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .hero__title {
@@ -256,7 +275,7 @@ a:focus, a:hover {
 
 @media only screen and (min-width: 320px) {
   .page-section {
-    padding: 7rem 0;
+    padding: 2.4rem 0;
   }
 }
 
@@ -312,6 +331,10 @@ a:focus, a:hover {
   }
 }
 
+.page-section--soluciones .thumbnail img {
+  max-height: 5rem;
+}
+
 @media only screen and (min-width: 320px) {
   .page-section--soluciones .thumbnail h3 {
     font-size: 2.4rem;
@@ -363,13 +386,14 @@ a:focus, a:hover {
 @media only screen and (min-width: 320px) {
   .page-section--software__descarga--img {
     margin-bottom: 3rem;
+    max-height: 6rem;
   }
 }
 
 .page-section--software__descarga {
   color: #0090ff;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   position: relative;
 }
@@ -404,9 +428,9 @@ a:focus, a:hover {
 
 .page-section--ayuda__img {
   float: left;
-  height: 5rem;
+  height: 4rem;
   margin-right: 1.5rem;
-  width: 5rem;
+  width: 4rem;
 }
 
 .page-section--ayuda__text-azul {

@@ -1,6 +1,6 @@
 .page-section {
     @include xxs-device {
-        padding: 7rem 0;
+        padding: 2.4rem 0;
     }
     @include sm-device {
         padding: 4rem 0;
@@ -9,7 +9,9 @@
         padding: 10rem 0;
     }
 
-    //-- Soluciones Basicas
+    //----------
+    // Soluciones Basicas
+    //----------
     &--soluciones {
         .row {
             &:nth-child(2) {
@@ -63,6 +65,10 @@
                 margin-bottom: 6rem;
             }
 
+            img {
+              max-height: 5rem;
+            }
+
             h3 {
                 @include xxs-device {
                     font-size: 2.4rem;
@@ -80,7 +86,10 @@
         }
     }
 
-    //--Software
+    //----------
+    // Software
+    //----------
+
     &--software {
         .col-sm-6 {
             @include xxs-device {
@@ -108,14 +117,15 @@
 
         &__descarga--img {
             @include xxs-device {
-                margin-bottom: 3rem;
+              margin-bottom: 3rem;
+              max-height: 6rem;
             }
         }
 
         &__descarga {
             color: $azul;
             display: inline-block;
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 300;
             position: relative;
             @include xxs-device {
@@ -140,15 +150,18 @@
         }
     }
 
-    //-- Ayuda
+    //---------
+    // Ayuda
+    //---------
+
     &--ayuda {
       padding-bottom: 2rem;
 
         &__img {
           float: left;
-          height: 5rem;
+          height: 4rem;
           margin-right: 1.5rem;
-          width: 5rem;
+          width: 4rem;
         }
 
         &__text-azul {
@@ -196,7 +209,9 @@
         }
     }
 
-    //-- Garantia
+    //---------
+    // Garantia
+    //---------
     &--garantia {
 
       &__img {
