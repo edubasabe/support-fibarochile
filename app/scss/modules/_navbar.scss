@@ -65,6 +65,17 @@
     .navbar-brand {
       color: $negro;
 
+      img {
+
+        @include xxs-device {
+          margin-top: 0;
+        }
+        @include md-device {
+          margin-top: .4rem;
+        }
+
+      }
+
       &:hover {
         color: $negro;
       }
