@@ -1,5 +1,4 @@
 .footer {
-  background-color: $grisclaro;
 
   @include xxs-device {
     padding: 1.5rem 0;
@@ -9,21 +8,99 @@
     padding: 3rem 0;
   }
 
+  &__menu {
+    display: flex;
+
+      ul {
+        list-style: none;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        // max-width: 320px;
+        padding-bottom: 1rem;
+        padding-top: 2.4rem;
+        text-align: center;
+        width: 100%;
+
+          li {
+            border-left: 1px solid #ccc;
+            display: inline-block;
+            margin-bottom: 1.4rem;
+            padding: 0 1rem;
+
+            &:first-child {
+              border-left-color: transparent;
+            }
+
+            @include xxs-device {
+              border-left-color: transparent;
+            }
+
+            @include sm-device {
+              border-left-color: transparent;
+            }
+
+            @include md-device {
+              border-left-color: #ccc;
+            }
+
+              a {
+                color: $gris-footer-text;
+                font-size: 1.4rem;
+                text-decoration: none;
+              }
+          }
+      }
+
+      &-bg {
+        background-color: #eee;
+      }
+  }
+
+  &__social {
+    display: flex;
+
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      // max-width: 320px;
+      padding-bottom: 1rem;
+      padding-top: 2.4rem;
+      text-align: center;
+      width: 100%;
+
+        li {
+          display: inline-block;
+          margin-bottom: 1.4rem;
+          padding: 0 1rem;
+
+            a {
+              align-items: center;
+              border: .1rem solid $gris-footer-icons;
+              border-radius: 3rem;
+              color: $gris-footer-icons;
+              display: flex;
+              height: 3.6rem;
+              text-decoration: none;
+              width: 3.6rem;
+            }
+        }
+    }
+  }
+
   &__copyright {
+    color: #7e7e7e;
     font-size: 1.4rem;
 
     @include xxs-device {
       text-align: center;
     }
 
-    &__cookies {
-      @include xxs-device {
-        float: none;
-        text-align: center;
-      }
-      @include md-device {
-        float: right;
-      }
+    &--img {
+      height: 2.5rem;
+      margin: 1rem auto;
     }
   }
 }

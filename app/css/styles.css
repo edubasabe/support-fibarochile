@@ -86,6 +86,7 @@ a:focus, a:hover {
 
 .navbar-default .navbar-nav > li > a {
   color: #111;
+  font-size: 1.4rem;
   -webkit-transition: color 250ms;
   transition: color 250ms;
 }
@@ -418,12 +419,16 @@ a:focus, a:hover {
   height: 2rem;
   left: 0;
   position: absolute;
-  top: .5rem;
+  top: 0;
   width: 2rem;
 }
 
 .page-section--ayuda {
   padding-bottom: 2rem;
+}
+
+.page-section--ayuda .tiny {
+  font-size: 1.4rem;
 }
 
 .page-section--ayuda__img {
@@ -437,6 +442,24 @@ a:focus, a:hover {
   color: #0090ff;
 }
 
+@media only screen and (min-width: 992px) {
+  .page-section--ayuda__text-azul {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--ayuda__text-container {
+    max-width: 16rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-section--ayuda__text-container {
+    max-width: initial;
+  }
+}
+
 .page-section--ayuda__text {
   font-weight: 300;
   margin-top: 0;
@@ -444,7 +467,7 @@ a:focus, a:hover {
 
 @media only screen and (min-width: 320px) {
   .page-section--ayuda__text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 0;
   }
 }
@@ -467,6 +490,12 @@ a:focus, a:hover {
   text-align: left;
 }
 
+@media only screen and (min-width: 320px) {
+  .page-section--ayuda__align {
+    margin: 3rem 0;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .page-section--ayuda__align {
     margin-bottom: 4rem;
@@ -480,13 +509,13 @@ a:focus, a:hover {
 
 @media only screen and (min-width: 320px) {
   .page-section--ayuda__link {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .page-section--ayuda__link {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 6rem;
   }
 }
@@ -500,6 +529,18 @@ a:focus, a:hover {
 
 .page-section--garantia__text-azul {
   color: #0090ff;
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--garantia__text-azul {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--garantia__text-azul {
+    font-size: 1.4rem;
+  }
 }
 
 .page-section--garantia__text {
@@ -530,6 +571,12 @@ a:focus, a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: left;
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--garantia__align {
+    margin: 3rem 0;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -597,10 +644,6 @@ a:focus, a:hover {
   }
 }
 
-.footer {
-  background-color: #f2f2f2;
-}
-
 @media only screen and (min-width: 320px) {
   .footer {
     padding: 1.5rem 0;
@@ -613,7 +656,102 @@ a:focus, a:hover {
   }
 }
 
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__menu ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+  padding-top: 2.4rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer__menu ul li {
+  border-left: 1px solid #ccc;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  padding: 0 1rem;
+}
+
+.footer__menu ul li:first-child {
+  border-left-color: transparent;
+}
+
+@media only screen and (min-width: 320px) {
+  .footer__menu ul li {
+    border-left-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .footer__menu ul li {
+    border-left-color: transparent;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .footer__menu ul li {
+    border-left-color: #ccc;
+  }
+}
+
+.footer__menu ul li a {
+  color: #444;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.footer__menu-bg {
+  background-color: #eee;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__social ul {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1rem;
+  padding-top: 2.4rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer__social ul li {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  padding: 0 1rem;
+}
+
+.footer__social ul li a {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.1rem solid #7e7f7f;
+  border-radius: 3rem;
+  color: #7e7f7f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.6rem;
+  text-decoration: none;
+  width: 3.6rem;
+}
+
 .footer__copyright {
+  color: #7e7e7e;
   font-size: 1.4rem;
 }
 
@@ -623,17 +761,9 @@ a:focus, a:hover {
   }
 }
 
-@media only screen and (min-width: 320px) {
-  .footer__copyright__cookies {
-    float: none;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .footer__copyright__cookies {
-    float: right;
-  }
+.footer__copyright--img {
+  height: 2.5rem;
+  margin: 1rem auto;
 }
 
 .panel {

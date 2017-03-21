@@ -144,7 +144,7 @@
                 height: 2rem;
                 left: 0;
                 position: absolute;
-                top: .5rem;
+                top: 0;
                 width: 2rem;
             }
         }
@@ -157,6 +157,10 @@
     &--ayuda {
       padding-bottom: 2rem;
 
+      .tiny {
+        font-size: 1.4rem;
+      }
+
         &__img {
           float: left;
           height: 4rem;
@@ -166,6 +170,20 @@
 
         &__text-azul {
             color: $azul;
+
+            @include md-device {
+              font-size: 1.8rem;
+            }
+        }
+
+        &__text-container {
+          @include xxs-device {
+            max-width: 16rem;
+          }
+
+          @include md-device {
+            max-width: initial;
+          }
         }
 
         &__text {
@@ -173,7 +191,7 @@
             margin-top: 0;
 
             @include xxs-device {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 margin-bottom: 0;
                 // padding-left: 1rem;
             }
@@ -188,6 +206,9 @@
           display: inline-flex;
           flex-wrap: wrap;
           text-align: left;
+            @include xxs-device {
+              margin: 3rem 0;
+            }
 
             @include sm-device {
               margin-bottom: 4rem;
@@ -198,11 +219,11 @@
         &__link {
             font-weight: 300;
             @include xxs-device {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 // padding-left: 1rem;
             }
             @include md-device {
-                font-size: 2rem;
+                font-size: 1.8rem;
                 margin-bottom: 6rem;
                 // padding-left: initial;
             }
@@ -223,6 +244,13 @@
 
       &__text-azul {
           color: $azul;
+
+          @include xxs-device {
+            font-size: 1.6rem;
+          }
+          @include sm-device {
+            font-size: 1.4rem;
+          }
       }
 
       &__text {
@@ -245,6 +273,10 @@
         display: inline-flex;
         flex-wrap: wrap;
         text-align: left;
+
+          @include xxs-device {
+            margin: 3rem 0;
+          }
 
           @include sm-device {
             margin-bottom: 4rem;

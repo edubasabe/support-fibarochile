@@ -18,6 +18,12 @@ $(document).on('ready', function () {
       'padding-top': paddingNav,
       'padding-bottom': paddingNav,
     });
+
+  $('.navbar-brand.navbar__logo-text').css({
+      'padding-top': paddingNav,
+      'padding-bottom': paddingNav,
+    });
+
     console.log(paddingNav);
 });
 
