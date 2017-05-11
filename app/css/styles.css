@@ -1,3 +1,62 @@
+.tabs-left,
+.tabs-right {
+  border-bottom: 0;
+  padding-top: 2px;
+}
+
+.tabs-left {
+  border-right: 1px solid #ddd;
+}
+
+.tabs-right {
+  border-left: 1px solid #ddd;
+}
+
+.tabs-left > li,
+.tabs-right > li {
+  float: none;
+  margin-bottom: 2px;
+}
+
+.tabs-left > li {
+  margin-right: -1px;
+}
+
+.tabs-right > li {
+  margin-left: -1px;
+}
+
+.tabs-left > li.active > a {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.tabs-left > li.active > a:hover, .tabs-left > li.active > a:focus {
+  border-bottom-color: #ddd;
+  border-right-color: transparent;
+}
+
+.tabs-right > li.active > a {
+  border-bottom: 1px solid #ddd;
+  border-left-color: transparent;
+}
+
+.tabs-right > li.active > a:hover, .tabs-right > li.active > a:focus {
+  border-bottom: 1px solid #ddd;
+  border-left-color: transparent;
+}
+
+.tabs-left > li > a {
+  border-radius: 4px 0 0 4px;
+  display: block;
+  margin-right: 0;
+}
+
+.tabs-right > li > a {
+  border-radius: 0 4px 4px 0;
+  margin-right: 0;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -59,6 +118,43 @@ a:focus, a:hover {
   -webkit-transform: rotate(45deg) translate(1px, -2px);
           transform: rotate(45deg) translate(1px, -2px);
   width: 8px;
+}
+
+.profile-pic {
+  border-radius: 50px;
+  float: left;
+  height: 5rem;
+  left: 3rem;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 5rem;
+}
+
+.experto {
+  color: #0090ff;
+  left: 9rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.experto .nombre {
+  font-size: 1.4rem;
+}
+
+.experto .folio {
+  color: #111;
+  font-size: 1.4rem;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(17, 17, 17, 0.3);
+  min-height: 8rem;
 }
 
 .navbar__logo-text {
@@ -235,7 +331,7 @@ a:focus, a:hover {
 @media only screen and (min-width: 320px) {
   .hero {
     background: url("../images/hero-mobile.jpg") no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 17.9rem;
   }
 }
@@ -613,6 +709,140 @@ a:focus, a:hover {
     font-size: 2rem;
     margin-bottom: 6rem;
   }
+}
+
+.page-section--reseller {
+  background: url("../images/expertos-reseller.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--reseller {
+    min-height: 30rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--reseller {
+    min-height: 40rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-section--reseller {
+    background-size: contain;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--reseller h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--reseller h2 {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--reseller .lead {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--reseller .lead {
+    text-align: left;
+  }
+}
+
+.page-section--reseller a {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--reseller a {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--reseller a {
+    text-align: left;
+  }
+}
+
+.page-section--instaladores {
+  background: url("../images/expertos-instaladores.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--instaladores {
+    min-height: 30rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--instaladores {
+    min-height: 40rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-section--instaladores {
+    background-size: contain;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--instaladores h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--instaladores h2 {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--instaladores .lead {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--instaladores .lead {
+    text-align: left;
+  }
+}
+
+.page-section--instaladores a {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 320px) {
+  .page-section--instaladores a {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-section--instaladores a {
+    text-align: left;
+  }
+}
+
+.page-section--nuestros-instaladores {
+  background: #f2f2f2;
 }
 
 .headline {

@@ -1,0 +1,119 @@
+.page-section {
+  //---
+  // Reseller Banner
+  //---
+
+  &--reseller {
+    background: url('../images/expertos-reseller.jpg') no-repeat center;
+    background-size: cover;
+
+    @include xxs-device {
+      min-height: 30rem;
+    }
+
+    @include sm-device {
+      min-height: 40rem;
+    }
+
+    @include md-device {
+      // background-position: left;
+      background-size: contain;
+    }
+
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+    .lead {
+      @include xxs-device {
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+    a {
+      display: inline-block;
+
+      @include xxs-device {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+  }
+  //---
+  // Instaladores Banner
+  //---
+
+  &--instaladores {
+    background: url('../images/expertos-instaladores.jpg') no-repeat center;
+    background-size: cover;
+
+    @include xxs-device {
+      min-height: 30rem;
+    }
+
+    @include sm-device {
+      min-height: 40rem;
+    }
+
+    @include md-device {
+      // background-position: left;
+      background-size: contain;
+    }
+
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+    .lead {
+      @include xxs-device {
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+    a {
+      display: inline-block;
+
+      @include xxs-device {
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+  }
+
+  &--nuestros-instaladores {
+    background: $grisclaro;
+  }
+
+}

@@ -4,7 +4,7 @@
 
   @include xxs-device {
     background: url('../images/hero-mobile.jpg') no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 17.9rem;
   }
 
