@@ -1,4 +1,5 @@
 .navbar {
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
 
   &__logo-text {
     color: $negro;
@@ -16,7 +17,8 @@
   }
 
   &-default {
-    background-color: $blanco;
+    background-color: $negro;
+    border-color: $negro;
 
     .navbar-nav {
       & > {
@@ -85,7 +87,13 @@
       border-color: transparent;
 
       .icon-bar {
-        background-color: $azul;
+        background-color: $blanco;
+        height: 1px;
+        transition: transform .25s cubic-bezier(.4, .01, .165, .99);
+
+        & + .icon-bar {
+          margin-top: .6rem;
+        }
       }
     }
   }
@@ -162,4 +170,9 @@
       transition: background-color 250ms;
     }
   }
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: $negro;
 }

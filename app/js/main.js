@@ -24,7 +24,12 @@ $(document).on('ready', function () {
       'padding-bottom': paddingNav,
     });
 
-    console.log(paddingNav);
+    $('button.navbar-toggle.fixed-left').css({
+      'margin-top':paddingNav,
+      'margin-bottom': paddingNav
+    });
+
+
 });
 
 //-- JQuery Easing
@@ -47,4 +52,39 @@ $(function() {
         event.preventDefault();
         $('.navbar-collapse.navbar-ex1-collapse.collapse').removeClass('in').attr('aria-expanded','false');
     });
+});
+
+//-- Owl Testimonios
+$(document).on('ready', function() {
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      autoplay:true,
+      autoplayTimeout:15000,
+      margin:10,
+      nav: false,
+      dots:true,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:false
+          },
+          600:{
+              items:1,
+              nav:false
+          },
+          1000:{
+              items:1,
+              nav:false,
+              loop:true
+          }
+      }
+  });
+});
+
+//-- Button Close
+$(document).on('ready', function () {
+  $('.navbar-toggle.fixed-left').click(function () {
+    $(this).toggleClass('cerrado');
+  })
 });

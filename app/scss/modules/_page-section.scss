@@ -1,6 +1,10 @@
 .page-section {
     @include xxs-device {
-        padding: 2.4rem 0;
+        padding: 8rem 0;
+    }
+
+    @include xs-device {
+      padding: 4rem 0;
     }
     @include sm-device {
         padding: 4rem 0;

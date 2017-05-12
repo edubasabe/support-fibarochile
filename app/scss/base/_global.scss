@@ -97,3 +97,44 @@ a {
   min-height: 8rem;
   // margin-bottom: 1.5rem;
 }
+
+.btn-fibaro {
+  background-color: $azul;
+  border-color: $azul;
+  border-radius: .3rem;
+  color: $blanco;
+  transition: 300ms ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+    color: $azul;
+  }
+}
+
+.btn-max-width {
+  max-width: 32rem;
+}
+
+b {
+  font-weight: 700;
+}
+
+.material-icons {
+  color: $azul;
+}
+
+.lista {
+  font-size: 2rem;
+}
+
+.js-powered-by-eb-link.link--subtle.link--undecorated {
+  display: none !important;
+}
+
+.transparent-bg {
+  background-color: $negro;
+  border-bottom: transparent;
+  transition: 800ms ease;
+}

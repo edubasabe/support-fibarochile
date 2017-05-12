@@ -157,6 +157,52 @@ a:focus, a:hover {
   min-height: 8rem;
 }
 
+.btn-fibaro {
+  background-color: #0090ff;
+  border-color: #0090ff;
+  border-radius: .3rem;
+  color: #fff;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.btn-fibaro:hover, .btn-fibaro:active, .btn-fibaro:focus {
+  background-color: transparent;
+  color: #0090ff;
+}
+
+.btn-max-width {
+  max-width: 32rem;
+}
+
+b {
+  font-weight: 700;
+}
+
+.material-icons {
+  color: #0090ff;
+}
+
+.lista {
+  font-size: 2rem;
+}
+
+.js-powered-by-eb-link.link--subtle.link--undecorated {
+  display: none !important;
+}
+
+.transparent-bg {
+  background-color: #111;
+  border-bottom: transparent;
+  -webkit-transition: 800ms ease;
+  transition: 800ms ease;
+}
+
+.navbar {
+  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+  transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
 .navbar__logo-text {
   color: #111;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -177,7 +223,8 @@ a:focus, a:hover {
 }
 
 .navbar-default {
-  background-color: #fff;
+  background-color: #111;
+  border-color: #111;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -244,7 +291,16 @@ a:focus, a:hover {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #0090ff;
+  background-color: #fff;
+  height: 1px;
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.navbar-default .navbar-toggle .icon-bar + .icon-bar {
+  margin-top: .6rem;
 }
 
 .navbar-brand {
@@ -321,6 +377,11 @@ a:focus, a:hover {
   transition: background-color 250ms;
 }
 
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #111;
+}
+
 .hero {
   background-size: cover;
   display: -webkit-box;
@@ -384,7 +445,13 @@ a:focus, a:hover {
 
 @media only screen and (min-width: 320px) {
   .page-section {
-    padding: 2.4rem 0;
+    padding: 8rem 0;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .page-section {
+    padding: 4rem 0;
   }
 }
 
@@ -1028,4 +1095,251 @@ a:focus, a:hover {
 
 .panel-heading {
   padding-left: .5rem;
+}
+
+.landing-expertos__hero-container {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: url("../images/hero-overlay.png") no-repeat center center;
+  background-color: #333;
+  background-size: cover;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__hero-container {
+    padding-top: 6rem;
+  }
+}
+
+.landing-expertos__hero-container__main-text {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: block;
+}
+
+.landing-expertos__title {
+  font-weight: 400;
+  margin-top: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__title {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__title {
+    font-size: 4.8rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .landing-expertos__title {
+    font-size: 4.8rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__titular {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+.landing-expertos__tachado {
+  text-decoration: line-through;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__tachado {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+.landing-expertos__beneficios__list {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__beneficios__list {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__beneficios__list {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__beneficios__list li {
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__beneficios__list li {
+    line-height: 2;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__beneficios__list li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.landing-expertos__pasos {
+  background-size: cover;
+  color: #fff;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__pasos {
+    background: #565e65;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__pasos {
+    background: url("../images/pasos-bg.png") no-repeat center;
+  }
+}
+
+.landing-expertos__pasos__title {
+  font-size: 2.2rem;
+}
+
+.landing-expertos__pasos-icon {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: 2px solid #0090ff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16rem;
+  max-width: 16rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__pasos-icon {
+    max-width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__pasos-icon {
+    max-width: 16rem;
+    height: 16rem;
+  }
+}
+
+.landing-expertos__pasos-icon img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__pasos-icon img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__pasos-icon img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.landing-expertos__testimonios blockquote {
+  border-left: 0;
+}
+
+.landing-expertos__testimonios blockquote em {
+  color: #0090ff;
+}
+
+.landing-expertos__testimonios-image {
+  border: 6px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px #eee;
+  max-width: 20rem;
+  overflow: hidden;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.main-logo {
+  max-height: 3.8rem;
+  padding: .5rem 0;
+}
+
+.navbar-default {
+  background-color: #111;
+}
+
+.nav-text-white li a {
+  color: #fff !important;
+}
+
+.navbar-brand {
+  display: inline-block;
+  float: none;
+  padding: 0;
+}
+
+.navbar-icon-center {
+  display: block;
+}
+
+.navbar-icon-center img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fixed-left {
+  background-color: transparent !important;
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-toggle.cerrado .icon-bar:nth-child(2) {
+  background-color: #fff;
+  margin-top: 0 !important;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.navbar-toggle.cerrado .icon-bar:nth-child(3) {
+  background-color: #fff;
+  margin-top: -1px !important;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 }
