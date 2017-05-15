@@ -198,6 +198,36 @@ b {
   transition: 800ms ease;
 }
 
+@media only screen and (min-width: 320px) {
+  .navbar-brand .desktop-logo {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-brand .desktop-logo {
+    display: block;
+    margin-top: 0 !important;
+    max-height: 2.8rem;
+  }
+}
+
+.navbar-brand .mobile-icon {
+  max-height: 2rem;
+}
+
+@media only screen and (min-width: 320px) {
+  .navbar-brand .mobile-icon {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-brand .mobile-icon {
+    display: none;
+  }
+}
+
 .navbar {
   -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
   transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -208,6 +238,7 @@ b {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
+  padding-left: 1.5rem !important;
 }
 
 @media only screen and (min-width: 320px) {
@@ -223,8 +254,8 @@ b {
 }
 
 .navbar-default {
-  background-color: #111;
-  border-color: #111;
+  background-color: #323232;
+  border-color: #323232;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -445,7 +476,7 @@ b {
 
 @media only screen and (min-width: 320px) {
   .page-section {
-    padding: 8rem 0;
+    padding: 4rem 0;
   }
 }
 
@@ -920,7 +951,7 @@ b {
 @media only screen and (min-width: 320px) {
   .headline {
     font-size: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     margin-top: 0;
   }
 }
@@ -1014,6 +1045,7 @@ b {
 .footer__menu ul li a {
   color: #444;
   font-size: 1.4rem;
+  font-weight: 300;
   text-decoration: none;
 }
 
@@ -1061,7 +1093,12 @@ b {
 
 .footer__copyright {
   color: #7e7e7e;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.footer__copyright sup {
+  font-size: .8rem;
 }
 
 @media only screen and (min-width: 320px) {
@@ -1071,7 +1108,7 @@ b {
 }
 
 .footer__copyright--img {
-  height: 2.5rem;
+  height: 3rem;
   margin: 1rem auto;
 }
 
@@ -1098,41 +1135,78 @@ b {
 }
 
 .landing-expertos__hero-container {
-  -ms-flex-line-pack: center;
-      align-content: center;
-  background: url("../images/hero-overlay.png") no-repeat center center;
+  background: url("../images/expertos-home-intelligence.jpg") no-repeat center center;
   background-color: #333;
   background-size: cover;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   min-height: 100vh;
   width: 100%;
 }
 
 @media only screen and (min-width: 320px) {
   .landing-expertos__hero-container {
-    padding-top: 6rem;
+    padding-top: 1rem;
   }
 }
 
 .landing-expertos__hero-container__main-text {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   display: block;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__hero-container__main-text {
+    margin-top: 16rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .landing-expertos__hero-container__main-text {
+    margin-top: 22rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__hero-container .asegura-lugar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .landing-expertos__hero-container .asegura-lugar {
+    margin-top: 11rem;
+    width: 100%;
+  }
+}
+
+.landing-expertos__hero-container .viviendas {
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__hero-container .viviendas {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .landing-expertos__hero-container .viviendas {
+    margin-top: 1rem;
+    text-align: left;
+  }
 }
 
 .landing-expertos__title {
   font-weight: 400;
   margin-top: 0;
-  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 320px) {
   .landing-expertos__title {
     font-size: 3.2rem;
+    text-align: center;
   }
 }
 
@@ -1144,14 +1218,52 @@ b {
 
 @media only screen and (min-width: 992px) {
   .landing-expertos__title {
-    font-size: 4.8rem;
+    font-size: 3.6rem;
+    text-align: left;
   }
+}
+
+.landing-expertos__titular {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 320px) {
   .landing-expertos__titular {
     font-size: 1.5rem;
     font-weight: 300;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__titular {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .landing-expertos__titular {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+}
+
+.landing-expertos__subtitular {
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__subtitular {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__subtitular {
+    text-align: left;
   }
 }
 
@@ -1172,7 +1284,7 @@ b {
 
 @media only screen and (min-width: 320px) {
   .landing-expertos__beneficios__list {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1182,16 +1294,27 @@ b {
   }
 }
 
+.landing-expertos__beneficios__list .material-icons {
+  font-size: 1.4rem;
+}
+
 @media only screen and (min-width: 320px) {
   .landing-expertos__beneficios__list li {
-    line-height: 1.3;
-    margin-bottom: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: .5rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .landing-expertos__beneficios__list li {
     line-height: 2;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .landing-expertos__beneficios__list li {
+    font-size: 1.8rem;
+    line-height: 1.5;
   }
 }
 
@@ -1212,14 +1335,39 @@ b {
   }
 }
 
-@media only screen and (min-width: 768px) {
-  .landing-expertos__pasos {
-    background: url("../images/pasos-bg.png") no-repeat center;
+.landing-expertos__pasos .reseller-certificado {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__pasos .paso {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__pasos .paso:last-child {
+    margin-top: 4rem;
+  }
+}
+
+.landing-expertos__pasos .lista p {
+  margin-bottom: 0;
+}
+
+.landing-expertos__pasos .lista p span {
+  color: #fff;
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__pasos .lista p {
+    font-size: 1.4rem;
   }
 }
 
 .landing-expertos__pasos__title {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 
 .landing-expertos__pasos-icon {
@@ -1237,15 +1385,15 @@ b {
 
 @media only screen and (min-width: 320px) {
   .landing-expertos__pasos-icon {
-    max-width: 10rem;
     height: 10rem;
+    max-width: 10rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .landing-expertos__pasos-icon {
-    max-width: 16rem;
     height: 16rem;
+    max-width: 16rem;
   }
 }
 
@@ -1269,31 +1417,55 @@ b {
   }
 }
 
-.landing-expertos__testimonios blockquote {
-  border-left: 0;
+.landing-expertos__testimonios table {
+  margin: 0 auto;
+  max-width: 32rem;
 }
 
-.landing-expertos__testimonios blockquote em {
+.landing-expertos__testimonios .name-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.landing-expertos__testimonios em {
   color: #0090ff;
+  font-size: 1.4rem;
+}
+
+.landing-expertos__testimonios blockquote {
+  border-left: 0;
+  font-size: 1.4rem;
+}
+
+.landing-expertos__testimonios blockquote p {
+  font-style: italic;
 }
 
 .landing-expertos__testimonios-image {
-  border: 6px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 0 0 6px #eee;
-  max-width: 20rem;
   overflow: hidden;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+}
+
+@media only screen and (min-width: 320px) {
+  .landing-expertos__testimonios-image {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__testimonios-image {
+    max-width: 10rem;
+  }
 }
 
 .main-logo {
-  max-height: 3.8rem;
+  max-height: 3rem;
   padding: .5rem 0;
-}
-
-.navbar-default {
-  background-color: #111;
 }
 
 .nav-text-white li a {
@@ -1342,4 +1514,40 @@ b {
   transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+.blacking-bg {
+  background-color: #111;
+  -webkit-transition: background 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: background 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
+}
+
+#menu-escrito li a {
+  font-weight: 300;
+}
+
+.home-intelligence {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.bg-gradient {
+  background: transparent;
+  border: 0;
+  -webkit-transition: border 300ms ease;
+  transition: border 300ms ease;
+}
+
+.landing-expertos__hero-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.6)), color-stop(100%, transparent));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
 }

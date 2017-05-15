@@ -138,3 +138,28 @@ b {
   border-bottom: transparent;
   transition: 800ms ease;
 }
+
+.navbar-brand {
+  .desktop-logo {
+    @include xxs-device {
+      display: none;
+    }
+
+    @include md-device {
+      display: block;
+      margin-top: 0 !important;
+      max-height: 2.8rem;
+    }
+  }
+
+  .mobile-icon {
+    max-height: 2rem;
+
+    @include xxs-device {
+      display: block;
+    }
+    @include md-device {
+      display: none;
+    }
+  }
+}

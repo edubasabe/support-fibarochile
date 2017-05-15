@@ -8,6 +8,12 @@ $(document).on('ready', function () {
     // console.log(margenTop);
 });
 
+function clickeaMenu() {
+  $('.navbar.navbar-default.nav-text-white.navbar-fixed-top li > a').click( function () {
+    return true;
+  });
+}
+
 
 
 //-- Padding Nav
@@ -47,7 +53,7 @@ $(function() {
     $(document).on('click', 'a.page-scroll', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).offset().top - 30
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
         $('.navbar-collapse.navbar-ex1-collapse.collapse').removeClass('in').attr('aria-expanded','false');
@@ -83,8 +89,34 @@ $(document).on('ready', function() {
 });
 
 //-- Button Close
+var btnToggle = $('.navbar-toggle.fixed-left');
+var navCollapse = $('.navbar-collapse.navbar-ex1-collapse.collapse');
+var cenefa = $('.navbar-fixed-top.nav-text-white');
 $(document).on('ready', function () {
-  $('.navbar-toggle.fixed-left').click(function () {
-    $(this).toggleClass('cerrado');
-  })
+
+  if (!btnToggle.hasClass('cerrado') ) {
+    btnToggle.click(function () {
+      $(this).toggleClass('cerrado');
+      cenefa.toggleClass('blacking-bg');
+      cenefa.removeClass('bg-gradient');
+    });
+  }
+
+  $('.navbar-collapse.navbar-ex1-collapse ul li > a').click(function () {
+    if (btnToggle.hasClass('cerrado') && cenefa.hasClass('blacking-bg')) {
+      btnToggle.removeClass('cerrado');
+      cenefa.removeClass('blacking-bg');
+    }
+  });
+});
+
+//-- Cambiar bg del menu cuando haga scroll
+$(document).ready(function () {
+  $(window).bind('scroll', function () {
+    if ($(window).scrollTop() < 50 && $(window).width() > 800) {
+        cenefa.addClass('bg-gradient');
+    } else {
+        cenefa.removeClass('bg-gradient');
+    }
+});
 });
