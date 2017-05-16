@@ -169,11 +169,13 @@
     color: $blanco;
 
     @include xxs-device {
-      background: #565e65;
+      background: url('../images/casa-inteligente.jpg') no-repeat center;
+      background-size: cover;
+      // background: #565e65;
     }
 
     @include sm-device {
-      // background: url('../images/pasos-bg.png') no-repeat center;
+      background: url('../images/casa-inteligente.jpg') no-repeat center;
     }
 
       .reseller-certificado {
@@ -193,8 +195,11 @@
     }
 
     .lista {
+
       p {
         margin-bottom: 0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+
 
         span {
           color: $blanco;
@@ -208,6 +213,7 @@
 
     &__title {
       font-size: 1.8rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
     }
 
     &-icon {
@@ -393,6 +399,34 @@ background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
 }
 
+
+.datos-pato {
+  margin: 0 auto;
+  max-width: 39rem;
+
+ h4 {
+   margin-bottom: 0;
+   margin-top: 0;
+ }
+
+ span {
+   font-size: 1.2rem;
+ }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    a {
+      font-weight: 300;
+    }
+  }
+
+
+
+
+}
 
 // .ac-gn-menuicon-bread-top {
 //     -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);

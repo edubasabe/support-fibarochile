@@ -1331,7 +1331,14 @@ b {
 
 @media only screen and (min-width: 320px) {
   .landing-expertos__pasos {
-    background: #565e65;
+    background: url("../images/casa-inteligente.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .landing-expertos__pasos {
+    background: url("../images/casa-inteligente.jpg") no-repeat center;
   }
 }
 
@@ -1354,6 +1361,7 @@ b {
 
 .landing-expertos__pasos .lista p {
   margin-bottom: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .landing-expertos__pasos .lista p span {
@@ -1368,6 +1376,7 @@ b {
 
 .landing-expertos__pasos__title {
   font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .landing-expertos__pasos-icon {
@@ -1550,4 +1559,28 @@ b {
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
+.datos-pato {
+  margin: 0 auto;
+  max-width: 39rem;
+}
+
+.datos-pato h4 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.datos-pato span {
+  font-size: 1.2rem;
+}
+
+.datos-pato p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.datos-pato p a {
+  font-weight: 300;
 }
