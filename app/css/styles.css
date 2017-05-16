@@ -1414,8 +1414,9 @@ b {
 
 @media only screen and (min-width: 320px) {
   .landing-expertos__pasos-icon img {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
+    max-height: 5rem;
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
 }
 

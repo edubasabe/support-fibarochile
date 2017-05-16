@@ -239,7 +239,8 @@
           align-self: center;
 
           @include xxs-device {
-            transform: scale(.8);
+            max-height: 5rem;
+            transform: scale(.7);
           }
 
           @include sm-device {

@@ -165,7 +165,7 @@ function fadeElement(element, animation) {
   fadeElement('#proceso .row:nth-child(2) .col-sm-4', 'fadeIn');
   fadeElement('#proceso .col-sm-4 h4', 'fadeIn');
   fadeElement('#proceso .col-sm-4 p', 'fadeInDown');
-  fadeElement('#proceso .col-sm-4 img', 'fadeInUp');
+  fadeElement('#proceso .col-sm-4 .landing-expertos__pasos-icon', 'fadeInUp');
   fadeElement('#proceso .col-sm-4 a', 'fadeInUp');
 
   //-- Resevar cupo
