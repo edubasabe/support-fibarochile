@@ -118,5 +118,76 @@ $(document).ready(function () {
     } else {
         cenefa.removeClass('bg-gradient');
     }
+  });
 });
+
+
+// -- waypoints
+$(document).ready(function () {
+
+// //-- funcion para animar
+// function fadeAnimate(element, section, animation) {
+//   $(element).css('opacity', 0);
+//
+//   $(section).waypoint(function () {
+//       $(element).addClass(animation);
+//   }, { offset: '50%' });
+// }
+
+  // fadeAnimate('#beneficios h2', '#beneficios', 'fadeIn');
+  // fadeAnimate('#beneficios .headline--subheadline', '#beneficios', 'fadeIn');
+
+function fadeElement(element, animation) {
+  $(element).css('opacity', 0);
+  $(element).each(function() {
+      $(this).waypoint(function() {
+          $(this.element).addClass('animated').addClass(animation);
+      },
+      { offset: '80%'});
+  });
+}
+
+  //-- hero
+  fadeElement('#hero-container .landing-expertos__title', 'fadeInDown');
+  fadeElement('#hero-container .landing-expertos__titular', 'fadeInLeft');
+  fadeElement('#hero-container .landing-expertos__subtitular', 'fadeIn');
+  fadeElement('#hero-container .viviendas', 'fadeIn');
+  fadeElement('#hero-container .asegura-lugar', 'fadeInUp');
+
+  //-- Beneficios
+  fadeElement('#beneficios h2', 'fadeIn');
+  fadeElement('#beneficios .headline--subheadline', 'fadeIn');
+  fadeElement('#beneficios .landing-expertos__beneficios__list li', 'fadeIn');
+  fadeElement('#beneficios .btn-fibaro', 'fadeInUp');
+
+  //-- Proceso
+  fadeElement('#proceso h2', 'fadeInUp');
+  fadeElement('#proceso .row:nth-child(2) .col-sm-4', 'fadeIn');
+  fadeElement('#proceso .col-sm-4 h4', 'fadeIn');
+  fadeElement('#proceso .col-sm-4 p', 'fadeInDown');
+  fadeElement('#proceso .col-sm-4 img', 'fadeInUp');
+  fadeElement('#proceso .col-sm-4 a', 'fadeInUp');
+
+  //-- Resevar cupo
+  fadeElement('#reservar-cupo h2','fadeIn');
+  fadeElement('#reservar-cupo .headline--subheadline', 'fadeIn');
+  fadeElement('#reservar-cupo .landing-expertos__tachado','fadeInDown');
+  fadeElement('#reservar-cupo iframe', 'fadeInUp');
+
+  //-- Testimonios
+  fadeElement('#testimonios h2', 'fadeIn');
+  fadeElement('#testimonios .owl-stage-outer', 'fadeIn');
+
+  //-- Dudas
+  fadeElement('#contacto-pato h2', 'fadeIn');
+  fadeElement('#contacto-pato table', 'fadeInUp');
+
+
+
+
+
+
+
+
+
 });

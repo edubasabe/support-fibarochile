@@ -34,6 +34,7 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
     <!-- build:css css/styles.css -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./css/styles.css">
     <!-- endbuild -->
@@ -81,7 +82,7 @@
           <!-- /.container -->
       </nav>
 
-    <div class="landing-expertos__hero-container">
+    <section class="landing-expertos__hero-container" id="hero-container">
       <div class="container">
         <div class="row">
           <div class="col-sm-5">
@@ -98,17 +99,16 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
 
-<section class="page-section page-section--beneficios landing-expertos__beneficios page-scroll" id="beneficios">
+<section class="page-section page-section--beneficios landing-expertos__beneficios page-scroll animated" id="beneficios">
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h2 class="headline headline--nomargin text-center">Beneficios</h2>
+      <h2 class="headline headline--nomargin text-center animated">Beneficios</h2>
       <br>
-      <p class="lead text-center headline--subheadline">Puedes ser parte de nuestro equipo como un profesional <b>Instalador</b> y <b>No Instalador</b></p>
-      <br>
+      <p class="lead text-center headline--subheadline animated">Puedes ser parte de nuestro equipo como un profesional <b>Instalador</b> y <b>No Instalador</b></p>
     </div>
   </div>
   <div class="row">
@@ -210,6 +210,17 @@
                 </div>
                 <div class="col-xs-11">
                   <p>Como Reseller podrás acceder a líneas de crédito y condiciones especiales para potenciar tu desarrollo</p>
+                </div>
+              </div>
+            </li>
+            <!-- 9 -->
+            <li>
+              <div class="row">
+                <div class="col-xs-1">
+                  <i class="material-icons">&#xE876;</i>
+                </div>
+                <div class="col-xs-11">
+                  <p>Pertenecerás a una exclusiva red de arquitectos, diseñadores, ingenieros, técnicos y profesionales de diferentes áreas del rubro</p>
                 </div>
               </div>
             </li>
@@ -483,7 +494,7 @@
 
 <hr class="divider">
 
-<section class="page-section">
+<section class="page-section" id="contacto-pato">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -502,8 +513,8 @@
             <td>
               <h4>Patricio Cáceres</h4>
               <span>Lead Business Development</p>
-              <p><a href="tel:+56228486547">(+56) 228486547</a></p>
-              <p><a href="tel:+56962484994">(+56)96248 4994</a></p>
+              <p><a href="tel:+56228486547">(+56) 2 28486547</a>&nbsp;<a href="#">ext. 301</a></p>
+              <p><a href="tel:+56962484994">(+56) 9 6248 4994</a></p>
               <p><a href="mailto:pcaceres@tamed.cl">pcaceres@tamed.cl</a></p>
             </td>
           </tr>
@@ -563,6 +574,7 @@
     <script src="./js/jquery.easing.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/main.js"></script>
     <!-- endbuild -->
 
