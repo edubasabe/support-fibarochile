@@ -165,25 +165,27 @@ function fadeElement(element, animation) {
   fadeElement('#proceso .row:nth-child(2) .col-sm-4', 'fadeIn');
   fadeElement('#proceso .col-sm-4 h4', 'fadeIn');
   fadeElement('#proceso .col-sm-4 p', 'fadeInDown');
-  fadeElement('#proceso .col-sm-4 .landing-expertos__pasos-icon', 'fadeInUp');
+  fadeElement('#proceso .col-sm-4.col-sm-offset-4 img', 'fadeInUp');
   fadeElement('#proceso .col-sm-4 a', 'fadeInUp');
 
   //-- Resevar cupo
   fadeElement('#reservar-cupo h2','fadeIn');
   fadeElement('#reservar-cupo .headline--subheadline', 'fadeIn');
   fadeElement('#reservar-cupo .landing-expertos__tachado','fadeInDown');
-  fadeElement('#reservar-cupo iframe', 'fadeInUp');
+  // fadeElement('#reservar-cupo iframe', 'fadeInUp');
 
   //-- Testimonios
   fadeElement('#testimonios h2', 'fadeIn');
   fadeElement('#testimonios .owl-stage-outer', 'fadeIn');
 
   //-- Dudas
-  fadeElement('#contacto-pato h2', 'fadeIn');
-  fadeElement('#contacto-pato table', 'fadeInUp');
+  // fadeElement('#contacto-pato h2', 'fadeIn');
+  // fadeElement('#contacto-pato table', 'fadeInUp');
 
 
-
+  $('#eventbrite-data').click(function () {
+    alert(1);
+  });
 
 
 

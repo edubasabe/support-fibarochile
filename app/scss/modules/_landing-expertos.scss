@@ -3,8 +3,8 @@
   //-- Hero
   &__hero-container {
     // align-content: center;
-    background: url('../images/expertos-home-intelligence.jpg') no-repeat center center;
-    background-color: #333;
+    // background: url('../images/expertos-home-intelligence.jpg') no-repeat center center;
+    // background-color: #333;
     background-size: cover;
     color: $blanco;
     // display: flex;
@@ -33,6 +33,7 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+        max-width: 45rem;
       }
 
       @include md-device {
@@ -429,6 +430,16 @@ background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
 
 }
 
+#eventbrite-data {
+  @include xxs-device {
+    min-height: 35rem;
+  }
+
+  @include sm-device {
+    min-height: 38rem;
+  }
+
+}
 // .ac-gn-menuicon-bread-top {
 //     -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 //     transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
