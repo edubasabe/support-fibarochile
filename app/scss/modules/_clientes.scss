@@ -1,14 +1,41 @@
 .clientes {
   //-- Hero
   &-hero {
+
+    @include xxs-device {
+      min-height: 39rem;
+    }
+
     &__container {
-      flex-direction: row; 
+      display: block;
+
+      @include xxs-device {
+        width: 100%;
+      }
+
+      @include sm-device {
+        width: 80%;
+      }
     }
 
     &__btn {
       border: 1px solid $azul;
       border-radius: .4rem;
+      font-weight: 400;
       width: 100%;
+
+      @include sm-device {
+        font-size: 1.2rem;
+      }
+
+      @include md-device {
+        font-size: 1.4rem;
+      }
+
+      &:visited,
+      &:focus {
+        color: $azul;
+      }
 
       &:hover,
       &:active {
@@ -18,8 +45,47 @@
       }
     }
 
+    &__flex-container {
+      align-content: center;
+      align-items: center;
+      display: flex;
+      height: 35rem;
+      justify-content: center;
+    }
+
+    &__title {
+      color: $blanco;
+      margin-top: 0;
+      text-align: center;
+
+      @include xxs-device {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 3rem;
+        margin-top: 4rem;
+      }
+
+      @include sm-device {
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin-bottom: 3.2rem;
+      }
+
+      @include md-device {
+        // font-size: 4rem;
+        display: block;
+        font-weight: 300;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__btn-flex-container {
+      flex-direction: row;
+    }
+
     &__req {
       color: $blanco;
+      font-size: 1.2rem;
     }
   }
 
@@ -35,6 +101,105 @@
   }
 
   //-- Contactar un experto
+  &-contactar-experto {
+
+    &__img-exp {
+      border: 1px solid #ccc;
+      border-radius: 100px;
+      height: 5rem;
+      overflow: hidden;
+      width: 5rem;
+    }
+
+    &__regiones-select {
+
+
+      @include xxs-device {
+        margin-bottom: 6rem;
+      }
+
+      label {
+        color: #0090ff;
+        font-size: 2.4rem;
+        font-weight: 300;
+      }
+
+      select {
+        font-weight: 300;
+      }
+    }
+
+    &__card {
+      border: 1px solid #ccc !important;
+
+      input {
+        &[type='radio'] {
+          left: 50%;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    &__img {
+      display: flex;
+      width: 20%;
+    }
+
+    &__column {
+      float: left;
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+    }
+
+    &__radio {
+      height: 8rem;
+      margin: 0;
+      position: relative;
+      text-align: center;
+      width: 5%;
+    }
+
+    &__content {
+      padding-bottom: 0;
+      padding-left: 15px;
+      padding-top: 0;
+      width: 75%;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        word-wrap: break-word;
+      }
+
+      li {
+
+        &:first-child {
+          color: $azul;
+        }
+
+        &:nth-child(2) {
+          font-size: 1.4rem;
+        }
+
+        &:nth-child(3) {
+          font-size: 1.5rem;
+        }
+
+        &:nth-child(4) {
+          font-size: 1.4rem;
+        }
+
+        a {
+          margin-bottom: 4rem;
+        }
+      }
+    }
+
+
+  }
 
   //-- Desarrollo Inmobiliario
   &-desarrollo-inmobiliario {

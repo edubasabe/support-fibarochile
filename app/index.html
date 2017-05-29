@@ -80,22 +80,39 @@
           </div>
 
       </nav -->
-
+<!-- Hero Clientes -->
 <section class="hero clientes-hero">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12">
+        <div class="clientes-hero__flex-container">
         <div class="hero__container clientes-hero__container">
-          <h2 class="hero__title">Cuentas con todo nuestro apoyo para desarrollar tu Proyecto</h2>
-
-
-              <p class="text-center clientes-hero__req">*Requiere conocimientos eléctricos.</p>
-
+          <h2 class="clientes-hero__title">Cuentas con todo nuestro apoyo <br> para desarrollar tu proyecto</h2>
+            <div class="row">
+            <div class="col-sm-4">
+              <p class="text-center">
+                <a href="#autoinstalacion" class="btn btn-tamed btn-lg clientes-hero__btn page-scroll">Autoinstalación</a>
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <p class="text-center">
+                <a href="#contactar-un-experto" class="btn btn-tamed btn-lg clientes-hero__btn page-scroll">Contactar un Experto</a>
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <p class="text-center">
+                <a href="#desarrollo-inmobiliario" class="btn btn-tamed btn-lg clientes-hero__btn page-scroll">Desarrollo Inmobiliario</a>
+              </p>
+            </div>
+            </div>
+            <p class="text-center clientes-hero__req">*Requiere conocimientos eléctricos.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- Autoinstalacion -->
@@ -110,7 +127,7 @@
     <div class="row">
       <div class="col-xs-12 col-sm-4">
         <div class="thumbnail text-center">
-          <img src="http://localhost:8888/soporte-wp/wp-content/themes/tamed-soporte/assets/images/icon-chatbubbles.svg" alt="">
+          <img src="images/icon-chatbubbles.svg" alt="">
           <h3>Preguntas Frecuentes</h3>
           <p class="lead">Soluciones para problemas frecuentes</p>
           <a href="http://localhost:8888/soporte-wp/faq/" class="page-section--soluciones__link link link--arrow">Ir a Preguntas Frecuentes</a>
@@ -138,16 +155,61 @@
 <hr class="divider">
 
 <!-- Contactar un experto -->
-<section class="page-section" id="contactar-un-experto">
+<section class="page-section clientes-contactar-experto" id="contactar-un-experto">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <h2 class="headline headline--nomargin text-center">Contactar un Experto</h2>
-        <p class="lead headline--subheadline">Antes de comenzar te recomendamos revisar los siguientes videos y tutoriales</p>
+        <p class="lead headline--subheadline">Contamos con una amplia red de profesionales que te ayudarán a desarrollar tu proyecto de la mejor forma</p>
       </div>
     </div>
+
     <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+      <form class="form" action="" method="post" name="regiones-form" id="form-select">
+        <div class="form-group clientes-contactar-experto__regiones-select">
+          <label for="region-select" class="text-center center-block">Selecciona una región</label>
+          <select type="select" class="form-control input-lg" id="region-select" name="region-select">
+            <option value='ninguno'>Seleccione una opción</option>
+            <option value='region' >Region Metropolitana</option>
+          </select>
+          <p class="help-block text-center">Seleccione un región para localizar el experto más cercano</p>
+        </div>
+      </form>
+      </div>
     </div>
+    <div class="row hide">
+      <div class='col-sm-6 col-md-4'>
+        <div class='thumbnail clearfix clientes-contactar-experto__card'>
+          <div class='clientes-contactar-experto__column clientes-contactar-experto__radio'>
+            <input type='radio' name='expertos' value='" . $resellers->nombre_exp . "' class='region-" . $resellers->region_id . "'>
+          </div>
+          <div class='clientes-contactar-experto__column clientes-contactar-experto__img'>
+            <div class='clientes-contactar-experto__img-exp center-block'>
+              <img src='". $resellers->image_url ."' alt='" . $resellers->nombre_exp . "' class='img-responsive'>
+            </div>
+          </div>
+          <div class='clientes-contactar-experto__column clientes-contactar-experto__content'>
+            <ul class="list-unstyled">
+              <li>David Basabe</li>
+              <li>Reseller</li>
+              <li><a href='tel:" . $resellers->telefono_exp . "'>" . $resellers->telefono_exp . "</a></li>
+              <li><a href='mailto:" . $resellers->email_exp . "'>" . $resellers->email_exp . "</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row hide">
+      <div class="col-xs-12">
+          <h2 class="headline headline--nomargin text-center">¿No hay un experto en tu región?</h2>
+          <br>
+          <p class="lead text-center"><a href="" class="link link--arrow"> Contáctanos</a></p>
+      </div>
+    </div>
+
+
+
   </div>
 </section>
 
@@ -234,13 +296,13 @@
       </div>
     </div>
     <br><br>
-    <!-- build:js js/scripts.min.js -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.easing.min.js"></script>
     <script src="./js/parallax.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
+    <!-- build:js js/main.min.js -->
     <script src="./js/main.js"></script>
     <!-- endbuild -->
 

@@ -3,10 +3,7 @@ function altoNav() {
   return resultado + 'px';
 }
 var valorAlto = altoNav();
-$(document).on('ready', function () {
-    var margenTop = $('.hero').css('margin-top', valorAlto);
-    // console.log(margenTop);
-});
+
 
 function clickeaMenu() {
   $('.navbar.navbar-default.nav-text-white.navbar-fixed-top li > a').click( function () {

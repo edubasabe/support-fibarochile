@@ -1134,17 +1134,49 @@ b {
   padding-left: .5rem;
 }
 
+@media only screen and (min-width: 320px) {
+  .clientes-hero {
+    min-height: 39rem;
+  }
+}
+
 .clientes-hero__container {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  display: block;
+}
+
+@media only screen and (min-width: 320px) {
+  .clientes-hero__container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .clientes-hero__container {
+    width: 80%;
+  }
 }
 
 .clientes-hero__btn {
   border: 1px solid #0090ff;
   border-radius: .4rem;
+  font-weight: 400;
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .clientes-hero__btn {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .clientes-hero__btn {
+    font-size: 1.4rem;
+  }
+}
+
+.clientes-hero__btn:visited, .clientes-hero__btn:focus {
+  color: #0090ff;
 }
 
 .clientes-hero__btn:hover, .clientes-hero__btn:active {
@@ -1154,8 +1186,62 @@ b {
   transition: all 300ms ease;
 }
 
+.clientes-hero__flex-container {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clientes-hero__title {
+  color: #fff;
+  margin-top: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 320px) {
+  .clientes-hero__title {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .clientes-hero__title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .clientes-hero__title {
+    display: block;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+}
+
+.clientes-hero__btn-flex-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 .clientes-hero__req {
   color: #fff;
+  font-size: 1.2rem;
 }
 
 .clientes-autoinstalacion .thumbnail {
@@ -1164,6 +1250,97 @@ b {
 
 .clientes-autoinstalacion .thumbnail img {
   height: 7.2rem;
+}
+
+.clientes-contactar-experto__img-exp {
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  height: 5rem;
+  overflow: hidden;
+  width: 5rem;
+}
+
+@media only screen and (min-width: 320px) {
+  .clientes-contactar-experto__regiones-select {
+    margin-bottom: 6rem;
+  }
+}
+
+.clientes-contactar-experto__regiones-select label {
+  color: #0090ff;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.clientes-contactar-experto__regiones-select select {
+  font-weight: 300;
+}
+
+.clientes-contactar-experto__card {
+  border: 1px solid #ccc !important;
+}
+
+.clientes-contactar-experto__card input[type='radio'] {
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.clientes-contactar-experto__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+}
+
+.clientes-contactar-experto__column {
+  float: left;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.clientes-contactar-experto__radio {
+  height: 8rem;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  width: 5%;
+}
+
+.clientes-contactar-experto__content {
+  padding-bottom: 0;
+  padding-left: 15px;
+  padding-top: 0;
+  width: 75%;
+}
+
+.clientes-contactar-experto__content ul {
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+.clientes-contactar-experto__content li:first-child {
+  color: #0090ff;
+}
+
+.clientes-contactar-experto__content li:nth-child(2) {
+  font-size: 1.4rem;
+}
+
+.clientes-contactar-experto__content li:nth-child(3) {
+  font-size: 1.5rem;
+}
+
+.clientes-contactar-experto__content li:nth-child(4) {
+  font-size: 1.4rem;
+}
+
+.clientes-contactar-experto__content li a {
+  margin-bottom: 4rem;
 }
 
 .clientes-desarrollo-inmobiliario__btn {
