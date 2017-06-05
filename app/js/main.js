@@ -12,7 +12,6 @@ function clickeaMenu() {
 }
 
 
-
 //-- Padding Nav
 $(document).on('ready', function () {
  var navHeight = $('.navbar').height();
@@ -178,15 +177,5 @@ function fadeElement(element, animation) {
   //-- Dudas
   // fadeElement('#contacto-pato h2', 'fadeIn');
   // fadeElement('#contacto-pato table', 'fadeInUp');
-
-
-  $('#eventbrite-data').click(function () {
-    alert(1);
-  });
-
-
-
-
-
 
 });
