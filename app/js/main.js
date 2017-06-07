@@ -35,16 +35,21 @@ $(document).on('ready', function () {
 });
 
 //-- JQuery Easing
-//jQuery to collapse the navbar on scroll
+//-- jQuery to collapse the navbar on scroll
+
+function scrollCheck() {
+  if ($(".navbar").offset().top > 50) {
+      $(".navbar-fixed-top").addClass("top-nav-collapse");
+  } else {
+      $(".navbar-fixed-top").removeClass("top-nav-collapse");
+  }
+}
+
 $(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
+  scrollCheck();
 });
 
-//jQuery for page scrolling feature - requires jQuery Easing plugin
+//-- jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $(document).on('click', 'a.page-scroll', function(event) {
         var $anchor = $(this);
@@ -58,7 +63,7 @@ $(function() {
 
 //-- Owl Testimonios
 $(document).on('ready', function() {
-  $('.owl-carousel').owlCarousel({
+  /*$('.owl-carousel').owlCarousel({
       loop:true,
       autoplay:true,
       autoplayTimeout:15000,
@@ -79,6 +84,56 @@ $(document).on('ready', function() {
               items:1,
               nav:false,
               loop:true
+          }
+      }
+  }); */
+
+  $('#owl-casos-de-exito').owlCarousel({
+      loop:true,
+      autoplay:true,
+      autoplayTimeout:15000,
+      margin:10,
+      nav: false,
+      dots:true,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:false
+          },
+          600:{
+              items:2,
+              nav:false
+          },
+          1000:{
+              items:3,
+              nav:false,
+              loop:false
+          }
+      }
+  });
+
+  $('#owl-alianzas').owlCarousel({
+      loop:true,
+      autoplay:true,
+      autoplayTimeout:6000,
+      margin:10,
+      nav: false,
+      dots:true,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:2,
+              nav:false
+          },
+          600:{
+              items:4,
+              nav:false
+          },
+          1000:{
+              items:6,
+              nav:false,
+              loop:false
           }
       }
   });
@@ -143,6 +198,16 @@ function fadeElement(element, animation) {
   });
 }
 
+function fadeElementNoHide(element, animation) {
+  $(element).each(function() {
+      $(this).waypoint(function() {
+          $(this.element).addClass('animated').addClass(animation);
+      },
+      { offset: '80%'
+    });
+  });
+}
+
   //-- hero
   fadeElement('#hero-container .landing-expertos__title', 'fadeInDown');
   fadeElement('#hero-container .landing-expertos__titular', 'fadeInLeft');
@@ -177,5 +242,22 @@ function fadeElement(element, animation) {
   //-- Dudas
   // fadeElement('#contacto-pato h2', 'fadeIn');
   // fadeElement('#contacto-pato table', 'fadeInUp');
+
+
+  //-- Tu Hogar Inicio ---------------------------------------------------------
+
+  //-- Revisar si es ipad
+  function is_iPad() {
+    return (navigator.platform.indexOf("iPad") != -1)
+  }
+
+  if (is_iPad()) {
+    $('video').attr('controls','true');
+  }
+
+  else {
+    console.log('No es iPad');
+  }
+
 
 });

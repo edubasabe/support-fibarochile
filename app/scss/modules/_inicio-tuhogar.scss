@@ -1,0 +1,258 @@
+.inicio-tuhogar {
+
+  //-- Section 1 : Homevideo ---------------------------------------------------
+  &--homevideo {
+    background: $negro url('../images/FIBARO_Lili_No_HUD.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+
+    &__title {
+      bottom: 10%;
+      left: 50%;
+      position: absolute;
+      text-shadow: .1rem .1rem .2rem rgba($negro, .9);
+      transform: translateX(-50%) translateY(0%);
+    }
+
+    &__video {
+      height: auto;
+      max-height: 100%;
+      width: 100%;
+      z-index: -100;
+    }
+  }
+
+  //-- Section 2 : Smarthome ---------------------------------------------------
+  &--smarthome {
+    background: url('../images/smarthome.jpg') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+
+    &__title {
+      font-weight: 300;
+
+      @include xxs-device {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .fibaro-hand {
+      bottom: 0;
+      max-width: 25rem;
+      position: absolute;
+      right: 0;
+      transform: translateY(20%);
+      transition: opacity 300ms ease;
+
+
+      @include xxs-device {
+        opacity: 0;
+      }
+
+
+      @include sm-device {
+        opacity: 1;
+      }
+    }
+  }
+
+  //-- Section 3 : Por qué FIBARO ----------------------------------------------
+  &--por-que-fibaro {
+
+    .row {
+      &:nth-child(1) {
+        @include xxs-device {
+          margin-bottom: 8rem;
+        }
+
+        @include md-device {
+          margin-bottom: initial;
+        }
+      }
+    }
+
+    &__title {
+      @include xxs-device {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__subtitle {
+      color: #666;
+    }
+
+    .thumbnail {
+      border: transparent;
+
+      h3 {
+        color: #333;
+        font-weight: 300;
+
+        @include xxs-device {
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        color: #666;
+
+        @include xxs-device {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+
+  //-- Section 4 : Experience Center -------------------------------------------
+  &__experience-center {
+    position: relative;
+
+    &__title-container {
+
+      @include xxs-device {
+        color: $negro;
+        margin: 0 auto;
+        width: 90%;
+      }
+
+      @include sm-device {
+        color: $blanco;
+        left: 50%;
+        position: absolute;
+        text-shadow: .1rem .1rem .2rem rgba($negro, .9);
+        top: 15%;
+        transform: translateX(-50%) translateY(0%);
+      }
+
+      @include md-device {
+        color: $blanco;
+        left: 50%;
+        position: absolute;
+        text-shadow: .1rem .1rem .2rem rgba($negro, .9);
+        top: 15%;
+        transform: translateX(-50%) translateY(0%);
+      }
+
+      h2 {
+        @include xxs-device {
+          font-size: 2rem;
+        }
+
+        @include sm-device {
+          font-size: 3rem;
+        }
+
+        @include md-device {
+          font-size: 4.2rem;
+        }
+      }
+
+      h3 {
+        @include xxs-device {
+          font-size: 1.6rem;
+        }
+
+        @include sm-device {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        @include xxs-device {
+          font-size: 1.6rem;
+        }
+
+        @include sm-device {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  //-- Section 5 : Desarrollo de Proyectos -------------------------------------
+  &--desarrollo-de-proyectos {
+
+    .row {
+      &:first-child {
+        @include sm-device {
+          margin-bottom: 3rem;
+      }
+    }
+
+    .thumbnail {
+      border: 0;
+      cursor: default;
+      text-decoration: none;
+
+        img {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+
+  //-- Section 6 : Expertos Casos de exito -------------------------------------
+  &--casos-de-exito {
+    background: url('../images/bg--tuhogar-casos-de-exito.jpg') no-repeat center center;
+    background-size: cover;
+    color: $blanco;
+
+    .owl-theme {
+      .owl-dots {
+        .owl-dot {
+          span {
+            background-color: transparent;
+            border: .1rem solid rgba($blanco, .8);
+          }
+
+          &.active {
+            span {
+              background-color: $azul;
+              border: .1rem solid transparent;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    .row {
+
+      &:first-child {
+        @include xxs-device {
+          margin-bottom: 3rem;
+        }
+
+        @include sm-device {
+          margin-bottom: 4rem;
+        }
+
+        @include md-device {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__image {
+      border-radius: 3rem;
+      height: 6rem;
+      overflow: hidden;
+      width: 6rem !important;
+    }
+
+    blockquote {
+      border-left: 0;
+    }
+
+    p {
+      em {
+        color: $azul;
+      }
+    }
+  }
+}

@@ -228,6 +228,10 @@ b {
   }
 }
 
+.text-color-white {
+  color: #fff;
+}
+
 .navbar {
   -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
   transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -1354,4 +1358,258 @@ b {
   color: #fff;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+}
+
+.inicio-tuhogar--homevideo {
+  background: #111 url("../images/FIBARO_Lili_No_HUD.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.inicio-tuhogar--homevideo__title {
+  bottom: 10%;
+  left: 50%;
+  position: absolute;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(17, 17, 17, 0.9);
+  -webkit-transform: translateX(-50%) translateY(0%);
+          transform: translateX(-50%) translateY(0%);
+}
+
+.inicio-tuhogar--homevideo__video {
+  height: auto;
+  max-height: 100%;
+  width: 100%;
+  z-index: -100;
+}
+
+.inicio-tuhogar--smarthome {
+  background: url("../images/smarthome.jpg") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.inicio-tuhogar--smarthome__title {
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--smarthome__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.inicio-tuhogar--smarthome .fibaro-hand {
+  bottom: 0;
+  max-width: 25rem;
+  position: absolute;
+  right: 0;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--smarthome .fibaro-hand {
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar--smarthome .fibaro-hand {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--por-que-fibaro .row:nth-child(1) {
+    margin-bottom: 8rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .inicio-tuhogar--por-que-fibaro .row:nth-child(1) {
+    margin-bottom: initial;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--por-que-fibaro__title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.inicio-tuhogar--por-que-fibaro__subtitle {
+  color: #666;
+}
+
+.inicio-tuhogar--por-que-fibaro .thumbnail {
+  border: transparent;
+}
+
+.inicio-tuhogar--por-que-fibaro .thumbnail h3 {
+  color: #333;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--por-que-fibaro .thumbnail h3 {
+    font-size: 3rem;
+  }
+}
+
+.inicio-tuhogar--por-que-fibaro .thumbnail p {
+  color: #666;
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--por-que-fibaro .thumbnail p {
+    font-size: 1.8rem;
+  }
+}
+
+.inicio-tuhogar__experience-center {
+  position: relative;
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar__experience-center__title-container {
+    color: #111;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar__experience-center__title-container {
+    color: #fff;
+    left: 50%;
+    position: absolute;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(17, 17, 17, 0.9);
+    top: 15%;
+    -webkit-transform: translateX(-50%) translateY(0%);
+            transform: translateX(-50%) translateY(0%);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .inicio-tuhogar__experience-center__title-container {
+    color: #fff;
+    left: 50%;
+    position: absolute;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(17, 17, 17, 0.9);
+    top: 15%;
+    -webkit-transform: translateX(-50%) translateY(0%);
+            transform: translateX(-50%) translateY(0%);
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar__experience-center__title-container h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar__experience-center__title-container h2 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .inicio-tuhogar__experience-center__title-container h2 {
+    font-size: 4.2rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar__experience-center__title-container h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar__experience-center__title-container h3 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar__experience-center__title-container p {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar__experience-center__title-container p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar--desarrollo-de-proyectos .row:first-child {
+    margin-bottom: 3rem;
+  }
+}
+
+.inicio-tuhogar--desarrollo-de-proyectos .row .thumbnail {
+  border: 0;
+  cursor: default;
+  text-decoration: none;
+}
+
+.inicio-tuhogar--desarrollo-de-proyectos .row .thumbnail img {
+  margin-bottom: 1.5rem;
+}
+
+.inicio-tuhogar--casos-de-exito {
+  background: url("../images/bg--tuhogar-casos-de-exito.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.inicio-tuhogar--casos-de-exito .owl-theme .owl-dots .owl-dot span {
+  background-color: transparent;
+  border: 0.1rem solid rgba(255, 255, 255, 0.8);
+}
+
+.inicio-tuhogar--casos-de-exito .owl-theme .owl-dots .owl-dot.active span {
+  background-color: #0090ff;
+  border: .1rem solid transparent;
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--casos-de-exito .row:first-child {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar--casos-de-exito .row:first-child {
+    margin-bottom: 4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .inicio-tuhogar--casos-de-exito .row:first-child {
+    margin-bottom: 0;
+  }
+}
+
+.inicio-tuhogar--casos-de-exito__image {
+  border-radius: 3rem;
+  height: 6rem;
+  overflow: hidden;
+  width: 6rem !important;
+}
+
+.inicio-tuhogar--casos-de-exito blockquote {
+  border-left: 0;
+}
+
+.inicio-tuhogar--casos-de-exito p em {
+  color: #0090ff;
 }
