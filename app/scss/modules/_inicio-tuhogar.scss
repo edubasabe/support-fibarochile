@@ -21,6 +21,18 @@
       width: 100%;
       z-index: -100;
     }
+
+    &::after {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(145, 255, 48, 0) 100%);
+      color: transparent;
+      content: 'Hola';
+      float: left;
+      font-size: 10.2rem;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
   }
 
   //-- Section 2 : Smarthome ---------------------------------------------------
@@ -255,4 +267,92 @@
       }
     }
   }
+}
+
+.floating {
+  background: $blanco;
+  border: 1px solid rgba(#979797, .17);
+  border-radius: .4rem;
+  border-style: inset;
+  box-shadow:  0 .2rem .4rem rgba($negro, .16);
+  float: right;
+  min-height: 30rem;
+  opacity: 0;
+  padding: 1.5rem;
+  position: fixed;
+  width: 40rem;
+  z-index: 9;
+
+  @include xxs-device {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 30px);
+  }
+
+  @include sm-device {
+    bottom: 1rem;
+    left: initial;
+    max-width: 30rem;
+    right: 1rem;
+    top: initial;
+    transform: none;
+  }
+
+  @keyframes elevacion {
+    from { bottom: 1rem; }
+    to { bottom: 38rem; }
+  }
+
+  @include lg-device {
+    bottom: 3rem;
+    right: 3rem;
+  }
+
+
+    input {
+      appearance: none;
+      box-shadow: none;
+      margin-bottom: 1rem;
+    }
+
+  .btn-subscribe {
+    background-color: $blanco;
+    border: 1px solid $azul;
+    color: $azul;
+    font-weight: 400;
+    width: 100%;
+
+    &:hover {
+      background-color: $azul;
+      color: $blanco;
+    }
+  }
+
+}
+
+.sube {
+  animation: elevacion 3s;
+  animation-fill-mode: forwards;
+}
+
+
+
+@media (max-width: 992px) {
+  .navbar-collapse.collapse {
+       display: none !important;
+   }
+
+   .navbar-collapse.collapse.in {
+       display: block !important;
+   }
+
+   .navbar-header .collapse,
+   .navbar-toggle {
+       display: block !important;
+   }
+
+   .navbar-header {
+       float: none;
+   }
 }

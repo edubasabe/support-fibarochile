@@ -29,7 +29,7 @@ gulp.task('browserSync', function() {
 gulp.task('sass', function() {
   return gulp.src('./app/scss/**/*.scss')
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({ browsers: ['Safari 8'] }))
     .pipe(gulp.dest('./app/css'))
     .pipe(browserSync.reload({ stream:true }));
 });

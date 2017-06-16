@@ -21,12 +21,24 @@
     background-color: $gris-mac;
     border-color: $gris-mac;
 
+    @include sm-device {
+      background: transparent;
+      border: 0;
+    }
+
+    .navbar-toggle {
+      &:focus,
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
     .navbar-nav {
       & > {
 
         li > {
           a {
-            color: $negro;
+            color: $blanco;
             font-size: 1.4rem;
             transition: color 250ms;
 
@@ -142,6 +154,68 @@
       top: -2px;
     }
   }
+
+  &-collapse {
+    max-height: 100vh;
+
+    .navbar-nav {
+      li {
+
+        @include sm-device {
+          border-bottom: 1px solid rgba($blanco, .3);
+          width: 100%;
+        }
+
+        @include md-device {
+          border-bottom: 1px solid rgba($blanco, 0);
+          width: initial;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      @include sm-device {
+        float: none;
+        margin: 0 auto;
+        max-width: 40rem;
+      }
+
+      @include md-device {
+        float: right;
+        max-width: none;
+      }
+
+
+    }
+  }
+
+  &-collapse.navbar-ex1-collapse.collapse.in {
+    background-color: #111;
+    max-height: 100vh;
+
+    .navbar-nav {
+      li {
+        border-bottom: 1px solid rgba($blanco, .3);
+        width: 100%;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      @include sm-device {
+        float: none;
+        margin: 0 auto;
+        max-width: 40rem;
+      }
+
+      @include md-device {
+        float: right;
+      }
+    }
+  }
 }
 
 .nav-pills {
@@ -153,7 +227,7 @@
     &.active {
       a {
         background-color: $azul;
-        transition: background 250ms;
+        // transition: background-color 250ms;
 
         &:hover,
         &:focus,
@@ -176,4 +250,20 @@
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: $negro;
+}
+
+
+  .navbar.nav-text-white.navbar-fixed-top.navbar-default.blacking-bg {
+    background: #111;
+  }
+
+.bg-black {
+  background: #111 !important;
+}
+
+.bg-no-gradient {
+
+  &::after {
+    background: transparent !important;
+  }
 }

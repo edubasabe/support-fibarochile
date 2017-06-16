@@ -11,28 +11,73 @@ function clickeaMenu() {
   });
 }
 
+function setCookie() {
+  document.cookie = "Subscripcion=Realizada";
+}
+function setCookieForm() {
+  document.cookie = "formulario=Enviado";
+}
+
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(";", begin);
+        if (end == -1) {
+        end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+ }
+
+var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+
+function checkWidth() {
+  var windowSize = $(window).width();
+  if ( windowSize <= 414) {
+    return true;
+  }
+
+  else {
+    return false;
+  }
+}
 
 //-- Padding Nav
 $(document).on('ready', function () {
+
+if ( !checkWidth() ) {
+
  var navHeight = $('.navbar').height();
  var paddingNav = (navHeight - 20) / 2  + 'px';
-  $('.nav.navbar-nav.navbar-right li > a').css({
+  $('.nav.navbar-nav li > a').css({
       'padding-top': paddingNav,
       'padding-bottom': paddingNav,
-    });
+  });
 
   $('.navbar-brand.navbar__logo-text').css({
       'padding-top': paddingNav,
       'padding-bottom': paddingNav,
-    });
+  });
 
-    $('button.navbar-toggle.fixed-left').css({
+  $('button.navbar-toggle.fixed-left').css({
       'margin-top':paddingNav,
       'margin-bottom': paddingNav
-    });
+  });
+}
 
 
 });
+
 
 //-- JQuery Easing
 //-- jQuery to collapse the navbar on scroll
@@ -144,7 +189,7 @@ var btnToggle = $('.navbar-toggle.fixed-left');
 var navCollapse = $('.navbar-collapse.navbar-ex1-collapse.collapse');
 var cenefa = $('.navbar-fixed-top.nav-text-white');
 $(document).on('ready', function () {
-
+  // Si el btn No tiene la clase 'cerrado'
   if (!btnToggle.hasClass('cerrado') ) {
     btnToggle.click(function () {
       $(this).toggleClass('cerrado');
@@ -153,7 +198,9 @@ $(document).on('ready', function () {
     });
   }
 
+  // Si hacen click en una opcion del menu
   $('.navbar-collapse.navbar-ex1-collapse ul li > a').click(function () {
+    $('.navbar-collapse.navbar-ex1-collapse').removeClass('in');
     if (btnToggle.hasClass('cerrado') && cenefa.hasClass('blacking-bg')) {
       btnToggle.removeClass('cerrado');
       cenefa.removeClass('blacking-bg');
@@ -198,12 +245,13 @@ function fadeElement(element, animation) {
   });
 }
 
-function fadeElementNoHide(element, animation) {
+function fadeElementOffset(element, animation, offsetvalue) {
+  $(element).css('opacity', 0);
   $(element).each(function() {
       $(this).waypoint(function() {
           $(this.element).addClass('animated').addClass(animation);
       },
-      { offset: '80%'
+      { offset: offsetvalue
     });
   });
 }
@@ -259,5 +307,46 @@ function fadeElementNoHide(element, animation) {
     console.log('No es iPad');
   }
 
+  //-- Waypoint Inicio ---------------------------------------------------------
+  $(function () {
+    $('#homevideo').waypoint(function () {
+      $('.navbar-default').toggleClass('bg-black');
+      $('.inicio-tuhogar--homevideo').toggleClass('bg-no-gradient');
+    }, { 'offset': '-80%' });
+  });
+
+  //-- Formulario de Subscripcion ----------------------------------------------
+  if (is_iPad()) {
+    $('#name').on('focus', function () {
+      $('.floating.subscribers-form').toggleClass('sube');
+    });
+  }
+
+  var myCookie = getCookie("Subscripcion");
+  if ( myCookie !== "Realizada" ) {
+
+    fadeElementOffset('#porque-fibaro .floating', 'fadeInUp', '50%');
+    $('.subscribers-form .close').on('click', function () {
+      $('.subscribers-form').css('display', 'none');
+    });
+  }
+
+
+  //-- Ventana Modal de Subscripcion
+  var contar = 0;
+  var myCookie = getCookie("Subscripcion");
+  $(document).on('mouseleave', function () {
+    contar++;
+    if (contar < 2 && myCookie !== "Realizada") {
+      $('#modal-subscribirse').modal();
+    }
+  })
+
+  //-- Formularios Enviados
+  function formsEnviados() {
+    if (true) {
+
+    }
+  }
 
 });
