@@ -2,37 +2,80 @@
 
   //-- Section 1 : Homevideo ---------------------------------------------------
   &--homevideo {
-    background: $negro url('../images/FIBARO_Lili_No_HUD.png') no-repeat center center;
     background-size: cover;
     position: relative;
 
 
-    &__title {
-      bottom: 10%;
-      left: 50%;
-      position: absolute;
-      text-shadow: .1rem .1rem .2rem rgba($negro, .9);
-      transform: translateX(-50%) translateY(0%);
+    @include xxs-device {
+      background: $negro url('../images/tu-hogar-inteligente.png') no-repeat center center;
+      height: 100vh;
+      padding-top: 5rem;
+
+      &__video {
+        display: none;
+      }
+
+      &__title {
+        display: block;
+        left: 50%;
+        position: absolute;
+        text-shadow: .1rem .1rem .2rem rgba($negro, .9);
+        top: 10%;
+        transform: translateX(-50%) translateY(0%);
+        width: 80%;
+      }
     }
 
-    &__video {
+    @include sm-device {
+      background: $negro url('../images/tu-hogar-inteligente-tablet.png') no-repeat center center;
       height: auto;
-      max-height: 100%;
-      width: 100%;
-      z-index: -100;
+      min-height: 46rem;
+      padding-top: 0;
+
     }
 
-    &::after {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(145, 255, 48, 0) 100%);
-      color: transparent;
-      content: 'Hola';
-      float: left;
-      font-size: 10.2rem;
-      left: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
+
+
+    @include md-device {
+    background: $negro;
+
+      &__video {
+        display: block;
+        height: auto;
+        max-height: 100%;
+        width: 100%;
+        z-index: -100;
+      }
+
+      &__title {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: initial;
+
+        h2 {
+          font-size: 6.2rem;
+          font-weight: 300;
+        }
+
+        p {
+          font-size: 2.2rem;
+        }
+      }
+
+
+      &::after {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(145, 255, 48, 0) 100%);
+        color: transparent;
+        content: 'Hola';
+        float: left;
+        font-size: 10.2rem;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
     }
+
   }
 
   //-- Section 2 : Smarthome ---------------------------------------------------
@@ -128,16 +171,19 @@
       @include xxs-device {
         color: $negro;
         margin: 0 auto;
+        padding-top: 4rem;
         width: 90%;
       }
 
       @include sm-device {
-        color: $blanco;
-        left: 50%;
-        position: absolute;
-        text-shadow: .1rem .1rem .2rem rgba($negro, .9);
-        top: 15%;
-        transform: translateX(-50%) translateY(0%);
+        color: $negro;
+        max-width: 80%;
+        padding-top: 4rem;
+
+        .horario {
+          font-size: 1.4rem;
+          font-weight: 300;
+        }
       }
 
       @include md-device {
@@ -267,76 +313,138 @@
       }
     }
   }
-}
 
-.floating {
-  background: $blanco;
-  border: 1px solid rgba(#979797, .17);
-  border-radius: .4rem;
-  border-style: inset;
-  box-shadow:  0 .2rem .4rem rgba($negro, .16);
-  float: right;
-  min-height: 30rem;
-  opacity: 0;
-  padding: 1.5rem;
-  position: fixed;
-  width: 40rem;
-  z-index: 9;
+  //-- Elementos Flotantes -----------------------------------------------------
 
-  @include xxs-device {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 30px);
+  input {
+    appearance: none;
+    box-shadow: none;
+    margin-bottom: 1rem;
   }
 
-  @include sm-device {
-    bottom: 1rem;
-    left: initial;
-    max-width: 30rem;
-    right: 1rem;
-    top: initial;
-    transform: none;
+  &__modal-salir {
+
+    .modal {
+      &-content {
+        @include xxs-device {
+          max-width: 32rem;
+        }
+
+        input {
+          appearance: none;
+          box-shadow: none;
+          margin-bottom: 1rem;
+        }
+      }
+
+      &-dialog {
+        max-width: 32rem;
+      }
+
+      &-header {
+        border: 0;
+        padding-bottom: 0;
+      }
+
+      &-body {
+        padding-top: 0;
+
+        h3 {
+          font-size: 3rem;
+          font-weight: 300;
+        }
+
+        .lead {
+          font-size: 1.6rem;
+        }
+      }
+    }
   }
 
-  @keyframes elevacion {
-    from { bottom: 1rem; }
-    to { bottom: 38rem; }
-  }
+  &__contact-form {
+    background: $blanco;
+    border: 1px solid rgba(#979797, .17);
+    border-radius: .4rem;
+    border-style: inset;
+    box-shadow:  0 .2rem .4rem rgba($negro, .16);
+    display: block;
+    float: right;
+    min-height: 30rem;
+    opacity: 0;
+    padding: 1.5rem;
+    position: fixed;
+    z-index: 9;
 
-  @include lg-device {
-    bottom: 3rem;
-    right: 3rem;
-  }
+    @include xxs-device {
+      bottom: 10%;
+      left: 50%;
+      margin-left: -37.5%;
+      right: auto;
+      width: 75%;
+    }
+
+    @include sm-device {
+      bottom: 1rem;
+      left: initial;
+      margin-left: 0;
+      max-width: 32rem;
+      right: 1rem;
+      top: initial;
+      // transform: none;
+    }
+
+    @keyframes elevacion {
+      from { bottom: 1rem; }
+      to { bottom: 38rem; }
+    }
+
+    @include lg-device {
+      bottom: 3rem;
+      right: 3rem;
+    }
 
 
-    input {
+    input,
+    textarea {
       appearance: none;
+      border-radius: .2rem;
       box-shadow: none;
       margin-bottom: 1rem;
     }
 
-  .btn-subscribe {
-    background-color: $blanco;
-    border: 1px solid $azul;
-    color: $azul;
-    font-weight: 400;
-    width: 100%;
-
-    &:hover {
-      background-color: $azul;
-      color: $blanco;
-    }
   }
-
 }
+
 
 .sube {
   animation: elevacion 3s;
   animation-fill-mode: forwards;
 }
 
+.btn-subscribe {
+  background-color: $blanco;
+  border: 1px solid $azul;
+  color: $azul;
+  font-weight: 400;
+  transition:  all 300ms ease-out;
+  width: 100%;
 
+  &:hover {
+    background-color: $azul;
+    border: 1px solid $azul;
+    color: $blanco;
+  }
+}
+
+.preloader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: $blanco;
+  z-index: 9999;
+  transition: all 800ms ease-out;
+}
 
 @media (max-width: 992px) {
   .navbar-collapse.collapse {

@@ -436,7 +436,7 @@ b {
 }
 
 .navbar-collapse.navbar-ex1-collapse.collapse.in .navbar-nav li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
 }
 
@@ -1416,37 +1416,75 @@ b {
 }
 
 .inicio-tuhogar--homevideo {
-  background: #111 url("../images/FIBARO_Lili_No_HUD.png") no-repeat center center;
   background-size: cover;
   position: relative;
 }
 
-.inicio-tuhogar--homevideo__title {
-  bottom: 10%;
-  left: 50%;
-  position: absolute;
-  text-shadow: 0.1rem 0.1rem 0.2rem rgba(17, 17, 17, 0.9);
-  -webkit-transform: translateX(-50%) translateY(0%);
-          transform: translateX(-50%) translateY(0%);
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar--homevideo {
+    background: #111 url("../images/tu-hogar-inteligente.png") no-repeat center center;
+    height: 100vh;
+    padding-top: 5rem;
+  }
+  .inicio-tuhogar--homevideo__video {
+    display: none;
+  }
+  .inicio-tuhogar--homevideo__title {
+    display: block;
+    left: 50%;
+    position: absolute;
+    text-shadow: 0.1rem 0.1rem 0.2rem rgba(17, 17, 17, 0.9);
+    top: 10%;
+    -webkit-transform: translateX(-50%) translateY(0%);
+            transform: translateX(-50%) translateY(0%);
+    width: 80%;
+  }
 }
 
-.inicio-tuhogar--homevideo__video {
-  height: auto;
-  max-height: 100%;
-  width: 100%;
-  z-index: -100;
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar--homevideo {
+    background: #111 url("../images/tu-hogar-inteligente-tablet.png") no-repeat center center;
+    height: auto;
+    min-height: 46rem;
+    padding-top: 0;
+  }
 }
 
-.inicio-tuhogar--homevideo::after {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(145, 255, 48, 0) 100%);
-  color: transparent;
-  content: 'Hola';
-  float: left;
-  font-size: 10.2rem;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
+@media only screen and (min-width: 992px) {
+  .inicio-tuhogar--homevideo {
+    background: #111;
+  }
+  .inicio-tuhogar--homevideo__video {
+    display: block;
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    z-index: -100;
+  }
+  .inicio-tuhogar--homevideo__title {
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: initial;
+  }
+  .inicio-tuhogar--homevideo__title h2 {
+    font-size: 6.2rem;
+    font-weight: 300;
+  }
+  .inicio-tuhogar--homevideo__title p {
+    font-size: 2.2rem;
+  }
+  .inicio-tuhogar--homevideo::after {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(145, 255, 48, 0) 100%);
+    color: transparent;
+    content: 'Hola';
+    float: left;
+    font-size: 10.2rem;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .inicio-tuhogar--smarthome {
@@ -1545,19 +1583,20 @@ b {
   .inicio-tuhogar__experience-center__title-container {
     color: #111;
     margin: 0 auto;
+    padding-top: 4rem;
     width: 90%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .inicio-tuhogar__experience-center__title-container {
-    color: #fff;
-    left: 50%;
-    position: absolute;
-    text-shadow: 0.1rem 0.1rem 0.2rem rgba(17, 17, 17, 0.9);
-    top: 15%;
-    -webkit-transform: translateX(-50%) translateY(0%);
-            transform: translateX(-50%) translateY(0%);
+    color: #111;
+    max-width: 80%;
+    padding-top: 4rem;
+  }
+  .inicio-tuhogar__experience-center__title-container .horario {
+    font-size: 1.4rem;
+    font-weight: 300;
   }
 }
 
@@ -1680,40 +1719,81 @@ b {
   color: #0090ff;
 }
 
-.floating {
+.inicio-tuhogar input {
+  -webkit-appearance: none;
+          appearance: none;
+  box-shadow: none;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar__modal-salir .modal-content {
+    max-width: 32rem;
+  }
+}
+
+.inicio-tuhogar__modal-salir .modal-content input {
+  -webkit-appearance: none;
+          appearance: none;
+  box-shadow: none;
+  margin-bottom: 1rem;
+}
+
+.inicio-tuhogar__modal-salir .modal-dialog {
+  max-width: 32rem;
+}
+
+.inicio-tuhogar__modal-salir .modal-header {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.inicio-tuhogar__modal-salir .modal-body {
+  padding-top: 0;
+}
+
+.inicio-tuhogar__modal-salir .modal-body h3 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.inicio-tuhogar__modal-salir .modal-body .lead {
+  font-size: 1.6rem;
+}
+
+.inicio-tuhogar__contact-form {
   background: #fff;
   border: 1px solid rgba(151, 151, 151, 0.17);
   border-radius: .4rem;
   border-style: inset;
   box-shadow: 0 0.2rem 0.4rem rgba(17, 17, 17, 0.16);
+  display: block;
   float: right;
   min-height: 30rem;
   opacity: 0;
   padding: 1.5rem;
   position: fixed;
-  width: 40rem;
   z-index: 9;
 }
 
 @media only screen and (min-width: 320px) {
-  .floating {
+  .inicio-tuhogar__contact-form {
+    bottom: 10%;
     left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: calc(100% - 30px);
+    margin-left: -37.5%;
+    right: auto;
+    width: 75%;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .floating {
+  .inicio-tuhogar__contact-form {
     bottom: 1rem;
     left: initial;
-    max-width: 30rem;
+    margin-left: 0;
+    max-width: 32rem;
     right: 1rem;
     top: initial;
-    -webkit-transform: none;
-            transform: none;
   }
 }
 
@@ -1736,30 +1816,19 @@ b {
 }
 
 @media only screen and (min-width: 1200px) {
-  .floating {
+  .inicio-tuhogar__contact-form {
     bottom: 3rem;
     right: 3rem;
   }
 }
 
-.floating input {
+.inicio-tuhogar__contact-form input,
+.inicio-tuhogar__contact-form textarea {
   -webkit-appearance: none;
           appearance: none;
+  border-radius: .2rem;
   box-shadow: none;
   margin-bottom: 1rem;
-}
-
-.floating .btn-subscribe {
-  background-color: #fff;
-  border: 1px solid #0090ff;
-  color: #0090ff;
-  font-weight: 400;
-  width: 100%;
-}
-
-.floating .btn-subscribe:hover {
-  background-color: #0090ff;
-  color: #fff;
 }
 
 .sube {
@@ -1767,6 +1836,31 @@ b {
           animation: elevacion 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.btn-subscribe {
+  background-color: #fff;
+  border: 1px solid #0090ff;
+  color: #0090ff;
+  font-weight: 400;
+  transition: all 300ms ease-out;
+  width: 100%;
+}
+
+.btn-subscribe:hover {
+  background-color: #0090ff;
+  border: 1px solid #0090ff;
+  color: #fff;
+}
+
+.preloader {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #fff;
+  z-index: 9999;
+  transition: all 800ms ease-out;
 }
 
 @media (max-width: 992px) {

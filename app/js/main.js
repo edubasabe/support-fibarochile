@@ -1,23 +1,16 @@
-function altoNav() {
-  var resultado = $('.navbar').height();
-  return resultado + 'px';
-}
-var valorAlto = altoNav();
-
-
+//-- Funciones Globales --------------------------------------------------------
+/* Si se clickea el Menu */
 function clickeaMenu() {
   $('.navbar.navbar-default.nav-text-white.navbar-fixed-top li > a').click( function () {
     return true;
   });
 }
 
+/* Crear una cookie */
 function setCookie() {
   document.cookie = "Subscripcion=Realizada";
 }
-function setCookieForm() {
-  document.cookie = "formulario=Enviado";
-}
-
+/* Obtener una cookie */
 function getCookie(name) {
     var dc = document.cookie;
     var prefix = name + "=";
@@ -39,8 +32,7 @@ function getCookie(name) {
     return decodeURI(dc.substring(begin + prefix.length, end));
  }
 
-var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
-
+/* Checkear el ancho de la ventana para saber si es Mobile */
 function checkWidth() {
   var windowSize = $(window).width();
   if ( windowSize <= 414) {
@@ -52,9 +44,9 @@ function checkWidth() {
   }
 }
 
-//-- Padding Nav
+//-- Padding Nav  --------------------------------------------------------------
+/* Centrar los elementos del menu con el padding */
 $(document).on('ready', function () {
-
 if ( !checkWidth() ) {
 
  var navHeight = $('.navbar').height();
@@ -74,14 +66,11 @@ if ( !checkWidth() ) {
       'margin-bottom': paddingNav
   });
 }
-
-
 });
 
 
 //-- JQuery Easing
-//-- jQuery to collapse the navbar on scroll
-
+/* jQuery to collapse the navbar on scroll */
 function scrollCheck() {
   if ($(".navbar").offset().top > 50) {
       $(".navbar-fixed-top").addClass("top-nav-collapse");
@@ -184,7 +173,8 @@ $(document).on('ready', function() {
   });
 });
 
-//-- Button Close
+//-- Button Close --------------------------------------------------------------
+/* Animacion del hamburger btn */
 var btnToggle = $('.navbar-toggle.fixed-left');
 var navCollapse = $('.navbar-collapse.navbar-ex1-collapse.collapse');
 var cenefa = $('.navbar-fixed-top.nav-text-white');
@@ -208,7 +198,7 @@ $(document).on('ready', function () {
   });
 });
 
-//-- Cambiar bg del menu cuando haga scroll
+//-- Cambiar bg del menu cuando haga scroll ------------------------------------
 $(document).ready(function () {
   $(window).bind('scroll', function () {
     if ($(window).scrollTop() < 50 && $(window).width() > 800) {
@@ -219,21 +209,8 @@ $(document).ready(function () {
   });
 });
 
-
-// -- waypoints
+//-- Funciones para Elementos animados con Animate.css -------------------------
 $(document).ready(function () {
-
-// //-- funcion para animar
-// function fadeAnimate(element, section, animation) {
-//   $(element).css('opacity', 0);
-//
-//   $(section).waypoint(function () {
-//       $(element).addClass(animation);
-//   }, { offset: '50%' });
-// }
-
-  // fadeAnimate('#beneficios h2', '#beneficios', 'fadeIn');
-  // fadeAnimate('#beneficios .headline--subheadline', '#beneficios', 'fadeIn');
 
 function fadeElement(element, animation) {
   $(element).css('opacity', 0);
@@ -256,6 +233,8 @@ function fadeElementOffset(element, animation, offsetvalue) {
   });
 }
 
+
+//-- Página Expertos TAMED -----------------------------------------------------
   //-- hero
   fadeElement('#hero-container .landing-expertos__title', 'fadeInDown');
   fadeElement('#hero-container .landing-expertos__titular', 'fadeInLeft');
@@ -293,13 +272,25 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
 
   //-- Tu Hogar Inicio ---------------------------------------------------------
+  $(document).on('ready', function () {
+    setTimeout(function () {
+      $('.preloader').css({
+        'opacity':'0',
+        'visibility':'hidden'
+      });
+    },  1000);
 
+  });
   //-- Revisar si es ipad
   function is_iPad() {
     return (navigator.platform.indexOf("iPad") != -1)
   }
 
-  if (is_iPad()) {
+  function is_iPhone() {
+    return (navigator.platform.indexOf("iPhone") != -1)
+  }
+
+  if (is_iPad() || is_iPhone()) {
     $('video').attr('controls','true');
   }
 
@@ -308,17 +299,26 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
   //-- Waypoint Inicio ---------------------------------------------------------
-  $(function () {
+  // Se cambia el fondo degradado del nav menu cuando es desktop
+  if ( !checkWidth() ) {
+      $('#homevideo').waypoint(function () {
+        $('.navbar-default').toggleClass('bg-black');
+        $('.inicio-tuhogar--homevideo').toggleClass('bg-no-gradient');
+      }, { 'offset': '-80%' });
+  }else {
+    $('.inicio-tuhogar--homevideo').addClass('bg-no-gradient');
     $('#homevideo').waypoint(function () {
-      $('.navbar-default').toggleClass('bg-black');
+      // $('.navbar-default').toggleClass('bg-black');
       $('.inicio-tuhogar--homevideo').toggleClass('bg-no-gradient');
     }, { 'offset': '-80%' });
-  });
+  }
+
 
   //-- Formulario de Subscripcion ----------------------------------------------
+  // Si es IPad y seleccionan el campo de nombre subir más el formulario flotante
   if (is_iPad()) {
     $('#name').on('focus', function () {
-      $('.floating.subscribers-form').toggleClass('sube');
+      $('.floating.inicio-tuhogar__contact-form').toggleClass('sube');
     });
   }
 
@@ -326,13 +326,15 @@ function fadeElementOffset(element, animation, offsetvalue) {
   if ( myCookie !== "Realizada" ) {
 
     fadeElementOffset('#porque-fibaro .floating', 'fadeInUp', '50%');
-    $('.subscribers-form .close').on('click', function () {
-      $('.subscribers-form').css('display', 'none');
+    $('.inicio-tuhogar__contact-form .close').on('click', function () {
+      $('.inicio-tuhogar__contact-form').css('display', 'none');
     });
   }
 
 
-  //-- Ventana Modal de Subscripcion
+  //-- Ventana Modal de Subscripcion -------------------------------------------
+  /* Mientras la cantidad de mouse over sea menor a 2 y no haya cookie del
+  formulario de suscripcion mostrar ventana modal */
   var contar = 0;
   var myCookie = getCookie("Subscripcion");
   $(document).on('mouseleave', function () {
@@ -341,12 +343,4 @@ function fadeElementOffset(element, animation, offsetvalue) {
       $('#modal-subscribirse').modal();
     }
   })
-
-  //-- Formularios Enviados
-  function formsEnviados() {
-    if (true) {
-
-    }
-  }
-
-});
+ });
