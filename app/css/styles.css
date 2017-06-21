@@ -1580,18 +1580,44 @@ b {
 }
 
 @media only screen and (min-width: 320px) {
+  .inicio-tuhogar__experience-center {
+    background: url("../images/experience-center-night-tablet.jpg") no-repeat right center;
+    background-size: cover;
+    min-height: 40rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inicio-tuhogar__experience-center {
+    background-position: center -12rem;
+    min-height: 60rem;
+  }
+}
+
+@media only screen and (min-width: 320px) {
+  .inicio-tuhogar__experience-center__image {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .inicio-tuhogar__experience-center__image {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 320px) {
   .inicio-tuhogar__experience-center__title-container {
-    color: #111;
+    color: #fff;
     margin: 0 auto;
     padding-top: 4rem;
-    width: 90%;
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .inicio-tuhogar__experience-center__title-container {
     color: #111;
-    max-width: 80%;
     padding-top: 4rem;
   }
   .inicio-tuhogar__experience-center__title-container .horario {
@@ -1614,7 +1640,8 @@ b {
 
 @media only screen and (min-width: 320px) {
   .inicio-tuhogar__experience-center__title-container h2 {
-    font-size: 2rem;
+    color: #fff;
+    font-size: 3rem;
   }
 }
 
@@ -1632,7 +1659,9 @@ b {
 
 @media only screen and (min-width: 320px) {
   .inicio-tuhogar__experience-center__title-container h3 {
+    color: #fff;
     font-size: 1.6rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -1644,7 +1673,8 @@ b {
 
 @media only screen and (min-width: 320px) {
   .inicio-tuhogar__experience-center__title-container p {
-    font-size: 1.6rem;
+    color: #fff;
+    font-size: 1.2rem;
   }
 }
 
@@ -1719,6 +1749,20 @@ b {
   color: #0090ff;
 }
 
+.inicio-tuhogar__icon-contact {
+  bottom: 1rem;
+  position: fixed;
+  right: 1rem;
+  z-index: 999;
+}
+
+@media only screen and (min-width: 992px) {
+  .inicio-tuhogar__icon-contact {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 .inicio-tuhogar input {
   -webkit-appearance: none;
           appearance: none;
@@ -1782,6 +1826,7 @@ b {
     left: 50%;
     margin-left: -37.5%;
     right: auto;
+    visibility: hidden;
     width: 75%;
   }
 }
@@ -1794,6 +1839,7 @@ b {
     max-width: 32rem;
     right: 1rem;
     top: initial;
+    visibility: initial;
   }
 }
 
@@ -1853,14 +1899,21 @@ b {
   color: #fff;
 }
 
-.preloader {
+.mostrar {
   display: block;
-  width: 100%;
+  opacity: 1;
+  transition: all 300ms ease-out;
+  visibility: visible;
+}
+
+.preloader {
+  background: #fff;
+  display: block;
   height: 100%;
   position: fixed;
-  background: #fff;
-  z-index: 9999;
   transition: all 800ms ease-out;
+  width: 100%;
+  z-index: 9999;
 }
 
 @media (max-width: 992px) {

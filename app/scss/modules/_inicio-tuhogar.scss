@@ -165,19 +165,38 @@
   //-- Section 4 : Experience Center -------------------------------------------
   &__experience-center {
     position: relative;
+    @include xxs-device {
+      background: url('../images/experience-center-night-tablet.jpg') no-repeat right center;
+      background-size: cover;
+      min-height: 40rem;
+    }
+
+    @include sm-device {
+      background-position: center -12rem;
+      min-height: 60rem;
+    }
+
+    &__image {
+      @include xxs-device {
+        display: block;
+      }
+
+      @include md-device {
+        display: none;
+      }
+    }
 
     &__title-container {
-
       @include xxs-device {
-        color: $negro;
+        color: $blanco;
         margin: 0 auto;
         padding-top: 4rem;
-        width: 90%;
+        width: 100%;
       }
 
       @include sm-device {
         color: $negro;
-        max-width: 80%;
+        // max-width: 80%;
         padding-top: 4rem;
 
         .horario {
@@ -197,7 +216,8 @@
 
       h2 {
         @include xxs-device {
-          font-size: 2rem;
+          color: $blanco;
+          font-size: 3rem;
         }
 
         @include sm-device {
@@ -211,7 +231,9 @@
 
       h3 {
         @include xxs-device {
+          color: $blanco;
           font-size: 1.6rem;
+          margin-bottom: 1rem;
         }
 
         @include sm-device {
@@ -221,7 +243,8 @@
 
       p {
         @include xxs-device {
-          font-size: 1.6rem;
+          color: $blanco;
+          font-size: 1.2rem;
         }
 
         @include sm-device {
@@ -315,6 +338,19 @@
   }
 
   //-- Elementos Flotantes -----------------------------------------------------
+  &__icon-contact {
+    bottom: 1rem;
+    position: fixed;
+    right: 1rem;
+    z-index: 999;
+
+    @include md-device {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+
 
   input {
     appearance: none;
@@ -380,6 +416,7 @@
       left: 50%;
       margin-left: -37.5%;
       right: auto;
+      visibility: hidden;
       width: 75%;
     }
 
@@ -390,6 +427,7 @@
       max-width: 32rem;
       right: 1rem;
       top: initial;
+      visibility: initial;
       // transform: none;
     }
 
@@ -436,14 +474,21 @@
   }
 }
 
-.preloader {
+.mostrar {
   display: block;
-  width: 100%;
+  opacity: 1;
+  transition: all 300ms ease-out;
+  visibility: visible;
+}
+
+.preloader {
+  background: $blanco;
+  display: block;
   height: 100%;
   position: fixed;
-  background: $blanco;
-  z-index: 9999;
   transition: all 800ms ease-out;
+  width: 100%;
+  z-index: 9999;
 }
 
 @media (max-width: 992px) {

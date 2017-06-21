@@ -314,7 +314,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
 
-  //-- Formulario de Subscripcion ----------------------------------------------
+  //-- Formulario de Contacto --------------------------------------------------
   // Si es IPad y seleccionan el campo de nombre subir más el formulario flotante
   if (is_iPad()) {
     $('#name').on('focus', function () {
@@ -323,14 +323,28 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
   var myCookie = getCookie("Subscripcion");
+  // Si no existe una cookie del formulario
   if ( myCookie !== "Realizada" ) {
+    // Mostar solo si no es mobile
+      if ( !checkWidth()) {
+        // Apertura de la pop up de contacto con el waypoint al 50%
+        fadeElementOffset('#porque-fibaro .floating', 'fadeInUp', '50%');
 
-    fadeElementOffset('#porque-fibaro .floating', 'fadeInUp', '50%');
-    $('.inicio-tuhogar__contact-form .close').on('click', function () {
-      $('.inicio-tuhogar__contact-form').css('display', 'none');
-    });
+        //Al hacer click el en btn cerrarlo es decir colocarle display none
+        $('.inicio-tuhogar__contact-form .close').on('click', function () {
+          $('.inicio-tuhogar__contact-form').css('display', 'none');
+        });
+      }
   }
+  // Al hacer click en el btn del icono de correo
+  $('.inicio-tuhogar__icon-contact').on('click', function () {
+    $('.floating.inicio-tuhogar__contact-form').addClass('mostrar');
+  });
 
+  //Al hacer click el en btn cerrarlo es decir colocarle display none
+  $('.inicio-tuhogar__contact-form .close').on('click', function () {
+    $('.inicio-tuhogar__contact-form').removeClass('mostrar');
+  });
 
   //-- Ventana Modal de Subscripcion -------------------------------------------
   /* Mientras la cantidad de mouse over sea menor a 2 y no haya cookie del
@@ -342,5 +356,11 @@ function fadeElementOffset(element, animation, offsetvalue) {
     if (contar < 2 && myCookie !== "Realizada") {
       $('#modal-subscribirse').modal();
     }
-  })
+  });
+
+  //-- Breaks en Mobile de la seccion Experience center ------------------------
+  if ( checkWidth() ) {
+    $('.horario').html('Lunes a Viernes: <br> 9:00 AM – 07:00 PM <br> Sábado:  10:00 AM – 07:00 PM <br><br>');
+  }
+
  });
