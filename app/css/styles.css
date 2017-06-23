@@ -229,7 +229,12 @@ b {
 }
 
 .navbar {
-  transition: background .5s ease-in-out, padding .5s ease-in-out;
+  margin-bottom: 0;
+  transition: all 300ms ease;
+}
+
+.navbar-fixed-top {
+  transition: all 500ms ease;
 }
 
 .navbar__logo-text {
@@ -237,7 +242,6 @@ b {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
-  padding-left: 1.5rem !important;
 }
 
 @media only screen and (min-width: 320px) {
@@ -253,24 +257,14 @@ b {
 }
 
 .navbar-default {
-  background-color: #323232;
-  border-color: #323232;
-}
-
-@media only screen and (min-width: 768px) {
-  .navbar-default {
-    background: transparent;
-    border: 0;
-  }
-}
-
-.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: rgba(226, 226, 226, 0);
 }
 
 .navbar-default .navbar-nav > li > a {
   color: #fff;
   font-size: 1.4rem;
+  font-weight: 300;
   transition: color 250ms;
 }
 
@@ -306,18 +300,40 @@ b {
 }
 
 .navbar-default .navbar-brand {
+  background-position: center;
   color: #111;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@media only screen and (min-width: 320px) {
+  .navbar-default .navbar-brand {
+    background-size: 80%;
+    max-height: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-default .navbar-brand {
+    background-size: contain;
+  }
+}
+
+.navbar-default .navbar-brand img {
+  -webkit-align-self: center;
+          align-self: center;
 }
 
 @media only screen and (min-width: 320px) {
   .navbar-default .navbar-brand img {
-    margin-top: 0;
+    max-height: 2rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .navbar-default .navbar-brand img {
-    margin-top: .4rem;
+    max-height: 2.7rem;
+    opacity: 0;
   }
 }
 
@@ -327,18 +343,15 @@ b {
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
+  transition: all 300ms ease-out;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #fff;
-  height: 1px;
-  transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-}
-
-.navbar-default .navbar-toggle .icon-bar + .icon-bar {
-  margin-top: .6rem;
 }
 
 .navbar-brand {
@@ -346,6 +359,7 @@ b {
   display: flex;
   height: auto;
   line-height: normal;
+  position: relative;
 }
 
 @media only screen and (min-width: 320px) {
@@ -359,6 +373,12 @@ b {
   .navbar-brand {
     padding: 2rem 1.5rem;
   }
+}
+
+.navbar-brand .color-logo {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 .navbar__logo-subtext {
@@ -393,71 +413,6 @@ b {
   top: -2px;
 }
 
-.navbar-collapse {
-  max-height: 100vh;
-}
-
-@media only screen and (min-width: 768px) {
-  .navbar-collapse .navbar-nav li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .navbar-collapse .navbar-nav li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    width: initial;
-  }
-}
-
-.navbar-collapse .navbar-nav li:last-child {
-  border-bottom: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .navbar-collapse .navbar-nav {
-    float: none;
-    margin: 0 auto;
-    max-width: 40rem;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .navbar-collapse .navbar-nav {
-    float: right;
-    max-width: none;
-  }
-}
-
-.navbar-collapse.navbar-ex1-collapse.collapse.in {
-  background-color: #111;
-  max-height: 100vh;
-}
-
-.navbar-collapse.navbar-ex1-collapse.collapse.in .navbar-nav li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  width: 100%;
-}
-
-.navbar-collapse.navbar-ex1-collapse.collapse.in .navbar-nav li:last-child {
-  border-bottom: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .navbar-collapse.navbar-ex1-collapse.collapse.in .navbar-nav {
-    float: none;
-    margin: 0 auto;
-    max-width: 40rem;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .navbar-collapse.navbar-ex1-collapse.collapse.in .navbar-nav {
-    float: right;
-  }
-}
-
 .nav-pills > li {
   display: inline-block;
   float: none;
@@ -465,27 +420,80 @@ b {
 
 .nav-pills > li.active a {
   background-color: #0090ff;
+  transition: background 250ms;
 }
 
 .nav-pills > li.active a:hover, .nav-pills > li.active a:focus, .nav-pills > li.active a:active {
   background-color: #111;
 }
 
+@media only screen and (min-width: 320px) {
+  .nav li {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 0 1.5rem;
+  }
+  .nav li:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav li {
+    border-bottom: 0;
+  }
+}
+
 .nav li a {
+  padding-left: 0;
+  padding-right: 0;
   transition: background-color 250ms;
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #111;
+.open-animation {
+  height: 3.4rem;
 }
 
-.navbar.nav-text-white.navbar-fixed-top.navbar-default.blacking-bg {
-  background: #111;
+.open-animation .icon-bar {
+  transition: all 300ms ease-out;
 }
 
-.bg-black {
-  background: #111 !important;
+.open-animation .icon-bar:nth-child(2) {
+  margin-bottom: -.6rem;
+}
+
+.open-animation .icon-bar:last-child {
+  margin-top: -2px;
+}
+
+.bg-white {
+  background-color: white;
+  border-bottom: 1px solid #e2e2e2;
+  color: #111;
+}
+
+.bg-white .navbar-brand {
+  background: url("../images/tamed-logo-2017.svg") no-repeat center center;
+  transition: background 300ms ease;
+}
+
+@media only screen and (min-width: 320px) {
+  .bg-white .navbar-brand {
+    background-size: 85%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .bg-white .navbar-brand img {
+    opacity: 0;
+  }
+}
+
+.bg-white .navbar-toggle .icon-bar {
+  background-color: #0090ff;
+}
+
+.bg-white .navbar-nav li a {
+  color: #111;
 }
 
 .bg-no-gradient::after {

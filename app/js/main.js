@@ -1,11 +1,15 @@
+//-- Variables Globales --------------------------------------------------------
+var navHeight = $('.navbar').height();
+var navbar = $('.navbar.navbar-default');
+var body = $('body');
+var buttonNavbarToggle = $('button.navbar-toggle');
 //-- Funciones Globales --------------------------------------------------------
 /* Si se clickea el Menu */
 function clickeaMenu() {
-  $('.navbar.navbar-default.nav-text-white.navbar-fixed-top li > a').click( function () {
+  $('.navbar.navbar-default.navbar-fixed-top li > a').click( function () {
     return true;
   });
 }
-
 /* Crear una cookie */
 function setCookie() {
   document.cookie = "Subscripcion=Realizada";
@@ -31,7 +35,6 @@ function getCookie(name) {
     //return unescape(dc.substring(begin + prefix.length, end));
     return decodeURI(dc.substring(begin + prefix.length, end));
  }
-
 /* Checkear el ancho de la ventana para saber si es Mobile */
 function checkWidth() {
   var windowSize = $(window).width();
@@ -44,44 +47,28 @@ function checkWidth() {
   }
 }
 
+function calcularPadding(element) {
+  var elementHeight = $(element).height();
+  var elementMargin = (navHeight - elementHeight) / 2 + 'px';
+  $(element).css({'padding-top': elementMargin, 'padding-bottom': elementMargin });
+}
+function calcularMargin(element) {
+  var elementHeight = $(element).height();
+  var elementMargin = (navHeight - elementHeight) / 2 + 'px';
+  $(element).css({'padding-top': elementMargin, 'padding-bottom': elementMargin });
+}
+
+function calcularPaddingNav(element) {
+  var elementHeight = $(element).height();
+  var elementMargin = (navHeight - 20) / 2 + 'px';
+  $(element).css({'padding-top': elementMargin, 'padding-bottom': elementMargin });
+}
 //-- Padding Nav  --------------------------------------------------------------
 /* Centrar los elementos del menu con el padding */
-$(document).on('ready', function () {
-if ( !checkWidth() ) {
+calcularPadding('.navbar-brand.navbar__logo-text');
+calcularMargin('.navbar-brand .color-logo');
+calcularPaddingNav('.nav.navbar-nav li > a');
 
- var navHeight = $('.navbar').height();
- var paddingNav = (navHeight - 20) / 2  + 'px';
-  $('.nav.navbar-nav li > a').css({
-      'padding-top': paddingNav,
-      'padding-bottom': paddingNav,
-  });
-
-  $('.navbar-brand.navbar__logo-text').css({
-      'padding-top': paddingNav,
-      'padding-bottom': paddingNav,
-  });
-
-  $('button.navbar-toggle.fixed-left').css({
-      'margin-top':paddingNav,
-      'margin-bottom': paddingNav
-  });
-}
-});
-
-
-//-- JQuery Easing
-/* jQuery to collapse the navbar on scroll */
-function scrollCheck() {
-  if ($(".navbar").offset().top > 50) {
-      $(".navbar-fixed-top").addClass("top-nav-collapse");
-  } else {
-      $(".navbar-fixed-top").removeClass("top-nav-collapse");
-  }
-}
-
-$(window).scroll(function() {
-  scrollCheck();
-});
 
 //-- jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
@@ -97,31 +84,6 @@ $(function() {
 
 //-- Owl Testimonios
 $(document).on('ready', function() {
-  /*$('.owl-carousel').owlCarousel({
-      loop:true,
-      autoplay:true,
-      autoplayTimeout:15000,
-      margin:10,
-      nav: false,
-      dots:true,
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-              nav:false
-          },
-          600:{
-              items:1,
-              nav:false
-          },
-          1000:{
-              items:1,
-              nav:false,
-              loop:true
-          }
-      }
-  }); */
-
   $('#owl-casos-de-exito').owlCarousel({
       loop:true,
       autoplay:true,
@@ -174,40 +136,47 @@ $(document).on('ready', function() {
 });
 
 //-- Button Close --------------------------------------------------------------
-/* Animacion del hamburger btn */
-var btnToggle = $('.navbar-toggle.fixed-left');
-var navCollapse = $('.navbar-collapse.navbar-ex1-collapse.collapse');
-var cenefa = $('.navbar-fixed-top.nav-text-white');
-$(document).on('ready', function () {
-  // Si el btn No tiene la clase 'cerrado'
-  if (!btnToggle.hasClass('cerrado') ) {
-    btnToggle.click(function () {
-      $(this).toggleClass('cerrado');
-      cenefa.toggleClass('blacking-bg');
-      cenefa.removeClass('bg-gradient');
-    });
-  }
+/* Funcion al hacer click */
+  buttonNavbarToggle.on('click', function () {
+    $(this).toggleClass('open-animation');
 
-  // Si hacen click en una opcion del menu
-  $('.navbar-collapse.navbar-ex1-collapse ul li > a').click(function () {
-    $('.navbar-collapse.navbar-ex1-collapse').removeClass('in');
-    if (btnToggle.hasClass('cerrado') && cenefa.hasClass('blacking-bg')) {
-      btnToggle.removeClass('cerrado');
-      cenefa.removeClass('blacking-bg');
+    /* Cuando el usuario haga click si el navbar no tiene el bg-white agregarselo  */
+    if ( !navbar.hasClass('bg-white')) {
+      navbar.addClass('bg-white');
     }
   });
-});
 
-//-- Cambiar bg del menu cuando haga scroll ------------------------------------
-$(document).ready(function () {
-  $(window).bind('scroll', function () {
-    if ($(window).scrollTop() < 50 && $(window).width() > 800) {
-        cenefa.addClass('bg-gradient');
-    } else {
-        cenefa.removeClass('bg-gradient');
+//-- Si hacen click en una opcion del menu
+$(function () {
+    if (clickeaMenu()){
+      $('.navbar-collapse.navbar-ex1-collapse').removeClass('in');
     }
-  });
-});
+})
+
+
+// var btnToggle = $('.navbar-toggle.fixed-left');
+// var navCollapse = $('.navbar-collapse.navbar-ex1-collapse.collapse');
+// var cenefa = $('.navbar-fixed-top.nav-text-white');
+// $(document).on('ready', function () {
+//   // Si el btn No tiene la clase 'cerrado'
+//   if (!btnToggle.hasClass('cerrado') ) {
+//     btnToggle.click(function () {
+//       $(this).toggleClass('cerrado');
+//       cenefa.toggleClass('blacking-bg');
+//       cenefa.removeClass('bg-gradient');
+//     });
+//   }
+//
+//   // Si hacen click en una opcion del menu
+//   $('.navbar-collapse.navbar-ex1-collapse ul li > a').click(function () {
+//     $('.navbar-collapse.navbar-ex1-collapse').removeClass('in');
+//     if (btnToggle.hasClass('cerrado') && cenefa.hasClass('blacking-bg')) {
+//       btnToggle.removeClass('cerrado');
+//       cenefa.removeClass('blacking-bg');
+//     }
+//   });
+// });
+
 
 //-- Funciones para Elementos animados con Animate.css -------------------------
 $(document).ready(function () {
@@ -266,21 +235,17 @@ function fadeElementOffset(element, animation, offsetvalue) {
   fadeElement('#testimonios h2', 'fadeIn');
   fadeElement('#testimonios .owl-stage-outer', 'fadeIn');
 
-  //-- Dudas
-  // fadeElement('#contacto-pato h2', 'fadeIn');
-  // fadeElement('#contacto-pato table', 'fadeInUp');
-
 
   //-- Tu Hogar Inicio ---------------------------------------------------------
-  $(document).on('ready', function () {
+  /* $(document).on('ready', function () {
     setTimeout(function () {
       $('.preloader').css({
         'opacity':'0',
         'visibility':'hidden'
       });
     },  1000);
-
   });
+  */
   //-- Revisar si es ipad
   function is_iPad() {
     return (navigator.platform.indexOf("iPad") != -1)
@@ -300,19 +265,12 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
   //-- Waypoint Inicio ---------------------------------------------------------
   // Se cambia el fondo degradado del nav menu cuando es desktop
-  if ( !checkWidth() ) {
-      $('#homevideo').waypoint(function () {
-        $('.navbar-default').toggleClass('bg-black');
-        $('.inicio-tuhogar--homevideo').toggleClass('bg-no-gradient');
-      }, { 'offset': '-80%' });
-  }else {
-    $('.inicio-tuhogar--homevideo').addClass('bg-no-gradient');
     $('#homevideo').waypoint(function () {
-      // $('.navbar-default').toggleClass('bg-black');
+      if ( !navbar.hasClass('bg-white') ) {
+      navbar.toggleClass('bg-white');
+    }
       $('.inicio-tuhogar--homevideo').toggleClass('bg-no-gradient');
-    }, { 'offset': '-80%' });
-  }
-
+    }, { 'offset': '-50%' });
 
   //-- Formulario de Contacto --------------------------------------------------
   // Si es IPad y seleccionan el campo de nombre subir más el formulario flotante

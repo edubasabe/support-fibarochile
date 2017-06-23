@@ -1,12 +1,16 @@
 .navbar {
-  transition: background .5s ease-in-out, padding .5s ease-in-out;
+  margin-bottom: 0;
+  transition: all 300ms ease;
+
+  &-fixed-top  {
+      transition: all 500ms ease;
+  }
 
   &__logo-text {
     color: $negro;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: -1px;
-    padding-left: 1.5rem !important;
 
     @include xxs-device {
       font-size: 1.8rem;
@@ -18,28 +22,16 @@
   }
 
   &-default {
-    background-color: $gris-mac;
-    border-color: $gris-mac;
-
-    @include sm-device {
-      background: transparent;
-      border: 0;
-    }
-
-    .navbar-toggle {
-      &:focus,
-      &:hover {
-        background-color: transparent;
-      }
-    }
+    background-color: rgba($blanco, 0);
+    border-color: rgba(#e2e2e2, 0);
 
     .navbar-nav {
       & > {
-
         li > {
           a {
             color: $blanco;
             font-size: 1.4rem;
+            font-weight: 300;
             transition: color 250ms;
 
             &:hover {
@@ -78,17 +70,30 @@
     }
 
     .navbar-brand {
+      background-position: center;
       color: $negro;
+      display: flex;
+
+      @include xxs-device {
+        background-size: 80%;
+        max-height: 2rem;
+      }
+
+      @include md-device {
+        background-size: contain;
+      }
 
       img {
+        align-self: center;
 
         @include xxs-device {
-          margin-top: 0;
-        }
-        @include md-device {
-          margin-top: .4rem;
+          max-height: 2rem;
         }
 
+        @include md-device {
+          max-height: 2.7rem;
+          opacity: 0;
+        }
       }
 
       &:hover {
@@ -98,15 +103,15 @@
 
     .navbar-toggle {
       border-color: transparent;
+      transition: all 300ms ease-out;
+
+      &:focus,
+      &:hover {
+        background: transparent;
+      }
 
       .icon-bar {
         background-color: $blanco;
-        height: 1px;
-        transition: transform .25s cubic-bezier(.4, .01, .165, .99);
-
-        & + .icon-bar {
-          margin-top: .6rem;
-        }
       }
     }
   }
@@ -115,6 +120,7 @@
     display: flex;
     height: auto;
     line-height: normal;
+    position: relative;
 
     @include xxs-device {
       padding: 1.4rem 0;
@@ -124,6 +130,12 @@
     @include md-device {
       padding: 2rem 1.5rem;
 
+    }
+
+    .color-logo {
+      left: 0;
+      position: absolute;
+      top: 0;
     }
   }
 
@@ -154,68 +166,6 @@
       top: -2px;
     }
   }
-
-  &-collapse {
-    max-height: 100vh;
-
-    .navbar-nav {
-      li {
-
-        @include sm-device {
-          border-bottom: 1px solid rgba($blanco, .3);
-          width: 100%;
-        }
-
-        @include md-device {
-          border-bottom: 1px solid rgba($blanco, 0);
-          width: initial;
-        }
-
-        &:last-child {
-          border-bottom: 0;
-        }
-      }
-
-      @include sm-device {
-        float: none;
-        margin: 0 auto;
-        max-width: 40rem;
-      }
-
-      @include md-device {
-        float: right;
-        max-width: none;
-      }
-
-
-    }
-  }
-
-  &-collapse.navbar-ex1-collapse.collapse.in {
-    background-color: #111;
-    max-height: 100vh;
-
-    .navbar-nav {
-      li {
-        border-bottom: 1px solid rgba($blanco, .1);
-        width: 100%;
-
-        &:last-child {
-          border-bottom: 0;
-        }
-      }
-
-      @include sm-device {
-        float: none;
-        margin: 0 auto;
-        max-width: 40rem;
-      }
-
-      @include md-device {
-        float: right;
-      }
-    }
-  }
 }
 
 .nav-pills {
@@ -227,7 +177,7 @@
     &.active {
       a {
         background-color: $azul;
-        // transition: background-color 250ms;
+        transition: background 250ms;
 
         &:hover,
         &:focus,
@@ -241,24 +191,79 @@
 
 .nav {
   li {
+
+    @include xxs-device {
+      border-bottom: 1px solid #e7e7e7;
+      margin: 0 1.5rem;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @include sm-device {
+      border-bottom: 0;
+    }
+
     a {
+      padding-left: 0;
+      padding-right: 0;
       transition: background-color 250ms;
     }
   }
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: $negro;
+.open-animation {
+  height: 3.4rem;
+
+  .icon-bar {
+    transition: all 300ms ease-out;
+
+    &:nth-child(2) {
+      margin-bottom: -.6rem;
+    }
+
+    &:last-child {
+      margin-top: -2px;
+    }
+  }
 }
 
+//-- Navbar White --------------------------------------------------------------
+.bg-white {
+  background-color: rgba($blanco, 1);
+  border-bottom: 1px solid #e2e2e2;
+  color: $negro;
 
-  .navbar.nav-text-white.navbar-fixed-top.navbar-default.blacking-bg {
-    background: #111;
+  .navbar-brand {
+    background: url('../images/tamed-logo-2017.svg') no-repeat center center;
+    transition: background 300ms ease;
+
+    @include xxs-device {
+      background-size: 85%;
+    }
+
+
+    img {
+      @include md-device {
+        opacity: 0;
+      }
+    }
   }
 
-.bg-black {
-  background: #111 !important;
+  .navbar-toggle {
+    .icon-bar {
+      background-color: $azul;
+    }
+  }
+
+  .navbar-nav {
+    li {
+      a {
+        color: $negro;
+      }
+    }
+  }
 }
 
 .bg-no-gradient {
