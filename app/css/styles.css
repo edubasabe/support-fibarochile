@@ -157,6 +157,17 @@ a:focus, a:hover {
   min-height: 8rem;
 }
 
+.navbar {
+  margin-bottom: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.navbar-fixed-top {
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
 .navbar__logo-text {
   color: #111;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -183,6 +194,7 @@ a:focus, a:hover {
 .navbar-default .navbar-nav > li > a {
   color: #111;
   font-size: 1.4rem;
+  font-weight: 300;
   -webkit-transition: color 250ms;
   transition: color 250ms;
 }
@@ -221,17 +233,26 @@ a:focus, a:hover {
 
 .navbar-default .navbar-brand {
   color: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-default .navbar-brand img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media only screen and (min-width: 320px) {
   .navbar-default .navbar-brand img {
-    margin-top: 0;
+    max-height: 2rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .navbar-default .navbar-brand img {
-    margin-top: .4rem;
+    max-height: 2.7rem;
   }
 }
 
@@ -241,6 +262,12 @@ a:focus, a:hover {
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -316,9 +343,42 @@ a:focus, a:hover {
   background-color: #111;
 }
 
+@media only screen and (min-width: 320px) {
+  .nav li {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 0 1.5rem;
+  }
+  .nav li:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav li {
+    border-bottom: 0;
+  }
+}
+
 .nav li a {
   -webkit-transition: background-color 250ms;
   transition: background-color 250ms;
+}
+
+.open-animation {
+  height: 3.4rem;
+}
+
+.open-animation .icon-bar {
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.open-animation .icon-bar:nth-child(2) {
+  margin-bottom: -.6rem;
+}
+
+.open-animation .icon-bar:last-child {
+  margin-top: -2px;
 }
 
 .hero {
@@ -442,6 +502,10 @@ a:focus, a:hover {
 
 .page-section--soluciones .thumbnail img {
   max-height: 5rem;
+}
+
+.page-section--soluciones .thumbnail h3 {
+  font-weight: 300;
 }
 
 @media only screen and (min-width: 320px) {
@@ -947,6 +1011,7 @@ a:focus, a:hover {
 .footer__menu ul li a {
   color: #444;
   font-size: 1.4rem;
+  font-weight: 300;
   text-decoration: none;
 }
 
@@ -981,9 +1046,9 @@ a:focus, a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 0.1rem solid #7e7f7f;
+  border: 0.1rem solid #999;
   border-radius: 3rem;
-  color: #7e7f7f;
+  color: #999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
