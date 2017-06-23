@@ -229,8 +229,14 @@ b {
 }
 
 .navbar {
-  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-  transition: background .5s ease-in-out, padding .5s ease-in-out;
+  margin-bottom: 0;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.navbar-fixed-top {
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 .navbar__logo-text {
@@ -238,7 +244,6 @@ b {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: -1px;
-  padding-left: 1.5rem !important;
 }
 
 @media only screen and (min-width: 320px) {
@@ -254,13 +259,13 @@ b {
 }
 
 .navbar-default {
-  background-color: #323232;
-  border-color: #323232;
+  background-color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a {
   color: #111;
   font-size: 1.4rem;
+  font-weight: 300;
   -webkit-transition: color 250ms;
   transition: color 250ms;
 }
@@ -299,17 +304,27 @@ b {
 
 .navbar-default .navbar-brand {
   color: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 1.5rem;
+}
+
+.navbar-default .navbar-brand img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media only screen and (min-width: 320px) {
   .navbar-default .navbar-brand img {
-    margin-top: 0;
+    max-height: 2rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .navbar-default .navbar-brand img {
-    margin-top: .4rem;
+    max-height: 2.7rem;
   }
 }
 
@@ -319,19 +334,16 @@ b {
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background: transparent;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
-  height: 1px;
-  -webkit-transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-  transition: transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99), -webkit-transform 0.25s cubic-bezier(0.4, 0.01, 0.165, 0.99);
-}
-
-.navbar-default .navbar-toggle .icon-bar + .icon-bar {
-  margin-top: .6rem;
+  background-color: #0090ff;
 }
 
 .navbar-brand {
@@ -403,14 +415,42 @@ b {
   background-color: #111;
 }
 
+@media only screen and (min-width: 320px) {
+  .nav li {
+    border-bottom: 1px solid #e7e7e7;
+    margin: 0 1.5rem;
+  }
+  .nav li:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .nav li {
+    border-bottom: 0;
+  }
+}
+
 .nav li a {
   -webkit-transition: background-color 250ms;
   transition: background-color 250ms;
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #111;
+.open-animation {
+  height: 3.4rem;
+}
+
+.open-animation .icon-bar {
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.open-animation .icon-bar:nth-child(2) {
+  margin-bottom: -.6rem;
+}
+
+.open-animation .icon-bar:last-child {
+  margin-top: -2px;
 }
 
 .hero {

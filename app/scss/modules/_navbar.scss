@@ -1,12 +1,16 @@
 .navbar {
-  transition: background .5s ease-in-out, padding .5s ease-in-out;
+  margin-bottom: 0;
+  transition: all 300ms ease;
+
+  &-fixed-top  {
+      transition: all 500ms ease;
+  }
 
   &__logo-text {
     color: $negro;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     letter-spacing: -1px;
-    padding-left: 1.5rem !important;
 
     @include xxs-device {
       font-size: 1.8rem;
@@ -18,16 +22,15 @@
   }
 
   &-default {
-    background-color: $gris-mac;
-    border-color: $gris-mac;
+    background-color: $blanco;
 
     .navbar-nav {
       & > {
-
         li > {
           a {
             color: $negro;
             font-size: 1.4rem;
+            font-weight: 300;
             transition: color 250ms;
 
             &:hover {
@@ -67,16 +70,19 @@
 
     .navbar-brand {
       color: $negro;
+      display: flex;
+      padding-left: 1.5rem;
 
       img {
+        align-self: center;
 
         @include xxs-device {
-          margin-top: 0;
-        }
-        @include md-device {
-          margin-top: .4rem;
+          max-height: 2rem;
         }
 
+        @include md-device {
+          max-height: 2.7rem;
+        }
       }
 
       &:hover {
@@ -86,15 +92,15 @@
 
     .navbar-toggle {
       border-color: transparent;
+      transition: all 300ms ease-out;
+
+      &:focus,
+      &:hover {
+        background: transparent;
+      }
 
       .icon-bar {
-        background-color: $blanco;
-        height: 1px;
-        transition: transform .25s cubic-bezier(.4, .01, .165, .99);
-
-        & + .icon-bar {
-          margin-top: .6rem;
-        }
+        background-color: $azul;
       }
     }
   }
@@ -167,13 +173,38 @@
 
 .nav {
   li {
+
+    @include xxs-device {
+      border-bottom: 1px solid #e7e7e7;
+      margin: 0 1.5rem;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @include sm-device {
+      border-bottom: 0;
+    }
+
     a {
       transition: background-color 250ms;
     }
   }
 }
 
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: $negro;
+.open-animation {
+  height: 3.4rem;
+
+  .icon-bar {
+    transition: all 300ms ease-out;
+
+    &:nth-child(2) {
+      margin-bottom: -.6rem;
+    }
+
+    &:last-child {
+      margin-top: -2px;
+    }
+  }
 }
