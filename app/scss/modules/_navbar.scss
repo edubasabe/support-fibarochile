@@ -88,11 +88,12 @@
 
         @include xxs-device {
           max-height: 2rem;
+          opacity: 1;
         }
 
         @include md-device {
           max-height: 2.7rem;
-          opacity: 0;
+          opacity: 1;
         }
       }
 
