@@ -13,17 +13,18 @@
         padding: 10rem 0;
     }
 
+
     //----------
     // Soluciones Basicas
     //----------
-    &--soluciones {
+    &--clientes-autoinstalacion {
         .row {
             &:nth-child(2) {
                 .col-sm-4 {
                     &:first-child {
                         .thumbnail {
                             @include xxs-device {
-                                margin-top: 0;
+                                margin-top: 3rem;
                             }
                             @include md-device {
                                 margin-bottom: 6rem;
@@ -57,31 +58,54 @@
                             @include xxs-device {
                                 margin-bottom: 0;
                             }
+
+                          img {
+                            @include xxs-device {
+                              max-height: 6rem;
+
+                            }
+                          }
                         }
+                    }
+                }
+            }
+
+            .thumbnail {
+                border: 0;
+                @include xxs-device {
+                    margin-bottom: 6rem;
+
+                }
+
+                img {
+                  @include xxs-device {
+                    max-height: 5rem;
+                    min-height: 5rem;
+                  }
+
+                  @include sm-device {
+                    max-height: 7rem;
+                    min-height: 7rem;
+                  }
+
+                  @include md-device {
+                    max-height: initial;
+                  }
+                }
+
+                h3 {
+                  font-weight: 300;
+                    @include xxs-device {
+                        font-size: 2.4rem;
+                    }
+                    @include md-device {
+                        font-size: 3.2rem;
                     }
                 }
             }
         }
 
-        .thumbnail {
-            border: transparent;
-            @include xxs-device {
-                margin-bottom: 6rem;
-            }
 
-            img {
-              max-height: 5rem;
-            }
-
-            h3 {
-                @include xxs-device {
-                    font-size: 2.4rem;
-                }
-                @include md-device {
-                    font-size: 3.2rem;
-                }
-            }
-        }
 
         &__link {
             @include sm-device {

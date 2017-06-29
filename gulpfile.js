@@ -10,10 +10,15 @@ var cache           =  require('gulp-cache');
 var del             =  require('del');
 var runSequence     =  require('run-sequence');
 var cssnano         =  require('gulp-cssnano');
+var sourcemaps      =  require('gulp-sourcemaps');
 
 var sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
+};
+
+var autoprefixerOptions = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
 };
 
 //-- BrowserSync
@@ -28,8 +33,10 @@ gulp.task('browserSync', function() {
 //-- Sass
 gulp.task('sass', function() {
   return gulp.src('./app/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer(autoprefixerOptions))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./app/css'))
     .pipe(browserSync.reload({ stream:true }));
 });
