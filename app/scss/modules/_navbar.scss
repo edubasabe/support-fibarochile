@@ -246,7 +246,7 @@
 
 
     img {
-      @include md-device {
+      @include xxs-device {
         opacity: 0;
       }
     }
@@ -260,6 +260,21 @@
 
   .navbar-nav {
     li {
+
+      @include xxs-device {
+        border-bottom: 1px solid #e7e7e7;
+        margin: 0 1.5rem;
+        width: 100%;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      @include md-device {
+        width: initial;
+      }
+
       a {
         color: $negro;
       }

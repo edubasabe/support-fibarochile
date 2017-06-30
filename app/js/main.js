@@ -3,6 +3,8 @@ var navHeight = $('.navbar').height();
 var navbar = $('.navbar.navbar-default');
 var body = $('body');
 var buttonNavbarToggle = $('button.navbar-toggle');
+var windowHeight = $(window).height();
+var windowWidth = $(window).width();
 //-- Funciones Globales --------------------------------------------------------
 /* Si se clickea el Menu */
 function clickeaMenu() {
@@ -46,6 +48,21 @@ function checkWidth() {
     return false;
   }
 }
+/* Checkear si es Tablet */
+function isTablet() {
+  var calcAspectRatio = windowHeight / windowWidth;
+  var aspectRatio = calcAspectRatio.toFixed(2);
+
+  if ( windowHeight > windowWidth) {
+    if ( aspectRatio == 1.33) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+}
+
 
 function calcularPadding(element) {
   var elementHeight = $(element).height();
@@ -274,7 +291,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
   //-- Formulario de Contacto --------------------------------------------------
   // Si es IPad y seleccionan el campo de nombre subir más el formulario flotante
-  if (is_iPad()) {
+  if (is_iPad() ) {
     $('#name').on('focus', function () {
       $('.floating.inicio-tuhogar__contact-form').toggleClass('sube');
     });
@@ -283,7 +300,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
   var myCookie = getCookie("Subscripcion");
   // Si no existe una cookie del formulario
   if ( myCookie !== "Realizada" ) {
-    // Mostar solo si no es mobile
+    // Mostrar solo si no es mobile
       if ( !checkWidth()) {
         // Apertura de la pop up de contacto con el waypoint al 50%
         fadeElementOffset('#porque-fibaro .floating', 'fadeInUp', '50%');
@@ -303,6 +320,10 @@ function fadeElementOffset(element, animation, offsetvalue) {
   $('.inicio-tuhogar__contact-form .close').on('click', function () {
     $('.inicio-tuhogar__contact-form').removeClass('mostrar');
   });
+
+  if ( isTablet() || is_iPad() ) {
+    $('.floating').css({'display':'none'});
+  }
 
   //-- Ventana Modal de Subscripcion -------------------------------------------
   /* Mientras la cantidad de mouse over sea menor a 2 y no haya cookie del
