@@ -26,6 +26,11 @@
     border-color: rgba(#e2e2e2, 0);
 
     .navbar-nav {
+
+      @include md-device {
+        float: right;
+      }
+
       & > {
         li > {
           a {
