@@ -113,6 +113,10 @@
         @include xxs-device {
           text-align: center;
         }
+
+        @include sm-device {
+          text-align: left;
+        }
     }
 
 
