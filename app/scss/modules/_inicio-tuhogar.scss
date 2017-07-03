@@ -85,6 +85,10 @@
     overflow: hidden;
     position: relative;
 
+    @include md-device {
+      background-position: bottom;
+    }
+
     &__title {
       font-weight: 300;
 
@@ -93,6 +97,32 @@
         margin-bottom: 2rem;
       }
     }
+
+    &__subtitle {
+      @include xxs-device {
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+
+      .btn-container {
+        @include xxs-device {
+          text-align: center;
+        }
+
+        @include sm-device {
+          text-align: left;
+        }
+    }
+
+
+
+
+
 
     .fibaro-hand {
       bottom: 0;
@@ -489,6 +519,14 @@
   transition: all 800ms ease-out;
   width: 100%;
   z-index: 9999;
+}
+
+.blacking-bg {
+  background: rgba($negro, .5);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 @media (max-width: 992px) {
