@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./css/font-awesome.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/yamm.css">
     <!-- build:css css/styles.min.css -->
     <link rel="stylesheet" href="./css/styles.css">
     <!-- endbuild -->
@@ -63,19 +64,78 @@
                 </div>
 
 
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <div class="collapse navbar-collapse navbar-ex1-collapse yamm">
                     <ul class="nav navbar-nav" id="menu-escrito">
                         <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                        <li><a class="page-scroll" href="https://tuhogarinteligente.cl/">Inicio</a></li>
-                        <li><a class="page-scroll" href="https://tuhogarinteligente.cl/nosotros/">Nosotros</a></li>
-                        <li><a class="page-scroll" href="https://tuhogarinteligente.cl/el-sistema/">Productos</a></li>
-                        <li><a class="page-scroll" href="https://tuhogarinteligente.cl/comprar/">Tienda Online</a></li>
+                        <li class="dropdown yamm-fullwidth">
+                          <a class="dropdown-toggle" href="#">Productos <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <div class="yamm-content container">
+                                <div class="row">
+                                  <div class="span12">
+                                    <ul class="nav nav-pills text-center">
+                                      <li><a data-toggle="tab" href="#sensores">Sensores</a></li>
+                                      <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li>
+                                      <li><a data-toggle="tab" href="#remotos">Remotos</a></li>
+                                      <li><a data-toggle="tab" href="#puerta-de-enlace">Puerta de Enlace</a></li>
+                                    </ul>
+                                  </div>
+                                  <div class="span12">
+                                    <div class="tab-content">
+                                      <div class="tab-pane" id="sensores">
+                                        <ul class="nav-product-tab-list list-unstyled">
+                                          <li class="product-nav" v-for="data in titles">
+                                            <a href="#">
+                                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                              <p>{{ data.text }}</p>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="tab-pane" id="actuadores">
+                                        <ul class="nav-product-tab-list list-unstyled">
+                                          <li class="product-nav" v-for="data in titles">
+                                            <a href="#">
+                                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                              <p>{{ data.text }}</p>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="tab-pane" id="remotos">
+                                        <ul class="nav-product-tab-list list-unstyled">
+                                          <li class="product-nav remotos" v-for="data in titles" v-bind:="data.class">
+                                            <a href="#">
+                                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                              <p>{{ data.text }}</p>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="tab-pane" id="puerta-de-enlace">
+                                        <ul class="nav-product-tab-list list-unstyled">
+                                          <li class="product-nav puerta-de-enlace" v-for="data in titles">
+                                            <a href="#">
+                                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                              <p>{{ data.text }}</p>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </li>
+                          </ul>
+                        </li>
                         <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/instalacion">Instalación</a></li>
                         <li><a class="page-scroll" href="http://www.proyectos.tuhogarinteligente.cl/">Proyectos</a></li>
                         <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
                         <li><a class="page-scroll" href="http://expertos.tuhogarinteligente.cl/">Expertos</a></li>
                         <li><a class="page-scroll" href="http://blog.tuhogarinteligente.cl">Blog</a></li>
-                        <li><a class="page-scroll" href="https://tuhogarinteligente.cl/contactenos/">Contacto</a></li>
                     </ul>
                 </div>
               </div>
@@ -88,7 +148,7 @@
 <!-- Inicio Video -->
 <section class="inicio-tuhogar--homevideo" id="homevideo">
     <div class="inicio-tuhogar--homevideo__title">
-      <h2 class="text-center text-color-white">Reinventa tu hogar</h2>
+      <h2 class="text-center text-color-white">Tu hogar inteligente</h2>
       <p class="lead text-center text-color-white">Haz tu vida fácil con más seguridad, confort y eficiencia</p>
     </div>
 <video autoplay loop muted class="inicio-tuhogar--homevideo__video img-responsive">
@@ -474,6 +534,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/vue.min.js"></script>
     <script src="./js/main.js"></script>
     <!-- endbuild -->
 

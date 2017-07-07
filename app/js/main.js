@@ -342,4 +342,86 @@ function fadeElementOffset(element, animation, offsetvalue) {
     $('.horario').html('Lunes a Viernes: <br> 9:00 AM – 07:00 PM <br> Sábado:  10:00 AM – 07:00 PM <br><br>');
   }
 
+
+  //-- Navbar Animacion Yamm ---------------------------------------------------
+
+  /* Darle clase open al hacer click, para que se despliegue el menu*/
+  $('li.dropdown.yamm-fullwidth > a').on('click', function (event) {
+    $(this).parent().toggleClass('open');
+  });
+
+  /* Guardar el menu si el usuario hace click fuera */
+  $('body').on('click', function (e) {
+    if (!$('li.dropdown.yamm-fullwidth').is(e.target)
+        && $('li.dropdown.yamm-fullwidth').has(e.target).length === 0
+        && $('.open').has(e.target).length === 0
+    ) {
+        $('li.dropdown.yamm-fullwidth').removeClass('open');
+    }
+  });
+
+  var sensores = new Vue({
+    el: '#sensores',
+    data: {
+      titles: [
+        { text: 'Motion Sensor', url: 'images/nav-motion.jpg', class: 'active' },
+        { text: 'Flood Sensor', url: 'images/nav-flood.jpg' },
+        { text: 'Door/Window Sensor', url: 'images/nav-dws.jpg' },
+        { text: 'Smoke Sensor', url: 'images/nav-smoke.jpg' },
+        { text: 'Universal Binary Sensor', url: 'images/nav-ubs.jpg' }
+      ],
+    }
+  });
+  var actuadores = new Vue({
+    el: '#actuadores',
+    data: {
+      titles: [
+        { text: 'Wall Plug', url: 'images/nav-wallplug.jpg' },
+        { text: 'Dimmer 2', url: 'images/nav-dimmer.jpg' },
+        { text: 'Switches 2', url: 'images/nav-relay.jpg' },
+        { text: 'Roller Shutter 2', url: 'images/nav-smoke.jpg' },
+        { text: 'RGBW Controller', url: 'images/nav-ubs.jpg' }
+      ],
+    }
+  });
+
+  var actuadores = new Vue({
+    el: '#remotos',
+    data: {
+      titles: [
+        { text: 'KeyFob', url: 'images/nav-keyfob.jpg' },
+        { text: 'The Button', url: 'images/nav-button.jpg' },
+        { text: 'Swipe', url: 'images/nav-swipe.jpg' }
+      ],
+    }
+  });
+
+  var puertaDeEnlace = new Vue({
+    el: '#puerta-de-enlace',
+    data: {
+      titles: [
+        { text: 'Home Center 2', url: 'images/nav-hcl.jpg' },
+        { text: 'The Button', url: 'images/nav-hc2.jpg' }
+      ],
+    }
+  });
+
+  $('.dropdown-toggle').click(function () {
+    /* Agrega clase active al primer li*/
+    $('.open .nav.nav-pills > li:first-child').addClass('active');
+    /* Agrega clase bg-white al navbar*/
+    $('nav').addClass('bg-white');
+    /* Agrega clase activa  sensores */
+    $('#sensores').addClass('active');
+    /* Agrega el atributo aria expanded */
+    $('.open .nav.nav-pills > li:first-child > a').attr('aria-expanded',true);
+  });
+
+
+
+
+
+
+
+
  });
