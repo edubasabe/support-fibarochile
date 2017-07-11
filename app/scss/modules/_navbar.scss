@@ -269,7 +269,7 @@
   color: $negro;
 
   .navbar-brand {
-    background: url('../images/tamed-logo-2017.svg') no-repeat center center;
+    // background: url('../images/tamed-logo-2017.svg') no-repeat center center;
     transition: background 300ms ease;
 
     @include xxs-device {
@@ -279,7 +279,7 @@
 
     img {
       @include xxs-device {
-        opacity: 0;
+        opacity: 1;
       }
     }
   }
