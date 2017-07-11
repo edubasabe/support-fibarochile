@@ -191,6 +191,13 @@
     position: fixed;
     top: 50px;
   }
+
+  &-collapse {
+    @include xxs-device {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .nav-pills {
@@ -216,24 +223,25 @@
 
 .nav {
   li {
-
-    @include xxs-device {
-      border-bottom: 1px solid #e7e7e7;
-      margin: 0 1.5rem;
-
-      &:last-child {
-        border-bottom: 0;
-      }
-    }
-
-    @include sm-device {
-      border-bottom: 0;
-    }
-
     a {
       padding-left: 0;
       padding-right: 0;
       transition: background-color 250ms;
+
+      @include xxs-device {
+        // border-bottom: 1px solid #e7e7e7;
+        margin: 0 1.5rem;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+
+
+    @include sm-device {
+      border-bottom: 0;
     }
   }
 }
@@ -283,11 +291,14 @@
   }
 
   .navbar-nav {
-    li {
+    margin: 0 auto;
+    // width: calc(100% - 3rem);
 
+    li {
       @include xxs-device {
-        border-bottom: 1px solid #e7e7e7;
-        margin: 0 1.5rem;
+        // border-bottom: 1px solid #e7e7e7;
+        margin: 0 auto;
+        // width: calc(100% - 3rem);
         width: 100%;
 
         &:last-child {
@@ -302,6 +313,48 @@
 
       a {
         color: $negro;
+
+        @include xxs-device {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .open {
+      .collapsed {
+        .open > a {
+          color: $azul;
+
+          &::after {
+            border-bottom: 1px solid $azul;
+            border-right: 1px solid $azul;
+            content: '';
+            display: block;
+            height: 1rem;
+            position: absolute;
+            right: 1.5rem;
+            top: 2rem;
+            transform: rotate(225deg);
+            transition: all 300ms;
+            width: 1rem;
+          }
+        }
+
+        > a {
+          &::after {
+            border-bottom: 1px solid $negro;
+            border-right: 1px solid $negro;
+            content: '';
+            display: block;
+            height: 1rem;
+            position: absolute;
+            right: 1.5rem;
+            top: 2rem;
+            transform: rotate(45deg);
+            transition: all 300ms;
+            width: 1rem;
+          }
+        }
       }
     }
   }
@@ -315,9 +368,100 @@
 }
 
 //-- Yamm Navbar ---------------------------------------------------------------
+.dropdown-menu--desktop {
+  @include xxs-device {
+    display: none;
+  }
+
+  @include md-device {
+    // display: initial;
+  }
+}
+
+.dropdown-menu--mobile {
+  margin: 0 auto;
+  width: calc(100% - 3rem);
+
+  @include sm-device { display: none; }
+
+    .dropdown {
+      margin-left: 0;
+      position: relative;
+
+
+
+      a {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1.2rem 0;
+        padding-left: 1.5rem;
+        text-decoration: none;
+
+        img {
+          display: inline-block;
+          max-width: 8rem;
+        }
+      }
+
+      ul {
+        li {
+          margin-left: 0;
+
+          a {
+            font-weight: 300;
+            padding: 0;
+
+            span {
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+
+
+      .menu-sub-toggle {
+        font-weight: 300;
+        padding-left: 0;
+        position: relative;
+
+        @include xxs-device {
+          font-size: 1.4rem;
+        }
+
+        &::after {
+          border-bottom: 1px solid $negro;
+          border-right: 1px solid $negro;
+          content: '';
+          display: block;
+          height: 1rem;
+          position: absolute;
+          right: 1.5rem;
+          top: 2rem;
+          transform: rotate(45deg);
+          transition: all 300ms;
+          width: 1rem;
+        }
+      }
+    }
+}
+
+.dropdown-submenu {
+  display: none;
+  position: relative;
+
+    .dropdown-menu {
+      left: 0;
+      margin-top: -1px;
+      top: 0;
+    }
+}
 
 .yamm-fullwidth {
+  margin-left: 0;
+
   .yamm-content {
+
     .nav-pills {
       @include md-device {
         border-bottom: 1px solid #f2f2f2;
@@ -392,6 +536,51 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.dropdown.yamm-fullwidth.open {
+  & > a {
+    @include xxs-device {
+      border-bottom: 0;
+      color: $azul !important;
+
+      &::after {
+        border-bottom: 1px solid $azul;
+        border-right: 1px solid $azul;
+        content: '';
+        display: block;
+        height: 1rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 2rem;
+        transform: rotate(225deg);
+        transition: all 300ms;
+        width: 1rem;
+      }
+    }
+  }
+}
+
+.dropdown.yamm-fullwidth {
+  & > a {
+    @include xxs-device {
+      color: $negro;
+
+      &::after {
+        border-bottom: 1px solid $negro;
+        border-right: 1px solid $negro;
+        content: '';
+        display: block;
+        height: 1rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 2rem;
+        transform: rotate(45deg);
+        transition: all 300ms;
+        width: 1rem;
       }
     }
   }

@@ -84,7 +84,7 @@ function calcularPaddingNav(element) {
 /* Centrar los elementos del menu con el padding */
 calcularPadding('.navbar-brand.navbar__logo-text');
 calcularMargin('.navbar-brand .color-logo');
-calcularPaddingNav('.nav.navbar-nav li > a');
+calcularPaddingNav('.nav.navbar-nav > li > a');
 
 
 //-- jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -277,7 +277,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
   else {
-    console.log('No es iPad');
+    // console.log('No es iPad');
   }
 
   //-- Waypoint Inicio ---------------------------------------------------------
@@ -372,6 +372,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
       ],
     }
   });
+
   var actuadores = new Vue({
     el: '#actuadores',
     data: {
@@ -400,11 +401,63 @@ function fadeElementOffset(element, animation, offsetvalue) {
     el: '#puerta-de-enlace',
     data: {
       titles: [
-        { text: 'Home Center 2', url: 'images/nav-hcl.jpg' },
-        { text: 'The Button', url: 'images/nav-hc2.jpg' }
+        { text: 'Home Center Lite', url: 'images/nav-hcl.jpg' },
+        { text: 'Home Center 2', url: 'images/nav-hc2.jpg' }
       ],
     }
   });
+
+  /* Menu en Mobile */
+  var sensoresMobile = new Vue({
+    el: '#sensores-mobile',
+    data: {
+      titles: [
+        { text: 'Motion Sensor', url: 'images/nav-motion.jpg', class: 'active' },
+        { text: 'Flood Sensor', url: 'images/nav-flood.jpg' },
+        { text: 'Door/Window Sensor', url: 'images/nav-dws.jpg' },
+        { text: 'Smoke Sensor', url: 'images/nav-smoke.jpg' },
+        { text: 'Universal Binary Sensor', url: 'images/nav-ubs.jpg' }
+      ],
+    }
+  });
+
+  var actuadoresMobile = new Vue({
+    el: '#actuadores-mobile',
+    data: {
+      titles: [
+        { text: 'Wall Plug', url: 'images/nav-wallplug.jpg' },
+        { text: 'Dimmer 2', url: 'images/nav-dimmer.jpg' },
+        { text: 'Switches 2', url: 'images/nav-relay.jpg' },
+        { text: 'Roller Shutter 2', url: 'images/nav-smoke.jpg' },
+        { text: 'RGBW Controller', url: 'images/nav-ubs.jpg' }
+      ],
+    }
+  });
+
+  var actuadoresMobile = new Vue({
+    el: '#remotos-mobile',
+    data: {
+      titles: [
+        { text: 'KeyFob', url: 'images/nav-keyfob.jpg' },
+        { text: 'The Button', url: 'images/nav-button.jpg' },
+        { text: 'Swipe', url: 'images/nav-swipe.jpg' }
+      ],
+    }
+  });
+
+  var puertaDeEnlaceMobile = new Vue({
+    el: '#puertas-mobile',
+    data: {
+      titles: [
+        { text: 'Home Center Lite', url: 'images/nav-hcl.jpg' },
+        { text: 'Home Center 2', url: 'images/nav-hc2.jpg' }
+      ],
+    }
+  });
+
+
+
+
 
   $('.dropdown-toggle').click(function () {
     /* Agrega clase active al primer li*/
@@ -415,6 +468,34 @@ function fadeElementOffset(element, animation, offsetvalue) {
     $('#sensores').addClass('active');
     /* Agrega el atributo aria expanded */
     $('.open .nav.nav-pills > li:first-child > a').attr('aria-expanded',true);
+  });
+
+  /* Collapsando todos los submenus */
+  $('.dropdown-menu--mobile > li.dropdown > ul').addClass('collapse');
+
+  /* Eliminar el otro menu si no es mobile */
+  if ( checkWidth()) {
+    $('.dropdown-menu--desktop').hide();
+    $('.dropdown-menu--mobile').addClass('collapse')
+  }else {
+    $('.dropdown-menu--mobile').hide();
+  }
+
+  $('.dropdown-menu--mobile > li.dropdown').on('click',function () {
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    }else {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
+
+  });
+
+  $('#menu-escrito > li').on('click', function () {
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    }else if ( !$(this).hasClass('open') ) {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
   });
 
 

@@ -68,8 +68,50 @@
                     <ul class="nav navbar-nav" id="menu-escrito">
                         <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
                         <li class="dropdown yamm-fullwidth">
-                          <a class="dropdown-toggle" href="#">Productos <b class="caret"></b></a>
-                          <ul class="dropdown-menu">
+                          <a class="dropdown-toggle" href="#">Productos </a>
+                          <ul class="dropdown-menu--mobile list-unstyled">
+                            <!-- Sensores Mobile -->
+                            <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
+                              <ul id="sensores-mobile" class="list-unstyled">
+                                <li v-for="data in titles">
+                                  <a href="#">
+                                    <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                    <span>{{ data.text }}</span>
+                                  </a></li>
+                              </ul>
+                            </li>
+                            <!-- Actuadores Mobile -->
+                            <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
+                              <ul id="actuadores-mobile" class="list-unstyled">
+                                <li v-for="data in titles">
+                                  <a href="#">
+                                    <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                    <span>{{ data.text }}</span>
+                                  </a></li>
+                              </ul>
+                            </li>
+                            <!-- Remotos Mobile -->
+                            <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Remotos</a>
+                              <ul id="remotos-mobile" class="list-unstyled">
+                                <li v-for="data in titles">
+                                  <a href="#">
+                                    <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                    <span>{{ data.text }}</span>
+                                  </a></li>
+                              </ul>
+                            </li>
+                            <!-- Puertas de Enlace Mobile -->
+                            <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Puertas de Enlace</a>
+                              <ul id="puertas-mobile" class="list-unstyled">
+                                <li v-for="data in titles">
+                                  <a href="#">
+                                    <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                    <span>{{ data.text }}</span>
+                                  </a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                          <ul class="dropdown-menu dropdown-menu--desktop">
                             <li>
                               <div class="yamm-content container">
                                 <div class="row">
