@@ -68,7 +68,7 @@
                     <ul class="nav navbar-nav" id="menu-escrito">
                         <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
                         <li class="dropdown yamm-fullwidth">
-                          <a class="dropdown-toggle" href="#">Productos </a>
+                          <a class="dropdown-toggle" href="#">Productos &nbsp;</a>
                           <ul class="dropdown-menu--mobile list-unstyled">
                             <!-- Sensores Mobile -->
                             <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
@@ -268,43 +268,21 @@
       <input type="hidden" name="elqCustomerGUID" value="">
       <input type="hidden" name="elqCookieWrite" value="0">
       <div class="form-group">
-        <input type="text" class="form-control" id="name" name="firstName" placeholder="Escribe tu nombre">
+        <input type="text" class="form-control" id="name" name="firstName" placeholder="Nombre">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" id="email" name="emailAddress" placeholder="Escribe tu e-mail">
+        <input type="text" class="form-control" id="email" name="emailAddress" placeholder="E-mail">
       </div>
       <div class="form-group">
-        <textarea class="form-control" id="mensaje" name="message" placeholder="Escribe un mensaje"></textarea>
+        <textarea class="form-control" id="mensaje" name="message" placeholder="Mensaje"></textarea>
       </div>
-      <input type="submit" class="btn btn-default btn-subscribe" value="Enviar Mensaje" id="btn-subscripcion" onclick="setCookie()">
-      <script type='text/javascript'>
-      <!--//
-      var timerId = null, timeout = 5;
-      //--></script>
-      <script type='text/javascript'><!--//
-      function WaitUntilCustomerGUIDIsRetrieved() {
-      if (!!(timerId)) {
-          if (timeout == 0) {
-      return;
-      }
-      if (typeof this.GetElqCustomerGUID === 'function') {
-              document.forms["Gracias_Contacto"].elements["elqCustomerGUID"].value = GetElqCustomerGUID();
-      return;
-      }
-      timeout -= 1;
-      }
-      timerId = setTimeout("WaitUntilCustomerGUIDIsRetrieved()", 500);
-      return;
-      }
-      window.onload = WaitUntilCustomerGUIDIsRetrieved;
-      _elqQ.push(['elqGetCustomerGUID']);
-      //--></script>
+      <input type="submit" class="btn btn-default btn-subscribe" value="Enviar" id="btn-subscripcion" onclick="setCookie()">
     </form>
   </div>
   <!-- Fin del formulario -->
 </section>
 
-<!-- <hr class="divider"> -->
+<hr class="divider">
 
 <section class="inicio-tuhogar__experience-center" id="experience-center">
       <div class="inicio-tuhogar__experience-center__title-container">
@@ -316,6 +294,7 @@
       <source src="videos/fibaro-experience-center-chile-web-optimized.mp4" type="video/mp4">
        Tu navegador no implementa el elemento <code>video</code>.
   </video>
+  <img src="images/experience-center.jpg" alt="Experience Center" class="img-responsive ec">
 </section>
 
 <!-- <hr class="divider"> -->
@@ -332,37 +311,37 @@
   </div>
   <div class="row">
     <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail">
+      <a href="#" class="thumbnail" id="telcos">
         <img src="images/icon-telco.svg" alt="Telco" class="img-responsive">
         <p class="lead text-center">Telcos</p>
       </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail">
+      <a href="http://expertos.tuhogarinteligente.cl/" class="thumbnail">
         <img src="images/icon-dist.svg" alt="Distribuidores" class="img-responsive">
         <p class="lead text-center">Distribuidores</p>
       </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail">
+      <a href="#" class="thumbnail" id="retail">
         <img src="images/icon-retail.svg" alt="Retail" class="img-responsive">
         <p class="lead text-center">Retail</p>
       </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail">
+      <a href="http://proyectos.tuhogarinteligente.cl/" class="thumbnail">
         <img src="images/icon-inmobiliaria.svg" alt="Inmobiliaria" class="img-responsive">
         <p class="lead text-center">Inmobiliarias y Constructoras</p>
       </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail">
+      <a href="http://expertos.tuhogarinteligente.cl/" class="thumbnail">
         <img src="images/icon-artist.svg" alt="Inmobiliaria" class="img-responsive">
         <p class="lead text-center">Arquitectos y Diseñadores</p>
       </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail">
+      <a href="http://tuhogarinteligente.cl/comprar" class="thumbnail">
         <img src="images/icon-client.svg" alt="Inmobiliaria" class="img-responsive">
         <p class="lead text-center">Clientes Finales</p>
       </a>
@@ -372,7 +351,7 @@
 </section>
 
 <!-- Casos de exito -->
-<section class="page-section inicio-tuhogar--casos-de-exito" id="casos-de-exito">
+<section class="page-section inicio-tuhogar--casos-de-exito" id="casos-de-exito" style="display:none;visibility:hidden;">
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
@@ -413,6 +392,30 @@
   </div>
 </section>
 
+<!-- Proyectos Inmobiliarios -->
+<section class="page-section inicio-tuhogar--proyectos" id="proyectos">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="headline headline--nomargin text-center">Proyectos Inmobiliarios</h2>
+        <p class="lead headline--subheadline">Estos proyectos ya incorporan domótica</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="owl-carousel owl-theme" id="owl-proyectos">
+
+          <div class="item" v-for="data in item">
+            <a href="#">
+                <img :src="data.src" class="img-responsive center-block">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Nuestras Alianzas -->
 <section class="page-section inicio-tuhogar--nuestras-alianzas" id="nuestras-alianzas">
   <div class="container">
@@ -426,59 +429,9 @@
       <div class="col-sm-12">
         <div class="owl-carousel owl-theme" id="owl-alianzas">
 
-          <!-- Alianza 1 -->
-          <div class="item">
+          <div class="item" v-for="data in item">
             <a href="#">
-                <img src="images/partners-yale.jpg" srcset="images/partners-yale.jpg 1x, images/partners-yale@2x.jpg 2x" class="img-responsive inicio-tuhogar--nuestras-alianzas__image center-block">
-            </a>
-          </div>
-
-          <!-- Alianza 2 -->
-          <div class="item">
-            <a href="#">
-                <img src="images/partners-sonos.jpg" srcset="images/partners-sonos.jpg 1x, images/partners-sonos@2x.jpg 2x">
-            </a>
-          </div>
-
-          <!-- Alianza 3 -->
-          <div class="item">
-            <a href="#">
-                <img src="images/partners-evolux.jpg" srcset="images/partners-evolux.jpg 1x, images/partners-evolux@2x.jpg 2x">
-            </a>
-          </div>
-
-          <!-- Alianza 4 -->
-          <div class="item">
-            <a href="#">
-                <img src="images/partners-zwave.jpg" srcset="images/partners-zwave.jpg 1x, images/partners-zwave@2x.jpg 2x">
-            </a>
-          </div>
-
-          <!-- Alianza 5 -->
-          <div class="item">
-            <a href="#">
-                <img src="images/partners-leed.jpg" srcset="images/partners-leed.jpg 1x, images/partners-leed@2x.jpg 2x">
-            </a>
-          </div>
-
-          <!-- Alianza 6 -->
-          <div class="item">
-            <a href="#">
-                <img src="images/partners-dlink.jpg" srcset="images/partners-dlink.jpg 1x, images/partners-dlink@2x.jpg 2x">
-            </a>
-          </div>
-
-          <!-- Alianza 7 -->
-          <div class="item">
-            <a href="#">
-                <img src="images/partners-hunterdouglas.jpg" srcset="images/partners-hunterdouglas.jpg 1x, images/partners-hunterdouglas@2x.jpg 2x">
-            </a>
-          </div>
-
-          <!-- Alianza 8 -->
-          <div class="item">
-            <a href="#">
-                <img src="images/partners-rollerhouse.jpg" srcset="images/partners-rollerhouse.jpg 1x, images/partners-rollerhouse@2x.jpg 2x">
+                <img :src="data.src" :srcset="data.srcset" class="img-responsive inicio-tuhogar--nuestras-alianzas__image center-block">
             </a>
           </div>
         </div>
@@ -488,38 +441,8 @@
 </section>
 
 
-    <footer>
-      <div class="container-fluid">
-        <div class="row footer__menu-bg">
-          <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-            <div class="footer__menu">
-              <ul class="list-unstyled">
-                <li><a href="https://tuhogarinteligente.cl/nosotros/">Nosotros</a></li>
-                <li><a href="https://www.fibaro.com/en/patents/">Patentes</a></li>
-                <li><a href="https://tuhogarinteligente.cl/politica-de-cookies/">Política de Privacidad</a></li>
-                <li><a href="https://id.cloud.fibaro.com/">FIBARO ID</a></li>
-                <li><a href="https://tuhogarinteligente.cl/contactenos/">Contacto</a></li>
-                <li><a href="https://tuhogarinteligente.cl/trabaje-con-nosotros/">Trabaja con nosotros</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="social col-xs-12 col-md-4 col-md-offset-4">
-            <div class="footer__social">
-              <ul class="list-unstyled">
-                <li><a href="https://www.facebook.com/fibarochile/" target="_blank"><i class="fa fa-lg center-block fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/fibaro_chile/" target="_blank"><i class="fa fa-lg center-block fa-instagram"></i></a></li>
-                <li><a href="https://twitter.com/fibarochile/" target="_blank"><i class="fa fa-lg center-block fa-twitter"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/tamed-spa" target="_blank"><i class="fa fa-lg center-block fa-linkedin"></i></a></li>
-                <li><a href="https://www.youtube.com/channel/UCyq2iy8aEUjKmFatmGPicYg" target="_blank"><i class="fa fa-lg center-block fa-youtube-play"></i></a></li>
-              </ul>
-            </div>
-           </div>
-        </div>
-      </div>
-    </footer>
-    <hr class="divider">
+
+
     <!-- Modal Subscripcion al salir -->
     <div class="modal fade inicio-tuhogar__modal-salir" id="modal-subscribirse" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
       <div class="modal-dialog">
@@ -537,10 +460,10 @@
               <input type="hidden" name="elqCustomerGUID" value="">
               <input type="hidden" name="elqCookieWrite" value="0">
               <div class="form-group">
-                <input type="text" class="form-control" id="name" name="firstName" placeholder="Escribe tu nombre">
+                <input type="text" class="form-control" id="name" name="firstName" placeholder="Nombre">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="email" name="emailAddress" placeholder="Escribe tu e-mail">
+                <input type="text" class="form-control" id="email" name="emailAddress" placeholder="E-mail">
               </div>
               <input type="submit" class="btn btn-default btn-subscribe" value="Suscríbete" onclick="setCookie()">
             </form>
@@ -552,21 +475,32 @@
         </div>
       </div>
     </div>
+
     <div class="inicio-tuhogar__icon-contact">
       <img src="images/icon-contact.svg" alt="Contacto">
     </div>
-    <!-- Footer -->
-    <div class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <img src="./images/tamed-2017-gris-sl.svg" alt="Tamed" class="img-responsive footer__copyright--img">
-            <span class="footer__copyright text-center center-block">© 2017. TAMED<sup>®</sup>  SpA. Todos los derechos reservados.<br>
-              Distribuidor Oficial de FIBARO<sup>®</sup>  en Chile, Perú.</span>
-          </div>
-        </div>
-      </div>
+    <div id="telcos-modal" class="modal fade">
+      <modal-telcos></modal-telcos>
     </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div id="footer">
+        <my-footer></my-footer>
+      </div>
+      <hr class="divider">
+        <div class="container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <img src="./images/tamed-2017-gris-sl.svg" alt="Tamed" class="img-responsive footer__copyright--img">
+                    <span class="footer__copyright text-center center-block">© 2017. TAMED<sup>®</sup>  SpA. Todos los derechos reservados.<br>
+                      Distribuidor Oficial de FIBARO<sup>®</sup>  en Chile, Perú.</span>
+                  </div>
+                </div>
+              </div>
+    </footer>
+
+
+
 
     <br><br>
     <script src="./js/jquery.min.js"></script>
@@ -577,6 +511,7 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/vue.min.js"></script>
+    <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>
     <!-- endbuild -->
 

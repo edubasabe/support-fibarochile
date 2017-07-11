@@ -150,6 +150,31 @@ $(document).on('ready', function() {
           }
       }
   });
+  /* Proyectos Inmobiliarios */
+  $('#owl-proyectos').owlCarousel({
+      loop:true,
+      autoplay:true,
+      autoplayTimeout:2000,
+      margin:10,
+      nav: false,
+      dots:true,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:2,
+              nav:false
+          },
+          600:{
+              items:4,
+              nav:false
+          },
+          1000:{
+              items:6,
+              nav:false,
+              loop:false
+          }
+      }
+  });
 });
 
 //-- Button Close --------------------------------------------------------------
@@ -360,104 +385,6 @@ function fadeElementOffset(element, animation, offsetvalue) {
     }
   });
 
-  var sensores = new Vue({
-    el: '#sensores',
-    data: {
-      titles: [
-        { text: 'Motion Sensor', url: 'images/nav-motion.jpg', class: 'active' },
-        { text: 'Flood Sensor', url: 'images/nav-flood.jpg' },
-        { text: 'Door/Window Sensor', url: 'images/nav-dws.jpg' },
-        { text: 'Smoke Sensor', url: 'images/nav-smoke.jpg' },
-        { text: 'Universal Binary Sensor', url: 'images/nav-ubs.jpg' }
-      ],
-    }
-  });
-
-  var actuadores = new Vue({
-    el: '#actuadores',
-    data: {
-      titles: [
-        { text: 'Wall Plug', url: 'images/nav-wallplug.jpg' },
-        { text: 'Dimmer 2', url: 'images/nav-dimmer.jpg' },
-        { text: 'Switches 2', url: 'images/nav-relay.jpg' },
-        { text: 'Roller Shutter 2', url: 'images/nav-smoke.jpg' },
-        { text: 'RGBW Controller', url: 'images/nav-ubs.jpg' }
-      ],
-    }
-  });
-
-  var actuadores = new Vue({
-    el: '#remotos',
-    data: {
-      titles: [
-        { text: 'KeyFob', url: 'images/nav-keyfob.jpg' },
-        { text: 'The Button', url: 'images/nav-button.jpg' },
-        { text: 'Swipe', url: 'images/nav-swipe.jpg' }
-      ],
-    }
-  });
-
-  var puertaDeEnlace = new Vue({
-    el: '#puerta-de-enlace',
-    data: {
-      titles: [
-        { text: 'Home Center Lite', url: 'images/nav-hcl.jpg' },
-        { text: 'Home Center 2', url: 'images/nav-hc2.jpg' }
-      ],
-    }
-  });
-
-  /* Menu en Mobile */
-  var sensoresMobile = new Vue({
-    el: '#sensores-mobile',
-    data: {
-      titles: [
-        { text: 'Motion Sensor', url: 'images/nav-motion.jpg', class: 'active' },
-        { text: 'Flood Sensor', url: 'images/nav-flood.jpg' },
-        { text: 'Door/Window Sensor', url: 'images/nav-dws.jpg' },
-        { text: 'Smoke Sensor', url: 'images/nav-smoke.jpg' },
-        { text: 'Universal Binary Sensor', url: 'images/nav-ubs.jpg' }
-      ],
-    }
-  });
-
-  var actuadoresMobile = new Vue({
-    el: '#actuadores-mobile',
-    data: {
-      titles: [
-        { text: 'Wall Plug', url: 'images/nav-wallplug.jpg' },
-        { text: 'Dimmer 2', url: 'images/nav-dimmer.jpg' },
-        { text: 'Switches 2', url: 'images/nav-relay.jpg' },
-        { text: 'Roller Shutter 2', url: 'images/nav-smoke.jpg' },
-        { text: 'RGBW Controller', url: 'images/nav-ubs.jpg' }
-      ],
-    }
-  });
-
-  var actuadoresMobile = new Vue({
-    el: '#remotos-mobile',
-    data: {
-      titles: [
-        { text: 'KeyFob', url: 'images/nav-keyfob.jpg' },
-        { text: 'The Button', url: 'images/nav-button.jpg' },
-        { text: 'Swipe', url: 'images/nav-swipe.jpg' }
-      ],
-    }
-  });
-
-  var puertaDeEnlaceMobile = new Vue({
-    el: '#puertas-mobile',
-    data: {
-      titles: [
-        { text: 'Home Center Lite', url: 'images/nav-hcl.jpg' },
-        { text: 'Home Center 2', url: 'images/nav-hc2.jpg' }
-      ],
-    }
-  });
-
-
-
-
 
   $('.dropdown-toggle').click(function () {
     /* Agrega clase active al primer li*/
@@ -498,7 +425,16 @@ function fadeElementOffset(element, animation, offsetvalue) {
     }
   });
 
+  if ( !checkWidth() || !isTablet() ) {
+    $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
+  }
 
+
+  /* */
+  $('#telcos, #retail').on('click', function (e) {
+    e.preventDefault();
+    $('#telcos-modal').modal();
+  });
 
 
 

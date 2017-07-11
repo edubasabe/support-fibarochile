@@ -196,7 +196,7 @@
   &__experience-center {
     position: relative;
     @include xxs-device {
-      background: url('../images/experience-center-night-tablet.jpg') no-repeat right center;
+      // background: url('../images/experience-center.jpg') no-repeat center;
       background-size: cover;
       min-height: 40rem;
     }
@@ -246,7 +246,7 @@
 
       h2 {
         @include xxs-device {
-          color: $blanco;
+          color: $negro;
           font-size: 3rem;
         }
 
@@ -255,13 +255,14 @@
         }
 
         @include md-device {
+          color: $blanco;
           font-size: 4.2rem;
         }
       }
 
       h3 {
         @include xxs-device {
-          color: $blanco;
+          color: $negro;
           font-size: 1.6rem;
           margin-bottom: 1rem;
         }
@@ -269,17 +270,35 @@
         @include sm-device {
           font-size: 2rem;
         }
+
+        @include md-device {
+          color: $blanco;
+        }
       }
 
       p {
         @include xxs-device {
-          color: $blanco;
+          color: $negro;
           font-size: 1.2rem;
         }
 
         @include sm-device {
           font-size: 2rem;
         }
+
+        @include md-device {
+          color: $blanco;
+        }
+      }
+    }
+
+    .ec {
+      @include xxs-device {
+        display: block;
+      }
+
+      @include md-device {
+        display: none;
       }
     }
   }
