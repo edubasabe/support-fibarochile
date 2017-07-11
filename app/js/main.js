@@ -473,8 +473,8 @@ function fadeElementOffset(element, animation, offsetvalue) {
   /* Collapsando todos los submenus */
   $('.dropdown-menu--mobile > li.dropdown > ul').addClass('collapse');
 
-  /* Eliminar el otro menu si no es mobile */
-  if ( checkWidth()) {
+  /* Eliminar el otro menu si no es mobile o iPad */
+  if ( checkWidth() || isTablet() || is_iPad()) {
     $('.dropdown-menu--desktop').hide();
     $('.dropdown-menu--mobile').addClass('collapse')
   }else {
