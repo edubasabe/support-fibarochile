@@ -548,22 +548,3 @@
   top: 0;
   width: 100%;
 }
-
-@media (max-width: 992px) {
-  .navbar-collapse.collapse {
-       display: none !important;
-   }
-
-   .navbar-collapse.collapse.in {
-       display: block !important;
-   }
-
-   .navbar-header .collapse,
-   .navbar-toggle {
-       display: block !important;
-   }
-
-   .navbar-header {
-       float: none;
-   }
-}

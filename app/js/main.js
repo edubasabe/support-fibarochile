@@ -80,11 +80,15 @@ function calcularPaddingNav(element) {
   var elementMargin = (navHeight - 20) / 2 + 'px';
   $(element).css({'padding-top': elementMargin, 'padding-bottom': elementMargin });
 }
-//-- Padding Nav  --------------------------------------------------------------
+
+//-- Navbar  -------------------------------------------------------------------
 /* Centrar los elementos del menu con el padding */
 calcularPadding('.navbar-brand.navbar__logo-text');
-calcularMargin('.navbar-brand .color-logo');
+// calcularMargin('.navbar-brand .color-logo');
 calcularPaddingNav('.nav.navbar-nav > li > a');
+
+/* Darle el line-height al enlace de ubicación */
+$('.navbar__logo-subtext').css({'line-height': navHeight + 'px'});
 
 
 //-- jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -99,84 +103,6 @@ $(function() {
     });
 });
 
-//-- Owl Testimonios
-$(document).on('ready', function() {
-  $('#owl-casos-de-exito').owlCarousel({
-      loop:true,
-      autoplay:true,
-      autoplayTimeout:15000,
-      margin:10,
-      nav: false,
-      dots:true,
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:1,
-              nav:false
-          },
-          600:{
-              items:2,
-              nav:false
-          },
-          1000:{
-              items:3,
-              nav:false,
-              loop:false
-          }
-      }
-  });
-
-  $('#owl-alianzas').owlCarousel({
-      loop:true,
-      autoplay:true,
-      autoplayTimeout:6000,
-      margin:10,
-      nav: false,
-      dots:true,
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:2,
-              nav:false
-          },
-          600:{
-              items:4,
-              nav:false
-          },
-          1000:{
-              items:6,
-              nav:false,
-              loop:false
-          }
-      }
-  });
-  /* Proyectos Inmobiliarios */
-  $('#owl-proyectos').owlCarousel({
-      loop:true,
-      autoplay:true,
-      autoplayTimeout:2000,
-      margin:10,
-      nav: false,
-      dots:true,
-      responsiveClass:true,
-      responsive:{
-          0:{
-              items:2,
-              nav:false
-          },
-          600:{
-              items:4,
-              nav:false
-          },
-          1000:{
-              items:6,
-              nav:false,
-              loop:false
-          }
-      }
-  });
-});
-
 //-- Button Close --------------------------------------------------------------
 /* Funcion al hacer click */
   buttonNavbarToggle.on('click', function () {
@@ -189,11 +115,11 @@ $(document).on('ready', function() {
   });
 
 //-- Si hacen click en una opcion del menu
-$(function () {
-    if (clickeaMenu()){
-      $('.navbar-collapse.navbar-ex1-collapse').removeClass('in');
-    }
-})
+// $(function () {
+//     if (clickeaMenu()){
+//       $('.navbar-collapse.navbar-ex1-collapse').removeClass('in');
+//     }
+// })
 
 
 // var btnToggle = $('.navbar-toggle.fixed-left');
@@ -244,50 +170,6 @@ function fadeElementOffset(element, animation, offsetvalue) {
   });
 }
 
-
-//-- Página Expertos TAMED -----------------------------------------------------
-  //-- hero
-  fadeElement('#hero-container .landing-expertos__title', 'fadeInDown');
-  fadeElement('#hero-container .landing-expertos__titular', 'fadeInLeft');
-  fadeElement('#hero-container .landing-expertos__subtitular', 'fadeIn');
-  fadeElement('#hero-container .viviendas', 'fadeIn');
-  fadeElement('#hero-container .asegura-lugar', 'fadeInUp');
-
-  //-- Beneficios
-  fadeElement('#beneficios h2', 'fadeIn');
-  fadeElement('#beneficios .headline--subheadline', 'fadeIn');
-  fadeElement('#beneficios .landing-expertos__beneficios__list li', 'fadeIn');
-  fadeElement('#beneficios .btn-fibaro', 'fadeInUp');
-
-  //-- Proceso
-  fadeElement('#proceso h2', 'fadeInUp');
-  fadeElement('#proceso .row:nth-child(2) .col-sm-4', 'fadeIn');
-  fadeElement('#proceso .col-sm-4 h4', 'fadeIn');
-  fadeElement('#proceso .col-sm-4 p', 'fadeInDown');
-  fadeElement('#proceso .col-sm-4.col-sm-offset-4 img', 'fadeInUp');
-  fadeElement('#proceso .col-sm-4 a', 'fadeInUp');
-
-  //-- Resevar cupo
-  fadeElement('#reservar-cupo h2','fadeIn');
-  fadeElement('#reservar-cupo .headline--subheadline', 'fadeIn');
-  fadeElement('#reservar-cupo .landing-expertos__tachado','fadeInDown');
-  // fadeElement('#reservar-cupo iframe', 'fadeInUp');
-
-  //-- Testimonios
-  fadeElement('#testimonios h2', 'fadeIn');
-  fadeElement('#testimonios .owl-stage-outer', 'fadeIn');
-
-
-  //-- Tu Hogar Inicio ---------------------------------------------------------
-  /* $(document).on('ready', function () {
-    setTimeout(function () {
-      $('.preloader').css({
-        'opacity':'0',
-        'visibility':'hidden'
-      });
-    },  1000);
-  });
-  */
   //-- Revisar si es ipad
   function is_iPad() {
     return (navigator.platform.indexOf("iPad") != -1)
@@ -403,7 +285,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
   /* Eliminar el otro menu si no es mobile o iPad */
   if ( checkWidth() || isTablet() || is_iPad()) {
     $('.dropdown-menu--desktop').hide();
-    $('.dropdown-menu--mobile').addClass('collapse')
+    $('.dropdown-menu--mobile').addClass('collapse');
   }else {
     $('.dropdown-menu--mobile').hide();
   }
@@ -430,11 +312,19 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
 
-  /* */
+  /* Modales Inicio */
   $('#telcos, #retail').on('click', function (e) {
     e.preventDefault();
     $('#telcos-modal').modal();
   });
+
+  if ( navbar.hasClass('navbar-fixed-top') ) {
+    $('body').css({'margin-top': navHeight + 'px'})
+  }
+
+  if ( windowWidth > 768) {
+    $('.navbar-collapse').removeClass('collapse');
+  }
 
 
 

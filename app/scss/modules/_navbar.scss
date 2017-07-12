@@ -2,6 +2,18 @@
   margin-bottom: 0;
   transition: all 300ms ease;
 
+  &-nav {
+    &::before {
+      // border-top: 1px solid red;
+      box-sizing: border-box;
+      content: '';
+      margin-left: -1.5rem;
+      padding: 0;
+      position: fixed;
+      width: 100%;
+    }
+  }
+
   &-fixed-top  {
       transition: all 500ms ease;
   }
@@ -26,7 +38,6 @@
     border-color: rgba(#e2e2e2, 0);
 
     .navbar-nav {
-
       @include md-device {
         float: right;
       }
@@ -87,8 +98,9 @@
 
     .navbar-brand {
       background-position: center;
+      // border: 1px solid green;
       color: $negro;
-      display: flex;
+      display: inline-flex;
 
       @include xxs-device {
         background-size: 80%;
@@ -122,6 +134,14 @@
       border-color: transparent;
       transition: all 300ms ease-out;
 
+      @include sm-device {
+        display: block;
+      }
+
+      @include md-device {
+        display: none;
+      }
+
       &:focus,
       &:hover {
         background: transparent;
@@ -146,6 +166,7 @@
 
     @include md-device {
       padding: 2rem 1.5rem;
+      padding-right: 1rem;
 
     }
 
@@ -156,10 +177,13 @@
     }
   }
 
-  &__logo-subtext {
-    align-self: center;
-    color: $negro;
+  &__site-location {
     display: inline-block;
+    float: left;
+  }
+
+  &__logo-subtext {
+    color: $negro;
     font-family: 'Open Sans';
     font-weight: 300;
     letter-spacing: normal;
@@ -168,11 +192,14 @@
     position: relative;
 
     @include xxs-device {
+      display: inline-block;
       font-size: 1.4rem;
+      // border: 1px solid red;
     }
 
     @include md-device {
-       font-size: 2rem;
+       font-size: 1.6rem;
+       margin-left: 0;
     }
 
 
@@ -192,10 +219,23 @@
     top: 50px;
   }
 
-  &-collapse {
+  .navbar-collapse {
     @include xxs-device {
-      padding-left: 0;
-      padding-right: 0;
+      border-top: 0;
+      margin: 0 auto !important;
+      padding: 0;
+      width: 100%;
+    }
+
+    .collapse {
+      display: none !important;
+    }
+  }
+
+
+  &-header {
+    @include xxs-device {
+      float: left;
     }
   }
 }
@@ -204,6 +244,7 @@
   & > li {
     display: inline-block;
     float: none;
+    text-transform: uppercase;
 
 
     &.active {
@@ -245,6 +286,8 @@
     }
   }
 }
+
+
 
 .open-animation {
   height: 3.4rem;

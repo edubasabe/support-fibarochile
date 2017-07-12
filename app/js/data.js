@@ -135,6 +135,42 @@ var alianzas = new Vue({
   }
 });
 
+//-- Proyectos Inmobiliarios ---------------------------------------------------
+var alianzas = new Vue({
+  el: '#owl-proyectos',
+  data: {
+    item:[
+      { src: 'images/proyectos-logos-1.jpg'},
+      { src: 'images/proyectos-logos-2.jpg'},
+      { src: 'images/proyectos-logos-3.jpg'},
+      { src: 'images/proyectos-logos-4.jpg'},
+      { src: 'images/proyectos-logos-5.jpg'},
+      { src: 'images/proyectos-logos-6.jpg'},
+      { src: 'images/proyectos-logos-7.jpg'},
+      { src: 'images/proyectos-logos-8.jpg'},
+      { src: 'images/proyectos-logos-9.jpg'},
+      { src: 'images/proyectos-logos-10.jpg'},
+      { src: 'images/proyectos-logos-11.jpg'},
+      { src: 'images/proyectos-logos-12.jpg'},
+      { src: 'images/proyectos-logos-13.jpg'},
+      { src: 'images/proyectos-logos-14.jpg'},
+      { src: 'images/proyectos-logos-15.jpg'}
+    ]
+  }
+});
+
+//-- Inmobi --------------------------------------------------------------------
+var novedades = new Vue({
+  el: '.proyectos__novedades-list',
+  data: {
+    item:[
+      { src: 'images/novedades/1.jpg', text: 'Garantiza la seguridad de tu familia con un clic', link: 'http://blog.tuhogarinteligente.cl/como-garantizar-la-seguridad-de-tu-familia-y-tu-hogar-inteligente-con-un-solo-clic/'},
+      { src: 'images/novedades/2.jpg', text: 'Un Hogar Inteligente es una solución para la familia', link: 'http://blog.tuhogarinteligente.cl/un-hogar-inteligente-es-una-solucion-para-la-familia/'},
+      { src: 'images/novedades/3.jpg', text: 'Un Hogar Inteligente cuida la salud de tu familia', link: 'http://blog.tuhogarinteligente.cl/un-hogar-inteligente-cuida-la-salud-de-tu-familia/'},
+      { src: 'images/novedades/4.jpg', text: 'Tu Hogar Inteligente alivia tu llegada del supermercado', link: 'http://blog.tuhogarinteligente.cl/tu-hogar-inteligente-alivia-tu-llegada-del-supermercado/'},
+    ]
+  }
+});
 
 //-- Ventana Modal -------------------------------------------------------------
 
