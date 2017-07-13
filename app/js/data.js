@@ -137,24 +137,27 @@ var alianzas = new Vue({
 
 //-- Proyectos Inmobiliarios ---------------------------------------------------
 var alianzas = new Vue({
-  el: '#owl-proyectos',
+  el: '#owl-inmobi',
   data: {
     item:[
-      { src: 'images/proyectos-logos-1.jpg'},
-      { src: 'images/proyectos-logos-2.jpg'},
-      { src: 'images/proyectos-logos-3.jpg'},
-      { src: 'images/proyectos-logos-4.jpg'},
-      { src: 'images/proyectos-logos-5.jpg'},
-      { src: 'images/proyectos-logos-6.jpg'},
-      { src: 'images/proyectos-logos-7.jpg'},
-      { src: 'images/proyectos-logos-8.jpg'},
-      { src: 'images/proyectos-logos-9.jpg'},
-      { src: 'images/proyectos-logos-10.jpg'},
-      { src: 'images/proyectos-logos-11.jpg'},
-      { src: 'images/proyectos-logos-12.jpg'},
-      { src: 'images/proyectos-logos-13.jpg'},
-      { src: 'images/proyectos-logos-14.jpg'},
-      { src: 'images/proyectos-logos-15.jpg'}
+      { src: 'images/partners/partners-logos-1.png'},
+      { src: 'images/partners/partners-logos-2.png'},
+      { src: 'images/partners/partners-logos-3.png'},
+      { src: 'images/partners/partners-logos-4.png'},
+      { src: 'images/partners/partners-logos-5.png'},
+      { src: 'images/partners/partners-logos-6.png'},
+      { src: 'images/partners/partners-logos-7.png'},
+      { src: 'images/partners/partners-logos-8.png'},
+      { src: 'images/partners/partners-logos-9.png'},
+      { src: 'images/partners/partners-logos-10.png'},
+      { src: 'images/partners/partners-logos-11.png'},
+      { src: 'images/partners/partners-logos-12.png'},
+      { src: 'images/partners/partners-logos-13.png'},
+      { src: 'images/partners/partners-logos-14.png'},
+      { src: 'images/partners/partners-logos-15.png'},
+      { src: 'images/partners/partners-logos-16.png'},
+      { src: 'images/partners/partners-logos-17.png'},
+      { src: 'images/partners/partners-logos-18.png'},
     ]
   }
 });

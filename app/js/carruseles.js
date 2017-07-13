@@ -55,7 +55,7 @@ $(document).on('ready', function() {
   $('#owl-inmobi').owlCarousel({
       loop:true,
       autoplay:true,
-      autoplayTimeout:6000,
+      autoplayTimeout:2000,
       margin:10,
       nav: false,
       dots:true,
@@ -73,7 +73,7 @@ $(document).on('ready', function() {
           1000:{
               items:6,
               nav:false,
-              loop:false
+              loop:true
           }
       }
   });

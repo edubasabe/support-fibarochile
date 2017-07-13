@@ -221,7 +221,6 @@
     </form>
   </div>
   <!-- Fin del formulario -->
-</section>
 
 <hr class="divider">
 
@@ -267,7 +266,9 @@
         <div class="proyectos__novedades-list">
           <div class="item col-xs-6 col-sm-3" v-for="data in item">
             <a :href="data.link">
-              <img :src="data.src" class="img-responsive center-block" style="width:initial;" >
+              <div class="img-container">
+                <img :src="data.src" class="img-responsive center-block" style="width:initial;" >
+              </div>
               <p>{{ data.text }}</p>
             </a>
           </div>
@@ -277,10 +278,156 @@
   </div>
 </section>
 
+<!-- Tu hogar nuevo estándar video -->
+<section class="page-section proyectos__hogar-video">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="headline headline--nomargin text-center">Hogar inteligente es un nuevo estándar</h2>
+        <p class="lead headline--subheadline">Las tecnologías modernas están en todo lo que nos rodea.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p class="text-center">
+          <a href="#" class="button button-play"><span>Play</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Lightbox -->
+  <div id="video-modal" class="modal fade modal-video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <span class="cerrar">
+                    <svg width="20" height="20">
+            	        <line x1="0" y1="0" x2="20" y2="20" style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                      <line x1="0" y1="20" x2="20" y2="0" style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                    </svg>
+                  </span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/V4fFjzYn6Jo" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- Video Lightbox -->
+
+</section>
 
 
 
+<!-- Vive con Fibaro -->
+<section class="page-section proyectos__vive">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="headline headline--nomargin text-center">Vive con fibaro</h2>
+      <p class="lead headline--subheadline">Conoce más sobre las casas y departamentos en venta que incluyen este sistema.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div class="row">
+        <div class="col-sm-6">
+          <a href="#" class="proyectos__vive-casas">
+            <img src="images/casas-image.png" alt="Casas" class="img-responsive">
+          </a>
+        </div>
+        <div class="col-sm-6">
+          <a href="#" class="proyectos__vive-deptos">
+            <img src="images/deptos-image.png" alt="Departamentos" class="img-responsive">
+          </a>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</div>
+</section>
+
+<hr class="divider">
+
+<!-- Porque con Fibaro -->
+<section class="page-section proyectos__porque">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="headline headline--nomargin text-center">¿Por qué con FIBARO?</h2>
+      <p class="lead headline--subheadline">Un departamento moderno une el diseño vanguardista con funcionalidad.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-push-6">
+        <img src="images/sin-limites.png" alt="" class="img-responsive">
+    </div>
+    <div class="col-sm-6 col-sm-pull-6">
+      <h4 class="proyectos__porque-title">Sin límites</h4>
+      <p class="proyectos__porque-text">Sistema FIBARO opera a través del protocolo Z-wave. Su instalación es rápida, fácil, inalámbrica y no es invasiva, por lo tanto, no se requiere cableado ni intervención en la estructura de la casa.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+        <img src="images/escalable.png" alt="" class="img-responsive">
+    </div>
+    <div class="col-sm-6">
+      <h4 class="proyectos__porque-title">Escalable</h4>
+      <p class="proyectos__porque-text">Este sistema es abierto y escalable, lo que permite agregar más dispositivos a nuestro sistema. Por lo tanto, si aparecen nuevas necesidades en tu vida, con FIBARO, tendrás la solución.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-push-6">
+        <img src="images/eficiencia-energetica.png" alt="" class="img-responsive">
+    </div>
+    <div class="col-sm-6 col-sm-pull-6">
+      <h4 class="proyectos__porque-title">Eficiencia energética</h4>
+      <p class="proyectos__porque-text">Con Fibaro puedes disminuir tus gastos de energía térmica y eléctrica. Este sistema permite analizar tu consumo para que sepas qué elemento es el que más gasta en tu hogar. Además, queda un registro para que sepas como estás ahorrando en tus cuentas cada mes.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+        <img src="images/integra-tu-hogar.png" alt="" class="img-responsive">
+    </div>
+    <div class="col-sm-6">
+      <h4 class="proyectos__porque-title">Integra tu hogar</h4>
+      <p class="proyectos__porque-text">FIBARO es compatible con sistemas de alarmas, calefacción, aire acondicionado, audio, riego automático, etc… Permite controlar la iluminación y artefactos electrodomésticos. La interface es muy amigable y el manejo del sistema, muy intuitivo.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="page-section proyectos__demo">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="headline text-center proyectos__demo-title">Conoce lo fácil que es controlar tu casa</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-sm-6 col-sm-offset-3">
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="#" class="btn btn-lg btn-block proyectos__demo-btn">Demo iPad</a>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" class="btn btn-lg btn-block proyectos__demo-btn">Demo iPhone</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
 
 
 <!-- Nuestras Alianzas -->

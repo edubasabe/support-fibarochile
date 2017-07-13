@@ -326,6 +326,13 @@ function fadeElementOffset(element, animation, offsetvalue) {
     $('.navbar-collapse').removeClass('collapse');
   }
 
+  /* Video Modal */
+  $('.button-play').on('click',function (e) {
+    e.preventDefault();
+    $('#video-modal').modal('show');
+    $('#video-modal').attr('src','https://www.youtube.com/watch?v=V4fFjzYn6Jo');
+  });
+
 
 
 
