@@ -84,7 +84,7 @@ function calcularPaddingNav(element) {
 /* Centrar los elementos del menu con el padding */
 calcularPadding('.navbar-brand.navbar__logo-text');
 calcularMargin('.navbar-brand .color-logo');
-calcularPaddingNav('.nav.navbar-nav li > a');
+calcularPaddingNav('.nav.navbar-nav > li > a');
 
 
 //-- jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -130,6 +130,31 @@ $(document).on('ready', function() {
       loop:true,
       autoplay:true,
       autoplayTimeout:6000,
+      margin:10,
+      nav: false,
+      dots:true,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:2,
+              nav:false
+          },
+          600:{
+              items:4,
+              nav:false
+          },
+          1000:{
+              items:6,
+              nav:false,
+              loop:false
+          }
+      }
+  });
+  /* Proyectos Inmobiliarios */
+  $('#owl-proyectos').owlCarousel({
+      loop:true,
+      autoplay:true,
+      autoplayTimeout:2000,
       margin:10,
       nav: false,
       dots:true,
@@ -277,7 +302,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
   else {
-    console.log('No es iPad');
+    // console.log('No es iPad');
   }
 
   //-- Waypoint Inicio ---------------------------------------------------------
@@ -341,5 +366,79 @@ function fadeElementOffset(element, animation, offsetvalue) {
   if ( checkWidth() ) {
     $('.horario').html('Lunes a Viernes: <br> 9:00 AM – 07:00 PM <br> Sábado:  10:00 AM – 07:00 PM <br><br>');
   }
+
+
+  //-- Navbar Animacion Yamm ---------------------------------------------------
+
+  /* Darle clase open al hacer click, para que se despliegue el menu*/
+  $('li.dropdown.yamm-fullwidth > a').on('click', function (event) {
+    $(this).parent().toggleClass('open');
+  });
+
+  /* Guardar el menu si el usuario hace click fuera */
+  $('body').on('click', function (e) {
+    if (!$('li.dropdown.yamm-fullwidth').is(e.target)
+        && $('li.dropdown.yamm-fullwidth').has(e.target).length === 0
+        && $('.open').has(e.target).length === 0
+    ) {
+        $('li.dropdown.yamm-fullwidth').removeClass('open');
+    }
+  });
+
+
+  $('.dropdown-toggle').click(function () {
+    /* Agrega clase active al primer li*/
+    $('.open .nav.nav-pills > li:first-child').addClass('active');
+    /* Agrega clase bg-white al navbar*/
+    $('nav').addClass('bg-white');
+    /* Agrega clase activa  sensores */
+    $('#sensores').addClass('active');
+    /* Agrega el atributo aria expanded */
+    $('.open .nav.nav-pills > li:first-child > a').attr('aria-expanded',true);
+  });
+
+  /* Collapsando todos los submenus */
+  $('.dropdown-menu--mobile > li.dropdown > ul').addClass('collapse');
+
+  /* Eliminar el otro menu si no es mobile o iPad */
+  if ( checkWidth() || isTablet() || is_iPad()) {
+    $('.dropdown-menu--desktop').hide();
+    $('.dropdown-menu--mobile').addClass('collapse')
+  }else {
+    $('.dropdown-menu--mobile').hide();
+  }
+
+  $('.dropdown-menu--mobile > li.dropdown').on('click',function () {
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    }else {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
+
+  });
+
+  $('#menu-escrito > li').on('click', function () {
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    }else if ( !$(this).hasClass('open') ) {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
+  });
+
+  if ( !checkWidth() || !isTablet() ) {
+    $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
+  }
+
+
+  /* */
+  $('#telcos, #retail').on('click', function (e) {
+    e.preventDefault();
+    $('#telcos-modal').modal();
+  });
+
+
+
+
+
 
  });

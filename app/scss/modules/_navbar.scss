@@ -31,6 +31,17 @@
         float: right;
       }
 
+      & > .open {
+        a {
+          background-color: transparent;
+
+          &:hover,
+          &:focus {
+            background-color: transparent;
+          }
+        }
+      }
+
       & > {
         li > {
           a {
@@ -172,6 +183,21 @@
       top: -2px;
     }
   }
+
+  .dropdown-menu {
+    border: 0;
+    border-radius: 0;
+    border-top: 1px solid #f2f2f2;
+    position: fixed;
+    top: 50px;
+  }
+
+  &-collapse {
+    @include xxs-device {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .nav-pills {
@@ -197,24 +223,25 @@
 
 .nav {
   li {
-
-    @include xxs-device {
-      border-bottom: 1px solid #e7e7e7;
-      margin: 0 1.5rem;
-
-      &:last-child {
-        border-bottom: 0;
-      }
-    }
-
-    @include sm-device {
-      border-bottom: 0;
-    }
-
     a {
       padding-left: 0;
       padding-right: 0;
       transition: background-color 250ms;
+
+      @include xxs-device {
+        // border-bottom: 1px solid #e7e7e7;
+        margin: 0 1.5rem;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+
+
+    @include sm-device {
+      border-bottom: 0;
     }
   }
 }
@@ -264,11 +291,23 @@
   }
 
   .navbar-nav {
-    li {
+    margin: 0 auto;
 
+    @include sm-device {
+      width: 100%;
+    }
+
+    @include md-device {
+      width: initial;
+    }
+
+    & > li {
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    li {
       @include xxs-device {
-        border-bottom: 1px solid #e7e7e7;
-        margin: 0 1.5rem;
+        margin: 0 auto;
         width: 100%;
 
         &:last-child {
@@ -283,6 +322,71 @@
 
       a {
         color: $negro;
+
+        @include xxs-device {
+          margin: 0 auto;
+        }
+
+        @include sm-device {
+          font-size: 1.6rem;
+        }
+
+        @include md-device {
+          font-size: 1.4rem;
+          margin: 0 1.5rem;
+        }
+      }
+    }
+
+    .open {
+      .collapsed {
+        .open > a {
+          color: $azul;
+
+          @include xxs-device {
+            &::after {
+              border-bottom: 1px solid $azul;
+              border-right: 1px solid $azul;
+              content: '';
+              display: block;
+              height: 1rem;
+              position: absolute;
+              right: 1.5rem;
+              top: 2rem;
+              transform: rotate(225deg);
+              transition: all 300ms;
+              width: 1rem;
+            }
+          }
+
+          @include md-device {
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        > a {
+          &::after {
+            border-bottom: 1px solid $negro;
+            border-right: 1px solid $negro;
+            content: '';
+            display: block;
+            height: 1rem;
+            position: absolute;
+            right: 1.5rem;
+            top: 2rem;
+            transform: rotate(45deg);
+            transition: all 300ms;
+            width: 1rem;
+          }
+
+          @include md-device {
+            &::after {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
@@ -292,5 +396,271 @@
 
   &::after {
     background: transparent !important;
+  }
+}
+
+//-- Yamm Navbar ---------------------------------------------------------------
+.dropdown-menu--desktop {
+  @include xxs-device {
+    display: none;
+  }
+
+  @include md-device {
+    // display: initial;
+  }
+}
+
+.dropdown-menu--mobile {
+  margin: 0 auto;
+  width: calc(100% - 3rem);
+
+  @include md-device { display: none; }
+
+    .dropdown {
+      margin-left: 0;
+      position: relative;
+
+      a {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1.2rem 0;
+        padding-left: 1.5rem;
+        text-decoration: none;
+
+        img {
+          display: inline-block;
+          max-width: 8rem;
+        }
+      }
+
+      ul {
+        li {
+          margin-left: 0;
+
+
+          a {
+            font-weight: 300;
+            padding: 0;
+
+            @include sm-device {
+              width: 100%;
+            }
+
+            span {
+              @include xxs-device {
+                font-size: 1.4rem;
+              }
+              @include sm-device {
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+
+      .menu-sub-toggle {
+        font-weight: 300;
+        padding-left: 0;
+        position: relative;
+
+        @include xxs-device {
+          font-size: 1.4rem;
+        }
+
+        @include sm-device {
+          font-size: 1.6rem;
+          width: 100%;
+        }
+
+        &::after {
+          border-bottom: 1px solid $negro;
+          border-right: 1px solid $negro;
+          content: '';
+          display: block;
+          height: 1rem;
+          position: absolute;
+          right: 1.5rem;
+          top: 2rem;
+          transform: rotate(45deg);
+          transition: all 300ms;
+          width: 1rem;
+        }
+
+        @include md-device {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+}
+
+.dropdown-submenu {
+  display: none;
+  position: relative;
+
+    .dropdown-menu {
+      left: 0;
+      margin-top: -1px;
+      top: 0;
+    }
+}
+
+.yamm-fullwidth {
+  margin-left: 0;
+
+  .yamm-content {
+
+    .nav-pills {
+      @include md-device {
+        border-bottom: 1px solid #f2f2f2;
+      }
+
+      & > li {
+        &.active {
+          a {
+            background: transparent;
+            color: $azul;
+
+            &:hover {
+              background: transparent;
+            }
+          }
+        }
+
+        a {
+          color: $negro;
+          transition: all 300ms ease;
+
+          @include md-device {
+            font-size: 2rem;
+            font-weight: 300;
+          }
+
+          &:hover {
+            background: transparent;
+            color: $azul;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        .nav-product-tab-list {
+          text-align: center;
+
+          li {
+            // border: 1px solid $azul;
+            display: inline-block;
+            width: calc(20% - 3rem);
+
+            @include xxs-device {
+              text-align: left;
+            }
+
+            @include md-device {
+              text-align: center;
+            }
+
+            a {
+              color: $negro;
+              transition: all 300ms ease;
+
+              img {
+                transform: scale(.9);
+                transition: all 300ms ease;
+              }
+
+              &:hover {
+                color: $azul;
+                text-decoration: none;
+
+
+                img {
+                  transform: scale(1);
+
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dropdown.yamm-fullwidth.open {
+  & > a {
+    @include xxs-device {
+      border-bottom: 0;
+      color: $azul !important;
+
+      &::after {
+        border-bottom: 1px solid $azul;
+        border-right: 1px solid $azul;
+        content: '';
+        display: block;
+        height: 1rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 2rem;
+        transform: rotate(225deg);
+        transition: all 300ms;
+        width: 1rem;
+      }
+    }
+
+    @include md-device {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.dropdown.yamm-fullwidth {
+  & > a {
+    @include xxs-device {
+      color: $negro;
+
+      &::after {
+        border-bottom: 1px solid $negro;
+        border-right: 1px solid $negro;
+        content: '';
+        display: block;
+        height: 1rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 2rem;
+        transform: rotate(45deg);
+        transition: all 300ms;
+        width: 1rem;
+      }
+    }
+
+    @include md-device {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.arrow-down {
+  @include xxs-device {
+    display: none;
+  }
+
+  @include md-device {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    display: inline-block;
+    height: .8rem;
+    margin-bottom: .2rem;
+    transform: rotate(45deg);
+    width: .8rem;
   }
 }
