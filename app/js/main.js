@@ -246,48 +246,10 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
 
 //-- Página Expertos TAMED -----------------------------------------------------
-  //-- hero
-  fadeElement('#hero-container .landing-expertos__title', 'fadeInDown');
-  fadeElement('#hero-container .landing-expertos__titular', 'fadeInLeft');
-  fadeElement('#hero-container .landing-expertos__subtitular', 'fadeIn');
-  fadeElement('#hero-container .viviendas', 'fadeIn');
-  fadeElement('#hero-container .asegura-lugar', 'fadeInUp');
-
-  //-- Beneficios
-  fadeElement('#beneficios h2', 'fadeIn');
-  fadeElement('#beneficios .headline--subheadline', 'fadeIn');
-  fadeElement('#beneficios .landing-expertos__beneficios__list li', 'fadeIn');
-  fadeElement('#beneficios .btn-fibaro', 'fadeInUp');
-
-  //-- Proceso
-  fadeElement('#proceso h2', 'fadeInUp');
-  fadeElement('#proceso .row:nth-child(2) .col-sm-4', 'fadeIn');
-  fadeElement('#proceso .col-sm-4 h4', 'fadeIn');
-  fadeElement('#proceso .col-sm-4 p', 'fadeInDown');
-  fadeElement('#proceso .col-sm-4.col-sm-offset-4 img', 'fadeInUp');
-  fadeElement('#proceso .col-sm-4 a', 'fadeInUp');
-
-  //-- Resevar cupo
-  fadeElement('#reservar-cupo h2','fadeIn');
-  fadeElement('#reservar-cupo .headline--subheadline', 'fadeIn');
-  fadeElement('#reservar-cupo .landing-expertos__tachado','fadeInDown');
-  // fadeElement('#reservar-cupo iframe', 'fadeInUp');
-
-  //-- Testimonios
-  fadeElement('#testimonios h2', 'fadeIn');
-  fadeElement('#testimonios .owl-stage-outer', 'fadeIn');
 
 
   //-- Tu Hogar Inicio ---------------------------------------------------------
-  /* $(document).on('ready', function () {
-    setTimeout(function () {
-      $('.preloader').css({
-        'opacity':'0',
-        'visibility':'hidden'
-      });
-    },  1000);
-  });
-  */
+
   //-- Revisar si es ipad
   function is_iPad() {
     return (navigator.platform.indexOf("iPad") != -1)
@@ -314,6 +276,12 @@ function fadeElementOffset(element, animation, offsetvalue) {
       $('.inicio-tuhogar--homevideo').toggleClass('bg-no-gradient');
     }, { 'offset': '-50%' });
 
+    /* Animacion del formulario floating right */  
+    $('#smarthome').waypoint(function () {
+      console.log('Paso');
+      $('#contacto-modal .floating').addClass('animated fadeInUp');
+    }, { offset: '50%' });
+
   //-- Formulario de Contacto --------------------------------------------------
   // Si es IPad y seleccionan el campo de nombre subir más el formulario flotante
   if (is_iPad() ) {
@@ -328,7 +296,8 @@ function fadeElementOffset(element, animation, offsetvalue) {
     // Mostrar solo si no es mobile
       if ( !checkWidth()) {
         // Apertura de la pop up de contacto con el waypoint al 50%
-        fadeElementOffset('#porque-fibaro .floating', 'fadeInUp', '50%');
+        // fadeElementOffset('#contacto-modal', 'fadeInUp', '50%');
+
 
         //Al hacer click el en btn cerrarlo es decir colocarle display none
         $('.inicio-tuhogar__contact-form .close').on('click', function () {
@@ -430,7 +399,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
 
-  /* */
+  /* Acciones Ventana Modal Telcos */
   $('#telcos, #retail').on('click', function (e) {
     e.preventDefault();
     $('#telcos-modal').modal();

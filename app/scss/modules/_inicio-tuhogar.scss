@@ -28,7 +28,7 @@
 
     @include sm-device {
       background: $negro url('../images/tu-hogar-inteligente-tablet.png') no-repeat center center;
-      height: auto;
+      height: 100vh;
       min-height: 46rem;
       padding-top: 0;
 
@@ -38,6 +38,7 @@
 
     @include md-device {
     background: $negro;
+    height: auto;
 
       &__video {
         display: block;
@@ -79,7 +80,7 @@
   }
 
   //-- Section 2 : Smarthome ---------------------------------------------------
-  &--smarthome {
+  &__smarthome {
     background: url('../images/smarthome.jpg') no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -89,22 +90,29 @@
       background-position: bottom;
     }
 
-    &__title {
+    &--title {
+      color: $blanco;
       font-weight: 300;
 
       @include xxs-device {
         font-size: 3rem;
         margin-bottom: 2rem;
+        text-align: center;
+      }
+      @include sm-device {
+        font-size: 4.2rem;
       }
     }
 
-    &__subtitle {
+    &--subtitle {
+      color: $blanco;
+
       @include xxs-device {
         text-align: center;
       }
 
       @include sm-device {
-        text-align: left;
+        text-align: center;
       }
     }
 
@@ -159,13 +167,6 @@
       }
     }
 
-    &__title {
-      @include xxs-device {
-        font-size: 3rem;
-        margin-bottom: 2rem;
-      }
-    }
-
     &__subtitle {
       color: #666;
     }
@@ -206,6 +207,16 @@
       min-height: 60rem;
     }
 
+    .blacking-bg {
+      @include xxs-device {
+        display: none;
+      }
+
+      @include md-device {
+        display: block;
+      }
+    }
+
     &__image {
       @include xxs-device {
         display: block;
@@ -228,11 +239,6 @@
         color: $negro;
         // max-width: 80%;
         padding-top: 4rem;
-
-        .horario {
-          font-size: 1.4rem;
-          font-weight: 300;
-        }
       }
 
       @include md-device {
@@ -383,6 +389,14 @@
       em {
         color: $azul;
       }
+    }
+  }
+
+
+  //-- Nuestras Alianzas -------------------------------------------------------
+  &__nuestras-alianzas {
+    &__image {
+      transform: scale(.7);
     }
   }
 

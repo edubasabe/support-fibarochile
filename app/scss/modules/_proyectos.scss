@@ -1,0 +1,316 @@
+.proyectos {
+
+  //-- Novedades ---------------------------------------------------------------
+  &__novedades {
+    &-list {
+      .item {
+        padding: 0;
+        @include xxs-device {
+          margin-bottom: 1.5rem;
+        }
+
+        @include sm-device {
+          padding: 0 .75rem;
+        }
+
+        &:first-child {
+          @include sm-device {
+            padding-left: 0;
+          }
+        }
+
+        &:last-child {
+          @include sm-device {
+            padding-right: 0;
+          }
+        }
+
+        &:nth-child(odd) {
+          @include xxs-device {
+            padding-right: .75rem;
+          }
+        }
+
+        &:nth-child(even) {
+          @include xxs-device {
+            padding-left: .75rem;
+          }
+        }
+
+
+
+        a {
+          position: relative;
+          text-decoration: none;
+        }
+
+        .img-container {
+          overflow: hidden;
+
+          @include xxs-device {
+            // height: ;
+          }
+
+          @include md-device {
+            height: 25rem;
+          }
+
+          img {
+            border-radius: .4rem .4rem 0 0;
+          }
+        }
+
+
+        p {
+          border: 1px solid #f2f2f2;
+          border-radius: 0 0 .4rem .4rem;
+          bottom: 0;
+          padding: 1rem;
+
+          @include xxs-device {
+            min-height: 12rem;
+          }
+
+          @include md-device {
+            min-height: 9rem;
+          }
+        }
+      }
+
+    }
+  }
+
+  //-- Hogar Video -------------------------------------------------------------
+  &__hogar-video {
+    @include xxs-device {
+      background: url('../images/movie-poster-mobile.jpg') no-repeat left center;
+      background-size: cover;
+    }
+
+    @include md-device {
+      background: url('../images/movie-poster-desktop.jpg') no-repeat;
+    }
+
+
+    h2,
+    p {
+      @include xxs-device {
+        color: $blanco;
+      }
+    }
+  }
+
+  //-- Vive con fibaro ---------------------------------------------------------
+  &__vive {
+    &-casas {
+      // border: 1px solid #f2f2f2;
+      border-radius: .4rem;
+      display: inline-block;
+      margin-bottom: 2rem;
+      min-height: 6rem;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        bottom: 1.5rem;
+        content: 'Casas';
+        left: 1.5rem;
+        position: absolute;
+
+        @include xxs-device {
+          color: $blanco;
+          font-size: 1.6rem;
+        }
+
+        @include sm-device {
+          font-size: 2rem;
+          font-weight: 700;
+          text-shadow: .2rem .2rem .4rem rgba($negro, .6);
+        }
+      }
+    }
+
+    &-deptos {
+      // border: 1px solid #f2f2f2;
+      border-radius: .4rem;
+      display: inline-block;
+      margin-bottom: 2rem;
+      min-height: 6rem;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        bottom: 1.5rem;
+        content: 'Departamentos';
+        left: 1.5rem;
+        position: absolute;
+
+        @include xxs-device {
+          color: $blanco;
+          font-size: 1.6rem;
+        }
+
+        @include sm-device {
+          font-size: 2rem;
+          font-weight: 700;
+          text-shadow: .2rem .2rem .4rem rgba($negro, .6);
+        }
+      }
+    }
+  }
+
+  //-- porque-fibaro -----------------------------------------------------------
+  &__porque {
+    &-title {
+      color: $azul;
+      font-weight: 300;
+
+      @include xxs-device {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      @include sm-device {
+        font-size: 2.5rem;
+        text-align: left;
+      }
+      @include md-device {
+        font-size: 3rem;
+      }
+    }
+
+    &-text {
+      font-weight: 300;
+
+      @include xxs-device {
+        margin-bottom: 4rem;
+        text-align: center;
+      }
+
+      @include sm-device {
+        line-height: 1.6;
+        text-align: left;
+      }
+    }
+  }
+
+  &__demo {
+    background: url('../images/demo-desktop.jpg') no-repeat;
+    background-size: cover;
+
+    &-title {
+      color: $blanco;
+    }
+
+    &-btn {
+      border: .2rem solid $blanco;
+      border-radius: .4rem;
+      color: $blanco;
+      transition: all 250ms ease-out;
+
+      &:hover,
+      &:active {
+        background: $blanco;
+        color: $azul;
+      }
+
+      @include xxs-device {
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+@keyframes play-button-before {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    20% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.4);
+    }
+
+    75% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.7);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.7);
+    }
+}
+
+.modal-video {
+    .modal {
+      &-content {
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+      }
+
+      &-header {
+        border: 0;
+      }
+
+      &-dialog {
+        @include md-device {
+          width: 100rem;
+        }
+      }
+    }
+}
+
+.modal-backdrop {
+  &.in { opacity: .8; }
+}
+
+.button-play {
+  display: inline-block;
+  height: 60px;
+  position: relative;
+  width: 60px;
+
+  span {
+    display: block;
+    font-size: 0;
+    height: 1px;
+    visibility: hidden;
+    width: 1px;
+  }
+
+  &::before {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    animation: 2s linear 0s infinite normal;
+    animation-name: play-button-before;
+    background-color: rgba(255, 255, 255, .3);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 58px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 58px;
+  }
+
+  &::after {
+    background: url('../images/play-icon.svg') no-repeat;
+    background-size: 60px 60px;
+    content: '';
+    display: block;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 60px;
+  }
+}
