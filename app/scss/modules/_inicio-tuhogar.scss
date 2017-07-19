@@ -86,6 +86,16 @@
     overflow: hidden;
     position: relative;
 
+    @include xxs-device {
+      background-position: bottom;
+      height: 100vh;
+    }
+
+    @include sm-device {
+      background-position: bottom;
+      height: 100vh;
+    }
+
     @include md-device {
       background-position: bottom;
     }
@@ -123,7 +133,7 @@
         }
 
         @include sm-device {
-          text-align: left;
+          text-align: center;
         }
     }
 
@@ -179,6 +189,9 @@
         font-weight: 300;
 
         @include xxs-device {
+          font-size: 2rem;
+        }
+        @include sm-device {
           font-size: 3rem;
         }
       }
@@ -187,6 +200,10 @@
         color: #666;
 
         @include xxs-device {
+          font-size: 1.4rem;
+        }
+
+        @include sm-device {
           font-size: 1.8rem;
         }
       }
