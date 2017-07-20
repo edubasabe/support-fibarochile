@@ -3,11 +3,11 @@
     el: '#sensores',
     data: {
       titles: [
-        { text: 'Motion Sensor', url: 'images/nav-motion.jpg', class: 'active' },
-        { text: 'Flood Sensor', url: 'images/nav-flood.jpg' },
-        { text: 'Door/Window Sensor', url: 'images/nav-dws.jpg' },
-        { text: 'Smoke Sensor', url: 'images/nav-smoke.jpg' },
-        { text: 'Universal Binary Sensor', url: 'images/nav-ubs.jpg' }
+        { text: 'Motion Sensor', url: 'assets/images/nav-motion.jpg', class: 'active' },
+        { text: 'Flood Sensor', url: 'assets/images/nav-flood.jpg' },
+        { text: 'Door/Window Sensor', url: 'assets/images/nav-dws.jpg' },
+        { text: 'Smoke Sensor', url: 'assets/images/nav-smoke.jpg' },
+        { text: 'Universal Binary Sensor', url: 'assets/images/nav-ubs.jpg' }
       ],
     }
   });
@@ -16,11 +16,11 @@
     el: '#actuadores',
     data: {
       titles: [
-        { text: 'Wall Plug', url: 'images/nav-wallplug.jpg' },
-        { text: 'Dimmer 2', url: 'images/nav-dimmer.jpg' },
-        { text: 'Switches 2', url: 'images/nav-relay.jpg' },
-        { text: 'Roller Shutter 2', url: 'images/nav-smoke.jpg' },
-        { text: 'RGBW Controller', url: 'images/nav-ubs.jpg' }
+        { text: 'Wall Plug', url: 'assets/images/nav-wallplug.jpg' },
+        { text: 'Dimmer 2', url: 'assets/images/nav-dimmer.jpg' },
+        { text: 'Switches 2', url: 'assets/images/nav-relay.jpg' },
+        { text: 'Roller Shutter 2', url: 'assets/images/nav-smoke.jpg' },
+        { text: 'RGBW Controller', url: 'assets/images/nav-ubs.jpg' }
       ],
     }
   });
@@ -29,9 +29,9 @@
     el: '#remotos',
     data: {
       titles: [
-        { text: 'KeyFob', url: 'images/nav-keyfob.jpg' },
-        { text: 'The Button', url: 'images/nav-button.jpg' },
-        { text: 'Swipe', url: 'images/nav-swipe.jpg' }
+        { text: 'KeyFob', url: 'assets/images/nav-keyfob.jpg' },
+        { text: 'The Button', url: 'assets/images/nav-button.jpg' },
+        { text: 'Swipe', url: 'assets/images/nav-swipe.jpg' }
       ],
     }
   });
@@ -40,8 +40,8 @@
     el: '#puerta-de-enlace',
     data: {
       titles: [
-        { text: 'Home Center Lite', url: 'images/nav-hcl.jpg' },
-        { text: 'Home Center 2', url: 'images/nav-hc2.jpg' }
+        { text: 'Home Center Lite', url: 'assets/images/nav-hcl.jpg' },
+        { text: 'Home Center 2', url: 'assets/images/nav-hc2.jpg' }
       ],
     }
   });
@@ -51,11 +51,11 @@
     el: '#sensores-mobile',
     data: {
       titles: [
-        { text: 'Motion Sensor', url: 'images/nav-motion.jpg', class: 'active' },
-        { text: 'Flood Sensor', url: 'images/nav-flood.jpg' },
-        { text: 'Door/Window Sensor', url: 'images/nav-dws.jpg' },
-        { text: 'Smoke Sensor', url: 'images/nav-smoke.jpg' },
-        { text: 'Universal Binary Sensor', url: 'images/nav-ubs.jpg' }
+        { text: 'Motion Sensor', url: 'assets/images/nav-motion.jpg', class: 'active' },
+        { text: 'Flood Sensor', url: 'assets/images/nav-flood.jpg' },
+        { text: 'Door/Window Sensor', url: 'assets/images/nav-dws.jpg' },
+        { text: 'Smoke Sensor', url: 'assets/images/nav-smoke.jpg' },
+        { text: 'Universal Binary Sensor', url: 'assets/images/nav-ubs.jpg' }
       ],
     }
   });
@@ -64,11 +64,11 @@
     el: '#actuadores-mobile',
     data: {
       titles: [
-        { text: 'Wall Plug', url: 'images/nav-wallplug.jpg' },
-        { text: 'Dimmer 2', url: 'images/nav-dimmer.jpg' },
-        { text: 'Switches 2', url: 'images/nav-relay.jpg' },
-        { text: 'Roller Shutter 2', url: 'images/nav-smoke.jpg' },
-        { text: 'RGBW Controller', url: 'images/nav-ubs.jpg' }
+        { text: 'Wall Plug', url: 'assets/images/nav-wallplug.jpg' },
+        { text: 'Dimmer 2', url: 'assets/images/nav-dimmer.jpg' },
+        { text: 'Switches 2', url: 'assets/images/nav-relay.jpg' },
+        { text: 'Roller Shutter 2', url: 'assets/images/nav-smoke.jpg' },
+        { text: 'RGBW Controller', url: 'assets/images/nav-ubs.jpg' }
       ],
     }
   });
@@ -77,9 +77,9 @@
     el: '#remotos-mobile',
     data: {
       titles: [
-        { text: 'KeyFob', url: 'images/nav-keyfob.jpg' },
-        { text: 'The Button', url: 'images/nav-button.jpg' },
-        { text: 'Swipe', url: 'images/nav-swipe.jpg' }
+        { text: 'KeyFob', url: 'assets/images/nav-keyfob.jpg' },
+        { text: 'The Button', url: 'assets/images/nav-button.jpg' },
+        { text: 'Swipe', url: 'assets/images/nav-swipe.jpg' }
       ],
     }
   });
@@ -88,8 +88,8 @@
     el: '#puertas-mobile',
     data: {
       titles: [
-        { text: 'Home Center Lite', url: 'images/nav-hcl.jpg' },
-        { text: 'Home Center 2', url: 'images/nav-hc2.jpg' }
+        { text: 'Home Center Lite', url: 'assets/images/nav-hcl.jpg' },
+        { text: 'Home Center 2', url: 'assets/images/nav-hc2.jpg' }
       ],
     }
   });
@@ -99,14 +99,14 @@ var alianzas = new Vue({
   el: '#owl-alianzas',
   data: {
     item:[
-      { src: 'images/partners-yale.jpg', srcset: 'images/partners-yale.jpg 1x, images/partners-yale@2x.jpg 2x' },
-      { src: 'images/partners-sonos.jpg', srcset: 'images/partners-sonos.jpg 1x, images/partners-sonos@2x.jpg 2x' },
-      { src: 'images/partners-evolux.jpg', srcset: 'images/partners-evolux.jpg 1x, images/partners-evolux@2x.jpg 2x' },
-      { src: 'images/partners-zwave.jpg', srcset: 'images/partners-zwave.jpg 1x, images/partners-zwave@2x.jpg 2x' },
-      { src: 'images/partners-leed.jpg', srcset: 'images/partners-leed.jpg 1x, images/partners-leed@2x.jpg 2x' },
-      { src: 'images/partners-dlink.jpg', srcset: 'images/partners-dlink.jpg 1x, images/partners-dlink@2x.jpg 2x' },
-      { src: 'images/partners-hunterdouglas.jpg', srcset: 'images/partners-hunterdouglas.jpg 1x, images/partners-hunterdouglas@2x.jpg 2x' },
-      { src: 'images/partners-rollerhouse.jpg', srcset: 'images/partners-rollerhouse.jpg 1x, images/partners-rollerhouse@2x.jpg 2x' },
+      { src: 'assets/images/partners-yale.jpg', srcset: 'assets/images/partners-yale.jpg 1x, assets/images/partners-yale@2x.jpg 2x' },
+      { src: 'assets/images/partners-sonos.jpg', srcset: 'assets/images/partners-sonos.jpg 1x, assets/images/partners-sonos@2x.jpg 2x' },
+      { src: 'assets/images/partners-evolux.jpg', srcset: 'assets/images/partners-evolux.jpg 1x, assets/images/partners-evolux@2x.jpg 2x' },
+      { src: 'assets/images/partners-zwave.jpg', srcset: 'assets/images/partners-zwave.jpg 1x, assets/images/partners-zwave@2x.jpg 2x' },
+      { src: 'assets/images/partners-leed.jpg', srcset: 'assets/images/partners-leed.jpg 1x, assets/images/partners-leed@2x.jpg 2x' },
+      { src: 'assets/images/partners-dlink.jpg', srcset: 'assets/images/partners-dlink.jpg 1x, assets/images/partners-dlink@2x.jpg 2x' },
+      { src: 'assets/images/partners-hunterdouglas.jpg', srcset: 'assets/images/partners-hunterdouglas.jpg 1x, assets/images/partners-hunterdouglas@2x.jpg 2x' },
+      { src: 'assets/images/partners-rollerhouse.jpg', srcset: 'assets/images/partners-rollerhouse.jpg 1x, assets/images/partners-rollerhouse@2x.jpg 2x' },
     ]
   }
 });
@@ -116,21 +116,21 @@ var alianzas = new Vue({
   el: '#owl-proyectos',
   data: {
     item:[
-      { src: 'images/proyectos-logos-1.jpg'},
-      { src: 'images/proyectos-logos-2.jpg'},
-      { src: 'images/proyectos-logos-3.jpg'},
-      { src: 'images/proyectos-logos-4.jpg'},
-      { src: 'images/proyectos-logos-5.jpg'},
-      { src: 'images/proyectos-logos-6.jpg'},
-      { src: 'images/proyectos-logos-7.jpg'},
-      { src: 'images/proyectos-logos-8.jpg'},
-      { src: 'images/proyectos-logos-9.jpg'},
-      { src: 'images/proyectos-logos-10.jpg'},
-      { src: 'images/proyectos-logos-11.jpg'},
-      { src: 'images/proyectos-logos-12.jpg'},
-      { src: 'images/proyectos-logos-13.jpg'},
-      { src: 'images/proyectos-logos-14.jpg'},
-      { src: 'images/proyectos-logos-15.jpg'}
+      { src: 'assets/images/proyectos-logos-1.jpg'},
+      { src: 'assets/images/proyectos-logos-2.jpg'},
+      { src: 'assets/images/proyectos-logos-3.jpg'},
+      { src: 'assets/images/proyectos-logos-4.jpg'},
+      { src: 'assets/images/proyectos-logos-5.jpg'},
+      { src: 'assets/images/proyectos-logos-6.jpg'},
+      { src: 'assets/images/proyectos-logos-7.jpg'},
+      { src: 'assets/images/proyectos-logos-8.jpg'},
+      { src: 'assets/images/proyectos-logos-9.jpg'},
+      { src: 'assets/images/proyectos-logos-10.jpg'},
+      { src: 'assets/images/proyectos-logos-11.jpg'},
+      { src: 'assets/images/proyectos-logos-12.jpg'},
+      { src: 'assets/images/proyectos-logos-13.jpg'},
+      { src: 'assets/images/proyectos-logos-14.jpg'},
+      { src: 'assets/images/proyectos-logos-15.jpg'}
     ]
   }
 });
