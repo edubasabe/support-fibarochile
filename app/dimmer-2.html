@@ -29,13 +29,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
-    <!-- build:css css/styles.min.css -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" href="./assets/css/font-awesome.css">
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/yamm.css">
+    <!-- build:css css/styles.min.css -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- endbuild -->
     <!--[if lt IE 9]>
@@ -43,11 +43,11 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- <div class="preloader"></div> -->
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="products">
+
 
       <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation">
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
@@ -84,7 +84,7 @@
                             <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
                               <ul id="actuadores-mobile" class="list-unstyled">
                                 <li v-for="data in titles">
-                                  <a :href="data.link">
+                                  <a href="#">
                                     <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
                                     <span>{{ data.text }}</span>
                                   </a></li>
@@ -185,223 +185,79 @@
           </div>
       </nav>
 
-
-
-<!-- Inicio Video -->
-<section class="inicio-tuhogar--homevideo" id="homevideo">
-    <div class="inicio-tuhogar--homevideo__title">
-      <h2 class="text-center text-color-white">Tu Hogar Inteligente</h2>
-      <p class="lead text-center text-color-white">Haz tu vida fácil con más seguridad, confort y eficiencia</p>
-    </div>
-<video autoplay loop muted class="inicio-tuhogar--homevideo__video img-responsive">
-  <source src="./assets/videos/header-web-optimized.mp4" type="video/mp4">
-  <!-- <source src="videos/FIBARO_Lili_No_HUD.mov" type="video/x-m4v"> -->
-     <p>Tu navegador no implementa el elemento <code>video</code>.</p>
-</video>
-</section>
-
-
-
-<!-- Hogar Section -->
-<section class="page-section inicio-tuhogar__smarthome" id="smarthome">
-<!-- <div class="blacking-bg"></div> -->
-<img src="./assets/images/hand-right.png" alt="fibaro-smartphone" class="fibaro-hand">
+<!-- Hero -->
+<section class="hero products__hero hero__dimmer">
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
-      <h2 class="headline headline--nomargin inicio-tuhogar__smarthome--title">Controla tu hogar</h2>
-      <p class="lead inicio-tuhogar__smarthome--subtitle">Desde donde quiera que estés.</p>
-      <br><br>
-      <p class="btn-container text-center center-block"><a href="https://tuhogarinteligente.cl/wp-content/uploads/2017/02/CatalogoPreciosNuevosProductos2017.pdf" class="btn btn-lg btn-fibaro" download>Descargar catálogo</a></p>
+    <div class="col-xs-12">
+
     </div>
   </div>
-
 </div>
 </section>
 
-<!-- Porque FIBARO -->
-<section class="page-section inicio-tuhogar--por-que-fibaro" id="porque-fibaro">
+<section class="page-section products__dimmer">
   <div class="container">
-    <div class="row">
+    <div class="row products__title--mobile">
       <div class="col-sm-12">
-        <h2 class="headline text-center inicio-tuhogar--por-que-fibaro__title">¿Por qué con FIBARO?</h2>
-        <!-- <p class="lead headline--subheadline inicio-tuhogar--por-que-fibaro__subtitle">Un departamento moderno une el diseño vanguardista con funcionalidad. Las soluciones innovadoras del sistema FIBARO permiten utilizar en su totalidad el potencial que ofrece el hogar inteligente, garantizando de esta forma el confort, seguridad y eficiencia energética.</p> -->
+        <h2>Dimmer 2</h2>
       </div>
     </div>
     <div class="row">
-        <div class="col-xs-6 col-sm-6">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/shield-simple-line-icons.svg" alt="">
-            <h3>Seguridad</h3>
-            <p class="lead">Controla y vigila tu hogar desde cualquier parte del mundo. Fibaro protege tu casa y familia en todo instante.</p>
-          </div>
+      <div class="col-sm-6">
+        <div class="products__image">
+          <img src="./assets/images/products/dimmer-device.jpg" alt="Dimmer 2" class="img-responsive">
         </div>
-        <div class="col-xs-6 col-sm-6">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/energy-simple-line-icons.svg" alt="Videos">
-            <h3>Eficiencia energética</h3>
-                <p class="lead">Genera un importante ahorro en las cuentas de cada mes con Fibaro. Aporta sustentabilidad a tu vida.</p>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/home-simple-line-icons.svg" alt="Manuales">
-            <h3>Confort</h3>
-            <p class="lead">Disfruta de la satisfacción que te entrega un Hogar Inteligente. Gana tiempo y úsalo para compartir en familia.</p>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/home-simple-line-icons.svg" alt="Manuales">
-            <h3>Ecosistema</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/home-simple-line-icons.svg" alt="Manuales">
-            <h3>Diseño</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-        <div class="col-xs-6 col-sm-6">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/home-simple-line-icons.svg" alt="Manuales">
-            <h3>Inalámbrico</h3>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<section class="inicio-tuhogar__experience-center" id="experience-center">
-  <div class="blacking-bg"></div>
-      <div class="inicio-tuhogar__experience-center__title-container">
-        <p class="text-center">Ven a conocer nuestro</p>
-        <h2 class="headline headline--nomargin inicio-tuhogar__experience-center__title text-center">Experience Center</h2>
-        <h3 class="text-center lead">Visítanos en Av. Las Condes 9765. <br> Las Condes, Santiago, Chile.</h3>
-        <p class="inicio-tuhogar__experience-center__title-container--horario text-center">Lunes a Viernes: 9:00 – 19:00 hrs. | Sábado: 10:00 – 19:00 hrs.</p>
       </div>
-  <video autoplay loop poster="./assets/images/fibaro-experience-center-chile.png" muted class="inicio-tuhogar--homevideo__video img-responsive">
-      <source src="videos/experience-center-chile.mp4" type="video/mp4">
-       Tu navegador no implementa el elemento <code>video</code>.
-  </video>
-  <img src="./assets/images/experience-center.jpg" alt="Experience Center" class="img-responsive ec">
-</section>
 
-<hr class="divider">
-
-
-<!-- Desarrollo de proyectos -->
-<section class="page-section inicio-tuhogar--desarrollo-de-proyectos" id="desarrollo-proyectos">
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h2 class="headline text-center">Desarrolla tu proyecto</h2>
-      <br><br>
-      <!-- <p class="lead headline--subheadline">Trabajamos con grandes firmas</p> -->
-    </div>
-  </div>
-  <div class="row">
-      <div class="col-xs-6 col-sm-4 col-md-2">
-        <a href="http://tuhogarinteligente.cl/comprar" class="thumbnail">
-          <img src="./assets/images/icon-client.svg" alt="Inmobiliaria" class="img-responsive">
-          <p class="lead text-center">Clientes Finales</p>
-        </a>
+      <div class="col-sm-6">
+        <div class="products__content">
+          <h2>Dimmer 2</h2>
+          <p>Fibaro Dimmer 2, es un módulo universal que regula la intensidad de la luz. Dimmer se puede utilizar como un atenuador o interruptor. Este dispositivo mide el consumo de energía e incopora un sistema de seguridad avanzado para proteger del sobrecalentamiento, sobrecargas y de cortes de luz. La correcta configuración del dispositivo permite un mejor aprovechamiento de la vida útil de las lámparas, luces, etc. y reduce el consumo de energía.</p>
+        </div>
       </div>
-        <div class="col-xs-6 col-sm-4 col-md-2">
-          <a href="http://proyectos.tuhogarinteligente.cl/" class="thumbnail">
-            <img src="./assets/images/icon-inmobiliaria.svg" alt="Inmobiliaria" class="img-responsive">
-            <p class="lead text-center">Inmobiliarias y Constructoras</p>
+    </div>
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <!-- <div class="col-xs-6 col-sm-2">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_dim.svg" alt="">
+            <p>Regular el brillo</p>
+          </a>
+        </div> -->
+
+        <div class="col-xs-6 col-sm-3">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_bulb.svg" alt="">
+            <p>Controla la iluminación</p>
           </a>
         </div>
 
-    <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail" id="telcos">
-        <img src="./assets/images/icon-telco.svg" alt="Telco" class="img-responsive">
-        <p class="lead text-center">Telcos</p>
-      </a>
-    </div>
-
-    <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="#" class="thumbnail" id="retail">
-        <img src="./assets/images/icon-retail.svg" alt="Retail" class="img-responsive">
-        <p class="lead text-center">Retail</p>
-      </a>
-    </div>
-
-    <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="http://expertos.tuhogarinteligente.cl/" class="thumbnail">
-        <img src="./assets/images/icon-artist.svg" alt="Inmobiliaria" class="img-responsive">
-        <p class="lead text-center">Arquitectos y Diseñadores</p>
-      </a>
-    </div>
-
-    <div class="col-xs-6 col-sm-4 col-md-2">
-      <a href="http://expertos.tuhogarinteligente.cl/" class="thumbnail">
-        <img src="./assets/images/icon-dist.svg" alt="Distribuidores" class="img-responsive">
-        <p class="lead text-center">Distribuidores</p>
-      </a>
-    </div>
-  </div>
-</div>
-</section>
-
-<hr class="divider">
-
-<!-- Proyectos Inmobiliarios -->
-<section class="page-section inicio-tuhogar--proyectos" id="proyectos">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="headline headline--nomargin text-center">Proyectos Inmobiliarios</h2>
-        <p class="lead headline--subheadline">Descubre los hogares que ya son inteligentes en Chile</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="owl-carousel owl-theme" id="owl-proyectos">
-
-          <div class="item" v-for="data in item">
-            <a href="#">
-                <img :src="data.src" class="img-responsive center-block">
-            </a>
-          </div>
+        <div class="col-xs-6 col-sm-3">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_lightning-1.svg" alt="">
+            <p>Mide el consumo de energía</p>
+          </a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<hr class="divider">
-
-<!-- Nuestras Alianzas -->
-<section class="page-section inicio-tuhogar__nuestras-alianzas" id="nuestras-alianzas">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <h2 class="headline headline--nomargin text-center">Nuestras Alianzas</h2>
-        <p class="lead headline--subheadline">Desarrollamos proyectos de colaboración recíproca</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="owl-carousel owl-theme" id="owl-alianzas">
-
-          <div class="item" v-for="data in item">
-            <a href="#">
-                <img :src="data.src" :srcset="data.srcset" class="img-responsive inicio-tuhogar__nuestras-alianzas__image center-block">
-            </a>
-          </div>
+        <div class="col-xs-6 col-sm-3">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_lamp.svg" alt="">
+            <p>Varios tipos de luz</p>
+          </a>
         </div>
+
+        <div class="col-xs-6 col-sm-3">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_softstart.svg" alt="">
+            <p>Función de arranque suave</p>
+          </a>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-
 
 
 

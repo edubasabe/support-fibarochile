@@ -1,0 +1,122 @@
+.products {
+  @include xxs-device {
+    margin-top: 5rem;
+  }
+
+  @include sm-device {
+    margin-top: 5rem;
+  }
+
+  &__dimmer {
+    @include xxs-device {
+      padding-top: 1rem;
+    }
+  }
+
+  &__hero {
+    @include xxs-device {
+      height: 35vh;
+    }
+  }
+
+  &__title--mobile {
+
+
+    h2 {
+      font-weight: 300;
+      text-align: center;
+
+      @include xxs-device {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include xxs-device {
+      display: block;
+    }
+
+    @include md-device {
+      display: none;
+    }
+  }
+
+  &__image {
+    // border: 1px solid $azul;
+    display: block;
+
+    @include xxs-device {
+        margin-bottom: 5rem;
+    }
+
+    img {
+      @include xxs-device {
+        margin: 0 auto;
+        max-height: 20rem;
+      }
+      @include sm-device {
+        max-height: 32rem;
+      }
+    }
+  }
+
+  &__content {
+
+    @include xxs-device {
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    h2 {
+      font-weight: 300;
+
+      @include xxs-device {
+        display: none;
+        margin-bottom: 2rem;
+      }
+
+      @include sm-device {
+        display: none;
+        margin-top: 0;
+      }
+
+      @include md-device {
+        display: block;
+      }
+    }
+
+    p {
+      @include xxs-device {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+  }
+
+  .thumbnail {
+    border: 0;
+
+    @include md-device {
+      margin-top: 2rem;
+    }
+
+    p {
+      @include xxs-device {
+        font-size: 1.4rem;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      @include sm-device {
+
+      }
+    }
+  }
+
+}

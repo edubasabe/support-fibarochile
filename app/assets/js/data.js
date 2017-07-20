@@ -3,11 +3,11 @@
     el: '#sensores',
     data: {
       titles: [
-        { text: 'Motion Sensor', url: 'assets/images/nav-motion.jpg', class: 'active' },
-        { text: 'Flood Sensor', url: 'assets/images/nav-flood.jpg' },
-        { text: 'Door/Window Sensor', url: 'assets/images/nav-dws.jpg' },
-        { text: 'Smoke Sensor', url: 'assets/images/nav-smoke.jpg' },
-        { text: 'Universal Binary Sensor', url: 'assets/images/nav-ubs.jpg' }
+        { text: 'Motion Sensor', url: 'assets/images/nav-motion.jpg', class: 'active', link: 'motion-sensor.html' },
+        { text: 'Flood Sensor', url: 'assets/images/nav-flood.jpg', link: 'flood-sensor.html' },
+        { text: 'Door/Window Sensor', url: 'assets/images/nav-dws.jpg', link: 'dw-sensor.html' },
+        { text: 'Smoke Sensor', url: 'assets/images/nav-smoke.jpg', link: 'smoke-sensor.html' },
+        { text: 'Universal Binary Sensor', url: 'assets/images/nav-ubs.jpg', link: 'ubs.html' }
       ],
     }
   });
@@ -16,11 +16,11 @@
     el: '#actuadores',
     data: {
       titles: [
-        { text: 'Wall Plug', url: 'assets/images/nav-wallplug.jpg' },
-        { text: 'Dimmer 2', url: 'assets/images/nav-dimmer.jpg' },
-        { text: 'Switches 2', url: 'assets/images/nav-relay.jpg' },
-        { text: 'Roller Shutter 2', url: 'assets/images/nav-smoke.jpg' },
-        { text: 'RGBW Controller', url: 'assets/images/nav-ubs.jpg' }
+        { text: 'Wall Plug', url: 'assets/images/nav-wallplug.jpg', link: 'wall-plug.html' },
+        { text: 'Dimmer 2', url: 'assets/images/nav-dimmer.jpg', link: 'dimmer-2.html' },
+        { text: 'Switches 2', url: 'assets/images/nav-relay.jpg', link: 'switches-2.html' },
+        { text: 'Roller Shutter 2', url: 'assets/images/nav-smoke.jpg', link: 'roller-shutter-2.html' },
+        { text: 'RGBW Controller', url: 'assets/images/nav-ubs.jpg', link: 'rgbw-controller.html' }
       ],
     }
   });
@@ -29,9 +29,9 @@
     el: '#remotos',
     data: {
       titles: [
-        { text: 'KeyFob', url: 'assets/images/nav-keyfob.jpg' },
-        { text: 'The Button', url: 'assets/images/nav-button.jpg' },
-        { text: 'Swipe', url: 'assets/images/nav-swipe.jpg' }
+        { text: 'KeyFob', url: 'assets/images/nav-keyfob.jpg', link: 'keyfob.html' },
+        { text: 'The Button', url: 'assets/images/nav-button.jpg', link: 'the-button.html' },
+        { text: 'Swipe', url: 'assets/images/nav-swipe.jpg', link: 'swipe.html' }
       ],
     }
   });
@@ -40,8 +40,8 @@
     el: '#puerta-de-enlace',
     data: {
       titles: [
-        { text: 'Home Center Lite', url: 'assets/images/nav-hcl.jpg' },
-        { text: 'Home Center 2', url: 'assets/images/nav-hc2.jpg' }
+        { text: 'Home Center Lite', url: 'assets/images/nav-hcl.jpg', link: 'hcl.html' },
+        { text: 'Home Center 2', url: 'assets/images/nav-hc2.jpg', link: 'hc2.html' }
       ],
     }
   });

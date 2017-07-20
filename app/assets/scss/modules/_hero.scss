@@ -3,21 +3,22 @@
   display: flex;
 
   @include xxs-device {
-    background: url('../images/hero-mobile.jpg') no-repeat;
+    // background: url('../images/hero-mobile.jpg') no-repeat;
     background-size: cover;
     min-height: 17.9rem;
   }
 
   @include sm-device {
-    background: url('../images/hero.jpg') no-repeat;
+    // background: url('../images/hero.jpg') no-repeat;
     background-size: cover;
   }
 
   @include md-device {
-    background: url('../images/hero.jpg') no-repeat;
+    // background: url('../images/hero.jpg') no-repeat;
     background-size: cover;
     height: 35rem;
   }
+
 
   &__container {
     align-items: center;
@@ -37,6 +38,25 @@
 
     @include md-device {
       font-size: 4.2rem;
+    }
+  }
+
+
+  //-- Productos ---------------------------------------------------------------
+  &__dimmer {
+
+    @include xxs-device {
+      background: url('../images/hero/dimmer-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include sm-device {
+      background: url('../images/hero/dimmer-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include md-device {
+      background: url('../images/hero/dimmer-header-desktop.jpg') no-repeat;
     }
   }
 
