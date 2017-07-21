@@ -7,7 +7,7 @@
 
 
     @include xxs-device {
-      background: $negro url('../images/tu-hogar-inteligente.png') no-repeat center center;
+      background: $negro url('../images/background/tu-hogar-inteligente.png') no-repeat center center;
       height: 100vh;
       padding-top: 5rem;
 
@@ -27,7 +27,7 @@
     }
 
     @include sm-device {
-      background: $negro url('../images/tu-hogar-inteligente-tablet.png') no-repeat center center;
+      background: $negro url('../images/background/tu-hogar-inteligente-tablet.png') no-repeat center center;
       height: 100vh;
       min-height: 46rem;
       padding-top: 0;
@@ -81,7 +81,7 @@
 
   //-- Section 2 : Smarthome ---------------------------------------------------
   &__smarthome {
-    background: url('../images/smarthome.jpg') no-repeat;
+    background: url('../images/background/smarthome.jpg') no-repeat;
     background-size: cover;
     overflow: hidden;
     position: relative;
@@ -214,7 +214,7 @@
   &__experience-center {
     position: relative;
     @include xxs-device {
-      // background: url('../images/experience-center.jpg') no-repeat center;
+      // background: url('../images/background/experience-center.jpg') no-repeat center;
       background-size: cover;
       min-height: 40rem;
     }
@@ -350,7 +350,7 @@
 
   //-- Section 6 : Expertos Casos de exito -------------------------------------
   &--casos-de-exito {
-    background: url('../images/bg--tuhogar-casos-de-exito.jpg') no-repeat center center;
+    background: url('../images/background/bg--tuhogar-casos-de-exito.jpg') no-repeat center center;
     background-size: cover;
     color: $blanco;
 

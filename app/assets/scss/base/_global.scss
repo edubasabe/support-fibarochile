@@ -167,3 +167,11 @@ b {
 .text-color-white {
   color: $blanco;
 }
+
+.blacking-bg {
+  background: rgba($negro, .5);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

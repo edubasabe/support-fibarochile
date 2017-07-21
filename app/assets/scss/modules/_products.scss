@@ -1,51 +1,48 @@
-.products {
+.single-product {
   @include xxs-device {
     margin-top: 5rem;
   }
-
   @include sm-device {
     margin-top: 5rem;
   }
 
-  &__dimmer {
-    @include xxs-device {
-      padding-top: 1rem;
-    }
-  }
-
+  //-- Hero --------------------------------------------------------------------
   &__hero {
     @include xxs-device {
       height: 35vh;
     }
   }
 
+  //-- Section -----------------------------------------------------------------
+  &__section {
+    @include xxs-device {
+      padding-top: 1rem;
+    }
+    @include md-device {
+      padding-top: 6rem;
+    }
+  }
+
   &__title--mobile {
-
-
     h2 {
       font-weight: 300;
       text-align: center;
-
       @include xxs-device {
         margin-bottom: 3rem;
       }
     }
-
     @include xxs-device {
       display: block;
     }
-
     @include md-device {
       display: none;
     }
   }
 
   &__image {
-    // border: 1px solid $azul;
     display: block;
-
     @include xxs-device {
-        margin-bottom: 5rem;
+      margin-bottom: 5rem;
     }
 
     img {
@@ -60,7 +57,6 @@
   }
 
   &__content {
-
     @include xxs-device {
       font-weight: 300;
       line-height: 1.6;
@@ -71,17 +67,14 @@
 
     h2 {
       font-weight: 300;
-
       @include xxs-device {
         display: none;
         margin-bottom: 2rem;
       }
-
       @include sm-device {
         display: none;
         margin-top: 0;
       }
-
       @include md-device {
         display: block;
       }
@@ -92,8 +85,8 @@
         font-size: 1.4rem;
         text-align: center;
       }
-
       @include sm-device {
+        font-size: 1.6rem;
         text-align: left;
       }
     }
@@ -101,7 +94,7 @@
 
   .thumbnail {
     border: 0;
-
+    text-decoration: none;
     @include md-device {
       margin-top: 2rem;
     }
@@ -112,11 +105,97 @@
         font-weight: 300;
         text-align: center;
       }
-
-      @include sm-device {
-
-      }
     }
   }
 
+  &__video {
+    &__container {
+      position: relative;
+      @include xxs-device {
+        background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+        background-size: cover;
+      }
+      @keyframes play-button-before {
+        0% {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(1);
+        }
+
+        20% {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1.4);
+        }
+
+        75% {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(1.7);
+        }
+
+        100% {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(1.7);
+        }
+      }
+
+      .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      p {
+        align-items: center;
+        background-color: rgba($negro, .5);
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        @include xxs-device {
+          min-height: 20rem;
+        }
+      }
+
+      .button-play {
+        display: inline-block;
+        height: 60px;
+        position: relative;
+        width: 60px;
+
+        span {
+          display: block;
+          font-size: 0;
+          height: 1px;
+          visibility: hidden;
+          width: 1px;
+        }
+
+        &::before {
+          -webkit-transform: translate(-50%, -50%) scale(1);
+          animation: 2s linear 0s infinite normal;
+          animation-name: play-button-before;
+          background-color: rgba(255, 255, 255, .3);
+          border: 1px solid rgba(255, 255, 255, .5);
+          border-radius: 50%;
+          content: '';
+          display: block;
+          height: 58px;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%) scale(1);
+          width: 58px;
+        }
+
+        &::after {
+          background: url('../images/icon/play-icon.svg') no-repeat;
+          background-size: 60px 60px;
+          content: '';
+          display: block;
+          height: 60px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 60px;
+        }
+      }
+    }
+  }
 }

@@ -43,7 +43,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="products">
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="single-product">
 
 
       <!-- Navigation -->
@@ -186,7 +186,7 @@
       </nav>
 
 <!-- Hero -->
-<section class="hero products__hero hero__dimmer">
+<section class="hero single-product__hero hero__dimmer">
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -196,22 +196,22 @@
 </div>
 </section>
 
-<section class="page-section products__dimmer">
+<section class="page-section single-product__section">
   <div class="container">
-    <div class="row products__title--mobile">
+    <div class="row single-product__title--mobile">
       <div class="col-sm-12">
         <h2>Dimmer 2</h2>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-6">
-        <div class="products__image">
+        <div class="single-product__image">
           <img src="./assets/images/products/dimmer-device.jpg" alt="Dimmer 2" class="img-responsive">
         </div>
       </div>
 
       <div class="col-sm-6">
-        <div class="products__content">
+        <div class="single-product__content">
           <h2>Dimmer 2</h2>
           <p>Fibaro Dimmer 2, es un módulo universal que regula la intensidad de la luz. Dimmer se puede utilizar como un atenuador o interruptor. Este dispositivo mide el consumo de energía e incopora un sistema de seguridad avanzado para proteger del sobrecalentamiento, sobrecargas y de cortes de luz. La correcta configuración del dispositivo permite un mejor aprovechamiento de la vida útil de las lámparas, luces, etc. y reduce el consumo de energía.</p>
         </div>
@@ -219,12 +219,6 @@
     </div>
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
-        <!-- <div class="col-xs-6 col-sm-2">
-          <a href="#" class="thumbnail">
-            <img src="./assets/images/icon/icon_dim.svg" alt="">
-            <p>Regular el brillo</p>
-          </a>
-        </div> -->
 
         <div class="col-xs-6 col-sm-3">
           <a href="#" class="thumbnail">
@@ -258,6 +252,48 @@
     </div>
   </div>
 </section>
+
+<section class="single-product__video">
+  <div class="container">
+    <div class="row single-product__title--mobile">
+      <h2>Ver video</h2>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row single-product__video__container">
+      <div class="col-xs-12">
+        <p class="text-center">
+          <a href="#" class="button button-play"><span>Play</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video  -->
+<div id="video-modal" class="modal fade modal-video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" src="https://www.youtube.com/watch?v=V4fFjzYn6Jo" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <span class="cerrar">
+                    <svg width="20" height="20">
+            	        <line x1="0" y1="0" x2="20" y2="20" style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                      <line x1="0" y1="20" x2="20" y2="0" style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                    </svg>
+                  </span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/hSVadYFTp2M" frameborder="0" allowfullscreen=""></iframe>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 

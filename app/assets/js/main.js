@@ -80,6 +80,15 @@ function calcularPaddingNav(element) {
   var elementMargin = (navHeight - 20) / 2 + 'px';
   $(element).css({'padding-top': elementMargin, 'padding-bottom': elementMargin });
 }
+
+function modalVideo(videolink) {
+  $('.button-play').on('click', function(e) {
+    e.preventDefault();
+    $('#video-modal').modal('show');
+    $('#video-modal').attr('src', videolink);
+  });
+}
+
 //-- Padding Nav  --------------------------------------------------------------
 /* Centrar los elementos del menu con el padding */
 calcularPadding('.navbar-brand.navbar__logo-text');
@@ -276,7 +285,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
       $('.inicio-tuhogar--homevideo').toggleClass('bg-no-gradient');
     }, { 'offset': '-50%' });
 
-    /* Animacion del formulario floating right */  
+    /* Animacion del formulario floating right */
     $('#smarthome').waypoint(function () {
       console.log('Paso');
       $('#contacto-modal .floating').addClass('animated fadeInUp');
@@ -312,7 +321,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
   //Al hacer click el en btn cerrarlo es decir colocarle display none
   $('.inicio-tuhogar__contact-form .close').on('click', function () {
-    $('.inicio-tuhogar__contact-form').removeClass('mostrar');
+    $('.inicio-tuhogar__contact-form').hide();
   });
 
   if ( isTablet() || is_iPad() ) {
@@ -405,6 +414,8 @@ function fadeElementOffset(element, animation, offsetvalue) {
     $('#telcos-modal').modal();
   });
 
+    /* Video Dimmer */
+    modalVideo('https://www.youtube.com/embed/hSVadYFTp2M');
 
 
 
