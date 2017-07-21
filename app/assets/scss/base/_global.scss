@@ -176,27 +176,43 @@ b {
   width: 100%;
 }
 
+#video-modal {
+  &.modal-video {
 
-.modal-video {
-    .modal {
-      &-content {
-        background: transparent;
-        border: 0;
-        box-shadow: none;
-      }
+      .modal {
+        &-content {
+          background: transparent;
+          border: 0;
+          box-shadow: none;
+        }
 
-      &-header {
-        border: 0;
-      }
+        &-header {
+          border: 0;
+        }
 
-      &-dialog {
-        @include md-device {
-          width: 100rem;
+        &-dialog {
+          left: 50%;
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          transform: translate(-50%, -50%);
+
+          @include xxs-device {
+            width: 100vw;
+
+          }
+          @include sm-device {
+            transform: translate(-50%, -50%);
+            width: 90vw;
+          }
+
+          @include md-device {
+            width: 80vw;
+          }
         }
       }
-    }
+  }
 }
-
 .modal-backdrop {
   &.in { opacity: .8; }
 }

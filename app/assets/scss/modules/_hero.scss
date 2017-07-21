@@ -44,7 +44,6 @@
 
   //-- Productos ---------------------------------------------------------------
   &__dimmer {
-
     @include xxs-device {
       background: url('../images/hero/dimmer-header-mobile.jpg') no-repeat;
       background-size: cover;
@@ -57,6 +56,54 @@
 
     @include md-device {
       background: url('../images/hero/dimmer-header-desktop.jpg') no-repeat;
+    }
+  }
+
+  &__smoke {
+    @include xxs-device {
+      background: url('../images/hero/smoke-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include sm-device {
+      background: url('../images/hero/smoke-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include md-device {
+      background: url('../images/hero/smoke-header-desktop.jpg') no-repeat;
+    }
+  }
+
+  &__ubs {
+    @include xxs-device {
+      background: url('../images/hero/ubs-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include sm-device {
+      background: url('../images/hero/ubs-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include md-device {
+      background: url('../images/hero/ubs-header-desktop.jpg') no-repeat;
+    }
+  }
+
+  &__hc2 {
+    @include xxs-device {
+      background: url('../images/hero/hc2-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include sm-device {
+      background: url('../images/hero/hc2-header-mobile.jpg') no-repeat;
+      background-size: cover;
+    }
+
+    @include md-device {
+      background: url('../images/hero/hc2-header-desktop.jpg') no-repeat;
     }
   }
 

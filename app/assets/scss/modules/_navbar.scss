@@ -542,6 +542,7 @@
             background: transparent;
             color: $azul;
           }
+
         }
       }
     }
@@ -566,6 +567,7 @@
 
             a {
               color: $negro;
+              text-decoration: none;
               transition: all 300ms ease;
 
               img {
@@ -582,6 +584,11 @@
                   transform: scale(1);
 
                 }
+              }
+
+              p {
+                font-size: 1.6rem;
+                font-weight: 300;
               }
             }
           }
