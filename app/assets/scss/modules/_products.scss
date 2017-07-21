@@ -111,29 +111,27 @@
   &__video {
     &__container {
       position: relative;
+
+
       @include xxs-device {
-        background: url('../images/background/dimmer-video-mobile.png') no-repeat;
         background-size: cover;
       }
-      @keyframes play-button-before {
-        0% {
-          opacity: 0;
-          transform: translate(-50%, -50%) scale(1);
+
+      @include sm-device {
+        background-size: cover;
+        margin-bottom: 3rem;
+      }
+
+
+      &--dimmer {
+        @include xxs-device {
+          background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+          background-size: cover;
         }
 
-        20% {
-          opacity: 1;
-          transform: translate(-50%, -50%) scale(1.4);
-        }
-
-        75% {
-          opacity: 0;
-          transform: translate(-50%, -50%) scale(1.7);
-        }
-
-        100% {
-          opacity: 0;
-          transform: translate(-50%, -50%) scale(1.7);
+        @include md-device {
+          background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+          background-size: cover;
         }
       }
 
@@ -148,52 +146,20 @@
         display: flex;
         justify-content: center;
         margin-bottom: 0;
+
         @include xxs-device {
           min-height: 20rem;
         }
-      }
 
-      .button-play {
-        display: inline-block;
-        height: 60px;
-        position: relative;
-        width: 60px;
-
-        span {
-          display: block;
-          font-size: 0;
-          height: 1px;
-          visibility: hidden;
-          width: 1px;
+        @include sm-device {
+          min-height: 35rem;
         }
 
-        &::before {
-          -webkit-transform: translate(-50%, -50%) scale(1);
-          animation: 2s linear 0s infinite normal;
-          animation-name: play-button-before;
-          background-color: rgba(255, 255, 255, .3);
-          border: 1px solid rgba(255, 255, 255, .5);
-          border-radius: 50%;
-          content: '';
+        .ver {
           display: block;
-          height: 58px;
-          left: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%) scale(1);
-          width: 58px;
-        }
 
-        &::after {
-          background: url('../images/icon/play-icon.svg') no-repeat;
-          background-size: 60px 60px;
-          content: '';
-          display: block;
-          height: 60px;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 60px;
+          @include xxs-device { display: none; }
+          @include md-device { display: block; }
         }
       }
     }
