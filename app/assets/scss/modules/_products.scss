@@ -6,6 +6,8 @@
     margin-top: 5rem;
   }
 
+
+
   //-- Hero --------------------------------------------------------------------
   &__hero {
     @include xxs-device {
@@ -20,6 +22,37 @@
     }
     @include md-device {
       padding-top: 6rem;
+    }
+
+    .nav-pills {
+      li {
+          @include xxs-device {
+            margin-top: 2rem;
+            min-width: 16rem;
+          }
+
+
+          @include xxs-device {
+            margin-bottom: 3rem;
+          }
+
+        a {
+          border: .1rem solid $azul;
+
+          &:hover {
+            background: $azul;
+            color: $blanco;
+          }
+
+          &:active {
+            background: $azul;
+          }
+
+          &:focus {
+            background: $azul;
+          }
+        }
+      }
     }
   }
 
@@ -131,6 +164,18 @@
 
         @include md-device {
           background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+          background-size: cover;
+        }
+      }
+
+      &--swipe {
+        @include xxs-device {
+          background: url('../images/background/swipe-video.jpg') no-repeat;
+          background-size: cover;
+        }
+
+        @include md-device {
+          background: url('../images/background/swipe-video.jpg') no-repeat;
           background-size: cover;
         }
       }
