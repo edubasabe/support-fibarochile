@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smoothing: antialiased;
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Helvetica, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   text-rendering: optimizeLegibility;
@@ -113,6 +113,21 @@ a {
   }
 }
 
+.btn-outline-white {
+  background-color: transparent;
+  border-color: $blanco;
+  border-radius: .3rem;
+  color: $blanco;
+  transition: 300ms ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: transparent;
+    color: $blanco;
+  }
+}
+
 .btn-max-width {
   max-width: 32rem;
 }
@@ -213,6 +228,7 @@ b {
       }
   }
 }
+
 .modal-backdrop {
   &.in { opacity: .8; }
 }

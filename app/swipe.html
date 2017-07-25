@@ -45,189 +45,197 @@
   </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="single-product">
 
+<header>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="navbar-header page-scroll">
+            <a class="navbar-brand page-scroll navbar__logo-text navbar-icon-center" href="#page-top">
+              <img src="./assets/images/logo/tamed-2017-blanco-sl.svg" alt="TAMED" class="white-logo">
+            </a>
+            <button type="button" class="navbar-toggle fixed-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          </div>
 
-      <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="navbar-header page-scroll">
-                <a class="navbar-brand page-scroll navbar__logo-text navbar-icon-center" href="#page-top">
-                  <img src="./assets/images/logo/tamed-2017-blanco-sl.svg" alt="TAMED" class="white-logo">
-                </a>
-                <button type="button" class="navbar-toggle fixed-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-              </div>
 
-
-              <div class="collapse navbar-collapse navbar-ex1-collapse yamm">
-                  <ul class="nav navbar-nav" id="menu-escrito">
-                      <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                      <li class="dropdown yamm-fullwidth">
-                        <a class="dropdown-toggle" href="#">Productos &nbsp;</a>
-                        <ul class="dropdown-menu--mobile list-unstyled">
-                          <!-- Sensores Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
-                            <ul id="sensores-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
-                          <!-- Actuadores Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
-                            <ul id="actuadores-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
-                          <!-- Remotos Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Remotos</a>
-                            <ul id="remotos-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
-                          <!-- Puertas de Enlace Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Puertas de Enlace</a>
-                            <ul id="puertas-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
+          <div class="collapse navbar-collapse navbar-ex1-collapse yamm">
+              <ul class="nav navbar-nav" id="menu-escrito">
+                  <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+                  <li class="dropdown yamm-fullwidth">
+                    <a class="dropdown-toggle" href="#">Productos &nbsp;</a>
+                    <ul class="dropdown-menu--mobile list-unstyled">
+                      <!-- Sensores Mobile -->
+                      <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
+                        <ul id="sensores-mobile" class="list-unstyled">
+                          <li v-for="data in titles">
+                            <a v-bind:href="data.link">
+                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              <span>{{ data.text }}</span>
+                            </a></li>
                         </ul>
-                        <ul class="dropdown-menu dropdown-menu--desktop">
-                          <li>
-                            <div class="yamm-content container">
-                              <div class="row">
-                                <div class="span12">
-                                  <ul class="nav nav-pills text-center">
-                                    <li><a data-toggle="tab" href="#sensores">Sensores</a></li>
-                                    <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li>
-                                    <li><a data-toggle="tab" href="#remotos">Remotos</a></li>
-                                    <li><a data-toggle="tab" href="#puerta-de-enlace">Puerta de Enlace</a></li>
+                      </li>
+                      <!-- Actuadores Mobile -->
+                      <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
+                        <ul id="actuadores-mobile" class="list-unstyled">
+                          <li v-for="data in titles">
+                            <a v-bind:href="data.link">
+                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              <span>{{ data.text }}</span>
+                            </a></li>
+                        </ul>
+                      </li>
+                      <!-- Remotos Mobile -->
+                      <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Remotos</a>
+                        <ul id="remotos-mobile" class="list-unstyled">
+                          <li v-for="data in titles">
+                            <a v-bind:href="data.link">
+                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              <span>{{ data.text }}</span>
+                            </a></li>
+                        </ul>
+                      </li>
+                      <!-- Puertas de Enlace Mobile -->
+                      <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Puertas de Enlace</a>
+                        <ul id="puertas-mobile" class="list-unstyled">
+                          <li v-for="data in titles">
+                            <a v-bind:href="data.link">
+                              <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              <span>{{ data.text }}</span>
+                            </a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul class="dropdown-menu dropdown-menu--desktop">
+                      <li>
+                        <div class="yamm-content container">
+                          <div class="row">
+                            <div class="span12">
+                              <ul class="nav nav-pills text-center">
+                                <li><a data-toggle="tab" href="#sensores">Sensores</a></li>
+                                <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li>
+                                <li><a data-toggle="tab" href="#remotos">Remotos</a></li>
+                                <li><a data-toggle="tab" href="#puerta-de-enlace">Puerta de Enlace</a></li>
+                              </ul>
+                            </div>
+                            <div class="span12">
+                              <div class="tab-content">
+                                <div class="tab-pane" id="sensores">
+                                  <ul class="nav-product-tab-list list-unstyled">
+                                    <li class="product-nav" v-for="data in titles">
+                                      <a v-bind:href="data.link">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                        <p>{{ data.text }}</p>
+                                      </a>
+                                    </li>
                                   </ul>
                                 </div>
-                                <div class="span12">
-                                  <div class="tab-content">
-                                    <div class="tab-pane" id="sensores">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="tab-pane" id="actuadores">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="tab-pane" id="remotos">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav remotos" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="tab-pane" id="puerta-de-enlace">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav puerta-de-enlace" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
+                                <div class="tab-pane" id="actuadores">
+                                  <ul class="nav-product-tab-list list-unstyled">
+                                    <li class="product-nav" v-for="data in titles">
+                                      <a v-bind:href="data.link">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                        <p>{{ data.text }}</p>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="tab-pane" id="remotos">
+                                  <ul class="nav-product-tab-list list-unstyled">
+                                    <li class="product-nav remotos" v-for="data in titles">
+                                      <a v-bind:href="data.link">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                        <p>{{ data.text }}</p>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                                <div class="tab-pane" id="puerta-de-enlace">
+                                  <ul class="nav-product-tab-list list-unstyled">
+                                    <li class="product-nav puerta-de-enlace" v-for="data in titles">
+                                      <a v-bind:href="data.link">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                        <p>{{ data.text }}</p>
+                                      </a>
+                                    </li>
+                                  </ul>
                                 </div>
                               </div>
                             </div>
-                          </li>
-                        </ul>
+                          </div>
+                        </div>
                       </li>
-                      <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/instalacion">Instalación</a></li>
-                      <li><a class="page-scroll" href="http://www.proyectos.tuhogarinteligente.cl/">Proyectos</a></li>
-                      <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
-                      <li><a class="page-scroll" href="http://expertos.tuhogarinteligente.cl/">Expertos</a></li>
-                      <li><a class="page-scroll" href="http://blog.tuhogarinteligente.cl">Blog</a></li>
-                  </ul>
-              </div>
-            </div>
+                    </ul>
+                  </li>
+                  <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/instalacion">Instalación</a></li>
+                  <li><a class="page-scroll" href="http://www.proyectos.tuhogarinteligente.cl/">Proyectos</a></li>
+                  <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
+                  <li><a class="page-scroll" href="http://expertos.tuhogarinteligente.cl/">Expertos</a></li>
+                  <li><a class="page-scroll" href="http://blog.tuhogarinteligente.cl">Blog</a></li>
+              </ul>
           </div>
         </div>
-      </nav>
-
-
-<!-- Hero -->
-<section class="hero single-product__hero hero__swipe">
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="page-section single-product__section">
-  <div class="container">
-    <div class="row single-product__title--mobile">
-      <div class="col-sm-12">
-        <h2>Swipe</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="single-product__image">
-          <img src="./assets/images/products/swipe/swipe-device-h.jpg" alt="Swipe" class="img-responsive">
+  </nav>
+</header>
+
+
+
+<!-- Section1 -->
+<section class="product-section__swipe" id="section1">
+  <div class="content text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1 class="text-uppercase">Swipe the magic</h1>
+          <p>Cambia todo con solo un gesto</p>
         </div>
       </div>
-
-      <div class="col-sm-6">
-        <div class="single-product__content">
-          <h2>Swipe</h2>
-          <p>SWIPE reconoce no solamente gestos simples, su sensor de alta resolución es capaz de interpretar hasta las más complejas combinaciones de gestos y órdenes. Le sorprenderá el potencial que tiene en sus manos.</p>
+      <div class="row">
+        <div class="col-xs-12">
+          <img src="./assets/images/hero/swipe-hero-mobile.jpg" alt="Mobile" class="img-responsive xxs-device-show">
+          <img src="./assets/images/hero/swipe-hero-desktop.jpg" alt="Desktop" class="img-responsive sm-device-show">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="single-product__video">
-  <div class="container">
-    <div class="row single-product__title--mobile">
-      <h2>Ver video</h2>
+<!-- Section2 -->
+<section class="product-section__swipe" id="section2">
+  <div class="content text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <h2>Descubre el poder de tus gestos</h2>
+          <p>SWIPE no sólo detecta movimientos sencillos, sino que también combinaciones. Este sensor inteligente de alta resolución, interpreta los comandos más complejos que puedes imaginar. Te vas a sorprender del poder que tienen tus manos.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+          <img src="./assets/images/products/swipe/gestures.jpg" alt="Gestures" class="img-responsive">
+        </div>
+      </div>
+      </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row single-product__video__container single-product__video__container--swipe ">
+</section>
+
+<!-- Section3 -->
+<section class="single-product__video" id="section3">
+  <div class="container">
+    <div class="row single-product__title--mobile">
+      <!-- <h2>Ver video</h2> -->
+    </div>
+  </div>
+  <div class="container-fluid" >
+    <div class="row single-product__video__container single-product__video__container--swipe" style="margin-bottom: 0;">
       <div class="col-xs-12">
         <p class="text-center">
           <a href="#" class="button button-play"><span>Play</span></a>
@@ -237,8 +245,99 @@
   </div>
 </section>
 
+<!-- section4 -->
+<section class="product-section__swipe section4" id="section4">
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <h2 class="text-center">Ahora te toca moverlas</h2>
+          <p class="text-center">Es realmente fácil. Puedes configurar lo que se te ocurra, como levantar tu mano y deslizarla hacia abajo para apagar las luces. Puedes mover tu mano para que las luces LED de color se enciendan e iluminen la habitación o deslizar hacia la derecha
+            si deseas apagar el televisor y otros aparatos electrónicos, etc... ¿Cuál será tu próxima movida?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- Video  -->
+<!-- section5 -->
+<section class="product-section__swipe section5" id="section5">
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <h2 class="text-center">Diseñado para impresionar</h2>
+          <p class="text-center">La tecnología más innovadora del mundo se oculta debajo de un portarretratos elegante, hermoso y liso. SWIPE es simplemente perfecto en cada detalle, por lo que impresiona en todas las formas posibles.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="./assets/images/products/swipe/design-left.jpg" alt="Swipe" class="img-responsive">
+        </div>
+        <div class="col-sm-6">
+          <img src="./assets/images/products/swipe/design-right.jpg" alt="Swipe" class="img-responsive sm-device-show">
+        </div>
+        <div class="col-sm-12">
+          <div class="content-center">
+            <h2>Negro<span>/</span>Blanco</h2>
+            <br>
+            <p class="text-center"><a href="#" class="btn btn-outline-white btn-block">Versiones en Blanco</a></p>
+          </div>
+          <img src="./assets/images/products/swipe/version-black.jpg" alt="Swipe" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section6  -->
+<section class="product-section__swipe section6" id="section6">
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <h2 class="text-center">Calidad y precisión</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section7  -->
+<section class="product-section__swipe section7" id="section7">
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <h2>Una belleza como la tuya</h2>
+          <p>Cuando está activo y a la vista, SWIPE puede ser usado como un marco de foto bellamente diseñado, el cual permite cambiar fácilmente las imágenes cuando lo desees. Toma apenas un momento quitar el panel delantero para que puedas revivir los recuerdos que te hacen sonreir.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section8  -->
+<section class="product-section__swipe section8" id="section8">
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+          <h2>Fijos y móviles</h2>
+          <p>SWIPE puede ser alimentado por baterías (4xAA) o por cable (Micro USB), lo que le da la una mayor flexibilidad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- Video Modal -->
 <div id="video-modal" class="modal fade modal-video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" src="https://www.youtube.com/watch?v=V4fFjzYn6Jo" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -337,14 +436,16 @@
 
 
     <br><br>
-    <script src="./assets/js/jquery.min.js"></script>
-    <script src="./assets/js/jquery.easing.min.js"></script>
-    <!-- build:js js/main.min.js -->
-    <script src="./assets/js/parallax.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/jquery.waypoints.min.js"></script>
-    <script src="./assets/js/vue.min.js"></script>
+    <!-- build:js assets/js/vendor/vendors.js -->
+    <script src="./assets/js/vendor/jquery.min.js"></script>
+    <script src="./assets/js/vendor/jquery.easing.min.js"></script>
+    <script src="./assets/js/vendor/parallax.min.js"></script>
+    <script src="./assets/js/vendor/bootstrap.min.js"></script>
+    <script src="./assets/js/vendor/owl.carousel.min.js"></script>
+    <script src="./assets/js/vendor/jquery.waypoints.min.js"></script>
+    <script src="./assets/js/vendor/vue.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js assets/js/main.min.js -->
     <script src="./assets/js/data.js"></script>
     <script src="./assets/js/main.js"></script>
     <!-- endbuild -->

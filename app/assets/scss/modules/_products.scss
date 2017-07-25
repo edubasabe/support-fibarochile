@@ -170,12 +170,12 @@
 
       &--swipe {
         @include xxs-device {
-          background: url('../images/background/swipe-video.jpg') no-repeat;
+          background: url('../images/products/swipe/swipe-video-mobile.jpg') no-repeat;
           background-size: cover;
         }
 
         @include md-device {
-          background: url('../images/background/swipe-video.jpg') no-repeat;
+          background: url('../images/products/swipe/swipe-video.jpg') no-repeat;
           background-size: cover;
         }
       }

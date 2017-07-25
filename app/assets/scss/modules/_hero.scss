@@ -123,22 +123,6 @@
     }
   }
 
-  &__swipe {
-    @include xxs-device {
-      background: url('../images/hero/swipe-header-mobile.jpg') no-repeat;
-      background-size: cover;
-    }
-
-    @include sm-device {
-      background: url('../images/hero/swipe-header-mobile.jpg') no-repeat;
-      background-size: cover;
-    }
-
-    @include md-device {
-      background: url('../images/hero/swipe-header-desktop.jpg') no-repeat;
-    }
-  }
-
   &__switches {
     @include xxs-device {
       background: url('../images/hero/relay-header-mobile.jpg') no-repeat;

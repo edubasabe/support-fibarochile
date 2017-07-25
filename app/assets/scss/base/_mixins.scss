@@ -29,3 +29,25 @@
     @content;
     }
 }
+
+.xxs-device {
+  &-show {
+    @include xxs-device {
+      display: block;
+    }
+
+    @include sm-device {
+      display: none;
+    }
+  }
+}
+
+.sm-device-show {
+  @include xxs-device {
+    display: none;
+  }
+
+  @include sm-device {
+    display: block;
+  }
+}
