@@ -278,6 +278,21 @@ b {
   }
 }
 
+.twentytwenty {
+  &-overlay {
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &-before {
+    &-label { display: none; }
+  }
+
+  &-after {
+    &-label { display: none; }
+  }
+}
 
 //-- Animaciones ---------------------------------------------------------------
 @keyframes play-button-before {

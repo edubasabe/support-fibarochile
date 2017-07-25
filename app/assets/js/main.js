@@ -417,6 +417,10 @@ function fadeElementOffset(element, animation, offsetvalue) {
     /* Video Dimmer */
     modalVideo('https://www.youtube.com/embed/hSVadYFTp2M');
 
+//-- Swipe ---------------------------------------------------------------------
+$(window).load(function() {
+  $("#container-section9").twentytwenty();
+});
 
 
 
