@@ -1,4 +1,5 @@
 .product-section {
+
   &__swipe {
     .content {
       @include xxs-device {
@@ -52,7 +53,7 @@
         }
 
         @include lg-device {
-          font-size: 4rem;
+          font-size: 4.8rem;
         }
     }
 
@@ -69,6 +70,10 @@
 
       @include md-device {
         font-size: 1.8rem;
+      }
+
+      @include lg-device {
+        font-size: 2rem;
       }
 
     }
@@ -96,6 +101,16 @@
     }
 
     &.section5 {
+      .container {
+        .row {
+          div {
+            @include xxs-device {
+              margin-bottom: 6rem;
+            }
+          }
+        }
+      }
+
       .container-fluid {
         overflow: hidden;
         padding: 0;
@@ -143,6 +158,94 @@
             }
           }
         }
+      }
+    }
+
+    &.section6 {
+      .bg {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: relative;
+        width: 100%;
+
+          @include xxs-device {
+            height: 30rem;
+          }
+
+          @include sm-device {
+            height: 40rem;
+          }
+
+          @include md-device {
+            height: 80rem;
+          }
+      }
+
+      .swipe-anim {
+        .anim {
+          perspective: 200rem;
+
+            #anim-back {
+              left: 0;
+              top: 397px;
+            }
+
+            #anim-sensor {
+              left: 83px;
+              top: 260px;
+              transform: matrix(.9434, 0, 0, 1.25, 0, 223);
+              transition: all 2s ease;
+            }
+
+            #anim-screen {
+              left: 141px;
+              top: 150px;
+              transform: matrix(.9259, 0, 0, 1.5385, 0, 379);
+              transition: all 2s ease;
+            }
+
+            #anim-frame {
+              left: 27px;
+              top: 0;
+              transform: matrix(.9259, 0, 0, 2, 0, 547);
+              transition: all 2s ease;
+            }
+        }
+        @include xxs-device { margin-top: 5rem; }
+        @include sm-device { margin-top: 10rem; }
+        @include md-device { margin-top: 10rem; }
+      }
+
+      .swipe-anim .anim,
+      .swipe-anim ul,
+      .swipe-anim #anim-blank {
+        height: 1080px;
+        left: 50%;
+        position: absolute;
+        transform-origin: 0 0;
+        width: 1210px;
+
+          @include xxs-device {
+            transform: scale(.25) translate(-50%, 0);
+          }
+
+          @include sm-device {
+            transform: scale(.35) translate(-41%, 0);
+          }
+
+          @include md-device {
+            transform: scale(.55) translate(-50%, 0);
+          }
+          @include lg-device {
+            transform: scale(.7) translate(-50%, 0);
+          }
+      }
+
+      .swipe-anim a,
+      .swipe-anim img {
+        display: block;
+        position: absolute;
       }
     }
 
@@ -199,9 +302,70 @@
           background-size: 100%;
           height: 60rem;
         }
+    }
 
+    &.section9 {
+      h2,
+      p {
+        text-align: center;
+      }
 
+      .content {
+        position: relative;
+          @include md-device {
+            padding-bottom: 0;
+            padding-top: 0;
+          }
 
+          @include lg-device {
+            h2 {
+              color: $blanco;
+              font-size: 4.8rem;
+            }
+
+            p {
+              color: $blanco;
+              font-size: 2rem;
+            }
+          }
+
+        .container {
+          @include md-device {
+            left: 50%;
+            position: absolute;
+            top: 10%;
+            transform: translate(-50%, 10%);
+            z-index: 9;
+          }
+        }
+      }
+    }
+
+    &.section10 {
+      .bg {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 100%;
+        padding-bottom: 60%;
+        position: relative;
+        width: 100%;
+          @include md-device {
+            background-image: url('../images/products/swipe/swipe-intuitive-on-desktop.jpg');
+          }
+
+        &-size-cover {
+          background-size: cover;
+        }
+
+        &-second {
+          @include xxs-device {
+            background-image: url('../images/products/swipe/swipe-intuitive-off-mobile.jpg');
+          }
+          @include md-device {
+            background-image: url('../images/products/swipe/swipe-intuitive-off-desktop.jpg');
+          }
+        }
+      }
     }
   }
 
