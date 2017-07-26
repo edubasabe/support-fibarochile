@@ -2,6 +2,8 @@
 
   &__swipe {
     .content {
+      text-align: center;
+
       @include xxs-device {
         padding-bottom: 2.4rem;
         padding-top: 2.4rem;
@@ -10,6 +12,14 @@
         padding-bottom: 3.6rem;
         padding-top: 3.6rem;
       }
+    }
+
+    .bg {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      height: 100%;
+      position: relative;
+      width: 100%;
     }
 
     .col-xs-12 {
@@ -96,7 +106,7 @@
       @include md-device {
         background-position: center top;
         background-size: 115%;
-        height: 100rem;
+        // height: 100rem;
       }
     }
 
@@ -158,16 +168,80 @@
             }
           }
         }
+
+        &.white {
+          .content-center {
+            h2,
+            p {
+              color: $negro !important;
+            }
+
+            .btn-outline-white {
+              border-color: $negro;
+              color: $negro !important;
+            }
+          }
+
+        }
       }
     }
 
     &.section6 {
+      position: relative;
+
+      .section-big-image {
+        .content {
+          left: 0;
+          top: 0;
+          width: 100%;
+        }
+      }
+
+      .content {
+        color: $blanco;
+        position: absolute;
+        transform: translateY(-50%);
+        z-index: 10;
+      }
+
       .bg {
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        height: 100%;
-        position: relative;
-        width: 100%;
+          @include xs-device {
+            padding-bottom: 85%;
+          }
+
+          @include sm-device {
+            padding-bottom: 65%;
+          }
+
+          @include md-device {
+            padding-bottom: 56.25%;
+          }
+
+        &-size-cover {
+          background-size: cover;
+        }
+
+        img {
+          height: 100%;
+          left: 50%;
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+        }
+        sub {
+          position: absolute;
+          bottom: 35px;
+          left: 22%;
+          transform: translateX(-50%);
+          color: #fff;
+          font-size: 60%;
+          opacity: .7;
+        }
+      }
+    }
+
+    &.section7 {
+      .bg {
 
           @include xxs-device {
             height: 30rem;
@@ -249,7 +323,7 @@
       }
     }
 
-    &.section7 {
+    &.section8 {
       h2,
       p {
         color: $blanco;
@@ -277,7 +351,7 @@
         }
     }
 
-    &.section8 {
+    &.section9 {
       h2,
       p {
         text-align: center;
@@ -304,7 +378,7 @@
         }
     }
 
-    &.section9 {
+    &.section10 {
       h2,
       p {
         text-align: center;
@@ -341,16 +415,33 @@
       }
     }
 
-    &.section10 {
+    &.section11 {
+      .content {
+
+        h2 {
+          color: inherit;
+        }
+        @include xxs-device {
+          position: relative;
+        }
+
+        @include lg-device {
+          color: $blanco;
+          position: absolute;
+          text-align: left;
+          z-index: 9;
+        }
+      }
+
       .bg {
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        height: 100%;
-        padding-bottom: 60%;
-        position: relative;
-        width: 100%;
+          @include xxs-device {
+            background-image: url('../images/products/swipe/swipe-intuitive-on-mobile.jpg');
+              padding-bottom: 60%;
+          }
+
           @include md-device {
             background-image: url('../images/products/swipe/swipe-intuitive-on-desktop.jpg');
+            padding-bottom: 46.328%;
           }
 
         &-size-cover {
@@ -358,13 +449,89 @@
         }
 
         &-second {
-          @include xxs-device {
-            background-image: url('../images/products/swipe/swipe-intuitive-off-mobile.jpg');
-          }
-          @include md-device {
-            background-image: url('../images/products/swipe/swipe-intuitive-off-desktop.jpg');
-          }
+          background-size: cover;
+          height: 100%;
+          position: absolute;
+          transition: all 1s ease;
+          width: 100%;
+            @include xxs-device {
+              background-image: url('../images/products/swipe/swipe-intuitive-off-mobile.jpg');
+            }
+            @include md-device {
+              background-image: url('../images/products/swipe/swipe-intuitive-off-desktop.jpg');
+            }
         }
+      }
+    }
+
+    &.section12 {
+
+      span {
+        display: inline-block;
+        position: relative;
+        top: 12rem;
+        z-index: 9;
+
+          &::after {
+            border-bottom: .1rem solid $negro;
+            border-right: .1rem solid $negro;
+            content: '';
+            display: block;
+            height: 1.2em;
+            left: 50%;
+            position: absolute;
+            top: 140%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 1.2em;
+          }
+      }
+
+      .bg {
+          @include xxs-device {
+            height: 0;
+            padding-bottom: 52.5%;
+          }
+
+          @include md-device {
+            height: 0;
+            padding-bottom: 56.25%;
+          }
+
+        .full {
+          // visibility: hidden;
+        }
+
+        img {
+          height: 100%;
+          left: 50%;
+          position: absolute;
+          top: 0;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    &.section13 {
+      .bg {
+        padding-bottom: 74%;
+          @include xxs-device {
+            background-image: url('../images/products/swipe/swipe-table-mobile.jpg');
+            background-repeat: no-repeat;
+          }
+
+        img {
+          bottom: -80%;
+          height: auto;
+          position: absolute;
+          right: 0;
+          transform: translateY(-50%);
+          width: 50%;
+        }
+      }
+
+      .sub-extra {
+        text-align: left;
+        width: 100%;
       }
     }
   }
