@@ -419,7 +419,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
 //-- Swipe ---------------------------------------------------------------------
 $(window).load(function() {
-  $("#container-section9").twentytwenty();
+  $("#container-section10").twentytwenty();
 });
 
 

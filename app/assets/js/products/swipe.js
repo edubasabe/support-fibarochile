@@ -35,6 +35,15 @@ $('#section5 .btn-outline-white').click(function (e) {
   $('#section5 .content .container-fluid .black').fadeOut('fast');
   $('#section5 .content .container-fluid .white').fadeIn('fast');
 });
+// -- Section 6 ----------------------------------------------------------------
+
+$('#section6 .btn-outline-white').on('click', function (e) {
+  e.preventDefault();
+
+
+  $('#section6').toggleClass('white-bg');
+});
+
 
 // -- Section 7 ----------------------------------------------------------------
 function swipeAnimar(action){
@@ -72,7 +81,7 @@ headlineAnimation('#section10 .content .container .row','fadeInDown', 'fadeInUp'
 function encender(action) {
   if (action === 'on') {
     $('#section11 .bg-second').css('opacity', 0);
-  } else {
+  } else if (action === 'off'){
     $('#section11 .bg-second').css('opacity', 1);
   }
 }
@@ -80,11 +89,11 @@ function encender(action) {
 $('#section11').waypoint(function(direction) {
   if (direction === 'down') {
     encender('on');
-  } else {
-    encender();
+  } else if (direction === 'up') {
+    encender('off');
   }
 },
-{ offset: '20%'}
+{ offset: '50%'}
 );
 
 // -- Section 12 ---------------------------------------------------------------

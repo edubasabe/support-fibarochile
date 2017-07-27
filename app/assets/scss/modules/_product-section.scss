@@ -168,25 +168,11 @@
             }
           }
         }
-
-        &.white {
-          .content-center {
-            h2,
-            p {
-              color: $negro !important;
-            }
-
-            .btn-outline-white {
-              border-color: $negro;
-              color: $negro !important;
-            }
-          }
-
-        }
       }
     }
 
     &.section6 {
+      overflow: hidden;
       position: relative;
 
       .section-big-image {
@@ -198,14 +184,19 @@
       }
 
       .content {
-        color: $blanco;
+        left: 50%;
         position: absolute;
-        transform: translateY(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
         z-index: 10;
+
+          h2 {
+            color: $blanco;
+          }
       }
 
       .bg {
-          @include xs-device {
+          @include xxs-device {
             padding-bottom: 85%;
           }
 
@@ -227,18 +218,51 @@
           position: absolute;
           top: 0;
           transform: translateX(-50%);
+
+            &:nth-child(2) {
+              opacity: 0;
+              transition: all 250ms ease;
+            }
         }
+
         sub {
-          position: absolute;
           bottom: 35px;
-          left: 22%;
-          transform: translateX(-50%);
           color: #fff;
           font-size: 60%;
+          left: 22%;
           opacity: .7;
+          position: absolute;
+          transform: translateX(-50%);
+        }
+      }
+
+      &.white-bg {
+        .content {
+          h2,
+          p {
+            color: $negro !important;
+          }
+
+          .btn-outline-white {
+            border-color: $negro;
+            color: $negro !important;
+          }
+        }
+
+        .bg {
+          img {
+            &:nth-child(2) {
+              opacity: 1;
+              transition: all 250ms ease;
+            }
+          }
         }
       }
     }
+
+
+
+
 
     &.section7 {
       .bg {
@@ -452,7 +476,7 @@
           background-size: cover;
           height: 100%;
           position: absolute;
-          transition: all 1s ease;
+          transition: all 350ms ease;
           width: 100%;
             @include xxs-device {
               background-image: url('../images/products/swipe/swipe-intuitive-off-mobile.jpg');
@@ -483,6 +507,14 @@
             top: 140%;
             transform: translate(-50%, -50%) rotate(45deg);
             width: 1.2em;
+          }
+
+          @include xxs-device {
+            top: 5rem;
+          }
+
+          @include sm-device {
+            top: 12rem;
           }
       }
 
