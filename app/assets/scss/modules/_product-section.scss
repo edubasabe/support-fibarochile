@@ -489,6 +489,7 @@
     }
 
     &.section12 {
+      overflow: hidden;
 
       span {
         display: inline-block;
@@ -515,6 +516,10 @@
 
           @include sm-device {
             top: 12rem;
+          }
+
+          @include md-device {
+            top: 30rem;
           }
       }
 
@@ -544,26 +549,232 @@
     }
 
     &.section13 {
+
+      .section-big-image {
+        .bg {
+          height: 0;
+
+          &-size-cover {
+              background-size: cover;
+          }
+        }
+      }
+
       .bg {
         padding-bottom: 74%;
           @include xxs-device {
             background-image: url('../images/products/swipe/swipe-table-mobile.jpg');
             background-repeat: no-repeat;
+              background-size: contain;
+          }
+
+          @include md-device {
+            background-image: url('../images/products/swipe/swipe-hide-large.jpg');
+            background-repeat: no-repeat;
+            padding-bottom: 49%;
+
           }
 
         img {
-          bottom: -80%;
-          height: auto;
-          position: absolute;
-          right: 0;
-          transform: translateY(-50%);
-          width: 50%;
+
+          @include md-device {
+            bottom: -80%;
+            height: auto;
+            position: absolute;
+            right: 0;
+            transform: translateY(-50%);
+            width: 50%;
+          }
         }
       }
 
       .sub-extra {
-        text-align: left;
         width: 100%;
+          @include xxs-device {
+            text-align: center;
+          }
+          @include sm-device {
+            padding-bottom: 2.4rem;
+            padding-top: 2.4rem;
+          }
+
+          @include md-device {
+            padding-bottom: 5rem;
+            padding-top: 5rem;
+            text-align: left;
+          }
+          @include lg-device {
+            padding-bottom: 13rem;
+            padding-top: 7rem;
+          }
+      }
+    }
+
+    &.section14 {
+      overflow: hidden;
+
+      .content {
+          @include sm-device {
+            color: $blanco;
+            position: absolute;
+            width: 100%;
+            z-index: 9;
+          }
+
+        h2 {
+          @include sm-device {
+            color: $blanco;
+          }
+        }
+      }
+
+      .bg {
+        background-position: 0 0;
+        background-size: auto 100%;
+        height: 330px;
+        padding: 0;
+
+          @include xxs-device {
+            background-image: url('../images/products/swipe/swipe-passage-mobile.jpg');
+            background-repeat: no-repeat;
+          }
+
+          @include sm-device {
+            background-image: url('../images/products/swipe/swipe-passage.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          @include lg-device {
+            height: 105rem;
+          }
+      }
+    }
+
+    &.section15 {
+      .content {
+        @include md-device {
+          position: absolute;
+        }
+      }
+
+      .bg {
+        background-position: 0 0;
+        background-size: auto 100%;
+        height: 330px;
+        padding: 0;
+
+          @include xxs-device {
+            background-image: url('../images/products/swipe/swipe-senior-mobile.jpg');
+            background-repeat: no-repeat;
+          }
+
+          @include sm-device {
+            background-image: url('../images/products/swipe/swipe-senior-desktop.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          @include lg-device {
+            height: 105rem;
+          }
+      }
+
+      .heating {
+        border: 1px solid #1fb3ef;
+        border-radius: 6px;
+        color: #1fb3ef;
+        height: 54px;
+        left: 20%;
+        opacity: .8;
+        padding: 6px 0 5px;
+        position: absolute;
+        text-align: center;
+        top: 42%;
+        transform: translate(-50%, -50%);
+        width: 106px;
+
+          span,
+          p {
+            display: block;
+            margin: 0;
+            padding: 0;
+          }
+
+          @include md-device {
+            font-size: 1rem;
+            font-weight: 300;
+            left: 32%;
+            top: 51%;
+            transform: scale(1.75) translate(-50%, -50%);
+          }
+
+          @include lg-device {
+            font-weight: 300;
+            transform: scale(2.2) translate(-50%, -50%);
+          }
+
+          p {
+            @include lg-device {
+              font-size: 1.6rem;
+            }
+          }
+      }
+    }
+
+    &.section16 {
+      overflow: hidden;
+
+      .content {
+        width: 100%;
+
+        @include md-device {
+          position: absolute;
+          z-index: 9;
+        }
+      }
+
+      .bg {
+        @include xxs-device {
+          background-size: cover;
+        }
+
+        @include md-device {
+          background: url('../images/products/swipe/swipe-audio-desktop.jpg') no-repeat;
+          padding-bottom: 44%;
+        }
+      }
+    }
+
+    &.section17 {
+      .content {
+        width: 100%;
+
+          @include sm-device {
+            position: absolute;
+            z-index: 9;
+          }
+
+        h2,
+        p {
+          @include sm-device {
+            color: $blanco;
+            text-align: left;
+          }
+        }
+      }
+
+      .bg {
+        @include xxs-device {
+          background-size: cover;
+        }
+
+        @include md-device {
+          background: url('../images/products/swipe/swipe-roof-desktop.jpg') no-repeat;
+          background-position: 0 -30rem;
+          background-size: cover;
+          padding-bottom: 70%;
+        }
       }
     }
   }

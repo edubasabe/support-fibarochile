@@ -50,4 +50,26 @@
   @include sm-device {
     display: block;
   }
+
+  &-only {
+
+    @include sm-device {
+      display: block;
+    }
+
+    @include md-device {
+      display: none;
+    }
+  }
+}
+
+
+.md-device-show {
+  @include xxs-device {
+    display: none;
+  }
+
+  @include md-device {
+    display: block;
+  }
 }
