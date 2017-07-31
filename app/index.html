@@ -212,47 +212,47 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <h2 class="headline text-center inicio-tuhogar--por-que-fibaro__title">¿Por qué con FIBARO?</h2>
+        <h2 class="headline headline--nomargin text-center inicio-tuhogar--por-que-fibaro__title">¿Por qué con FIBARO?</h2>
         <!-- <p class="lead headline--subheadline inicio-tuhogar--por-que-fibaro__subtitle">Un departamento moderno une el diseño vanguardista con funcionalidad. Las soluciones innovadoras del sistema FIBARO permiten utilizar en su totalidad el potencial que ofrece el hogar inteligente, garantizando de esta forma el confort, seguridad y eficiencia energética.</p> -->
       </div>
     </div>
     <div class="row">
-        <div class="col-xs-6 col-sm-6">
+        <div class="col-xs-6 col-sm-6 col-md-4">
           <div class="thumbnail text-center">
             <img src="./assets/images/icon/icon_security.svg" alt="">
             <h3>Seguridad</h3>
             <p class="lead">Controla y vigila tu hogar desde cualquier parte del mundo. Fibaro protege tu casa y familia en todo instante.</p>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6">
+        <div class="col-xs-6 col-sm-6 col-md-4">
           <div class="thumbnail text-center">
             <img src="./assets/images/icon/icon_lightning-1.svg" alt="Videos">
             <h3>Eficiencia energética</h3>
                 <p class="lead">Genera un importante ahorro en las cuentas de cada mes con Fibaro. Aporta sustentabilidad a tu vida.</p>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6">
+        <div class="col-xs-6 col-sm-6 col-md-4">
           <div class="thumbnail text-center">
-            <img src="./assets/images/icon/icon_.svg" alt="Manuales">
+            <img src="./assets/images/icon/icon_singleswitch.svg" alt="Manuales">
             <h3>Confort</h3>
             <p class="lead">Disfruta de la satisfacción que te entrega un Hogar Inteligente. Gana tiempo y úsalo para compartir en familia.</p>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6">
+        <div class="col-xs-6 col-sm-6 col-md-4">
           <div class="thumbnail text-center">
             <img src="./assets/images/icon/icon_sensors.svg" alt="Manuales">
             <h3>Ecosistema</h3>
             <p class="lead"> Permite conectar dispositivos de otras marcas gracias al protocolo de comunicación Z-Wave.</p>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6">
+        <div class="col-xs-6 col-sm-6 col-md-4">
           <div class="thumbnail text-center">
-            <img src="./assets/images/icon/home-simple-line-icons.svg" alt="Manuales">
+            <img src="./assets/images/icon/icon_motion.svg" alt="Manuales">
             <h3>Diseño</h3>
             <p class="lead">Basado en la naturaleza. Una mezcla perfecta entre elegancia y exclusividad.</p>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6">
+        <div class="col-xs-6 col-sm-6 col-md-4">
           <div class="thumbnail text-center">
             <img src="./assets/images/icon/icon_wireless-1.svg" alt="Manuales">
             <h3>Inalámbrico</h3>
@@ -268,7 +268,7 @@
 <section class="inicio-tuhogar__experience-center" id="experience-center">
   <div class="blacking-bg"></div>
       <div class="inicio-tuhogar__experience-center__title-container">
-        <p class="text-center"><img src="./assets/images/icon/frase.svg" style="max-height:2rem;" alt="" class="img-responsive"></p>
+        <p class="text-center frase"><img src="./assets/images/icon/frase.svg" style="max-height:2rem;" alt="" class="img-responsive"></p>
         <h2 class="headline headline--nomargin inicio-tuhogar__experience-center__title text-center">Experience Center</h2>
         <h3 class="text-center lead">Visítanos en Av. Las Condes 9765. <br> Las Condes, Santiago, Chile.</h3>
       </div>
@@ -277,7 +277,7 @@
        Tu navegador no implementa el elemento <code>video</code>.
   </video>
   <img src="./assets/images/background/experience-center.jpg" alt="Experience Center" class="img-responsive ec">
-  <p class="inicio-tuhogar__experience-center__title-container--horario text-center">Lunes a Viernes: 9:00 – 19:00 hrs. | Sábado: 10:00 – 19:00 hrs.</p>
+  <p class="inicio-tuhogar__experience-center__title-container--horario text-center">Lunes a Viernes: <br> 9:00 – 19:00 hrs. | Sábado: 10:00 – 19:00 hrs.</p>
 </section>
 
 <hr class="divider">
@@ -288,7 +288,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h2 class="headline text-center">Desarrolla tu proyecto</h2>
+      <h2 class="headline headline--nomargin text-center">Desarrolla tu proyecto</h2>
       <br><br>
       <!-- <p class="lead headline--subheadline">Trabajamos con grandes firmas</p> -->
     </div>
@@ -351,12 +351,16 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-12">
-        <div class="owl-carousel owl-theme" id="owl-proyectos">
-
-          <div class="item" v-for="data in item">
-            <a href="#">
-                <img v-bind:src="data.src" class="img-responsive center-block">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="#" class="inicio-tuhogar--proyectos__casas">
+              <img src="./assets/images/proyectos/casas-bg.jpg" alt="Casas" class="img-responsive">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" class="inicio-tuhogar--proyectos__deptos">
+              <img src="./assets/images/proyectos/deptos-bg.jpg" alt="Departamentos" class="img-responsive">
             </a>
           </div>
         </div>
@@ -390,6 +394,7 @@
     </div>
   </div>
 </section>
+
 
 
 

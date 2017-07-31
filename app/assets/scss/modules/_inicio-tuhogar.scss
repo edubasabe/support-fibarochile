@@ -313,6 +313,26 @@
           color: $blanco;
         }
       }
+
+      &--horario {
+        @include xxs-device {
+          font-weight: 300;
+        }
+
+        @include md-device {
+          bottom: 0;
+          color: $blanco;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+        }
+      }
+
+      .frase {
+        @include md-device {
+          img { filter: invert(); }
+        }
+      }
     }
 
     .ec {
@@ -348,7 +368,64 @@
     }
   }
 
-  //-- Section 6 : Expertos Casos de exito -------------------------------------
+  //-- Section proyectos inmobiliarios -----------------------------------------
+  &--proyectos {
+  &__casas {
+    border-radius: .4rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    max-height: 14.5rem;
+    min-height: 6rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      bottom: 1.5rem;
+      content: 'Casas';
+      left: 1.5rem;
+      position: absolute;
+      @include xxs-device {
+        color: $blanco;
+        font-size: 1.6rem;
+      }
+      @include sm-device {
+        font-size: 2rem;
+        font-weight: 700;
+        text-shadow: .2rem .2rem .4rem rgba($negro, .6);
+      }
+    }
+  }
+
+  &__deptos {
+    border-radius: .4rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    max-height: 14.5rem;
+    min-height: 6rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &::before {
+      bottom: 1.5rem;
+      content: 'Departamentos';
+      left: 1.5rem;
+      position: absolute;
+      @include xxs-device {
+        color: $blanco;
+        font-size: 1.6rem;
+      }
+      @include sm-device {
+        font-size: 2rem;
+        font-weight: 700;
+        text-shadow: .2rem .2rem .4rem rgba($negro, .6);
+      }
+    }
+  }
+}
+
+//-- Section 6 : Expertos Casos de exito -------------------------------------
   &--casos-de-exito {
     background: url('../images/background/bg--tuhogar-casos-de-exito.jpg') no-repeat center center;
     background-size: cover;
@@ -530,9 +607,9 @@
       box-shadow: none;
       margin-bottom: 1rem;
     }
-
   }
 }
+
 
 
 
