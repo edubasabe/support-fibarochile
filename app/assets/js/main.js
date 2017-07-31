@@ -287,8 +287,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
     /* Animacion del formulario floating right */
     $('#smarthome').waypoint(function () {
-      console.log('Paso');
-      $('#contacto-modal .floating').addClass('animated fadeInUp');
+      $('#contacto-modal .floating').addClass('animated fadeInUp').css('visibility', 'visible');
     }, { offset: '50%' });
 
   //-- Formulario de Contacto --------------------------------------------------
@@ -417,10 +416,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
     /* Video Dimmer */
     modalVideo('https://www.youtube.com/embed/hSVadYFTp2M');
 
-//-- Swipe ---------------------------------------------------------------------
-$(window).load(function() {
-  $("#container-section10").twentytwenty();
-});
+
 
 
 

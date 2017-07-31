@@ -330,7 +330,7 @@
 
       .frase {
         @include md-device {
-          img { filter: invert(); }
+          img { filter: invert(100%); }
         }
       }
     }
@@ -387,7 +387,7 @@
       position: absolute;
       @include xxs-device {
         color: $blanco;
-        font-size: 1.6rem;
+        font-size: 2rem;
       }
       @include sm-device {
         font-size: 2rem;
