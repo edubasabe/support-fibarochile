@@ -78,19 +78,19 @@ headlineAnimation('#section9 .content .container .row','fadeInDown', 'fadeInUp')
 headlineAnimation('#section10 .content .container .row','fadeInDown', 'fadeInUp')
 
 // -- Section 11 ---------------------------------------------------------------
-function encender(action) {
+function encender(element, action) {
   if (action === 'on') {
-    $('#section11 .bg-second').css('opacity', 0);
+    $(element).css('opacity', 0);
   } else if (action === 'off'){
-    $('#section11 .bg-second').css('opacity', 1);
+    $(element).css('opacity', 1);
   }
 }
 
 $('#section11').waypoint(function(direction) {
   if (direction === 'down') {
-    encender('on');
+    encender('#section11 .bg-second','on');
   } else if (direction === 'up') {
-    encender('off');
+    encender('#section11 .bg-second','off');
   }
 },
 { offset: '50%'}
@@ -99,6 +99,15 @@ $('#section11').waypoint(function(direction) {
 // -- Section 12 ---------------------------------------------------------------
 $('#section12 .bg').click(function () {
   $('#section12 .bg .empty').toggleClass('hide');
-})
+});
+
+// -- Section 18 ---------------------------------------------------------------
+
+$('#section18').waypoint(function() {
+    $('#section18 ').addClass('')
+
+},
+{ offset: '50%'}
+);
 
 });

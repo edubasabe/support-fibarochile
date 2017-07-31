@@ -773,7 +773,63 @@
           background: url('../images/products/swipe/swipe-roof-desktop.jpg') no-repeat;
           background-position: 0 -30rem;
           background-size: cover;
-          padding-bottom: 70%;
+          padding-bottom: 49%;
+        }
+      }
+    }
+
+    &.section18 {
+        @include md-device {
+          height: 80rem;
+          overflow: hidden;
+        }
+
+      .content {
+        h2 {
+          color: inherit;
+        }
+        @include xxs-device {
+          position: relative;
+        }
+
+        @include lg-device {
+          color: $blanco;
+          position: absolute;
+          text-align: left;
+          width: 100%;
+          z-index: 9;
+        }
+      }
+
+      .bg {
+        background-size: cover;
+          @include xxs-device {
+            background-image: url('../images/products/swipe/swipe-office-mobile.jpg');
+            padding-bottom: 60%;
+          }
+
+          @include md-device {
+            background-image: url('../images/products/swipe/swipe-office-on.jpg');
+            padding-bottom: 46.328%;
+          }
+
+        &-size-cover {
+          background-size: cover;
+        }
+
+        &-second {
+          background-size: cover;
+          height: 100%;
+          position: absolute;
+          transition: all 350ms ease;
+          width: 100%;
+            @include xxs-device {
+              background-image: url('../images/products/swipe/swipe-office-mobile-off.jpg');
+            }
+
+            @include md-device {
+              background-image: url('../images/products/swipe/swipe-office-on.jpg');
+            }
         }
       }
     }
