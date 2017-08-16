@@ -1,0 +1,61 @@
+.nosotros {
+  &__quienes-somos {
+    h2 {
+      font-weight: 300;
+      @include md-device {
+       font-size: 4.2rem;
+      }
+    }
+
+    h2,
+    h3,
+    p {
+      color: $blanco;
+      font-weight: 300;
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+    &--image {
+      border: .3rem solid rgba($blanco, .1);
+      border-radius: 50%;
+      height: 20rem;
+      margin: 0 auto;
+      overflow: hidden;
+      width: 20rem;
+
+      img {
+        transform: scale(1.2);
+      }
+    }
+
+    @include xxs-device {
+      background: url('../images/background/bg-key-values-mobile.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @include sm-device {
+      background: url('../images/background/bg-key-values.jpg');
+    }
+  }
+
+  &__vision {
+    &--logo-partners {
+      height: 6rem;
+      margin-top: 3rem;
+      position: relative;
+
+      img {
+        // transform: scale(.7);
+
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
