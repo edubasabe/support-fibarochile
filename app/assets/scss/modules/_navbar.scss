@@ -276,6 +276,10 @@
       background-size: 85%;
     }
 
+    @include md-device {
+      background-size: 10.5rem;
+    }
+
 
     img {
       @include xxs-device {
