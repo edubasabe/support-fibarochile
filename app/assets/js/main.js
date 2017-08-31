@@ -5,7 +5,9 @@ var body = $('body');
 var buttonNavbarToggle = $('button.navbar-toggle');
 var windowHeight = $(window).height();
 var windowWidth = $(window).width();
+
 //-- Funciones Globales --------------------------------------------------------
+
 /* Si se clickea el Menu */
 function clickeaMenu() {
   $('.navbar.navbar-default.navbar-fixed-top li > a').click( function () {
@@ -37,6 +39,7 @@ function getCookie(name) {
     //return unescape(dc.substring(begin + prefix.length, end));
     return decodeURI(dc.substring(begin + prefix.length, end));
  }
+
 /* Checkear el ancho de la ventana para saber si es Mobile */
 function checkWidth() {
   var windowSize = $(window).width();
@@ -48,6 +51,7 @@ function checkWidth() {
     return false;
   }
 }
+
 /* Checkear si es Tablet */
 function isTablet() {
   var calcAspectRatio = windowHeight / windowWidth;
@@ -89,6 +93,20 @@ function modalVideo(videolink) {
   });
 }
 
+function videosModales(element, src) {
+  $(element).on('click', function (e) {
+    e.preventDefault();
+    $('#video-modal').modal('show');
+    $('#video-modal iframe').attr('src', src);
+  });
+
+}
+
+function isMobile() {
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   return true;
+  }
+}
 //-- Padding Nav  --------------------------------------------------------------
 /* Centrar los elementos del menu con el padding */
 calcularPadding('.navbar-brand.navbar__logo-text');
@@ -155,7 +173,7 @@ $(document).on('ready', function() {
           1000:{
               items:6,
               nav:false,
-              loop:false
+              loop:true
           }
       }
   });
@@ -413,8 +431,11 @@ function fadeElementOffset(element, animation, offsetvalue) {
     $('#telcos-modal').modal();
   });
 
+//-- videosModales -------------------------------------------------------------
     /* Video Dimmer */
-    modalVideo('https://www.youtube.com/embed/hSVadYFTp2M');
+    videosModales('#play-dimmer-video','https://www.youtube.com/embed/hSVadYFTp2M');
+    videosModales('#play-promo-video', 'https://www.youtube.com/embed/m7Ra7G-4cis?ecver=1');
+//-- Waze ----------------------------------------------------------------------
 
 
 
