@@ -107,6 +107,21 @@ function isMobile() {
    return true;
   }
 }
+
+function autoplayYoutube(btn,iframe) {
+  $(btn).click(function(e){
+    $(iframe)[0].src += "&autoplay=1";
+      e.preventDefault();
+    });
+}
+
+function stopCloseYoutube() {
+  $("#myModal").on('hidden.bs.modal', function (e) {
+      $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+  });
+}
+
+
 //-- Padding Nav  --------------------------------------------------------------
 /* Centrar los elementos del menu con el padding */
 calcularPadding('.navbar-brand.navbar__logo-text');
@@ -432,10 +447,23 @@ function fadeElementOffset(element, animation, offsetvalue) {
   });
 
 //-- videosModales -------------------------------------------------------------
+/* autoplay videos function */
+$('#play-promo-video').click(function(e){
+  $('#play-promocional')[0].src += "&autoplay=1";
+    e.preventDefault();
+});
     /* Video Dimmer */
     videosModales('#play-dimmer-video','https://www.youtube.com/embed/hSVadYFTp2M');
     videosModales('#play-promo-video', 'https://www.youtube.com/embed/m7Ra7G-4cis?ecver=1');
 //-- Waze ----------------------------------------------------------------------
+
+
+$(document).ready(function () {
+  autoplayYoutube('#play-promo-video', '#play-promocional');
+  stopCloseYoutube();
+});
+
+
 
 
 

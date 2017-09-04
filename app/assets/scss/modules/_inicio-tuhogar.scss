@@ -695,3 +695,20 @@
     opacity: 1;
   }
 }
+
+//-- Mapas ---------------------------------------------------------------------
+.map {
+  &__container {
+    min-height: 30rem;
+  }
+
+  &__waze {
+    &-container {
+      background-color: $cyan-waze ;
+    }
+    &-title {
+      color: $blanco !important;
+      text-decoration: none !important;
+    }
+  }
+}
