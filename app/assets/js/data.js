@@ -51,11 +51,11 @@
     el: '#sensores-mobile',
     data: {
       titles: [
-        { text: 'Motion Sensor', url: 'assets/images/nav/nav-motion.jpg', class: 'active', link: 'motion-sensor.html' },
-        { text: 'Flood Sensor', url: 'assets/images/nav/nav-flood.jpg', link: 'flood-sensor.html' },
-        { text: 'Door/Window Sensor', url: 'assets/images/nav/nav-dws.jpg', link: 'dw-sensor.html' },
-        { text: 'Smoke Sensor', url: 'assets/images/nav/nav-smoke.jpg', link: 'smoke-sensor.html' },
-        { text: 'Universal Binary Sensor', url: 'assets/images/nav/nav-ubs.jpg', link: 'universal-sensor.html' }
+        { text: 'Motion Sensor', texto: '(Sensor de Movimiento)', url: 'assets/images/nav/nav-motion.jpg', class: 'active', link: 'motion-sensor.html' },
+        { text: 'Flood Sensor', texto: '(Sensor de Inundación)', url: 'assets/images/nav/nav-flood.jpg', link: 'flood-sensor.html' },
+        { text: 'Door/Window Sensor', texto: '(Sensor de Puerta/Ventana)', url: 'assets/images/nav/nav-dws.jpg', link: 'dw-sensor.html' },
+        { text: 'Smoke Sensor', texto: '(Sensor de Humo)', url: 'assets/images/nav/nav-smoke.jpg', link: 'smoke-sensor.html' },
+        { text: 'Universal Binary Sensor', texto: '(Sensor Binario Universal)', url: 'assets/images/nav/nav-ubs.jpg', link: 'universal-sensor.html' }
       ],
     }
   });
@@ -64,11 +64,11 @@
     el: '#actuadores-mobile',
     data: {
       titles: [
-        { text: 'Wall Plug', url: 'assets/images/nav/nav-wallplug.jpg', link: 'wall-plug.html' },
-        { text: 'Dimmer 2', url: 'assets/images/nav/nav-dimmer.jpg', link: 'dimmer-2.html' },
-        { text: 'Switches 2', url: 'assets/images/nav/nav-relay.jpg', link: 'switches-2.html' },
-        { text: 'Roller Shutter 2', url: 'assets/images/nav/nav-roller.jpg', link: 'roller-shutter-2.html' },
-        { text: 'RGBW Controller', url: 'assets/images/nav/nav-rgbw.jpg', link: 'rgbw-controller.html' }
+        { text: 'Wall Plug', texto: '(Enchufe inteligente)', url: 'assets/images/nav/nav-wallplug.jpg', link: 'wall-plug.html' },
+        { text: 'Dimmer 2', texto: '(Control de iluminación)', url: 'assets/images/nav/nav-dimmer.jpg', link: 'dimmer-2.html' },
+        { text: 'Switches 2', texto: '(Interruptores inteligentes)', url: 'assets/images/nav/nav-relay.jpg', link: 'switches-2.html' },
+        { text: 'Roller Shutter 2', texto: '(Control de cortinas y motores)', url: 'assets/images/nav/nav-roller.jpg', link: 'roller-shutter-2.html' },
+        { text: 'RGBW Controller', texto: '(Control de cintas LED RGBW)', url: 'assets/images/nav/nav-rgbw.jpg', link: 'rgbw-controller.html' }
       ],
     }
   });
@@ -77,9 +77,9 @@
     el: '#remotos-mobile',
     data: {
       titles: [
-        { text: 'KeyFob', url: 'assets/images/nav/nav-keyfob.jpg', link: 'keyfob.html' },
-        { text: 'The Button', url: 'assets/images/nav/nav-button.jpg', link: 'the-button.html' },
-        { text: 'Swipe', url: 'assets/images/nav/nav-swipe.jpg', link: 'swipe.html' }
+        { text: 'KeyFob',texto: '(Control remoto personal)', url: 'assets/images/nav/nav-keyfob.jpg', link: 'keyfob.html' },
+        { text: 'The Button',texto: '(Interruptor inalámbrico)', url: 'assets/images/nav/nav-button.jpg', link: 'the-button.html' },
+        { text: 'Swipe',texto: '(Control por gestos)', url: 'assets/images/nav/nav-swipe.jpg', link: 'swipe.html' }
       ],
     }
   });
@@ -103,7 +103,7 @@ var alianzas = new Vue({
       { src: 'assets/images/partners/partners-sonos.jpg', srcset: 'assets/images/partners/partners-sonos.jpg 1x, assets/images/partners/partners-sonos@2x.jpg 2x' },
       { src: 'assets/images/partners/partners-evolux.jpg', srcset: 'assets/images/partners/partners-evolux.jpg 1x, assets/images/partners/partners-evolux@2x.jpg 2x' },
       { src: 'assets/images/partners/partners-zwave.jpg', srcset: 'assets/images/partners/partners-zwave.jpg 1x, assets/images/partners/partners-zwave@2x.jpg 2x' },
-      { src: 'assets/images/partners/partners-leed.jpg', srcset: 'assets/images/partners/partners-leed.jpg 1x, assets/images/partners/partners-leed@2x.jpg 2x' },
+      // { src: 'assets/images/partners/partners-leed.jpg', srcset: 'assets/images/partners/partners-leed.jpg 1x, assets/images/partners/partners-leed@2x.jpg 2x' },
       { src: 'assets/images/partners/partners-dlink.jpg', srcset: 'assets/images/partners/partners-dlink.jpg 1x, assets/images/partners/partners-dlink@2x.jpg 2x' },
       { src: 'assets/images/partners/partners-hunterdouglas.jpg', srcset: 'assets/images/partners/partners-hunterdouglas.jpg 1x, assets/images/partners/partners-hunterdouglas@2x.jpg 2x' },
       { src: 'assets/images/partners/partners-rollerhouse.jpg', srcset: 'assets/images/partners/partners-rollerhouse.jpg 1x, assets/images/partners/partners-rollerhouse@2x.jpg 2x' },

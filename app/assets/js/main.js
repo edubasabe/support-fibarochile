@@ -378,68 +378,6 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
 
 
-  //-- Navbar Animacion Yamm ---------------------------------------------------
-
-  /* Darle clase open al hacer click, para que se despliegue el menu*/
-  $('li.dropdown.yamm-fullwidth > a').on('click', function (event) {
-    $(this).parent().toggleClass('open');
-  });
-
-  /* Guardar el menu si el usuario hace click fuera */
-  $('body').on('click', function (e) {
-    if (!$('li.dropdown.yamm-fullwidth').is(e.target)
-        && $('li.dropdown.yamm-fullwidth').has(e.target).length === 0
-        && $('.open').has(e.target).length === 0
-    ) {
-        $('li.dropdown.yamm-fullwidth').removeClass('open');
-    }
-  });
-
-
-  $('.dropdown-toggle').click(function () {
-    /* Agrega clase active al primer li*/
-    $('.open .nav.nav-pills > li:first-child').addClass('active');
-    /* Agrega clase bg-white al navbar*/
-    $('nav').addClass('bg-white');
-    /* Agrega clase activa  sensores */
-    $('#sensores').addClass('active');
-    /* Agrega el atributo aria expanded */
-    $('.open .nav.nav-pills > li:first-child > a').attr('aria-expanded',true);
-  });
-
-  /* Collapsando todos los submenus */
-  $('.dropdown-menu--mobile > li.dropdown > ul').addClass('collapse');
-
-  /* Eliminar el otro menu si no es mobile o iPad */
-  if ( checkWidth() || isTablet() || is_iPad()) {
-    $('.dropdown-menu--desktop').hide();
-    $('.dropdown-menu--mobile').addClass('collapse')
-  }else {
-    $('.dropdown-menu--mobile').hide();
-  }
-
-  $('.dropdown-menu--mobile > li.dropdown').on('click',function () {
-    if ( $(this).children('ul').hasClass('collapse') ) {
-      $(this).children('ul').removeClass('collapse').addClass('collapsed');
-    }else {
-      $(this).children('ul').removeClass('collapsed').addClass('collapse');
-    }
-
-  });
-
-  $('#menu-escrito > li').on('click', function () {
-    if ( $(this).children('ul').hasClass('collapse') ) {
-      $(this).children('ul').removeClass('collapse').addClass('collapsed');
-    }else if ( !$(this).hasClass('open') ) {
-      $(this).children('ul').removeClass('collapsed').addClass('collapse');
-    }
-  });
-
-  if ( !checkWidth() || !isTablet() ) {
-    $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
-  }
-
-
   /* Acciones Ventana Modal Telcos */
   $('#telcos, #retail').on('click', function (e) {
     e.preventDefault();
@@ -462,6 +400,15 @@ $(document).ready(function () {
   autoplayYoutube('#play-promo-video', '#play-promocional');
   stopCloseYoutube();
 });
+
+
+//-- shopping cart icon --------------------------------------------------------
+//Si no es Mobile
+if ( !isMobile() ) {
+  $('.tienda-link > img').attr('src','./assets/images/icon/shopping-bag.svg');
+} else {
+  $('.dropdown-menu--desktop').hide();
+}
 
 
 

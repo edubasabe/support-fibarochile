@@ -1,37 +1,43 @@
 .hero {
     background-size: cover;
     display: flex;
-    @include xxs-device {
-        // background: url('../images/hero-mobile.jpg') no-repeat;
-        background-size: cover;
-        min-height: 17.9rem;
-    }
-    @include sm-device {
-        // background: url('../images/hero.jpg') no-repeat;
-        background-size: cover;
-    }
-    @include md-device {
-        // background: url('../images/hero.jpg') no-repeat;
-        background-size: cover;
-        height: 35rem;
-    }
+
+      @include xxs-device {
+          // background: url('../images/hero-mobile.jpg') no-repeat;
+          background-size: cover;
+          min-height: 17.9rem;
+      }
+
+      @include sm-device {
+          // background: url('../images/hero.jpg') no-repeat;
+          background-size: cover;
+      }
+
+      @include md-device {
+          // background: url('../images/hero.jpg') no-repeat;
+          background-size: cover;
+          height: 35rem;
+      }
+
     &__container {
         align-items: center;
         display: flex;
     }
+
     &__title {
         align-self: center;
         color: $blanco;
         font-weight: 300;
         margin: 0 auto;
         text-align: center;
-        @include xxs-device {
-            font-size: 3rem;
-        }
-        @include md-device {
-            font-size: 4.2rem;
-        }
+            @include xxs-device {
+                font-size: 3rem;
+            }
+            @include md-device {
+                font-size: 4.2rem;
+            }
     }
+
     //-- Productos ---------------------------------------------------------------
     &__dimmer {
         @include xxs-device {
@@ -46,6 +52,7 @@
             background: url('../images/hero/dimmer-header-desktop.jpg') no-repeat;
         }
     }
+
     &__smoke {
         @include xxs-device {
             background: url('../images/hero/smoke-header-mobile.jpg') no-repeat;
@@ -59,6 +66,7 @@
             background: url('../images/hero/smoke-header-desktop.jpg') no-repeat;
         }
     }
+
     &__ubs {
         @include xxs-device {
             background: url('../images/hero/ubs-header-mobile.jpg') no-repeat;
@@ -72,6 +80,7 @@
             background: url('../images/hero/ubs-header-desktop.jpg') no-repeat;
         }
     }
+
     &__hc2 {
         @include xxs-device {
             background: url('../images/hero/hc2-header-mobile.jpg') no-repeat;
@@ -83,8 +92,10 @@
         }
         @include md-device {
             background: url('../images/hero/hc2-header-desktop.jpg') no-repeat;
+            background-position: center;
         }
     }
+
     &__hcl {
         @include xxs-device {
             background: url('../images/hero/hcl-header-mobile.jpg') no-repeat;
@@ -96,8 +107,11 @@
         }
         @include md-device {
             background: url('../images/hero/hcl-header-desktop.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
         }
     }
+
     &__switches {
         @include xxs-device {
             background: url('../images/hero/relay-header-mobile.jpg') no-repeat;
@@ -111,6 +125,7 @@
             background: url('../images/hero/relay-header-desktop.jpg') no-repeat;
         }
     }
+
     &__roller {
         @include xxs-device {
             background: url('../images/hero/roller-header-mobile.jpg') no-repeat;
@@ -122,6 +137,22 @@
         }
         @include md-device {
             background: url('../images/hero/roller-header-desktop.jpg') no-repeat;
+        }
+    }
+
+    &__rgbw-controller {
+        @include xxs-device {
+            background: url('../images/hero/rgbw-header-mobile.jpg') no-repeat;
+            background-size: cover;
+        }
+        @include sm-device {
+            background: url('../images/hero/rgbw-header-mobile.jpg') no-repeat;
+            background-size: cover;
+        }
+        @include md-device {
+            background: url('../images/hero/rgbw-header-desktop.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
         }
     }
 

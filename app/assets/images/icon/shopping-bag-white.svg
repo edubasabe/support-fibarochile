@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="33px" viewBox="0 0 25 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>shopping-bag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-170.000000, -911.000000)" fill="#FFFFFF">
+            <g id="shopping-bag" transform="translate(170.000000, 911.000000)">
+                <g id="Capa_1">
+                    <g id="Group">
+                        <path d="M24.313,33 L0.688,33 C0.551,33 0.42,32.944 0.326,32.845 C0.232,32.746 0.182,32.613 0.188,32.476 L1.313,8.851 C1.326,8.584 1.545,8.375 1.813,8.375 L23.188,8.375 C23.455,8.375 23.675,8.584 23.688,8.851 L24.813,32.476 C24.819,32.613 24.77,32.746 24.675,32.845 C24.58,32.944 24.449,33 24.313,33 Z M1.212,32 L23.788,32 L22.711,9.375 L2.289,9.375 L1.212,32 Z" id="Shape"></path>
+                        <path d="M17.905,11.375 C17.629,11.375 17.405,11.151 17.405,10.875 L17.405,5.905 C17.405,3.201 15.205,1 12.5,1 C9.795,1 7.595,3.201 7.595,5.905 L7.595,10.875 C7.595,11.151 7.371,11.375 7.095,11.375 C6.819,11.375 6.595,11.151 6.595,10.875 L6.595,5.905 C6.595,2.649 9.244,0 12.5,0 C15.756,0 18.405,2.649 18.405,5.905 L18.405,10.875 C18.405,11.151 18.182,11.375 17.905,11.375 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

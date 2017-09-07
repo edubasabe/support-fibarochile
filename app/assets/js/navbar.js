@@ -136,7 +136,7 @@ template: `<div class="container">
 </div>`
 }) */
 
-
+/*
 
 Vue.component('my-navbar', {
 template: `<div class="container">
@@ -279,3 +279,214 @@ template: `<div class="container">
 new Vue({
   el: '#nav'
 })
+
+*/
+
+jQuery(document).ready(function ($) {
+
+
+
+//-- Revisar si es ipad
+function is_iPad() {
+  return (navigator.platform.indexOf("iPad") != -1)
+}
+
+function is_iPhone() {
+  return (navigator.platform.indexOf("iPhone") != -1)
+}
+
+if (is_iPad() || is_iPhone()) {
+  $('video').attr('controls','true');
+}
+
+else {
+  // console.log('No es iPad');
+}
+
+
+//------------------------------------------------------------------------------
+// Navbar Animacion Yamm
+//------------------------------------------------------------------------------
+
+
+
+// Desktop
+//------------------------------------------------------------------------------
+
+/* Darle clase open al padre del a al hacer click, para que se despliegue el menu */
+$('li.dropdown > a').on('click', function (event) {
+  event.preventDefault();
+  $(this).parent().toggleClass('open');
+  $(this).parent().children('li.dropdown').toggleClass('open')
+  $(this).parent().siblings().children('ul').removeClass('collapsed').addClass('collapse');
+});
+
+/* Guardar el menu si el usuario hace click fuera */
+$('body').on('click', function (e) {
+  if (!$('li.dropdown.yamm-fullwidth').is(e.target)
+      && $('li.dropdown.yamm-fullwidth').has(e.target).length === 0
+      && $('.open').has(e.target).length === 0
+  ) {
+      $('li.dropdown.yamm-fullwidth').removeClass('open');
+
+      // Remueve clase para que no queden desplegados 2 tab-content
+      $('.dropdown-menu.dropdown-menu--desktop .tab-pane').removeClass('active');
+      $('.dropdown-menu.dropdown-menu--desktop .nav.nav-pills > li').removeClass('active');
+      $('.dropdown-menu.dropdown-menu--desktop .nav.nav-pills > li a').attr('aria-expanded','true');
+  }
+});
+
+
+$('.dropdown-toggle').click(function () {
+  /* Agrega clase active al primer li*/
+  $('.open .nav.nav-pills > li:first-child').addClass('active');
+  /* Agrega clase bg-white al navbar*/
+  $('nav').addClass('bg-white');
+  /* Agrega clase activa  sensores */
+  $('#sensores').addClass('active');
+  /* Agrega el atributo aria expanded */
+  $('.open .nav.nav-pills > li:first-child > a').attr('aria-expanded',true);
+});
+
+/* Collapsando todos los submenus */
+$('.dropdown-menu--mobile > li.dropdown > ul').addClass('collapse');
+
+/* Eliminar el otro menu si no es mobile o iPad */
+if ( checkWidth() || isTablet() || is_iPad())
+{
+  $('.dropdown-menu--desktop').hide();
+  $('.dropdown-menu--mobile').addClass('collapse')
+} else {
+  $('.dropdown-menu--mobile').hide();
+}
+
+
+
+
+// Mobile
+//------------------------------------------------------------------------------
+
+// Darle la clase open a la segunda generacion
+$('#menu-escrito li li.dropdown').on('click', function () {
+  $(this).toggleClass('open');
+})
+
+
+  $('.dropdown-menu--mobile > li.dropdown').on('click',function () {
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    } else {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
+
+  });
+
+
+
+  $('#menu-escrito > li').on('click', function () {
+
+    // Quitarle la clase open a los hermanos
+    $(this).siblings().removeClass('open');
+
+    // Quitar clase collapse a los sobrinos
+    $(this).siblings().children('ul').removeClass('collapsed').addClass('collapse');
+
+    //Quitarle la clase open a los sobrinos
+    $(this).siblings().children('ul').children('ul').removeClass('collapsed').addClass('collapse');
+
+
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    }else if ( !$(this).hasClass('open') ) {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
+  });
+
+
+
+
+
+// $('.dropdown-menu--mobile > li.dropdown').on('click',function () {
+//   if ( $(this).children('ul').hasClass('collapse') ) {
+//     $(this).children('ul').removeClass('collapse').addClass('collapsed');
+//   }
+//
+//   else {
+//     $(this).children('ul').removeClass('collapsed').addClass('collapse');
+//   }
+//
+// });
+
+
+
+//
+// $('#menu-escrito > li.level-1').on('click', function () {
+//
+//   if ( $(this).children('ul').hasClass('collapse') )
+//   {
+//     $(this).children('ul').toggleClass('collapsed collapse');
+//   }
+//
+//   else if ( !$(this).hasClass('open') )
+//   {
+//     $(this).toggleClass('open');
+//     $(this).children('ul').toggleClass('collapse collapsed');
+//   }
+//
+// });
+
+//  $('#menu-escrito > li').on('click', function(){
+// //Definiendo el hijo de la 1era generacion
+//  var hijo1g = $(this).children('ul');
+//
+//    // Si el hijo de la 1G y tiene algo que expandir expandirlo
+//    if ( hijo1g.hasClass('collapse') )
+//    {
+//     hijo1g.removeClass('collapse').addClass('collapsed');
+//
+//     //Definiendo el hijo de la 2da generacion
+//     var hijo2g = hijo1g.children('ul');
+//
+//     if ( hijo2g.hasClass('collapse') ) {
+//       hijo2g.removeClass('collapse').addClass('collapsed');
+//     }
+//    }
+//
+//    else {
+//     hijo1g.removeClass('collapsed').addClass('collapse');
+//    }
+//
+//
+//  });
+//
+//
+//
+
+
+if ( !checkWidth() || !isTablet() ) {
+  $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
+}
+
+
+
+// Despliegue collapse del Inmobiliaria smart
+
+var inmobiSmart = $('.casas-deptos a');
+var tieneCollapse = $('.casas-deptos.open ul');
+  inmobiSmart.click(function () {
+    var parentClass = $(this).parent().attr('class');
+
+    if ( parentClass.indexOf('open') && tieneCollapse.hasClass('collapsed'))
+    {
+      alert('tiene la clase open y esta collapsado');
+      // $('.casas-deptos.open ul.dropdown-menu--mobile')
+    }
+  });
+
+
+
+
+
+
+
+});
