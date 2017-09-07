@@ -464,7 +464,8 @@ $('#menu-escrito li li.dropdown').on('click', function () {
 
 
 if ( !checkWidth() || !isTablet() ) {
-  $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
+  // $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
+  $('#menu-escrito > .dropdown .dropdown-toggle').append('<span class="arrow-down"></span>');
 }
 
 

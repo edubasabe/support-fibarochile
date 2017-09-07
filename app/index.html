@@ -36,14 +36,13 @@
   </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-
       <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="nav">
+      <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12">
-              <div class="navbar-header page-scroll">
-                <a class="navbar-brand page-scroll navbar__logo-text navbar-icon-center" href="#page-top">
+            <div class="">
+              <div class="navbar-header">
+                <a class="navbar-brand navbar__logo-text navbar-icon-center" href="#">
                   <img src="./assets/images/logo/tamed-2017-blanco-sl.svg" alt="TAMED" class="white-logo">
                 </a>
                 <button type="button" class="navbar-toggle fixed-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -54,21 +53,207 @@
                 </button>
               </div>
 
-
               <div class="collapse navbar-collapse navbar-ex1-collapse yamm">
                   <ul class="nav navbar-nav" id="menu-escrito">
                       <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                      <li><a class="page-scroll" href="http://tuhogarinteligente.cl/comprar">Tienda en línea</a></li>
-                      <li><a class="page-scroll" href="http://proyectos.tuhogarinteligente.cl/">Proyectos</a></li>
-                      <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
-                      <li><a class="page-scroll" href="http://blog.tuhogarinteligente.cl">Blog</a></li>
+
+                      <li class="dropdown yamm-fullwidth level-1">
+                        <a class="dropdown-toggle" href="#">Productos &nbsp;</a>
+                        <!-- Menu Mobile ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                        <!-- Sensores Mobile -->
+                        <ul class="dropdown-menu--mobile list-unstyled">
+                          <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
+                            <ul id="sensores-mobile" class="list-unstyled">
+                              <li v-for="data in titles" class="level-3">
+                                <a v-bind:href="data.link">
+                                  <table border="0">
+                                    <tr>
+                                      <th rowspan="2">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                      </th>
+                                      <th>
+                                        <span class="titulo">{{ data.text }}</span><br>
+                                        <span class="subtitulo">{{ data.texto }}</span>
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                      <td></td>
+                                    </tr>
+                                  </table>
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <!-- Actuadores Mobile -->
+                          <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
+                            <ul id="actuadores-mobile" class="list-unstyled">
+                              <li v-for="data in titles" class="level-3">
+                                <a v-bind:href="data.link">
+                                  <table border="0">
+                                    <tr>
+                                      <th rowspan="2">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                      </th>
+                                      <th>
+                                        <span class="titulo">{{ data.text }}</span><br>
+                                        <span class="subtitulo">{{ data.texto }}</span>
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                  </table>
+                                </a></li>
+                            </ul>
+                          </li>
+                          <!-- Remotos Mobile -->
+                          <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores Remotos</a>
+                            <ul id="remotos-mobile" class="list-unstyled">
+                              <li v-for="data in titles" class="level-3">
+                                <a v-bind:href="data.link">
+                                  <table border="0">
+                                    <tr>
+                                      <th rowspan="2">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                      </th>
+                                      <th>
+                                        <span class="titulo">{{ data.text }}</span><br>
+                                        <span class="subtitulo">{{ data.texto }}</span>
+                                      </th>
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                  </table>
+                                </a></li>
+                            </ul>
+                          </li>
+                          <!-- Puertas de Enlace Mobile -->
+                          <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Controladores</a>
+                            <ul id="puertas-mobile" class="list-unstyled">
+                              <li v-for="data in titles" class="level-3">
+                                <a v-bind:href="data.link">
+                                  <table border="0">
+                                    <tr>
+                                      <th rowspan="2">
+                                        <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                      </th>
+                                      <th>
+                                        <span class="titulo">{{ data.text }}</span>
+                                      </th>
+                                    </tr>
+                                  </table>
+                                </a></li>
+                            </ul>
+                          </li>
+                        </ul>
+
+
+                        <!-- Menu Desktop ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                        <ul class="dropdown-menu dropdown-menu--desktop">
+                          <li>
+                            <div class="yamm-content container">
+                              <div class="row">
+                                <div class="span12">
+                                  <ul class="nav nav-pills text-center">
+                                    <li><a data-toggle="tab" href="#sensores">Sensores</a></li>
+                                    <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li>
+                                    <li><a data-toggle="tab" href="#remotos">Actuadores Remotos</a></li>
+                                    <li><a data-toggle="tab" href="#puerta-de-enlace">Controladores</a></li>
+                                  </ul>
+                                </div>
+                                <div class="span12">
+                                  <div class="tab-content">
+                                    <div class="tab-pane" id="sensores">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="tab-pane" id="actuadores">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="tab-pane" id="remotos">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav remotos" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="tab-pane" id="puerta-de-enlace">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav puerta-de-enlace" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                        <!-- Fin del Menu Desktop ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                      </li>
+                      <!-- <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/instalacion">Instalación</a></li> -->
+                      <li class="dropdown casas-deptos level-1"><a class="dropdown-toggle" href="#">Inmobiliarias <i>Smart</i>&nbsp;&nbsp;</a>
+
+                        <!-- Desplegable Mobile -->
+                        <ul class="dropdown-menu--mobile list-unstyled">
+                          <li class=""><a href="http://proyectos.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Casas</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Departamentos</a></li>
+                        </ul>
+
+                          <!-- Desplegable Desktop -->
+                          <ul class="dropdown-menu dropdown-menu--desktop list-unstyled">
+                            <li class=""><a href="http://proyectos.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                            <li class=""><a href="#" class="menu-sub-toggle">Casas</a></li>
+                            <li class=""><a href="#" class="menu-sub-toggle">Departamentos</a></li>
+                          </ul>
+
+                      </li>
+                      <!-- <li><a class="page-scroll" href="http://expertos.tuhogarinteligente.cl/">Expertos</a></li> -->
+                      <li class="dropdown yamm blog level-1"><a class="dropdown-toggle" href="#">Blog&nbsp;&nbsp;</a>
+                        <!-- Desplegable Mobile -->
+                        <ul class="dropdown-menu--mobile list-unstyled">
+                          <li class=""><a href="http://blog.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Mundo Inmobiliario</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Ideas para tu hogar</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Trucos Técnicos</a></li>
+                        </ul>
+
+                        <!-- Desplegable Desktop -->
+                        <ul class="dropdown-menu dropdown-menu--desktop list-unstyled">
+                          <li class=""><a href="http://blog.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Mundo Inmobiliario</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Ideas para tu hogar</a></li>
+                          <li class=""><a href="#" class="menu-sub-toggle">Trucos Técnicos</a></li>
+                        </ul>
+                      </li>
+                      <li class="level-1"><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
+                      <li class="level-1"><a class="page-scroll tienda-link" href="http://tuhogarinteligente.cl/comprar/">Tienda en línea &nbsp;&nbsp;<img src="./assets/images/icon/shopping-bag-white.svg" height="20" alt="Cart" class="cart-icon"/></a></li>
                   </ul>
               </div>
             </div>
           </div>
         </div>
       </nav>
-
 
 <!-- Inicio Video -->
 <section class="inicio-tuhogar--homevideo" id="homevideo">
@@ -115,30 +300,32 @@
           <div class="thumbnail text-center">
             <img src="./assets/images/icon/icon_singleswitch.svg" alt="Manuales">
             <h3>Confort</h3>
-            <p class="lead">Podrás disfrutar de la satisfacción que te sólo te entrega un Hogar Inteligente. Gana tiempo y úsalo para compartir en familia.</p><br><br>
+            <p class="lead">Podrás disfrutar de la satisfacción que te sólo te entrega un Hogar Inteligente. Gana tiempo y úsalo para compartir en familia.</p>
           </div>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-4">
           <div class="thumbnail text-center">
             <img src="./assets/images/icon/icon_sensors.svg" alt="Manuales">
             <h3>Ecosistema</h3>
-            <p class="lead">Integrarás dispositivos de otras marcas fácilmente, gracias al protocolo de comunicación Z-Wave.</p><br><br>
+            <p class="lead">Integrarás dispositivos de otras marcas fácilmente, gracias al protocolo de comunicación Z-Wave.</p>
           </div>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-4">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/icon/icon_motion.svg" alt="Manuales">
-            <h3>Diseño</h3>
-            <p class="lead">Basado en la naturaleza. Una mezcla perfecta entre elegancia y exclusividad.</p><br>
-          </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-4">
+        <div class="thumbnail text-center">
+          <img src="./assets/images/icon/icon_motion.svg" alt="Manuales">
+          <h3>Diseño</h3>
+          <p class="lead">Basado en la naturaleza. Una mezcla perfecta entre elegancia y exclusividad.</p>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-4">
-          <div class="thumbnail text-center">
-            <img src="./assets/images/icon/icon_wireless-1.svg" alt="Manuales">
-            <h3>Inalámbrico</h3>
-            <p class="lead">Ya no debes romper tus paredes para tener un sistema inteligente.</p><br><br>
-          </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-4">
+        <div class="thumbnail text-center">
+          <img src="./assets/images/icon/icon_wireless-1.svg" alt="Manuales">
+          <h3>Inalámbrico</h3>
+          <p class="lead">Ya no debes romper tus paredes para tener un sistema inteligente.</p><br><br>
         </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
@@ -149,10 +336,6 @@
     </div>
   </div>
 </section>
-
-
-
-
 
 
 <!-- Hogar Section -->
@@ -168,13 +351,24 @@
   </div>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <div class="col-md-6">
+      <div class="col-xs-6">
+        <div class="icon">
+          <p class="text-center">
+            <a href="#" class="button-bag"><span>Tienda</span></a>
+          </p>
+          <!-- <img src="./assets/images/icon/shopping-bag-white.svg" alt="Support" class="img-responsive center-block" style="transform:scale(1.2);"> -->
+        </div>
+        <br>
         <p class="btn-container text-center center-block">
-          <a href="https://tuhogarinteligente.cl/comprar" class="btn btn-block btn-lg btn-fibaro">Conoce nuestros productos</a></p>
+          <a href="https://tuhogarinteligente.cl/comprar" class="btn btn-outline-azul">Tienda en línea</a></p>
       </div>
-      <div class="col-md-6">
+      <div class="col-xs-6">
+        <div class="icon" style="min-height: 8rem; padding: 2.95rem;">
+
+          <img src="./assets/images/icon/support-icon.png" width="50" alt="Support" class="img-responsive center-block">
+        </div>
         <p class="btn-container text-center center-block">
-          <a href="http://soporte.tuhogarinteligente.cl/" class="btn btn-block btn-lg btn-fibaro">Contacta un experto</a>
+          <a href="http://soporte.tuhogarinteligente.cl/" class="btn btn-outline-azul">Contacta un experto</a>
           <!-- <a href="https://soporte.tuhogarinteligente.cl/" class="btn btn-block btn-lg btn-fibaro">Nuestros Servicios</a> -->
         </p>
       </div>
@@ -195,24 +389,42 @@
       <div class="inicio-tuhogar__experience-center__title-container">
         <p class="text-center frase"><img src="./assets/images/icon/frase.svg" style="max-height:2rem;" alt="" class="img-responsive center-block"></p>
         <h2 class="headline headline--nomargin inicio-tuhogar__experience-center__title text-center">Experience Center</h2>
-        <h3 class="text-center lead">Visítanos en Av. Las Condes 9765. <br> Las Condes, Santiago, Chile.</h3>
-        <br><br>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-              <div class="col-sm-6">
-                <a href="#" class="btn btn-fibaro btn-lg btn-block"> Ir con Waze</a>
-              </div>
-              <div class="col-sm-6">
-                <a href="#" class="btn btn-fibaro btn-lg btn-block"> Ir con Google Maps</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <br>
+        <p class="inicio-tuhogar__experience-center__title-container--horario text-center">Lunes a Viernes: 9:00 – 19:00 hrs. | Sábado: 10:00 – 19:00 hrs.</p>
       </div>
 
   <img src="./assets/images/background/experience-center.jpg" alt="Experience Center" class="img-responsive ec">
-  <p class="inicio-tuhogar__experience-center__title-container--horario text-center">Lunes a Viernes: <br> 9:00 – 19:00 hrs. | Sábado: 10:00 – 19:00 hrs.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="text-center lead">Visítanos en Av. Las Condes 9765. <br> Las Condes, Santiago, Chile.</h3>
+      </div>
+    </div>
+    <div class="row">
+      <p class="text-center">
+        <img src="./assets/images/icon/icon_lcd.png" alt="Las Condes Design" width="150" class="img-responsive center-block">
+      </p>
+    </div>
+    <div class="row" style="background-color:#eee;">
+      <div class="col-xs-12">
+        <table class="table" border="0" align="center" style="margin-bottom:0;">
+          <tr>
+            <td valign="middle" style="vertical-align:middle; border-top: 0;"><p class="lead link link--arrow-black text-center" style="margin:0;">Llévame aquí</p></td>
+            <td style="border-top: 0;">
+              <a href="#" class="">
+                <img src="./assets/images/icon/icon_waze.png" alt="Ir con Google Maps"  width="60" class="img-responsive center-block" style="padding-top:1rem;">
+              </a>
+            </td>
+            <td style="border-top: 0;">
+              <a href="#" class="">
+                <img src="./assets/images/icon/icon_maps.png" alt="Ir con Waze" width="60" class="img-responsive center-block">
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </section>
 
 <hr class="divider">
@@ -223,21 +435,23 @@
     <div class="row">
       <div class="col-sm-12">
         <h2 class="headline headline--nomargin text-center">Descubre los hogares que ya son inteligentes en Chile</h2>
-        <p class="lead headline--subheadline">Proyectos Inmobiliarios</p>
+        <p class="lead headline--subheadline">Proyectos Inmobiliarios <i>Smart</i></p>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
         <div class="row">
-          <div class="col-sm-6">
-            <a href="http://proyectos.tuhogarinteligente.cl/hogares/" class="inicio-tuhogar--proyectos__casas">
+          <div class="col-xs-6">
+            <!-- <a href="http://proyectos.tuhogarinteligente.cl/hogares/" class="inicio-tuhogar--proyectos__casas">
               <img src="./assets/images/proyectos/casas-bg.jpg" alt="Casas" class="img-responsive">
-            </a>
+            </a> -->
+            <p class="text-center"><a href="#" class="btn btn-outline-azul">Casas</a></p>
           </div>
-          <div class="col-sm-6">
-            <a href="http://proyectos.tuhogarinteligente.cl/hogares/" class="inicio-tuhogar--proyectos__deptos">
+          <div class="col-xs-6">
+            <!-- <a href="http://proyectos.tuhogarinteligente.cl/hogares/" class="inicio-tuhogar--proyectos__deptos">
               <img src="./assets/images/proyectos/deptos-bg.jpg" alt="Departamentos" class="img-responsive">
-            </a>
+            </a> -->
+            <p class="text-center"><a href="#" class="btn btn-outline-azul">Departamentos</a></p>
           </div>
         </div>
       </div>
@@ -335,7 +549,7 @@
 
 
 <!-- Mapa -->
-<section class="map" id="section-map">
+<section class="map" id="section-map" style="display: none;">
   <div class="map__container" id="map"></div>
   <div class="container-fluid">
     <div class="row">
@@ -383,6 +597,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+        <img src="./assets/images/logo/tamed-logo-2017.svg" height="20" alt="TAMED">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
           <svg width="10" height="10">
   	        <line x1="0" y1="0" x2="10" y2="10" style="stroke:rgb(0,0,0);stroke-width:2"></line>
@@ -493,12 +708,11 @@
             <div class="col-xs-12">
               <img src="./assets/images/logo/tamed-2017-gris-sl.svg" alt="Tamed" class="img-responsive footer__copyright--img">
               <span class="footer__copyright text-center center-block">© 2017. TAMED<sup>®</sup>  SpA. Todos los derechos reservados.<br>
-                Distribuidor Oficial de FIBARO<sup>®</sup>  en Chile, Perú.</span>
+                Distribuidor Oficial de FIBARO<sup>®</sup>  en Chile y Perú.</span>
             </div>
           </div>
         </div>
     </footer>
-    <br><br>
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIsPoE_GzkK3Cab2YJncgdSz7PQZY61N8&callback=initMap" async defer></script>
     <!-- build:js assets/js/vendor/vendors.js -->
     <script src="./assets/js/vendor/jquery.min.js"></script>

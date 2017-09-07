@@ -319,7 +319,7 @@ function fadeElementOffset(element, animation, offsetvalue) {
     }, { 'offset': '-50%' });
 
     /* Animacion del formulario floating right */
-    $('#smarthome').waypoint(function () {
+    $('#nuestras-alianzas').waypoint(function () {
       $('#contacto-modal .floating').addClass('animated fadeInUp').css('visibility', 'visible');
     }, { offset: '50%' });
 

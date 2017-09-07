@@ -188,6 +188,7 @@ new Vue({
 
 Vue.component('modal-contacto', {
   template: `<div class="floating inicio-tuhogar__contact-form">
+    <img src="./assets/images/logo/tamed-logo-2017.svg" height="20" alt="TAMED">
     <span class="close">
     <svg width="10" height="10">
       <line x1="0" y1="0" x2="10" y2="10" style="stroke:rgb(0,0,0);stroke-width:2"></line>

@@ -58,6 +58,18 @@ a {
           width: 8px;
       }
     }
+    &--arrow-black {
+      &::after {
+          background-color: transparent;
+          border-right: 1px solid $negro;
+          border-top: 1px solid $negro;
+          content: '';
+          display: inline-block;
+          height: 8px;
+          transform: rotate(45deg) translate(1px, -2px);
+          width: 8px;
+      }
+    }
 }
 
 
@@ -113,18 +125,32 @@ a {
   }
 }
 
-.btn-outline-white {
+.btn-outline {
   background-color: transparent;
-  border-color: $blanco;
   border-radius: .3rem;
-  color: $blanco;
   transition: 300ms ease;
 
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: transparent;
+  &-white {
+    border-color: $blanco;
     color: $blanco;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $blanco;
+    }
+  }
+  &-azul {
+    border-color: $azul;
+    color: $azul;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      color: $azul;
+    }
   }
 }
 
@@ -278,6 +304,50 @@ b {
   }
 }
 
+.button-bag {
+  display: inline-block;
+  height: 60px;
+  position: relative;
+  width: 60px;
+
+  span {
+    display: block;
+    font-size: 0;
+    height: 1px;
+    visibility: hidden;
+    width: 1px;
+  }
+
+  &::before {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    animation: 2s linear 0s infinite normal;
+    animation-name: play-button-before;
+    background-color: rgba(255, 255, 255, .3);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 58px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 58px;
+  }
+
+  &::after {
+    background: url('../images/icon/shopping-bag-white.svg') no-repeat center;
+    background-size: 40px 40px;
+    content: '';
+    display: block;
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 60px;
+  }
+}
+
 .twentytwenty {
   &-overlay {
     &:hover {
@@ -291,6 +361,13 @@ b {
 
   &-after {
     &-label { display: none; }
+  }
+}
+
+
+.icon-rounded {
+
+  img {
   }
 }
 
