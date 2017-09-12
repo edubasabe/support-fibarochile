@@ -379,9 +379,14 @@ $('#play-promo-video').click(function(e){
 
 
 //-- Waze ----------------------------------------------------------------------
-
-
 $(document).ready(function () {
+
+if ( isMobile() ) {
+  // $('#waze-link').attr('href','waze://?ll=-33.3869005,-70.5405292');
+  $('#waze-link').attr('href','waze://?q=<fibaro experience center>');
+  $('#maps-link').attr('href','comgooglemaps://?q=fibaro experience center');
+}
+
   // autoplayYoutube('#play-promo-video', '#play-promocional');
   stopCloseYoutube();
 });

@@ -19,14 +19,15 @@
     <link rel="icon" type="image/png" href="./favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
-    <!-- build:css css/styles.min.css -->
+    <!-- build:css assets/css/frameworks.min.css -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" href="./assets/css/font-awesome.css">
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/yamm.css">
+    <!-- endbuild -->
+    <!-- build:css assets/css/styles.min.css -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- endbuild -->
     <!--[if lt IE 9]>
@@ -37,7 +38,7 @@
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
       <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav" style="min-height: 60px;">
+      <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav">
         <div class="container">
           <div class="row">
             <div class="">
@@ -369,7 +370,7 @@
           <img src="./assets/images/icon/support-icon.png" width="50" alt="Support" class="img-responsive center-block">
         </div>
         <p class="btn-container text-center center-block">
-          <a href="http://soporte.tuhogarinteligente.cl/" class="btn btn-outline-azul">Contacta un experto</a>
+          <a href="http://soporte.tuhogarinteligente.cl/" class="btn btn-outline-azul">Consulta un experto</a>
           <!-- <a href="https://soporte.tuhogarinteligente.cl/" class="btn btn-block btn-lg btn-fibaro">Nuestros Servicios</a> -->
         </p>
       </div>
@@ -430,12 +431,12 @@
           <tr>
             <td valign="middle" style="vertical-align:middle; border-top: 0;"><p class="lead link link--arrow-black text-center" style="margin:0;">Llévame aquí</p></td>
             <td style="border-top: 0;">
-              <a href="#" class="">
+              <a href="https://www.waze.com/es-419/livemap?zoom=17&lat=-33.38677&lon=-70.53826" class="" id="waze-link">
                 <img src="./assets/images/icon/icon_waze.png" alt="Ir con Google Maps"  width="60" class="img-responsive center-block" style="padding-top:1rem;">
               </a>
             </td>
             <td style="border-top: 0;">
-              <a href="#" class="">
+              <a href="https://www.google.cl/maps/place/Fibaro+Experience+Center/@-33.3869005,-70.5405292,17z/data=!3m1!4b1!4m5!3m4!1s0x9662cead7de2de31:0x2795ef3a9c5fe7d9!8m2!3d-33.3869005!4d-70.5383405" class="" id="maps-link">
                 <img src="./assets/images/icon/icon_maps.png" alt="Ir con Waze" width="60" class="img-responsive center-block">
               </a>
             </td>
@@ -463,13 +464,13 @@
             <!-- <a href="http://proyectos.tuhogarinteligente.cl/hogares/" class="inicio-tuhogar--proyectos__casas">
               <img src="./assets/images/proyectos/casas-bg.jpg" alt="Casas" class="img-responsive">
             </a> -->
-            <p class="text-center"><a href="#" class="btn btn-block btn-lg btn-outline-azul">Casas</a></p>
+            <p class="text-center"><a href="http://proyectos.tuhogarinteligente.cl/hogares" class="btn btn-block btn-lg btn-fibaro">Casas</a></p>
           </div>
           <div class="col-xs-6">
             <!-- <a href="http://proyectos.tuhogarinteligente.cl/hogares/" class="inicio-tuhogar--proyectos__deptos">
               <img src="./assets/images/proyectos/deptos-bg.jpg" alt="Departamentos" class="img-responsive">
             </a> -->
-            <p class="text-center"><a href="#" class="btn btn-block btn-lg btn-outline-azul">Departamentos</a></p>
+            <p class="text-center"><a href="http://proyectos.tuhogarinteligente.cl/hogares" class="btn btn-block btn-lg btn-fibaro">Departamentos</a></p>
           </div>
         </div>
       </div>
@@ -589,19 +590,17 @@
 
 
 <!-- Mapa -->
-<section class="map" id="section-map" style="display: none;">
+<!--section class="map" id="section-map" style="display: none;">
   <div class="map__container" id="map"></div>
   <div class="container-fluid">
     <div class="row">
       <p class="text-center map__waze-container">
-        <!-- <a href="waze://www.waze.com/es-419/livemap?zoom=17&lat=-33.38677&lon=-70.53826">Ir con Waze</a> -->
-        <!-- waze://?q=fibaroexperiencecenter -->
         <a href="https://www.waze.com/es-419/livemap?zoom=17&lat=-33.38677&lon=-70.53826" class="map__waze-title">
           <img src="./assets/images/icon/waze.jpg" alt="Waze" class="img-responsive waze-image" />Ir con Waze</a>
       </p>
     </div>
   </div>
-</section>
+</section-->
 
 
 
@@ -668,7 +667,7 @@
 </div>
 
 <script>
-
+/*
 // Google Maps
 //------------------------------------------------------------------------------
     var map;
@@ -715,8 +714,8 @@
             // icon: './assets/images/icons/map-marker.png'
            });
 
-           */
        }
+       */
    </script>
 
 

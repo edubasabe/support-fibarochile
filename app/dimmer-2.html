@@ -20,13 +20,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
-    <!-- build:css assets/css/master.min.css -->
+    <!-- build:css assets/css/frameworks.min.css -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/animate.min.css">
     <link rel="stylesheet" href="./assets/css/font-awesome.css">
     <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/yamm.css">
+    <!-- endbuild -->
+    <!-- build:css assets/css/styles.min.css -->
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- endbuild -->
     <!--[if lt IE 9]>
@@ -38,142 +40,8 @@
 
 
       <!-- Navigation -->
-      <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="navbar-header page-scroll">
-                <a class="navbar-brand page-scroll navbar__logo-text navbar-icon-center" href="#page-top">
-                  <img src="./assets/images/logo/tamed-2017-blanco-sl.svg" alt="TAMED" class="white-logo">
-                </a>
-                <button type="button" class="navbar-toggle fixed-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-              </div>
-
-
-              <div class="collapse navbar-collapse navbar-ex1-collapse yamm">
-                  <ul class="nav navbar-nav" id="menu-escrito">
-                      <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                      <li class="dropdown yamm-fullwidth">
-                        <a class="dropdown-toggle" href="#">Productos &nbsp;</a>
-                        <ul class="dropdown-menu--mobile list-unstyled">
-                          <!-- Sensores Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
-                            <ul id="sensores-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
-                          <!-- Actuadores Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
-                            <ul id="actuadores-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
-                          <!-- Remotos Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Remotos</a>
-                            <ul id="remotos-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
-                          <!-- Puertas de Enlace Mobile -->
-                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Puertas de Enlace</a>
-                            <ul id="puertas-mobile" class="list-unstyled">
-                              <li v-for="data in titles">
-                                <a v-bind:href="data.link">
-                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                  <span>{{ data.text }}</span>
-                                </a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                        <ul class="dropdown-menu dropdown-menu--desktop">
-                          <li>
-                            <div class="yamm-content container">
-                              <div class="row">
-                                <div class="span12">
-                                  <ul class="nav nav-pills text-center">
-                                    <li><a data-toggle="tab" href="#sensores">Sensores</a></li>
-                                    <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li>
-                                    <li><a data-toggle="tab" href="#remotos">Remotos</a></li>
-                                    <li><a data-toggle="tab" href="#puerta-de-enlace">Puerta de Enlace</a></li>
-                                  </ul>
-                                </div>
-                                <div class="span12">
-                                  <div class="tab-content">
-                                    <div class="tab-pane" id="sensores">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="tab-pane" id="actuadores">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="tab-pane" id="remotos">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav remotos" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                    <div class="tab-pane" id="puerta-de-enlace">
-                                      <ul class="nav-product-tab-list list-unstyled">
-                                        <li class="product-nav puerta-de-enlace" v-for="data in titles">
-                                          <a v-bind:href="data.link">
-                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
-                                            <p>{{ data.text }}</p>
-                                          </a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/instalacion">Instalación</a></li>
-                      <li><a class="page-scroll" href="http://www.proyectos.tuhogarinteligente.cl/">Proyectos</a></li>
-                      <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
-                      <li><a class="page-scroll" href="http://expertos.tuhogarinteligente.cl/">Expertos</a></li>
-                      <li><a class="page-scroll" href="http://blog.tuhogarinteligente.cl">Blog</a></li>
-                  </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <nav role="navigation" id="nav" class="navbar navbar-default navbar-fixed-top bg-white"><div class="container"><div class="row"><div><div class="navbar-header"><a href="#" class="navbar-brand navbar__logo-text navbar-icon-center" style="padding-top: 25px; padding-bottom: 25px;"><img src="./assets/images/logo/tamed-2017-blanco-sl.svg" alt="TAMED" class="white-logo"></a> <button type="button" data-toggle="collapse" data-target=".navbar-ex1-collapse" class="navbar-toggle fixed-left"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div> <div class="collapse navbar-collapse navbar-ex1-collapse yamm"><ul id="menu-escrito" class="nav navbar-nav"><li class="hidden active"><a href="#page-top" class="page-scroll" style="padding-top: 15px; padding-bottom: 15px;"></a></li> <li class="dropdown yamm-fullwidth level-1"><a href="#" class="dropdown-toggle" style="padding-top: 15px; padding-bottom: 15px;">Productos &nbsp;</a> <ul class="dropdown-menu--mobile list-unstyled" style="display: none;"><li class="dropdown level-2"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-sub-toggle">Sensores</a> <ul id="sensores-mobile" class="list-unstyled collapse"><li class="level-3"><a href="motion-sensor.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-motion.jpg" alt="Motion Sensor" class="img-responsive"></th> <th><span class="titulo">Motion Sensor</span><br> <span class="subtitulo">(Sensor de Movimiento)</span></th></tr> <tr><td></td></tr></tbody></table></a></li><li class="level-3"><a href="flood-sensor.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-flood.jpg" alt="Flood Sensor" class="img-responsive"></th> <th><span class="titulo">Flood Sensor</span><br> <span class="subtitulo">(Sensor de Inundación)</span></th></tr> <tr><td></td></tr></tbody></table></a></li><li class="level-3"><a href="dw-sensor.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-dws.jpg" alt="Door/Window Sensor" class="img-responsive"></th> <th><span class="titulo">Door/Window Sensor</span><br> <span class="subtitulo">(Sensor de Puerta/Ventana)</span></th></tr> <tr><td></td></tr></tbody></table></a></li><li class="level-3"><a href="smoke-sensor.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-smoke.jpg" alt="Smoke Sensor" class="img-responsive"></th> <th><span class="titulo">Smoke Sensor</span><br> <span class="subtitulo">(Sensor de Humo)</span></th></tr> <tr><td></td></tr></tbody></table></a></li><li class="level-3"><a href="universal-sensor.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-ubs.jpg" alt="Universal Binary Sensor" class="img-responsive"></th> <th><span class="titulo">Universal Binary Sensor</span><br> <span class="subtitulo">(Sensor Binario Universal)</span></th></tr> <tr><td></td></tr></tbody></table></a></li></ul></li> <li class="dropdown level-2"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-sub-toggle">Actuadores</a> <ul id="actuadores-mobile" class="list-unstyled collapse"><li class="level-3"><a href="wall-plug.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-wallplug.jpg" alt="Wall Plug" class="img-responsive"></th> <th><span class="titulo">Wall Plug</span><br> <span class="subtitulo">(Enchufe inteligente)</span></th></tr> <tr></tr></tbody></table></a></li><li class="level-3"><a href="dimmer-2.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-dimmer.jpg" alt="Dimmer 2" class="img-responsive"></th> <th><span class="titulo">Dimmer 2</span><br> <span class="subtitulo">(Control de iluminación)</span></th></tr> <tr></tr></tbody></table></a></li><li class="level-3"><a href="switches-2.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-relay.jpg" alt="Switches 2" class="img-responsive"></th> <th><span class="titulo">Switches 2</span><br> <span class="subtitulo">(Interruptores inteligentes)</span></th></tr> <tr></tr></tbody></table></a></li><li class="level-3"><a href="roller-shutter-2.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-roller.jpg" alt="Roller Shutter 2" class="img-responsive"></th> <th><span class="titulo">Roller Shutter 2</span><br> <span class="subtitulo">(Control de cortinas y motores)</span></th></tr> <tr></tr></tbody></table></a></li><li class="level-3"><a href="rgbw-controller.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-rgbw.jpg" alt="RGBW Controller" class="img-responsive"></th> <th><span class="titulo">RGBW Controller</span><br> <span class="subtitulo">(Control de cintas LED RGBW)</span></th></tr> <tr></tr></tbody></table></a></li></ul></li> <li class="dropdown level-2"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-sub-toggle">Actuadores Remotos</a> <ul id="remotos-mobile" class="list-unstyled collapse"><li class="level-3"><a href="keyfob.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-keyfob.jpg" alt="KeyFob" class="img-responsive"></th> <th><span class="titulo">KeyFob</span><br> <span class="subtitulo">(Control remoto personal)</span></th></tr> <tr></tr></tbody></table></a></li><li class="level-3"><a href="the-button.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-button.jpg" alt="The Button" class="img-responsive"></th> <th><span class="titulo">The Button</span><br> <span class="subtitulo">(Interruptor inalámbrico)</span></th></tr> <tr></tr></tbody></table></a></li><li class="level-3"><a href="swipe.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-swipe.jpg" alt="Swipe" class="img-responsive"></th> <th><span class="titulo">Swipe</span><br> <span class="subtitulo">(Control por gestos)</span></th></tr> <tr></tr></tbody></table></a></li></ul></li> <li class="dropdown level-2"><a href="#" data-toggle="dropdown" class="dropdown-toggle menu-sub-toggle">Controladores</a> <ul id="puertas-mobile" class="list-unstyled collapse"><li class="level-3"><a href="hcl.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-hcl.jpg" alt="Home Center Lite" class="img-responsive"></th> <th><span class="titulo">Home Center Lite</span></th></tr></tbody></table></a></li><li class="level-3"><a href="hc2.html"><table border="0"><tbody><tr><th rowspan="2"><img src="assets/images/nav/nav-hc2.jpg" alt="Home Center 2" class="img-responsive"></th> <th><span class="titulo">Home Center 2</span></th></tr></tbody></table></a></li></ul></li></ul> <ul class="dropdown-menu dropdown-menu--desktop"><li><div class="yamm-content container"><div class="row"><div class="span12"><ul class="nav nav-pills text-center"><li><a data-toggle="tab" href="#sensores">Sensores</a></li> <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li> <li><a data-toggle="tab" href="#remotos">Actuadores Remotos</a></li> <li><a data-toggle="tab" href="#puerta-de-enlace">Controladores</a></li></ul></div> <div class="span12"><div class="tab-content"><div id="sensores" class="tab-pane"><ul class="nav-product-tab-list list-unstyled"><li class="product-nav"><a href="motion-sensor.html"><img src="assets/images/nav/nav-motion.jpg" alt="Motion Sensor" class="img-responsive"> <p>Motion Sensor</p></a></li><li class="product-nav"><a href="flood-sensor.html"><img src="assets/images/nav/nav-flood.jpg" alt="Flood Sensor" class="img-responsive"> <p>Flood Sensor</p></a></li><li class="product-nav"><a href="dw-sensor.html"><img src="assets/images/nav/nav-dws.jpg" alt="Door/Window Sensor" class="img-responsive"> <p>Door/Window Sensor</p></a></li><li class="product-nav"><a href="smoke-sensor.html"><img src="assets/images/nav/nav-smoke.jpg" alt="Smoke Sensor" class="img-responsive"> <p>Smoke Sensor</p></a></li><li class="product-nav"><a href="universal-sensor.html"><img src="assets/images/nav/nav-ubs.jpg" alt="Universal Binary Sensor" class="img-responsive"> <p>Universal Binary Sensor</p></a></li></ul></div> <div id="actuadores" class="tab-pane"><ul class="nav-product-tab-list list-unstyled"><li class="product-nav"><a href="wall-plug.html"><img src="assets/images/nav/nav-wallplug.jpg" alt="Wall Plug" class="img-responsive"> <p>Wall Plug</p></a></li><li class="product-nav"><a href="dimmer-2.html"><img src="assets/images/nav/nav-dimmer.jpg" alt="Dimmer 2" class="img-responsive"> <p>Dimmer 2</p></a></li><li class="product-nav"><a href="switches-2.html"><img src="assets/images/nav/nav-relay.jpg" alt="Switches 2" class="img-responsive"> <p>Switches 2</p></a></li><li class="product-nav"><a href="roller-shutter-2.html"><img src="assets/images/nav/nav-roller.jpg" alt="Roller Shutter 2" class="img-responsive"> <p>Roller Shutter 2</p></a></li><li class="product-nav"><a href="rgbw-controller.html"><img src="assets/images/nav/nav-rgbw.jpg" alt="RGBW Controller" class="img-responsive"> <p>RGBW Controller</p></a></li></ul></div> <div id="remotos" class="tab-pane"><ul class="nav-product-tab-list list-unstyled"><li class="product-nav remotos"><a href="keyfob.html"><img src="assets/images/nav/nav-keyfob.jpg" alt="KeyFob" class="img-responsive"> <p>KeyFob</p></a></li><li class="product-nav remotos"><a href="the-button.html"><img src="assets/images/nav/nav-button.jpg" alt="The Button" class="img-responsive"> <p>The Button</p></a></li><li class="product-nav remotos"><a href="swipe.html"><img src="assets/images/nav/nav-swipe.jpg" alt="Swipe" class="img-responsive"> <p>Swipe</p></a></li></ul></div> <div id="puerta-de-enlace" class="tab-pane"><ul class="nav-product-tab-list list-unstyled"><li class="product-nav puerta-de-enlace"><a href="hcl.html"><img src="assets/images/nav/nav-hcl.jpg" alt="Home Center Lite" class="img-responsive"> <p>Home Center Lite</p></a></li><li class="product-nav puerta-de-enlace"><a href="hc2.html"><img src="assets/images/nav/nav-hc2.jpg" alt="Home Center 2" class="img-responsive"> <p>Home Center 2</p></a></li></ul></div></div></div></div></div></li></ul></li> <li class="dropdown casas-deptos level-1"><a href="#" class="dropdown-toggle" style="padding-top: 15px; padding-bottom: 15px;">Inmobiliarias <i>Smart</i>&nbsp;&nbsp;</a> <ul class="dropdown-menu--mobile list-unstyled" style="display: none;"><li><a href="http://proyectos.tuhogarinteligente.cl/">Inicio</a></li> <li><a href="#" class="menu-sub-toggle">Casas</a></li> <li><a href="#" class="menu-sub-toggle">Departamentos</a></li></ul> <ul class="dropdown-menu dropdown-menu--desktop list-unstyled"><li><a href="http://proyectos.tuhogarinteligente.cl/">Inicio</a></li> <li><a href="#" class="menu-sub-toggle">Casas</a></li> <li><a href="#" class="menu-sub-toggle">Departamentos</a></li></ul></li> <li class="dropdown yamm blog level-1"><a href="#" class="dropdown-toggle" style="padding-top: 15px; padding-bottom: 15px;">Blog&nbsp;&nbsp;</a> <ul class="dropdown-menu--mobile list-unstyled" style="display: none;"><li><a href="http://blog.tuhogarinteligente.cl/">Inicio</a></li> <li><a href="#" class="menu-sub-toggle">Mundo Inmobiliario</a></li> <li><a href="#" class="menu-sub-toggle">Ideas para tu hogar</a></li> <li><a href="#" class="menu-sub-toggle">Trucos Técnicos</a></li></ul> <ul class="dropdown-menu dropdown-menu--desktop list-unstyled"><li><a href="http://blog.tuhogarinteligente.cl/">Inicio</a></li> <li><a href="#" class="menu-sub-toggle">Mundo Inmobiliario</a></li> <li><a href="#" class="menu-sub-toggle">Ideas para tu hogar</a></li> <li><a href="#" class="menu-sub-toggle">Trucos Técnicos</a></li></ul></li> <li class="level-1"><a href="http://soporte.tuhogarinteligente.cl/" class="page-scroll" style="padding-top: 15px; padding-bottom: 15px;">Soporte</a></li> <li class="level-1"><a href="http://tuhogarinteligente.cl/comprar/" class="page-scroll tienda-link" style="padding-top: 15px; padding-bottom: 15px;">Tienda en línea &nbsp;&nbsp;<img src="./assets/images/icon/shopping-bag.svg" height="20" alt="Cart" class="cart-icon"></a></li></ul></div></div></div></div></nav>
+      <!-- Fin de Navigation -->
 
 
 <!-- Hero -->

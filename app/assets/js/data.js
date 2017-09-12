@@ -141,9 +141,10 @@ var alianzas = new Vue({
 /* Ventana Modal Telcos */
 Vue.component('modal-telcos', {
   template: `
-        <div class="modal-dialog">
+        <div class="modal-dialog" style="max-width:414px;">
           <div class="modal-content">
             <div class="modal-header">
+              <img src="./assets/images/logo/tamed-logo-2017.svg" height="20" alt="TAMED">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
               <svg width="10" height="10">
                 <line x1="0" y1="0" x2="10" y2="10" style="stroke:rgb(0,0,0);stroke-width:2"></line>
@@ -161,21 +162,17 @@ Vue.component('modal-telcos', {
                 <input type="hidden" name="elqCustomerGUID" value="">
                 <input type="hidden" name="elqCookieWrite" value="0">
                 <div class="form-group">
-                  <input type="text" class="form-control" id="name" name="firstName" placeholder="Nombre">
+                  <input type="text" class="form-control" id="name" name="firstName" placeholder="Nombre" required>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" id="email" name="emailAddress" placeholder="E-mail">
+                  <input type="text" class="form-control" id="email" name="emailAddress" placeholder="E-mail" required>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" id="mensaje" name="message" placeholder="Mensaje"></textarea>
+                  <textarea class="form-control" id="mensaje" name="message" placeholder="Mensaje" required></textarea>
                 </div>
-                <input type="submit" class="btn btn-default btn-subscribe" value="Suscríbete" onclick="setCookie()">
+                <input type="submit" class="btn btn-default btn-subscribe" value="Enviar Mensaje" onclick="setCookie()">
               </form>
             </div>
-            <!--<div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Alguna Acción</button>
-            </div> -->
           </div>
         </div>`
 });
@@ -235,6 +232,8 @@ Vue.component('my-footer', {
             <li><a href="https://id.cloud.fibaro.com/">FIBARO ID</a></li>
             <li><a href="https://tuhogarinteligente.cl/contactenos/">Contacto</a></li>
             <li><a href="https://tuhogarinteligente.cl/trabaje-con-nosotros/">Trabaja con nosotros</a></li>
+            <li><a href="#">Descargar catálogo</a></li>
+            <li><a href="#">Ficha técnica</a></li>
           </ul>
         </div>
       </div>

@@ -152,10 +152,6 @@
 
     .row {
       &:nth-child(1) {
-        @include xxs-device {
-          // margin-bottom: 8rem;
-        }
-
         @include md-device {
           margin-bottom: initial;
         }
@@ -339,6 +335,31 @@
 
   //-- Section proyectos inmobiliarios -----------------------------------------
   &--proyectos {
+    background-color: $negro;
+    background-image: url('../images/background/bg-hogares-chile-blue.jpg');
+    background-repeat: no-repeat;
+
+    @include xxs-device {
+      background-position: center -30rem;
+    }
+
+    @include sm-device {
+      background-position: -40rem -30rem;
+    }
+    @include md-device {
+      background-position: center -40rem;
+    }
+
+
+
+    .headline {
+      color: $blanco;
+
+      &--subheadline {
+        color: $blanco;
+      }
+    }
+
   &__casas {
     border-radius: .4rem;
     display: inline-block;
@@ -656,18 +677,18 @@
 
 
 .waze-image {
-  display: inline-block;
-  text-align: center;
   border-radius: .4rem;
-  overflow: hidden;
+  display: inline-block;
   max-height: 6rem;
+  overflow: hidden;
+  text-align: center;
     @include xxs-device {
       margin: 1rem auto;
     }
 }
 
 .text-white {
-  color: white;
+  color: $blanco;
 }
 
 
@@ -703,7 +724,7 @@
 
   &__waze {
     &-container {
-      background-color: $cyan-waze ;
+      background-color: $cyan-waze;
     }
 
     &-title {
