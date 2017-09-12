@@ -66,7 +66,7 @@
 
 
       &::after {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(145, 255, 48, 0) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 100%);
         color: transparent;
         content: 'Hola';
         float: left;
@@ -175,6 +175,14 @@
     .thumbnail {
       border: transparent;
 
+      @include xxs-device {
+        height: 30rem;
+      }
+
+      @include md-device {
+        height: 25rem;
+      }
+
       h3 {
         color: #333;
         font-weight: 300;
@@ -204,25 +212,27 @@
   //-- Section 4 : Experience Center -------------------------------------------
   &__experience-center {
     position: relative;
-    @include xxs-device {
-      // background: url('../images/background/experience-center.jpg') no-repeat center;
-      background-size: cover;
-      min-height: 40rem;
-    }
-
-    @include sm-device {
-      background-position: center -12rem;
-      min-height: 60rem;
-    }
-
-    .blacking-bg {
       @include xxs-device {
-        display: none;
+        background-size: cover;
       }
 
       @include md-device {
-        display: block;
+        background-position: center;
+        overflow: hidden;
       }
+
+    &__video {
+        @include xxs-device {
+          display: none;
+        }
+
+        @include md-device {
+          display: block;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
     }
 
     &__image {
@@ -235,94 +245,55 @@
       }
     }
 
-    &__title-container {
+    &__title {
+        @include xxs-device {
+          color: $negro;
+          margin: 0 auto;
+          margin-bottom: 1rem;
+          margin-top: 1rem;
+          width: 100%;
+        }
+
+        @include sm-device {
+          color: $negro;
+        }
+
+        @include md-device {
+          color: $blanco;
+          text-shadow: .1rem .1rem .2rem rgba($negro, .9);
+        }
+    }
+
+
+    &__horario {
       @include xxs-device {
-        color: $blanco;
-        margin: 0 auto;
-        padding-top: 4rem;
-        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 300;
       }
 
       @include sm-device {
-        color: $negro;
-        // max-width: 80%;
-        padding-top: 4rem;
+        font-size: 1.6rem;
       }
 
       @include md-device {
         color: $blanco;
-        left: 50%;
-        position: absolute;
-        text-shadow: .1rem .1rem .2rem rgba($negro, .9);
-        top: 15%;
-        transform: translateX(-50%) translateY(0%);
+        font-size: 1.6rem;
+      }
+    }
+
+    .page-section {
+      @include sm-device {
+        padding: 2rem 0;
       }
 
-      h2 {
-        @include xxs-device {
-          color: $negro;
-          font-size: 3rem;
-        }
-
-        @include sm-device {
-          font-size: 3rem;
-        }
-
-        @include md-device {
-          color: $blanco;
-          font-size: 4.2rem;
-        }
+      @include md-device {
+        padding: 20rem 0;
       }
+    }
 
-      h3 {
-        @include xxs-device {
-          color: $negro;
-          font-size: 1.6rem;
-          margin-bottom: 1rem;
-        }
-
-        @include sm-device {
-          font-size: 2rem;
-        }
-
-        @include md-device {
-          color: $blanco;
-        }
-      }
-
-      p {
-        @include xxs-device {
-          color: $negro;
-          font-size: 1.2rem;
-        }
-
-        @include sm-device {
-          font-size: 2rem;
-        }
-
-        @include md-device {
-          color: $blanco;
-        }
-      }
-
-      &--horario {
-        @include xxs-device {
-          font-weight: 300;
-        }
-
-        @include md-device {
-          bottom: 0;
-          color: $blanco;
-          left: 50%;
-          position: absolute;
-          transform: translateX(-50%);
-        }
-      }
-
-      .frase {
-        @include md-device {
-          img { filter: invert(100%); }
-        }
+    .frase {
+      @include md-device {
+        img { filter: invert(100%); }
       }
     }
 
@@ -349,11 +320,18 @@
 
     .thumbnail {
       border: 0;
-      // cursor: default;
       text-decoration: none;
 
         img {
           margin-bottom: 1.5rem;
+        }
+
+        @include xxs-device {
+          height: 15rem;
+        }
+
+        @include sm-device {
+          height: 20rem;
         }
       }
     }
@@ -483,7 +461,15 @@
     &__image {
       transform: scale(.7);
     }
+
+    .brand-item {
+      img {
+        padding: 1rem;
+        transform: scale(.7);
+      }
+    }
   }
+
 
   //-- Elementos Flotantes -----------------------------------------------------
   &__icon-contact {
@@ -704,6 +690,11 @@
   }
 }
 
+//-- Visitanos -----------------------------------------------------------------
+.visitanos {
+  background: #eee;
+}
+
 //-- Mapas ---------------------------------------------------------------------
 .map {
   &__container {
@@ -714,6 +705,7 @@
     &-container {
       background-color: $cyan-waze ;
     }
+
     &-title {
       color: $blanco !important;
       text-decoration: none !important;

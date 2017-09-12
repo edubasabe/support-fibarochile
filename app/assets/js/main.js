@@ -116,8 +116,8 @@ function autoplayYoutube(btn,iframe) {
 }
 
 function stopCloseYoutube() {
-  $("#myModal").on('hidden.bs.modal', function (e) {
-      $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+  $("#video-modal").on('hidden.bs.modal', function (e) {
+      $("#video-modal iframe").attr("src", $("#video-modal iframe").attr("src"));
   });
 }
 
@@ -237,29 +237,6 @@ $(function () {
     }
 })
 
-
-// var btnToggle = $('.navbar-toggle.fixed-left');
-// var navCollapse = $('.navbar-collapse.navbar-ex1-collapse.collapse');
-// var cenefa = $('.navbar-fixed-top.nav-text-white');
-// $(document).on('ready', function () {
-//   // Si el btn No tiene la clase 'cerrado'
-//   if (!btnToggle.hasClass('cerrado') ) {
-//     btnToggle.click(function () {
-//       $(this).toggleClass('cerrado');
-//       cenefa.toggleClass('blacking-bg');
-//       cenefa.removeClass('bg-gradient');
-//     });
-//   }
-//
-//   // Si hacen click en una opcion del menu
-//   $('.navbar-collapse.navbar-ex1-collapse ul li > a').click(function () {
-//     $('.navbar-collapse.navbar-ex1-collapse').removeClass('in');
-//     if (btnToggle.hasClass('cerrado') && cenefa.hasClass('blacking-bg')) {
-//       btnToggle.removeClass('cerrado');
-//       cenefa.removeClass('blacking-bg');
-//     }
-//   });
-// });
 
 
 //-- Funciones para Elementos animados con Animate.css -------------------------
@@ -386,18 +363,26 @@ function fadeElementOffset(element, animation, offsetvalue) {
 
 //-- videosModales -------------------------------------------------------------
 /* autoplay videos function */
+/*
 $('#play-promo-video').click(function(e){
   $('#play-promocional')[0].src += "&autoplay=1";
     e.preventDefault();
 });
+*/
+
     /* Video Dimmer */
     videosModales('#play-dimmer-video','https://www.youtube.com/embed/hSVadYFTp2M');
-    videosModales('#play-promo-video', 'https://www.youtube.com/embed/m7Ra7G-4cis?ecver=1');
+   //-- Video Promocional Inicio
+   modalVideo('https://www.youtube.com/embed/PGL-CZEUOG0');
+    // videosModales('#play-promo-video', 'https://www.youtube.com/embed/PGL-CZEUOG0');
+
+
+
 //-- Waze ----------------------------------------------------------------------
 
 
 $(document).ready(function () {
-  autoplayYoutube('#play-promo-video', '#play-promocional');
+  // autoplayYoutube('#play-promo-video', '#play-promocional');
   stopCloseYoutube();
 });
 

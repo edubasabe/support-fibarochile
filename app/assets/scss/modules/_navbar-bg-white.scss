@@ -9,11 +9,18 @@
     .navbar-brand {
       background: url('../images/logo/tamed-logo-2017.svg') no-repeat center center;
       transition: background 300ms ease;
+
       @include xxs-device {
         background-size: 85%;
       }
+
+      @include sm-device {
+        margin-left: 1.5rem;
+      }
+
       @include md-device {
         background-size: 10.5rem;
+        margin-left: 0;
       }
 
       img {
@@ -75,38 +82,7 @@
 
       .open {
         .collapsed {
-          .open > a {
-            color: $azul;
-            font-weight: 700;
-            @include xxs-device {
-              &::after {
-                border-bottom: 1px solid $azul;
-                border-right: 1px solid $azul;
-                content: '';
-                display: block;
-                height: 1rem;
-                position: absolute;
-                right: 1.5rem;
-                top: 2rem;
-                transform: rotate(225deg);
-                transition: all 300ms;
-                width: 1rem;
-              }
-
-              ul {
-                li {
-                  border: 1px solid red;
-                }
-              }
-            }
-            @include md-device {
-              &::after {
-                display: none;
-              }
-            }
-          }
-
-          > a {
+          & > a {
             @include xxs-device {
               font-weight: 700;
             }
@@ -123,9 +99,42 @@
               transform: rotate(45deg);
               transition: all 300ms;
               width: 1rem;
+
+              @include sm-device {
+                right: 2rem;
+              }
+
+              @include md-device {
+                display: none;
+              }
             }
-            @include md-device {
-              &::after {
+          }
+
+          .open > a {
+          color: $azul;
+          font-weight: 700;
+
+            &::after {
+
+              @include xxs-device {
+                border-bottom: 1px solid $azul;
+                border-right: 1px solid $azul;
+                content: '';
+                display: block;
+                height: 1rem;
+                position: absolute;
+                right: 1.5rem;
+                top: 2rem;
+                transform: rotate(225deg);
+                transition: all 300ms;
+                width: 1rem;
+              }
+
+              @include sm-device {
+                right: 4rem;
+              }
+
+              @include md-device {
                 display: none;
               }
             }
@@ -164,8 +173,8 @@
 
         img {
           display: inline-block;
-          max-width: 8rem;
           margin-bottom: .1rem;
+          max-width: 8rem;
 
         }
       }
@@ -173,7 +182,6 @@
       ul {
         li {
           margin-left: 0;
-
 
           a {
             font-weight: 300;
@@ -221,12 +229,13 @@
           transform: rotate(45deg);
           transition: all 300ms;
           width: 1rem;
-        }
+            @include sm-device {
+              right: 4rem;
+            }
 
-        @include md-device {
-          &::after {
-            display: none;
-          }
+            @include md-device {
+              display: none;
+            }
         }
       }
     }
@@ -545,7 +554,7 @@
 
 
 .tienda-link {
-  font-weight:400 !important;
+  font-weight: 400 !important;
 
 
   @include xxs-device {
@@ -553,6 +562,10 @@
     background: $azul;
     color: $blanco !important;
     margin: 0 !important;
+  }
+
+  @include sm-device {
+    margin: 0 -1.5rem!important;
   }
 
   @include md-device {
