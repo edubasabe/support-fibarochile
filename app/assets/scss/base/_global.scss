@@ -402,3 +402,45 @@ b {
     transform: translate(-50%, -50%) scale(1.7);
   }
 }
+
+.logo-breadcrumb {
+  display: inline-flex;
+  margin-right: auto;
+}
+
+
+.navbar__site-location {
+    display: inline-flex;
+    align-self: center;
+}
+
+.navbar__logo-subtext {
+  color: #111;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  letter-spacing: normal;
+  margin-left: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+@media only screen and (min-width: 320px) {
+  .navbar__logo-subtext {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar__logo-subtext {
+    font-size: 1.6rem;
+    margin-left: 0;
+  }
+}
+
+.navbar__logo-subtext::before {
+  content: '|';
+  left: 0;
+  position: absolute;
+  top: -2px;
+}

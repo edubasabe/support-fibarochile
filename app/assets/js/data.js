@@ -230,8 +230,7 @@ Vue.component('my-footer', {
             <li><a href="https://id.cloud.fibaro.com/">FIBARO ID</a></li>
             <li><a href="https://tuhogarinteligente.cl/contactenos/">Contacto</a></li>
             <li><a href="https://tuhogarinteligente.cl/trabaje-con-nosotros/">Trabaja con nosotros</a></li>
-            <li><a href="#">Descargar catálogo</a></li>
-            <li><a href="#">Ficha técnica</a></li>
+            <li><a href="https://tuhogarinteligente.cl/wp-content/uploads/2017/02/CatalogoPreciosNuevosProductos2017.pdf" download>Catálogo</a></li>
           </ul>
         </div>
       </div>
