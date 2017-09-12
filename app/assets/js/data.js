@@ -226,8 +226,6 @@ Vue.component('my-footer', {
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="footer__menu">
           <ul class="list-unstyled">
-            <li><a href="https://tuhogarinteligente.cl/nosotros/">Nosotros</a></li>
-            <li><a href="https://www.fibaro.com/en/patents/">Patentes</a></li>
             <li><a href="https://tuhogarinteligente.cl/politica-de-cookies/">Política de Privacidad</a></li>
             <li><a href="https://id.cloud.fibaro.com/">FIBARO ID</a></li>
             <li><a href="https://tuhogarinteligente.cl/contactenos/">Contacto</a></li>
