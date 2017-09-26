@@ -401,6 +401,22 @@ if ( !isMobile() ) {
 }
 
 
+//-- Notify Cookies
+$('#close-notify').click(function () {
+  $('.notify-cookies').addClass('hidden');
+});
+
+//-- Timer Switches ------------------------------------------------------------
+var myTimer = false;
+
+$('.single-product__section > .container').hover(function () {
+  clearTimeout(myTimer);
+}, function () {
+  myTimer = setInterval(function () {
+      $('.single-product__section .tab-content .active, .single-product__section .nav-pills .active').removeClass('active').siblings().addClass('active');
+  }, 10000);
+});
+
 
 
 

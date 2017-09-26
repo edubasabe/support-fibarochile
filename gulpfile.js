@@ -36,6 +36,7 @@ gulp.task('sass', function() {
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./app/assets/css'))
+    .pipe(gulp.dest('/Applications/MAMP/htdocs/tuhogar-inicio/wp-content/themes/tamed2017/assets/css'))
     .pipe(browserSync.reload({ stream:true }));
 });
 

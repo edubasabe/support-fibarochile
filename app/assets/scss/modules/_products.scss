@@ -24,20 +24,39 @@
       padding-top: 6rem;
     }
 
-    .nav-pills {
+    .nav-tabs {
+      border: 0;
+
       li {
+
           @include xxs-device {
             margin-top: 2rem;
-            min-width: 16rem;
+            width: 100%;
+          }
+
+          @include xs-device {
+            width: 50%;
           }
 
 
-          @include xxs-device {
-            margin-bottom: 3rem;
+          @include sm-device {
+            margin-bottom: 6rem;
+          }
+
+          &:nth-child(2) {
+            @include xxs-device {
+              margin-top: 1rem;
+            }
+
+            @include xs-device {
+              margin-top: 2rem;
+            }
           }
 
         a {
           border: .1rem solid $azul;
+          border-radius: .4rem;
+          // font-size: 1.4rem;
 
           &:hover {
             background: $azul;
@@ -46,10 +65,19 @@
 
           &:active {
             background: $azul;
+            color: $blanco;
           }
 
           &:focus {
             background: $azul;
+            color: $blanco;
+          }
+        }
+
+        &.active {
+          a {
+            background-color: $azul;
+            color: $blanco;
           }
         }
       }
@@ -127,7 +155,9 @@
 
   .thumbnail {
     border: 0;
+    height: 13rem;
     text-decoration: none;
+
     @include md-device {
       margin-top: 2rem;
     }
@@ -158,12 +188,14 @@
 
       &--dimmer {
         @include xxs-device {
-          background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+          // background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+          background: $negro;
           background-size: cover;
         }
 
         @include md-device {
-          background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+          // background: url('../images/background/dimmer-video-mobile.png') no-repeat;
+          background: $negro;
           background-size: cover;
         }
       }
@@ -211,15 +243,7 @@
   }
 }
 
-.donde-comprar {
-  // background: rgba(8,126,190,1);
-  // background: -moz-linear-gradient(left, rgba(8,126,190,1) 0%, rgba(16,69,135,1) 100%);
-  // background: -webkit-gradient(left top, right top, color-stop(0%, rgba(8,126,190,1)), color-stop(100%, rgba(16,69,135,1)));
-  // background: -webkit-linear-gradient(left, rgba(8,126,190,1) 0%, rgba(16,69,135,1) 100%);
-  // background: -o-linear-gradient(left, rgba(8,126,190,1) 0%, rgba(16,69,135,1) 100%);
-  // background: -ms-linear-gradient(left, rgba(8,126,190,1) 0%, rgba(16,69,135,1) 100%);
-  // background: linear-gradient(to right, rgba(8,126,190,1) 0%, rgba(16,69,135,1) 100%);
-}
+
 .manuales {
   @include xxs-device {
     padding: 3rem 0;
