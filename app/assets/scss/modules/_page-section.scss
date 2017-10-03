@@ -13,6 +13,22 @@
         padding: 10rem 0;
     }
 
+    &--small {
+      @include xxs-device {
+          padding: 2rem 0;
+      }
+
+      @include xs-device {
+        padding: 2rem 0;
+      }
+      @include sm-device {
+          padding: 2rem 0;
+      }
+      @include md-device {
+          padding: 4rem 0;
+      }
+    }
+
     //----------
     // Soluciones Basicas
     //----------

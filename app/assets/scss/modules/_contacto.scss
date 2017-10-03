@@ -1,0 +1,167 @@
+.contacto {
+
+  //-- Hero ------------------------------------------------------------------
+  &__hero {
+    @include xxs-device {
+      background-image: url('../images/hero/contacto-hero-mobile.jpg');
+      background-position: center;
+      margin-top: 5rem;
+      padding: 8rem 0;
+    }
+
+    @include sm-device {
+      background-image: url('../images/hero/contacto-hero-desktop.jpg');
+      background-position: center;
+      padding: 14rem 0;
+    }
+
+    h2 {
+      color: $blanco;
+    }
+  }
+
+  //-- Ventas ------------------------------------------------------------------
+  &__ventas {
+    &__contenedor {
+      @include xxs-device {
+        padding: 2rem;
+      }
+
+      .card-info {
+        @include xxs-device {
+          text-align: center;
+        }
+
+        @include md-device {
+          text-align: left;
+        }
+
+        li {
+          // font-size: 1.8rem;
+          font-weight: 300;
+          line-height: 1.4;
+
+          &:nth-child(1) {
+            font-size: 2.2rem;
+            // font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+
+  //-- Partners ----------------------------------------------------------------
+  &__partners {
+    @include md-device {
+      margin-top: 3rem;
+    }
+    
+    .thumbnail {
+      border: 0;
+      height: 16rem;
+
+      p {
+        @include md-device {
+          font-size: 1.8rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  //-- Relaciones Públicas -----------------------------------------------------
+  &__relaciones-publicas {
+    @include md-device {
+      margin-top: 3rem;
+    }
+
+    &__contenedor {
+      @include xxs-device {
+        padding: 2rem 0;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin: 0;
+      }
+
+      .float-icon {
+        float: left;
+        margin-right: 1.5rem;
+
+        @include xxs-device {
+          max-height: 3.5rem;
+        }
+
+        @include sm-device {
+          max-height: 4rem;
+        }
+      }
+
+      .col-md-4 {
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+          @include xxs-device {
+            margin-bottom: 2rem;
+          }
+
+          @include sm-device {
+            margin-bottom: 4rem;
+          }
+
+          @include md-device {
+            margin-bottom: 0;
+          }
+
+        h3 {
+          @include xxs-device {
+            font-size: 1.8rem;
+          }
+
+          @include sm-device {
+            // font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  //-- Info --------------------------------------------------------------------
+  &__info {
+    @include md-device {
+      margin-top: 3rem;
+    }
+
+    &__contenedor {
+      @include md-device {
+        padding: 2rem 0;
+      }
+    }
+
+    &__list {
+      font-weight: 300;
+
+      @include xxs-device {
+        text-align: center;
+      }
+      @include md-device {
+        text-align: left;
+      }
+
+      li {
+        h4 {
+          font-size: 2.4rem;
+          font-weight: 400;
+          margin: 0;
+        }
+
+        strong {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-//-- Variables Globales --------------------------------------------------------
+ //-- Variables Globales --------------------------------------------------------
 var navHeight = $('.navbar').height();
 var navbar = $('.navbar.navbar-default');
 var body = $('body');
@@ -325,12 +325,12 @@ function fadeElementOffset(element, animation, offsetvalue) {
   }
   // Al hacer click en el btn del icono de correo
   $('.inicio-tuhogar__icon-contact').on('click', function () {
-    $('.floating.inicio-tuhogar__contact-form').addClass('mostrar');
+    $('.floating.inicio-tuhogar__contact-form').toggleClass('hidden');
   });
 
   //Al hacer click el en btn cerrarlo es decir colocarle display none
   $('.inicio-tuhogar__contact-form .close').on('click', function () {
-    $('.inicio-tuhogar__contact-form').hide();
+    $('.inicio-tuhogar__contact-form').addClass('hidden');
   });
 
   if ( isTablet() || is_iPad() ) {
