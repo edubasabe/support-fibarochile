@@ -31,9 +31,8 @@
 
 			img {
 				@include xxs-device {
+					height: 5rem;
 					margin-bottom: 2rem;
-					max-height: 6.1rem;
-					min-height: 6rem;
 				}
 			}
 
@@ -58,8 +57,8 @@
 		}
 			@include xxs-device {
 				background-image: url('../images/hero/todo-conectado-mobile.jpg');
-				background-size: cover;
 				background-repeat: no-repeat;
+				background-size: cover;
 				padding: 10rem 0;
 			}
 
@@ -80,20 +79,168 @@
 		&__marca {
 			img {
 				@include xxs-device {
+					height: 7rem;
 					margin-bottom: 2rem;
-					max-height: 6.1rem;
-					min-height: 6rem;
 				}
 			}
 		}
 	}
 
+	//-- Revisa Video
 	&__revisa-video {
+
+		h2 {
+			color: $blanco;
+		}
+
 		@include xxs-device {
 			background-image: url('../images/hero/joga-hero-mobile.jpg');
+			background-position: -8rem;
 			background-repeat: no-repeat;
 			background-size: cover;
 			padding: 10rem 0;
+		}
+		@include sm-device {
+			background-position: center;
+		}
+
+		@include md-device {
+			background-image: url('../images/hero/joga-hero-desktop.jpg');
+			background-position: left;
+		}
+	}
+
+	//-- Más posibilidades con dispositivos conectados
+	&__devices {
+
+		.thumbnail {
+			background-color: rgb(246, 246, 246);
+			border-color: rgb(246, 246, 246);
+			border-radius: 0;
+			max-width: 27.3rem;
+			padding: 0;
+
+				@include md-device {
+					height: 40rem;
+				}
+
+			.caption {
+				margin-top: 1.5rem;
+
+				img {
+					margin-bottom: 2rem;
+				}
+
+				p {
+					font-weight: 300;
+				}
+			}
+		}
+
+		&__brands {
+			@include xxs-device {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+
+	//--Interfaces
+	&__interfaces {
+		// background-color: rgba($negro, .1);
+			@include xxs-device {
+				background-color: rgb(232, 232, 232);
+				background-image: url('../images/background/interfaces-mobile.jpg');
+				background-position: center bottom;
+				background-repeat: no-repeat;
+				background-size: contain;
+				padding-bottom: 25rem;
+			}
+
+			@include sm-device {
+				background-image: url('../images/background/interfaces-desktop.jpg');
+				background-size: 160%;
+				padding-bottom: 30rem;
+			}
+
+			@include md-device {
+				padding-bottom: 40rem;
+			}
+
+		.lead {
+			@include xxs-device {
+				margin-top: 2rem;
+			}
+		}
+
+	}
+
+	&__plugins {
+		position: relative;
+
+		@include xxs-device {
+			background-image: url('../images/background/plugins-mobile.jpg');
+			background-position: center bottom;
+			background-size: cover;
+			height: 40rem;
+		}
+
+		.content {
+			-webkit-transform: translateY(-50%);
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			z-index: 10;
+
+			@include xxs-device {
+				padding: 4rem 0;
+			}
+
+			p {
+
+				&:nth-of-type(2) {
+					color: $azul;
+					font-size: 3rem;
+					margin-top: -1rem;
+					padding-bottom: 1rem;
+					text-align: center;
+					text-transform: uppercase;
+				}
+
+				&:nth-of-type(3) {
+					color: $blanco;
+					text-align: center;
+				}
+			}
+
+			.lead {
+				font-size: 2rem;
+			}
+		}
+
+		.typo-light {
+			color: $blanco;
+		}
+
+		svg {
+			margin-bottom: 2rem;
+			margin-top: -1rem;
+
+			.c {
+				dominant-baseline: middle;
+				font-size: 12.4rem;
+				text-anchor: middle;
+			}
+
+			.p {
+				dominant-baseline: central;
+				font-size: 5.2rem;
+				text-anchor: start;
+
+				@include lg-device {
+					transform: translateY(-50%);
+				}
+			}
 		}
 	}
 }
