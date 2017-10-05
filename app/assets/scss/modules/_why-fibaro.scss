@@ -1,0 +1,356 @@
+.why-fibaro {
+  &__header {
+    p {
+      color: $blanco;
+    }
+
+    h2 {
+      color: $blanco;
+
+      @include xxs-device {
+        font-size: 3.4rem;
+      }
+    }
+
+    @include xxs-device {
+      background-image: url('../images/background/smarthome.jpg');
+      background-position: -7rem center;
+      background-size: cover;
+      margin-top: 5rem;
+      min-height: 29rem;
+    }
+
+    @include sm-device {
+      background-image: url('../images/background/smarthome@2x.jpg');
+      background-position: center;
+      background-size: cover;
+      min-height: 40rem;
+      padding-top: 5rem;
+    }
+  }
+
+  //-- Caracteristicas principales
+  &__caracteristicas {
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 3rem;
+      }
+    }
+
+    img {
+      @include xxs-device {
+        margin-bottom: 2rem;
+        max-height: 6rem;
+      }
+    }
+
+    p {
+      font-weight: 300;
+    }
+
+    .container {
+      & > .row {
+        &:nth-child(2) {
+          .row {
+
+            .col-xs-6 {
+              &:first-child,
+              &:nth-child(2) {
+                @include xxs-device {
+                  margin-bottom: 3rem;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  //-- Tu Hogar con FIBARO
+  &__home {
+
+      @include xxs-device {
+        padding-bottom: 0;
+      }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .hand {
+      max-height: 6rem;
+    }
+
+    .wrapper {
+      @include xxs-device {
+        height: 29rem;
+        overflow-x: auto;
+        width: 100%;
+      }
+
+      img {
+        height: 100%;
+        width: auto;
+
+        @include sm-device {
+          padding-left: 0;
+        }
+      }
+    }
+
+    .container-fluid {
+      padding: 0;
+    }
+  }
+
+  //--Datos seguros
+  &__datos-seguros {
+    h2 {
+      color: $blanco;
+
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+    p {
+      color: $blanco;
+    }
+
+    @include xxs-device {
+      background-image: url('../images/background/data-safety-mobile.jpg');
+      background-position: center;
+      background-size: cover;
+      // pa  dding: 10rem 0;
+    }
+  }
+
+  //--Plug & Play
+  &__plug-play {
+    overflow: hidden;
+      @include xxs-device {
+        padding-bottom: 0;
+      }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+    p {
+      @include xxs-device {
+        margin-bottom: 4rem;
+      }
+    }
+
+    img {
+      @include xxs-device {
+        margin-bottom: 4rem;
+        margin-top: 4rem;
+        transform: scale(1.5);
+      }
+    }
+  }
+
+
+  //--Control de voz
+  &__control-voz {
+    overflow: hidden;
+
+      @include xxs-device {
+        padding-bottom: 0;
+      }
+
+    .row {
+      & > img {
+        @include xxs-device {
+          margin-bottom: 4rem;
+          margin-top: 4rem;
+          transform: scale(1.5);
+        }
+      }
+    }
+
+  }
+
+
+  //--Acceso Remoto desde cualquier parte
+  &__remoto {
+      @include xxs-device {
+        background-image: url('../images/background/anywhere-access-mobile.jpg');
+        background-position: center;
+        background-size: cover;
+        min-height: 55rem;
+        padding: 3rem 0;
+        padding-bottom: 10rem;
+      }
+
+      @include md-device {
+        background-image: url('../images/background/anywhere-access-desktop.jpg');
+      }
+
+    h2,
+    p,
+    div {
+      color: $blanco;
+    }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+  }
+
+  //--Una casa llena de paz
+  &__paz {
+    @include xxs-device {
+
+    }
+  }
+
+
+  //--Ahorra energía
+  &__ahorra {
+    background-color: #565a68;
+    overflow: hidden;
+
+    @include xxs-device {
+      padding-bottom: 0;
+    }
+
+    h2,
+    p,
+    div {
+      color: $blanco;
+    }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .row {
+      & > img {
+        @include xxs-device {
+          margin-bottom: 4rem;
+          margin-top: 8rem;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+
+
+  //--Los sueños se pueden hacer realidad
+  &__dreams {
+    overflow: hidden;
+
+      @include xxs-device {
+        padding-bottom: 0;
+      }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .row {
+    & > img {
+            @include xxs-device {
+              margin-bottom: 4rem;
+              margin-top: 6rem;
+              transform: scale(1.5);
+            }
+          }
+    }
+
+  }
+
+
+  //--Explora el sistema FIBARO
+  &__explora-sistema {
+    overflow: hidden;
+
+    @include xxs-device {
+      background-image: url('../images/background/explore-mobile.jpg');
+      background-position: center;
+      background-size: cover;
+      padding: 3rem 0;
+      padding-bottom: 10rem;
+    }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+
+//-- Generales
+.hint {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgba($blanco, .1);
+  border: .1rem solid $blanco;
+  border-radius: .6rem;
+  display: inline-flex;
+  padding: 1.2rem;
+  text-align: left;
+
+  &.quote {
+    figcaption {
+      text-transform: none;
+
+      div {
+        font-size: 100%;
+        font-style: italic;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &.blue {
+    background-color: rgba(0, 144, 255, .1);
+    border-color: $azul;
+    color: $azul;
+  }
+
+  img {
+    height: 5rem !important;
+    margin-right: 1.2rem ;
+    max-width: 6rem !important;
+    width: auto !important;
+  }
+
+  figcaption {
+    text-align: left;
+    text-transform: uppercase;
+
+      div {
+        font-size: 80%;
+        line-height: 1;
+
+        span {
+          display: block;
+          font-size: 170%;
+          padding-top: .4rem;
+        }
+      }
+  }
+}
+
+figure {
+  margin: 0 0 1rem;
+}
