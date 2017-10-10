@@ -85,22 +85,23 @@ function calcularPaddingNav(element) {
   $(element).css({'padding-top': elementMargin, 'padding-bottom': elementMargin });
 }
 
-function modalVideo(videolink) {
-  $('.button-play').on('click', function(e) {
-    e.preventDefault();
-    $('#video-modal').modal('show');
-    $('#video-modal').attr('src', videolink);
-  });
-}
+// function modalVideo(videolink) {
+//   if (videolink !== '') {
+//     $('.button-play').on('click', function(e) {
+//       e.preventDefault();
+//       $('#video-modal').modal('show');
+//       $('#video-modal').attr('src', videolink);
+//     });
+//   }
+// }
 
-function videosModales(element, src) {
-  $(element).on('click', function (e) {
-    e.preventDefault();
-    $('#video-modal').modal('show');
-    $('#video-modal iframe').attr('src', src);
-  });
-
-}
+// function videosModales(handler, modal ,src) {
+//   $(handler).on('click', function (e) {
+//     e.preventDefault();
+//     $(modal).modal('show');
+//     $(modal).find('iframe').attr('src', src);
+//   });
+// }
 
 function isMobile() {
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -204,6 +205,35 @@ $(document).on('ready', function() {
       responsive:{
           0:{
               items:2,
+              nav:false
+          },
+          600:{
+              items:4,
+              nav:false
+          },
+          1000:{
+              items:6,
+              nav:false,
+              loop:false
+          }
+      }
+  });
+
+
+
+
+  /* compatibilidad*/
+  $('#owl-compatibilidad').owlCarousel({
+      loop:false,
+      autoplay:true,
+      autoplayTimeout:2000,
+      margin:10,
+      nav: false,
+      dots:false,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
               nav:false
           },
           600:{
@@ -371,9 +401,9 @@ $('#play-promo-video').click(function(e){
 */
 
     /* Video Dimmer */
-    videosModales('#play-dimmer-video','https://www.youtube.com/embed/hSVadYFTp2M');
+    // videosModales('#play-dimmer-video','https://www.youtube.com/embed/hSVadYFTp2M');
    //-- Video Promocional Inicio
-   modalVideo('https://www.youtube.com/embed/PGL-CZEUOG0');
+  //  modalVideo('https://www.youtube.com/embed/PGL-CZEUOG0');
     // videosModales('#play-promo-video', 'https://www.youtube.com/embed/PGL-CZEUOG0');
 
 
@@ -424,3 +454,20 @@ $('.single-product__section > .container').hover(function () {
 
 
  });
+
+
+ function Modal(handler, modal ,src) {
+   this.handler = handler;
+   this.modal = modal;
+   this.src = src;
+
+   $(handler).on('click', function (e) {
+     e.preventDefault();
+     $(modal).modal('show');
+     $(modal).find('iframe').attr('src', src);
+   });
+ }
+
+
+ var alexa = new Modal('#play-alexa', '#video-modal', 'https://www.youtube.com/embed/hrgbHUni-z0');
+ var todoEstaConectado = new Modal('#todo-conectado', '#video-modal', 'https://www.youtube.com/embed/ou2TdFWOMc4');

@@ -2,6 +2,12 @@
   &__header {
     p {
       color: $blanco;
+
+      @include md-device {
+        font-size: 2.8rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+      }
     }
 
     h2 {
@@ -10,6 +16,11 @@
       @include xxs-device {
         font-size: 3.4rem;
       }
+
+      @include lg-device {
+        font-size: 5.6rem;
+        letter-spacing: .2rem;
+      }
     }
 
     @include xxs-device {
@@ -17,7 +28,7 @@
       background-position: -7rem center;
       background-size: cover;
       margin-top: 5rem;
-      min-height: 29rem;
+      min-height: 32rem;
     }
 
     @include sm-device {
@@ -27,6 +38,17 @@
       min-height: 40rem;
       padding-top: 5rem;
     }
+
+    @include md-device {
+      min-height: 58rem;
+    }
+
+    @include lg-device {
+      min-height: 78rem;
+      padding-top: 12rem;
+    }
+
+
   }
 
   //-- Caracteristicas principales
@@ -71,14 +93,25 @@
 
   //-- Tu Hogar con FIBARO
   &__home {
+    background-color: #edeae5;
 
       @include xxs-device {
         padding-bottom: 0;
       }
 
+      @include md-device {
+        min-height: 58rem;
+      }
+
     h2 {
       @include xxs-device {
         margin-bottom: 2rem;
+      }
+    }
+
+    p {
+      @include sm-device {
+        font-size: 1.6rem;
       }
     }
 
@@ -88,17 +121,27 @@
 
     .wrapper {
       @include xxs-device {
-        height: 29rem;
+        min-height: 29rem;
         overflow-x: auto;
         width: 100%;
       }
 
+
       img {
-        height: 100%;
-        width: auto;
+
+        @include xxs-device {
+          max-height: 29rem;
+          width: auto;
+        }
 
         @include sm-device {
           padding-left: 0;
+        }
+
+        @include md-device {
+          height: auto;
+          min-height: 52rem;
+          width: 100%;
         }
       }
     }
@@ -120,13 +163,24 @@
 
     p {
       color: $blanco;
+        @include sm-device {
+          font-size: 1.6rem;
+        }
     }
 
     @include xxs-device {
       background-image: url('../images/background/data-safety-mobile.jpg');
       background-position: center;
       background-size: cover;
-      // pa  dding: 10rem 0;
+      min-height: 29rem;
+    }
+
+    @include sm-device {
+      min-height: 40rem;
+    }
+
+    @include md-device {
+      min-height: 58rem;
     }
   }
 
@@ -134,18 +188,42 @@
   &__plug-play {
     overflow: hidden;
       @include xxs-device {
+        background-color: #f6e7d7;
         padding-bottom: 0;
+      }
+
+      @include sm-device {
+        background-image: url('../images/background/plug-n-play-mobile.jpg');
+        background-position: center;
+        background-size: cover;
+        min-height: 40rem;
+      }
+
+      @include md-device {
+        background-image: url('../images/background/plug-n-play-desktop.jpg');
+        min-height: 58rem;
       }
 
     h2 {
       @include xxs-device {
         margin-bottom: 2rem;
       }
+
+      @include sm-device {
+        color: $blanco;
+        text-align: left;
+      }
     }
 
     p {
       @include xxs-device {
         margin-bottom: 4rem;
+      }
+
+      @include sm-device {
+        color: $blanco;
+        font-size: 1.6rem;
+        text-align: left;
       }
     }
 
@@ -164,18 +242,47 @@
     overflow: hidden;
 
       @include xxs-device {
+        background-color: #f4f4f4;
         padding-bottom: 0;
+      }
+
+      @include sm-device {
+        background-image: url('../images/background/voice-control-mobile.jpg');
+        background-position: -15rem;
+        background-size: 120%;
+        min-height: 40rem;
+      }
+
+      @include md-device {
+        background-image: url('../images/background/voice-control-desktop.jpg');
+        background-position: center;
+        background-size: cover;
+        min-height: 66rem;
       }
 
     .row {
       & > img {
         @include xxs-device {
           margin-bottom: 4rem;
-          margin-top: 4rem;
+          margin-top: 6rem;
           transform: scale(1.5);
         }
       }
     }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+
+    p {
+      @include sm-device {
+        font-size: 1.6rem;
+      }
+    }
+
 
   }
 
@@ -186,13 +293,26 @@
         background-image: url('../images/background/anywhere-access-mobile.jpg');
         background-position: center;
         background-size: cover;
-        min-height: 55rem;
+        min-height: 60rem;
         padding: 3rem 0;
-        padding-bottom: 10rem;
+        padding-bottom: 12rem;
+      }
+
+      @include sm-device {
+        background-image: url('../images/background/anywhere-access-mobile.jpg');
+        background-position:  left;
+        background-size: 145%;
+        min-height: 45rem;
       }
 
       @include md-device {
         background-image: url('../images/background/anywhere-access-desktop.jpg');
+        background-position: center;
+        min-height: 58rem;
+      }
+
+      @include lg-device {
+        background-position: center -4rem;
       }
 
     h2,
@@ -207,12 +327,66 @@
       }
     }
 
+    p {
+      @include sm-device {
+        font-size: 1.6rem;
+      }
+    }
+
+    .col-sm-4 {
+      @include sm-device {
+        text-align: center;
+      }
+    }
+
   }
 
   //--Una casa llena de paz
   &__paz {
     @include xxs-device {
+      background-color: #f0efec;
+      padding-bottom: 0;
+    }
+    @include sm-device {
+      background-image: url('../images/background/safety-security-mobile.jpg');
+      background-position:  top 0;
+      background-size: 110%;
+      min-height: 45rem;
+    }
 
+    @include md-device {
+      background-image: url('../images/background/safety-security-desktop.jpg');
+      background-size: cover;
+      min-height: 66rem;
+    }
+
+    @include lg-device {
+      background-position: top center;
+    }
+
+    h2 {
+      @include xxs-device {
+        margin-bottom: 2rem;
+      }
+    }
+
+    p {
+      @include sm-device {
+        font-size: 1.6rem;
+      }
+    }
+
+    h2,
+    p {
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+    .row {
+      & > .text-center {
+        text-align: left;
+      }
     }
   }
 
@@ -224,6 +398,23 @@
 
     @include xxs-device {
       padding-bottom: 0;
+    }
+
+    @include sm-device {
+      background-image: url('../images/background/real-savings-desktop.jpg');
+      background-position:  -20rem;
+      background-repeat: no-repeat;
+      background-size: 175%;
+      min-height: 45rem;
+    }
+
+    @include md-device {
+      background-position: center;
+      min-height: 66rem;
+    }
+
+    @include lg-device {
+      background-position: center -4rem;
     }
 
     h2,
@@ -247,6 +438,18 @@
         }
       }
     }
+
+    .text-center {
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+    p {
+      @include sm-device {
+        font-size: 1.6rem;
+      }
+    }
   }
 
 
@@ -258,21 +461,56 @@
         padding-bottom: 0;
       }
 
+      @include sm-device {
+        background-image: url('../images/background/comfort-desktop.jpg');
+        background-position: -40rem;
+        background-size: 180%;
+        min-height: 45rem;
+      }
+
+      @include md-device {
+        background-position: -60rem;
+        min-height: 66rem;
+      }
+
+      @include lg-device {
+        background-position: -100rem;
+      }
+
     h2 {
       @include xxs-device {
         margin-bottom: 2rem;
       }
+
+      @include sm-device {
+        text-align: left;
+      }
+    }
+
+    p {
+      @include sm-device {
+        font-size: 1.6rem;
+        text-align: left;
+      }
     }
 
     .row {
-    & > img {
-            @include xxs-device {
-              margin-bottom: 4rem;
-              margin-top: 6rem;
-              transform: scale(1.5);
+      & > img {
+              @include xxs-device {
+                margin-bottom: 4rem;
+                margin-top: 6rem;
+                transform: scale(1.5);
+              }
             }
-          }
+
+      & > .text-center {
+        @include sm-device {
+          text-align: left;
+        }
+      }
     }
+
+
 
   }
 
@@ -289,9 +527,24 @@
       padding-bottom: 10rem;
     }
 
+    @include sm-device {
+      min-height: 45rem;
+    }
+
+    @include md-device {
+      background-image: url('../images/background/explore-desktop.jpg');
+      min-height: 66rem;
+    }
+
     h2 {
       @include xxs-device {
         margin-bottom: 2rem;
+      }
+    }
+
+    p {
+      @include xxs-device {
+        font-size: 1.6rem;
       }
     }
   }
@@ -317,6 +570,10 @@
         font-size: 100%;
         font-style: italic;
         font-weight: 300;
+
+        @include md-device {
+          font-size: 120%;
+        }
       }
     }
   }
@@ -341,6 +598,7 @@
       div {
         font-size: 80%;
         line-height: 1;
+
 
         span {
           display: block;

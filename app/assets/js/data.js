@@ -135,6 +135,20 @@ var alianzas = new Vue({
   }
 });
 
+//-- Proyectos Inmobiliarios ---------------------------------------------------
+var alianzas = new Vue({
+  el: '#owl-compatibilidad',
+  data: {
+    item:[
+      { src: 'assets/images/icon/icon-multimedia.svg', text: 'Multimedia'},
+      { src: 'assets/images/icon/icon-security.svg', text: 'Seguridad'},
+      { src: 'assets/images/icon/icon-temperature.svg', text: 'Temperatura'},
+      { src: 'assets/images/icon/icon-lights.svg', text: 'Luces'},
+      { src: 'assets/images/icon/icon-home.svg', text: 'Casa'}
+    ]
+  }
+});
+
 
 //-- Ventana Modal -------------------------------------------------------------
 
