@@ -237,10 +237,10 @@ b {
           left: 50%;
           margin: 0;
           position: absolute;
-          top: calc(50% - 5rem);
           transform: translate(-50%, -50%);
 
           @include xxs-device {
+            top: calc(50% - 5rem);
             width: 100vw;
 
           }
@@ -250,6 +250,7 @@ b {
           }
 
           @include md-device {
+            top: calc(50%);
             width: 80vw;
           }
         }
@@ -445,15 +446,26 @@ b {
   }
 }
 
+#owl-why-fibaro {
+  img {
+    @include xxs-device {
+      max-width: 10rem;
+    }
+  }
+
+  h3 {
+    font-weight: 300;
+  }
+}
 
 
 // Wordpress
 
 .contenido-wp {
-  @include xs-device {
-    margin-top: 8rem;
+  @include xxs-device {
+    margin: 8rem 0;
   }
   @include md-device {
-    margin-top: 8rem;
+    margin: 8rem 0;
   }
 }

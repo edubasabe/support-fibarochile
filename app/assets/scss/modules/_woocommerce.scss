@@ -1,0 +1,55 @@
+.woocommerce {
+
+  //-- Estrellas de Rating
+  &-product-rating {
+      color: #ffc000 !important;
+    }
+
+  //-- Link a Reviews
+  &-review-link {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  //-- Precio del producto
+   div.product {
+      p.price,
+      span.price {
+        color: $azul;
+      }
+   }
+
+   //-- Descripción Corta del producto
+   &-product-details {
+     &__short-decription {
+       p,
+       ul {
+         font-size: 1.4rem !important;
+       }
+     }
+   }
+
+
+  //-- Selector de cantidad
+  .quantity {
+    .qty {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      min-height: 3.6rem;
+    }
+  }
+
+  //-- Button Add to Cart
+  button {
+    &.button {
+      &.alt {
+        background-color: $azul;
+
+        &:hover {
+          background-color: $azul;
+
+        }
+      }
+    }
+  }
+}

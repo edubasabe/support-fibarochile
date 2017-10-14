@@ -1,5 +1,24 @@
 .contacto {
 
+  h2 {
+    @include md-device {
+      font-size: 4rem !important;
+    }
+  }
+
+  .container-fluid {
+    @include lg-device {
+      width: 1170px;
+    }
+
+    & > .row {
+      & > div {
+            padding-left: .7rem;
+            padding-right: .7rem;
+          }
+    }
+  }
+
   //-- Hero ------------------------------------------------------------------
   &__hero {
     @include xxs-device {
@@ -15,36 +34,76 @@
       padding: 14rem 0;
     }
 
+
+
+    p {
+      @include xxs-device {
+        color: $blanco;
+        margin-bottom: 0;
+      }
+    }
+
     h2 {
       color: $blanco;
     }
   }
 
-  //-- Ventas ------------------------------------------------------------------
-  &__ventas {
-    &__contenedor {
+  //-- Departamentos -----------------------------------------------------------
+  &__departamentos {
+
+    @include lg-device {
+      margin-top: 6rem;
+    }
+
+
+    h2 {
       @include xxs-device {
-        padding: 2rem;
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+      }
+    }
+
+    h3 {
+      @include xxs-device {
+        font-size: 1.6rem;
       }
 
-      .card-info {
+      @include md-device {
+        font-size: 2.3rem;
+      }
+    }
+
+    h4 {
+      @include xxs-device {
+        font-size: 1.4rem;
+      }
+
+      @include md-device {
+        font-size: 2rem;
+      }
+    }
+
+    ul {
+      @include xxs-device {
+        margin-bottom: 3rem;
+      }
+    }
+
+    li {
+      @include xxs-device {
+        font-size: 1.4rem;
+        font-weight: 300;
+      }
+
+      @include md-device {
+        font-size: 2rem;
+      }
+
+      a {
         @include xxs-device {
-          text-align: center;
-        }
-
-        @include md-device {
-          text-align: left;
-        }
-
-        li {
-          // font-size: 1.8rem;
-          font-weight: 300;
-          line-height: 1.4;
-
-          &:nth-child(1) {
-            font-size: 2.2rem;
-            // font-weight: normal;
-          }
+          color: $negro;
+          text-decoration: none;
         }
       }
     }
@@ -52,18 +111,47 @@
 
   //-- Partners ----------------------------------------------------------------
   &__partners {
-    @include md-device {
-      margin-top: 3rem;
+      @include md-device {
+        margin-top: 3rem;
+      }
+
+    &__item {
+      img {
+        @include xxs-device {
+          max-width: 7rem;
+        }
+      }
     }
-    
+
+
+    h2 {
+      @include xxs-device {
+        font-size: 2.8rem;
+        margin-top: 2rem;
+      }
+    }
+
     .thumbnail {
       border: 0;
-      height: 16rem;
+      text-decoration: none;
+
+      @include xxs-device {
+        min-height: 4rem;
+      }
 
       p {
+        @include xxs-device {
+          color: $negro;
+          font-weight: 300;
+        }
+
         @include md-device {
           font-size: 1.8rem;
           margin-top: 1rem;
+        }
+
+        @include md-device {
+          font-size: 1.9rem;
         }
       }
     }
@@ -75,9 +163,17 @@
       margin-top: 3rem;
     }
 
+    h2 {
+      @include xxs-device {
+        font-size: 2.8rem;
+        margin-top: 2rem;
+      }
+    }
+
     &__contenedor {
       @include xxs-device {
         padding: 2rem 0;
+        padding-top: 4rem;
       }
 
       h3 {
@@ -99,7 +195,13 @@
         }
       }
 
-      .col-md-4 {
+      .team {
+        @include xxs-device {
+          margin-bottom: 3rem;
+        }
+      }
+
+      .col-sm-6 {
         &:last-child {
           margin-bottom: 0;
         }
@@ -118,11 +220,21 @@
 
         h3 {
           @include xxs-device {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
           }
 
-          @include sm-device {
-            // font-size: 2rem;
+          @include md-device {
+            font-size: 2.2rem;
+          }
+        }
+
+        .link {
+          @include xxs-device {
+            font-size: 1.4rem;
+          }
+
+          @include md-device {
+            font-size: 1.8rem;
           }
         }
       }
@@ -139,13 +251,18 @@
       @include md-device {
         padding: 2rem 0;
       }
+
+
+      img {
+        max-height: 9rem;
+      }
     }
 
     &__list {
       font-weight: 300;
 
       @include xxs-device {
-        text-align: center;
+        text-align: left;
       }
       @include md-device {
         text-align: left;
@@ -153,15 +270,39 @@
 
       li {
         h4 {
-          font-size: 2.4rem;
-          font-weight: 400;
-          margin: 0;
+          @include xxs-device {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 0;
+          }
+
+          @include md-device {
+            font-size: 1.8rem;
+          }
         }
+
+        @include xxs-device {
+          font-size: 1.4rem;
+        }
+
+        @include md-device {
+          font-size: 1.8rem;
+        }
+
 
         strong {
           font-weight: 500;
         }
       }
     }
+
+    h2 {
+      @include xxs-device {
+        font-size: 2.8rem;
+        margin-top: 2rem;
+      }
+    }
+
+
   }
 }

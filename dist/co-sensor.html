@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TAMED | Home</title>
+    <meta name="description" content="Forma parte de nuestra red de instaladres y resellers FIBARO. Transforma hogares en inteligentes con un sistema domótico único">
+    <meta name="keywords" content="Hogares Inteligentes, Domótica">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#0090ff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/frameworks.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="single-product">
+
+
+      <!-- Navigation -->
+      <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="navbar-header page-scroll">
+                <a class="navbar-brand page-scroll navbar__logo-text navbar-icon-center" href="#page-top">
+                  <img src="./assets/images/logo/tamed-2017-blanco-sl.svg" alt="TAMED" class="white-logo">
+                </a>
+                <button type="button" class="navbar-toggle fixed-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+              </div>
+
+
+              <div class="collapse navbar-collapse navbar-ex1-collapse yamm">
+                  <ul class="nav navbar-nav" id="menu-escrito">
+                      <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+                      <li class="dropdown yamm-fullwidth">
+                        <a class="dropdown-toggle" href="#">Productos &nbsp;</a>
+                        <ul class="dropdown-menu--mobile list-unstyled">
+                          <!-- Sensores Mobile -->
+                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
+                            <ul id="sensores-mobile" class="list-unstyled">
+                              <li v-for="data in titles">
+                                <a v-bind:href="data.link">
+                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                  <span>{{ data.text }}</span>
+                                </a></li>
+                            </ul>
+                          </li>
+                          <!-- Actuadores Mobile -->
+                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
+                            <ul id="actuadores-mobile" class="list-unstyled">
+                              <li v-for="data in titles">
+                                <a v-bind:href="data.link">
+                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                  <span>{{ data.text }}</span>
+                                </a></li>
+                            </ul>
+                          </li>
+                          <!-- Remotos Mobile -->
+                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Remotos</a>
+                            <ul id="remotos-mobile" class="list-unstyled">
+                              <li v-for="data in titles">
+                                <a v-bind:href="data.link">
+                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                  <span>{{ data.text }}</span>
+                                </a></li>
+                            </ul>
+                          </li>
+                          <!-- Puertas de Enlace Mobile -->
+                          <li class="dropdown"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Puertas de Enlace</a>
+                            <ul id="puertas-mobile" class="list-unstyled">
+                              <li v-for="data in titles">
+                                <a v-bind:href="data.link">
+                                  <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                  <span>{{ data.text }}</span>
+                                </a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <ul class="dropdown-menu dropdown-menu--desktop">
+                          <li>
+                            <div class="yamm-content container">
+                              <div class="row">
+                                <div class="span12">
+                                  <ul class="nav nav-pills text-center">
+                                    <li><a data-toggle="tab" href="#sensores">Sensores</a></li>
+                                    <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li>
+                                    <li><a data-toggle="tab" href="#remotos">Remotos</a></li>
+                                    <li><a data-toggle="tab" href="#puerta-de-enlace">Puerta de Enlace</a></li>
+                                  </ul>
+                                </div>
+                                <div class="span12">
+                                  <div class="tab-content">
+                                    <div class="tab-pane" id="sensores">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="tab-pane" id="actuadores">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="tab-pane" id="remotos">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav remotos" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div class="tab-pane" id="puerta-de-enlace">
+                                      <ul class="nav-product-tab-list list-unstyled">
+                                        <li class="product-nav puerta-de-enlace" v-for="data in titles">
+                                          <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/instalacion">Instalación</a></li>
+                      <li><a class="page-scroll" href="http://www.proyectos.tuhogarinteligente.cl/">Proyectos</a></li>
+                      <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
+                      <li><a class="page-scroll" href="http://expertos.tuhogarinteligente.cl/">Expertos</a></li>
+                      <li><a class="page-scroll" href="http://blog.tuhogarinteligente.cl">Blog</a></li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+<!-- Hero -->
+<section class="hero single-product__hero hero__co-sensor">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="page-section single-product__section">
+  <div class="container">
+    <div class="row single-product__title--mobile">
+      <div class="col-sm-12">
+        <h2>CO Sensor</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="single-product__image">
+          <img src="./assets/images/products/co-sensor/co-device.jpg" alt="CO Sensor" class="img-responsive">
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="single-product__content">
+          <h2>CO Sensor</h2>
+          <p>Protege cada suspiro CO FIBARO es un sensor de monóxido de carbono certificado y acreditado por laboratorio de pruebas del Grupo BSI. Es tan potente, que incluso detecta cantidades ligeramente elevadas de que puedan afectar tu salud con el tiempo. Lo mejor de todo, ¡es que funciona incluso sin estar conectado al sistema!</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_smoke.svg" alt="Smoke">
+            <p>Sensor de humo</p>
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_temperature-2.svg" alt="">
+            <p>Sensor de temperatura</p>
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_light-indicator.svg" alt="">
+            <p>Indicador de luz</p>
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_sound.svg" alt="">
+            <p>Alarma acústica</p>
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_notifications-2.svg" alt="">
+            <p>Notificaciones móviles</p>
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-2">
+          <a href="#" class="thumbnail">
+            <img src="./assets/images/icon/icon_battery.svg" alt="">
+            <p>La barería dura 2 años</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="single-product__video">
+  <div class="container">
+    <div class="row single-product__title--mobile">
+      <h2>Ver video</h2>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row single-product__video__container single-product__video__container--dimmer ">
+      <div class="col-xs-12">
+        <p class="text-center">
+          <a href="#" class="button button-play"><span>Play</span></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Video  -->
+<div id="video-modal" class="modal fade modal-video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" src="https://www.youtube.com/watch?v=V4fFjzYn6Jo" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                  <span class="cerrar">
+                    <svg width="20" height="20">
+            	        <line x1="0" y1="0" x2="20" y2="20" style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                      <line x1="0" y1="20" x2="20" y2="0" style="stroke:rgb(255,255,255);stroke-width:2"></line>
+                    </svg>
+                  </span>
+                </button>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/hSVadYFTp2M" frameborder="0" allowfullscreen=""></iframe>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <!-- Ya te vas -->
+    <div class="modal fade inicio-tuhogar__modal-salir" id="modal-subscribirse" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              <svg width="10" height="10">
+      	        <line x1="0" y1="0" x2="10" y2="10" style="stroke:rgb(0,0,0);stroke-width:2"></line>
+                <line x1="0" y1="10" x2="10" y2="0" style="stroke:rgb(0,0,0);stroke-width:2"></line>
+              </svg>
+            </button>
+            <h4 class="modal-title" id=""></h4>
+          </div>
+          <div class="modal-body">
+            <h3 class="text-center">¿Ya te vas?</h3>
+            <p class="lead text-center">Suscríbete para recibir ofertas, promociones y noticias.</p>
+            <form class="form form-subscribe" action="https://s242003202.t.eloqua.com/e/f2" method="post" id="modal-subscribe">
+              <input type="hidden" name="elqFormName" value="Gracias_Newsletter">
+              <input type="hidden" name="elqSiteID" value="242003202">
+              <input type="hidden" name="elqCustomerGUID" value="">
+              <input type="hidden" name="elqCookieWrite" value="0">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="firstName" placeholder="Nombre">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="emailAddress" placeholder="E-mail">
+              </div>
+              <input type="submit" class="btn btn-default btn-subscribe" value="Suscríbete" onclick="setCookie()">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- Contacto Form bottom right-->
+    <div id="contacto-modal">
+      <modal-contacto></modal-contacto>
+    </div>
+
+    <!-- Btn mobile contacto form -->
+    <div class="inicio-tuhogar__icon-contact">
+      <img src="./assets/images/icon/icon-contact.svg" alt="Contacto">
+    </div>
+
+    <!-- Telcos modal on click -->
+    <div id="telcos-modal" class="modal fade">
+      <modal-telcos></modal-telcos>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div id="footer">
+        <my-footer></my-footer>
+      </div>
+      <hr class="divider">
+        <div class="container">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <img src="./assets/images/logo/tamed-2017-gris-sl.svg" alt="Tamed" class="img-responsive footer__copyright--img">
+                    <span class="footer__copyright text-center center-block">© 2017. TAMED<sup>®</sup>  SpA. Todos los derechos reservados.<br>
+                      Distribuidor Oficial de FIBARO<sup>®</sup>  en Chile, Perú.</span>
+                  </div>
+                </div>
+              </div>
+    </footer>
+
+
+
+
+    <br><br>
+    <script src="assets/js/vendor/vendors.js"></script>
+    <script src="assets/js/main.min.js"></script>
+
+  </body>
+</html>

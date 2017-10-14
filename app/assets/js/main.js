@@ -52,6 +52,14 @@ function checkWidth() {
   }
 }
 
+function is_iPad() {
+  return (navigator.platform.indexOf("iPad") != -1)
+}
+
+function is_iPhone() {
+  return (navigator.platform.indexOf("iPhone") != -1)
+}
+
 /* Checkear si es Tablet */
 function isTablet() {
   var calcAspectRatio = windowHeight / windowWidth;
@@ -122,6 +130,15 @@ function stopCloseYoutube() {
   });
 }
 
+function modalShutter(buttonId, modalId) {
+  $(buttonId).on('click', function (e) {
+    e.preventDefault();
+    if ( buttonId === '' || modalId === '') {
+      console.error('El buttonId o modalId está vacío');
+    }
+    $(modalId).modal();
+  });
+}
 
 //-- Padding Nav  --------------------------------------------------------------
 /* Centrar los elementos del menu con el padding */
@@ -142,7 +159,7 @@ $(function() {
     });
 });
 
-//-- Owl Testimonios
+//-- Owl -----------------------------------------------------------------------
 $(document).on('ready', function() {
   $('#owl-casos-de-exito').owlCarousel({
       loop:true,
@@ -247,6 +264,31 @@ $(document).on('ready', function() {
           }
       }
   });
+
+  /* Por que con FIBARO */
+  $('#owl-why-fibaro').owlCarousel({
+      loop:true,
+      autoplay:true,
+      autoplayTimeout:2000,
+      margin:10,
+      nav: false,
+      dots:false,
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
+              nav:false
+          },
+          600:{
+              items:4,
+              nav:false
+          },
+          1000:{
+              items:4,
+              nav:false,
+          }
+      }
+  });
 });
 
 //-- Button Close --------------------------------------------------------------
@@ -294,27 +336,11 @@ function fadeElementOffset(element, animation, offsetvalue) {
 }
 
 
-//-- Página Expertos TAMED -----------------------------------------------------
-
-
-  //-- Tu Hogar Inicio ---------------------------------------------------------
-
-  //-- Revisar si es ipad
-  function is_iPad() {
-    return (navigator.platform.indexOf("iPad") != -1)
-  }
-
-  function is_iPhone() {
-    return (navigator.platform.indexOf("iPhone") != -1)
-  }
 
   if (is_iPad() || is_iPhone()) {
     $('video').attr('controls','true');
   }
 
-  else {
-    // console.log('No es iPad');
-  }
 
   //-- Waypoint Inicio ---------------------------------------------------------
   // Se cambia el fondo degradado del nav menu cuando es desktop
@@ -425,7 +451,7 @@ if ( isMobile() ) {
 //-- shopping cart icon --------------------------------------------------------
 //Si no es Mobile
 if ( !isMobile() ) {
-  $('.tienda-link > img').attr('src','./assets/images/icon/shopping-bag.svg');
+  $('.tienda-link > img').attr('src','http://nueva.tuhogarinteligente.cl/wp-content/themes/tamed2017/assets/images/icon/shopping-bag.svg');
 } else {
   $('.dropdown-menu--desktop').hide();
 }
@@ -434,6 +460,15 @@ if ( !isMobile() ) {
 //-- Notify Cookies
 $('#close-notify').click(function () {
   $('.notify-cookies').addClass('hidden');
+});
+
+
+$('.notify-cookies').addClass('animated fadeInUp');
+
+$(window).scroll(function () {
+  if( $(this).scrollTop() > 1 ) {
+    $('.notify-cookies').addClass('animated fadeOutDown');
+  }
 });
 
 //-- Timer Switches ------------------------------------------------------------
@@ -447,27 +482,220 @@ $('.single-product__section > .container').hover(function () {
   }, 10000);
 });
 
+//-- Contacto Ventana Modal Consulta EXPERTO -----------------------------------
+if ( !isMobile()) {
+  $('#consulta-experto').click(function (e) {
+    e.preventDefault();
+    $('#telcos-modal').modal();
+  });
+}
+
+function Modal(handler, modal ,src) {
+ this.handler = handler;
+ this.modal = modal;
+ this.src = src;
+
+ $(handler).on('click', function (e) {
+   e.preventDefault();
+   $(modal).find('iframe').attr('src', src);
+   setTimeout(function () {
+      $(modal).modal('show');
+   }, 1000)
+ });
+}
 
 
+/* Video Homepage */
+var videoPromocional = new Modal('#play-promo-video','#video-modal', 'https://www.youtube.com/embed/PGL-CZEUOG0');
 
+/* Página Compatibilidad */
+var alexa = new Modal('#play-alexa', '#video-modal', 'https://www.youtube.com/embed/hrgbHUni-z0');
+var todoEstaConectado = new Modal('#todo-conectado', '#video-modal', 'https://www.youtube.com/embed/ou2TdFWOMc4');
+
+
+/* Videos Productos */
+var cOsensor = new Modal('#play-co-sensor', '#video-modal', 'https://www.youtube.com/embed/EMge0LSmxuM');
 
 
 
  });
 
 
- function Modal(handler, modal ,src) {
-   this.handler = handler;
-   this.modal = modal;
-   this.src = src;
-
-   $(handler).on('click', function (e) {
-     e.preventDefault();
-     $(modal).modal('show');
-     $(modal).find('iframe').attr('src', src);
-   });
- }
+jQuery(document).ready(function ($) {
 
 
- var alexa = new Modal('#play-alexa', '#video-modal', 'https://www.youtube.com/embed/hrgbHUni-z0');
- var todoEstaConectado = new Modal('#todo-conectado', '#video-modal', 'https://www.youtube.com/embed/ou2TdFWOMc4');
+
+
+if (is_iPad() || is_iPhone()) {
+  $('video').attr('controls','true');
+}
+
+
+//------------------------------------------------------------------------------
+// Navbar Animacion Yamm
+//------------------------------------------------------------------------------
+
+
+
+// Desktop
+//------------------------------------------------------------------------------
+
+/* Darle clase open al padre del a al hacer click, para que se despliegue el menu */
+$('li.dropdown > a').on('click', function (event) {
+  event.preventDefault();
+  $(this).parent().toggleClass('open');
+  $(this).parent().children('li.dropdown').toggleClass('open')
+  $(this).parent().siblings().children('ul').removeClass('collapsed').addClass('collapse');
+});
+
+/* Guardar el menu si el usuario hace click fuera */
+$('body').on('click', function (e) {
+  if (!$('li.dropdown.yamm-fullwidth').is(e.target)
+      && $('li.dropdown.yamm-fullwidth').has(e.target).length === 0
+      && $('.open').has(e.target).length === 0
+  ) {
+      $('li.dropdown.yamm-fullwidth').removeClass('open');
+
+      // Remueve clase para que no queden desplegados 2 tab-content
+      $('.dropdown-menu.dropdown-menu--desktop .tab-pane').removeClass('active');
+      $('.dropdown-menu.dropdown-menu--desktop .nav.nav-pills > li').removeClass('active');
+      $('.dropdown-menu.dropdown-menu--desktop .nav.nav-pills > li a').attr('aria-expanded','true');
+  }
+});
+
+
+$('.dropdown-toggle').click(function () {
+  /* Agrega clase active al primer li*/
+  $('.open .nav.nav-pills > li:first-child').addClass('active');
+  /* Agrega clase bg-white al navbar*/
+  $('nav').addClass('bg-white');
+  /* Agrega clase activa  sensores */
+  $('#sensores').addClass('active');
+  /* Agrega el atributo aria expanded */
+  $('.open .nav.nav-pills > li:first-child > a').attr('aria-expanded',true);
+});
+
+/* Collapsando todos los submenus */
+$('.dropdown-menu--mobile > li.dropdown > ul').addClass('collapse');
+
+/* Eliminar el otro menu si no es mobile o iPad */
+if ( checkWidth() || isTablet() || is_iPad())
+{
+  $('.dropdown-menu--desktop').hide();
+  $('.dropdown-menu--mobile').addClass('collapse')
+} else {
+  $('.dropdown-menu--mobile').hide();
+}
+
+
+
+
+// Mobile
+//------------------------------------------------------------------------------
+
+// Darle la clase open a la segunda generacion
+$('#menu-escrito li li.dropdown').on('click', function () {
+  $(this).toggleClass('open');
+})
+
+
+  $('.dropdown-menu--mobile > li.dropdown').on('click',function () {
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    } else {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
+
+  });
+
+
+
+  $('#menu-escrito > li').on('click', function () {
+
+    // Quitarle la clase open a los hermanos
+    $(this).siblings().removeClass('open');
+
+    // Quitar clase collapse a los sobrinos
+    $(this).siblings().children('ul').removeClass('collapsed').addClass('collapse');
+
+    //Quitarle la clase open a los sobrinos
+    $(this).siblings().children('ul').children('ul').removeClass('collapsed').addClass('collapse');
+
+
+    if ( $(this).children('ul').hasClass('collapse') ) {
+      $(this).children('ul').removeClass('collapse').addClass('collapsed');
+    }else if ( !$(this).hasClass('open') ) {
+      $(this).children('ul').removeClass('collapsed').addClass('collapse');
+    }
+  });
+
+
+
+if ( !checkWidth() || !isTablet() ) {
+  // $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
+  $('#menu-escrito > .dropdown .dropdown-toggle').append('<span class="arrow-down"></span>');
+}
+
+
+
+// Despliegue collapse del Inmobiliaria smart
+
+var inmobiSmart = $('.casas-deptos a');
+var tieneCollapse = $('.casas-deptos.open ul');
+  inmobiSmart.click(function () {
+    var parentClass = $(this).parent().attr('class');
+
+    if ( parentClass.indexOf('open') && tieneCollapse.hasClass('collapsed'))
+    {
+
+
+    }
+  });
+
+//-- Ventanas Modales Contacto
+modalShutter('#btn-retail-form', '#retail-modal-form');
+modalShutter('#btn-dist-form', '#dist-modal-form');
+modalShutter('#btn-telcos-form', '#telcos-modal-form');
+
+//-- Typed ---------------------------------------------------------------------
+
+/*
+var typed = new Typed('#type-word', {
+strings: ["calefacción", "cámara", "iluminación", "seguridad", "dispositivo", "termostato", "casa"],
+typeSpeed: 50,
+fadeOut:true,
+loop: false,
+onComplete: function () {
+  $('.typed-cursor').fadeOut('slow');
+}
+});
+
+//-- Conteo de plugins
+var ciclo = 0;
+function numberAnimation() {
+  $('text.c').each(function () {
+      $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+      }, {
+          duration: 4000,
+          easing: 'swing',
+          step: function (now) {
+              $(this).text(Math.ceil(now));
+          }
+      });
+
+      ciclo = 1;
+  });
+}
+
+var sectionPlugins = $('.compatibilidad__plugins');
+sectionPlugins.waypoint(function (direction) {
+  if (direction == 'down') {
+      if (ciclo < 1) {
+        numberAnimation();
+      }
+    }
+}, { offset: '90%' });
+*/
+
+});

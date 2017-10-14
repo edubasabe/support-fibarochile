@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TAMED | Contacto</title>
+    <meta name="description" content="Forma parte de nuestra red de instaladres y resellers FIBARO. Transforma hogares en inteligentes con un sistema domótico único">
+    <meta name="keywords" content="Hogares Inteligentes, Domótica">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#0090ff">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/frameworks.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<header>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top bg-white" role="navigation" id="nav">
+    <div class="container">
+      <div class="row">
+        <div class="">
+          <div class="navbar-header">
+            <div class="logo-breadcrumb">
+              <a class="navbar-brand navbar__logo-text navbar-icon-center" href="http://tuhogarinteligente.cl/">
+                  <img src="./assets/images/logo/tamed-2017-blanco-sl.svg" alt="TAMED" class="white-logo">
+                </a>
+              <!-- <a href="http://proyectos.tuhogarinteligente.cl" class="navbar__site-location"><span class="navbar__logo-subtext">Proyectos</span></a> -->
+            </div>
+            <button type="button" class="navbar-toggle fixed-left" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+          </div>
+
+          <div class="collapse navbar-collapse navbar-ex1-collapse yamm">
+            <ul class="nav navbar-nav" id="menu-escrito">
+              <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
+
+              <li class="dropdown yamm-fullwidth level-1">
+                <a class="dropdown-toggle" href="#">Productos &nbsp;</a>
+                <!-- Menu Mobile ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <!-- Sensores Mobile -->
+                <ul class="dropdown-menu--mobile list-unstyled">
+                  <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Sensores</a>
+                    <ul id="sensores-mobile" class="list-unstyled">
+                      <li v-for="data in titles" class="level-3">
+                        <a v-bind:href="data.link">
+                          <table border="0">
+                            <tr>
+                              <th rowspan="2">
+                                <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              </th>
+                              <th>
+                                <span class="titulo">{{ data.text }}</span><br>
+                                <span class="subtitulo">{{ data.texto }}</span>
+                              </th>
+                            </tr>
+                            <tr>
+                              <td></td>
+                            </tr>
+                          </table>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Actuadores Mobile -->
+                  <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores</a>
+                    <ul id="actuadores-mobile" class="list-unstyled">
+                      <li v-for="data in titles" class="level-3">
+                        <a v-bind:href="data.link">
+                          <table border="0">
+                            <tr>
+                              <th rowspan="2">
+                                <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              </th>
+                              <th>
+                                <span class="titulo">{{ data.text }}</span><br>
+                                <span class="subtitulo">{{ data.texto }}</span>
+                              </th>
+                            </tr>
+                            <tr>
+                            </tr>
+                          </table>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Remotos Mobile -->
+                  <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Actuadores Remotos</a>
+                    <ul id="remotos-mobile" class="list-unstyled">
+                      <li v-for="data in titles" class="level-3">
+                        <a v-bind:href="data.link">
+                          <table border="0">
+                            <tr>
+                              <th rowspan="2">
+                                <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              </th>
+                              <th>
+                                <span class="titulo">{{ data.text }}</span><br>
+                                <span class="subtitulo">{{ data.texto }}</span>
+                              </th>
+                            </tr>
+                            <tr>
+                            </tr>
+                          </table>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Puertas de Enlace Mobile -->
+                  <li class="dropdown level-2"><a href="#" class="dropdown-toggle menu-sub-toggle" data-toggle="dropdown">Controladores</a>
+                    <ul id="puertas-mobile" class="list-unstyled">
+                      <li v-for="data in titles" class="level-3">
+                        <a v-bind:href="data.link">
+                          <table border="0">
+                            <tr>
+                              <th rowspan="2">
+                                <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                              </th>
+                              <th>
+                                <span class="titulo">{{ data.text }}</span>
+                              </th>
+                            </tr>
+                          </table>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+
+                <!-- Menu Desktop ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+                <ul class="dropdown-menu dropdown-menu--desktop">
+                  <li>
+                    <div class="yamm-content container">
+                      <div class="row">
+                        <div class="span12">
+                          <ul class="nav nav-pills text-center">
+                            <li><a data-toggle="tab" href="#sensores">Sensores</a></li>
+                            <li><a data-toggle="tab" href="#actuadores">Actuadores</a></li>
+                            <li><a data-toggle="tab" href="#remotos">Actuadores Remotos</a></li>
+                            <li><a data-toggle="tab" href="#puerta-de-enlace">Controladores</a></li>
+                          </ul>
+                        </div>
+                        <div class="span12">
+                          <div class="tab-content">
+                            <div class="tab-pane" id="sensores">
+                              <ul class="nav-product-tab-list list-unstyled">
+                                <li class="product-nav" v-for="data in titles">
+                                  <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="tab-pane" id="actuadores">
+                              <ul class="nav-product-tab-list list-unstyled">
+                                <li class="product-nav" v-for="data in titles">
+                                  <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="tab-pane" id="remotos">
+                              <ul class="nav-product-tab-list list-unstyled">
+                                <li class="product-nav remotos" v-for="data in titles">
+                                  <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="tab-pane" id="puerta-de-enlace">
+                              <ul class="nav-product-tab-list list-unstyled">
+                                <li class="product-nav puerta-de-enlace" v-for="data in titles">
+                                  <a v-bind:href="data.link">
+                                            <img v-bind:src="data.url" v-bind:alt="data.text" class="img-responsive">
+                                            <p>{{ data.text }}</p>
+                                          </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- Fin del Menu Desktop ++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+              </li>
+              <!-- <li><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/instalacion">Instalación</a></li> -->
+              <li class="dropdown casas-deptos level-1"><a class="dropdown-toggle" href="#">Inmobiliarias <i>Smart</i>&nbsp;&nbsp;</a>
+
+                <!-- Desplegable Mobile -->
+                <ul class="dropdown-menu--mobile list-unstyled">
+                  <li class=""><a href="http://proyectos.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Casas</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Departamentos</a></li>
+                </ul>
+
+                <!-- Desplegable Desktop -->
+                <ul class="dropdown-menu dropdown-menu--desktop list-unstyled">
+                  <li class=""><a href="http://proyectos.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Casas</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Departamentos</a></li>
+                </ul>
+
+              </li>
+              <!-- <li><a class="page-scroll" href="http://expertos.tuhogarinteligente.cl/">Expertos</a></li> -->
+              <li class="dropdown yamm blog level-1"><a class="dropdown-toggle" href="#">Blog&nbsp;&nbsp;</a>
+                <!-- Desplegable Mobile -->
+                <ul class="dropdown-menu--mobile list-unstyled">
+                  <li class=""><a href="http://blog.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Mundo Inmobiliario</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Ideas para tu hogar</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Trucos Técnicos</a></li>
+                </ul>
+
+                <!-- Desplegable Desktop -->
+                <ul class="dropdown-menu dropdown-menu--desktop list-unstyled">
+                  <li class=""><a href="http://blog.tuhogarinteligente.cl/" class="">Inicio</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Mundo Inmobiliario</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Ideas para tu hogar</a></li>
+                  <li class=""><a href="#" class="menu-sub-toggle">Trucos Técnicos</a></li>
+                </ul>
+              </li>
+              <li class="level-1"><a class="page-scroll" href="http://soporte.tuhogarinteligente.cl/">Soporte</a></li>
+              <li class="level-1"><a class="page-scroll tienda-link" href="http://tuhogarinteligente.cl/comprar/">Tienda en línea &nbsp;&nbsp;<img src="./assets/images/icon/shopping-bag-white.svg" height="20" alt="Cart" class="cart-icon"/></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main class="contacto">
+  <section class="page-section contacto__hero">
+    <div class="container-fluid">
+      <div class="row hidden-sm hidden-md hidden-lg">
+        <div class="col-xs-12">
+          <p class="text-center">Siéntete con libertad</p>
+          <h2 class="headline headline--nomargin text-center"> para contactarnos</h2>
+        </div>
+      </div>
+
+      <div class="row hidden-xs">
+        <div class="col-xs-12">
+          <h2 class="headline headline--nomargin text-center">Siéntete con libertad para contactarnos</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto__departamentos">
+    <div class="container-fluid">
+
+      <!-- Ventas -->
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <h2 class="headline headline--nomargin page-header">Ventas</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <div class="row">
+            <div class="col-sm-6">
+              <!-- Tamara -->
+              <ul class="list-unstyled card-info">
+                <li><h4 class="azul">Business Lead & Market Development</h4></li>
+                <li><h3>Tamara Utman</h3></li>
+                <li><a href="tel:+56228486547" class=""> +56 2 2848 6547</a> ext. 302</li>
+                <li><a href="mailto:tutman@tamed.cl" class="">tutman@tamed.cl</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <!-- Sebastian -->
+              <ul class="list-unstyled card-info">
+                <li><h4 class="azul">Real Estate Development Manager</h4></li>
+                <li><h3>Sebastián Carrasco</h3></li>
+                <li><a href="tel:+56228486547"> +56 2 2848 6547 </a> ext. 311</li>
+                <li><a href="mailto:scarrasco@tamed.cl" class="">scarrasco@tamed.cl</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Operaciones -->
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <h2 class="headline headline--nomargin page-header">Operaciones</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <div class="row">
+            <div class="col-sm-6">
+              <ul class="list-unstyled card-info">
+                <li><h4 class="azul">Chief Operations Officer</h4></li>
+                <li><h3>Paola Lillo</h3></li>
+                <li><a href="tel:+56228486547" class=""> +56 2 2848 6547</a> ext. 305</li>
+                <li><a href="mailto:plillo@tamed.cl" class="">plillo@tamed.cl</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul class="list-unstyled card-info">
+                <li><h4 class="azul">Quality Assurance</h4></li>
+                <li><h3>Izabela Wozniak</h3></li>
+                <li><a href="tel:+56228486547" class=""> +56 2 2848 6547</a> ext. 305</li>
+                <li><a href="mailto:iwozniak@tamed.cl" class="">iwozniak@tamed.cl</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin de Operaciones -->
+
+      <!-- Logística -->
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <h2 class="headline headline--nomargin page-header">Logística</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <div class="row">
+            <div class="col-sm-6">
+              <ul class="list-unstyled card-info">
+                <li><h4 class="azul">Chief Logistics Officer</h4></li>
+                <li><h3>Agnieszka Bartczak</h3></li>
+                <li><a href="tel:+56228486547" class=""> +56 2 2848 6547</a> ext. 304</li>
+                <li><a href="mailto:abart@tamed.cl" class="">abart@tamed.cl</a></li>
+              </ ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+  <!-- Partners -->
+  <section class="contacto__partners">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <h2 class="headline headline--nomargin page-header">Partners</h2>
+          <br>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <div class="row">
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+              <div class="contacto__partners__item">
+                <a href="http://expertos.tuhogarinteligente.cl/" class="thumbnail">
+                <img src="./assets/images/icon/icon_distributor_contact.svg" alt="Distribuidores" class="img-responsive">
+                <p class="text-center">Distribuidores</p>
+              </a>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+              <div class="contacto__partners__item">
+                <a href="http://expertos.tuhogarinteligente.cl/" class="thumbnail">
+                <img src="./assets/images/icon/icon_installer_contact.svg" alt="Inmobiliaria" class="img-responsive">
+                <p class="text-center">Instaladores</p>
+              </a>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-2">
+              <div class="contacto__partners__item">
+                <a href="http://expertos.tuhogarinteligente.cl/" class="thumbnail">
+                <img src="./assets/images/icon/icon_architect_contact.svg" alt="Inmobiliaria" class="img-responsive">
+                <p class="text-center">Arquitectos y Diseñadores</p>
+              </a>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+              <div class="contacto__partners__item">
+                <a href="http://proyectos.tuhogarinteligente.cl/" class="thumbnail">
+                <img src="./assets/images/icon/icon_developer_contact.svg" alt="Inmobiliaria" width="70" class="img-responsive">
+                <p class="text-center">Inmobiliarias y Constructoras</p>
+              </a>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+              <div class="contacto__partners__item">
+                <a href="#" class="thumbnail" id="telcos">
+                <img src="./assets/images/icon/icon_sensors.svg" alt="Telco" class="img-responsive">
+                <p class="text-center">Telcos</p>
+              </a>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2">
+              <div class="contacto__partners__item">
+                <a href="#" class="thumbnail" id="retail">
+              <img src="./assets/images/icon/icon_retail_bag.svg" alt="Retail" class="img-responsive">
+              <p class="text-center">Retail</p>
+            </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Relaciones Públicas -->
+  <section class="contacto__relaciones-publicas">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <h2 class="headline headline--nomargin page-header">Relaciones Públicas</h2>
+        </div>
+      </div>
+      <div class="row contacto__relaciones-publicas__contenedor">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0">
+          <div class="row">
+            <div class="col-sm-6 col-md-6">
+              <div class="team">
+                <img src="./assets/images/icon/marketing-dept.svg" width="50" alt="marketing" class="float-icon">
+                <h3>Departamento de Marketing</h3>
+                <p><a href="mailto:adonofrio@tamed.cl" class="link">adonofrio@tamed.cl</a></p>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6">
+              <div class="team">
+                <img src="./assets/images/icon/pr-dept.svg" width="50" alt="prensa" class="float-icon">
+                <h3>Departamento de Comunicaciones</h3>
+                <p><a href="mailto:cgarcia@tamed.cl" class="link">cgarcia@tamed.cl</a></p>
+              </div>
+            </div>
+            <!-- <div class="col-md-4">
+          <img src="./assets/images/icon/icon_mediadl.svg" alt="descarga" class="float-icon">
+          <h3>Comunicados de prensa</h3>
+          <a href="#" class="link" download>Descargar</a>
+        </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="contacto__info">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-lg-12 col-lg-offset-0">
+          <h2 class="headline headline--nomargin page-header">Contacto</h2>
+        </div>
+      </div>
+      <div class="row contacto__info__contenedor">
+        <div class="col-xs-10 col-xs-offset-1 col-md-2 col-lg-2 col-lg-offset-0">
+          <img src="./assets/images/logo/tamed-logo-2017-large.svg" height="50" alt="TAMED" class="img-responsive">
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-lg-6 col-lg-offset-0">
+          <ul class="list-unstyled contacto__info__list">
+            <li>
+              <h4>TAMED SpA.</h4></li>
+            <li>Distribuidor Oficial de FIBARO en Chile y Perú</li>
+            <li><strong>HQ:</strong> Av. Las Condes, Las Condes 9460 Of. 1504. Santiago, Chile</li>
+            <li><strong>Experience Center:</strong> Av. Las Condes 9765, Local 223-224. Las Condes, Santiago, Chile.</li>
+
+          </ul>
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-md-4 col-lg-4 col-lg-offset-0">
+          <ul class="list-unstyled contacto__info__list">
+            <li><strong>Email:</strong> <a href="mailto:contacto@tamed.cl">contacto@tamed.cl</a></li>
+            <li><strong>Contact Center Chile:</strong> <a href="+56228486547">+56 2 2848 6547</a></li>
+            <li><strong>Contact Center Perú:</strong> <a href="+5116419168">+51 1641 9168</a></li>
+            <li><strong>R.U.T.:</strong> 76.295.486-9.</li>
+            <li><strong>ZIP Code:</strong> 7591092</li>
+            <li>09:00 - 17:00 UTC-3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<!-- Ya te vas -->
+<div class="modal fade inicio-tuhogar__modal-salir" id="modal-subscribirse" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="./assets/images/logo/tamed-logo-2017.svg" height="20" alt="TAMED">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          <svg width="10" height="10">
+            <line x1="0" y1="0" x2="10" y2="10" style="stroke:rgb(0,0,0);stroke-width:2"></line>
+            <line x1="0" y1="10" x2="10" y2="0" style="stroke:rgb(0,0,0);stroke-width:2"></line>
+          </svg>
+        </button>
+        <h4 class="modal-title" id=""></h4>
+      </div>
+      <div class="modal-body">
+        <h3 class="text-center">¿Ya te vas?</h3>
+        <p class="lead text-center">Suscríbete para recibir ofertas, promociones y noticias.</p>
+        <form class="form form-subscribe" action="https://s242003202.t.eloqua.com/e/f2" method="post" id="modal-subscribe">
+          <input type="hidden" name="elqFormName" value="Gracias_Newsletter">
+          <input type="hidden" name="elqSiteID" value="242003202">
+          <input type="hidden" name="elqCustomerGUID" value="">
+          <input type="hidden" name="elqCookieWrite" value="0">
+          <div class="form-group">
+            <input type="text" class="form-control" id="name" name="firstName" placeholder="Nombre">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="email" name="emailAddress" placeholder="E-mail">
+          </div>
+          <input type="submit" class="btn btn-default btn-subscribe" value="Suscríbete" onclick="setCookie()">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Contacto Form bottom right-->
+    <div id="contacto-modal">
+      <div class="floating inicio-tuhogar__contact-form hidden"><img src="./assets/images/logo/tamed-logo-2017.svg" height="20" alt="TAMED"> <span class="close"><svg width="10" height="10"><line x1="0" y1="0" x2="10" y2="10" style="stroke: rgb(0, 0, 0); stroke-width: 2;"></line> <line x1="0" y1="10" x2="10" y2="0" style="stroke: rgb(0, 0, 0); stroke-width: 2;"></line></svg></span> <h4 class="lead text-center">Contáctanos</h4> <form action="https://s242003202.t.eloqua.com/e/f2" method="post" id="floating-subscribe" class="form form-subscribe"><input type="hidden" name="elqFormName" value="Gracias_Contacto"> <input type="hidden" name="elqSiteID" value="242003202"> <input type="hidden" name="elqCustomerGUID" value=""> <input type="hidden" name="elqCookieWrite" value="0"> <div class="form-group"><input type="text" id="name" name="firstName" placeholder="Nombre" class="form-control"></div> <div class="form-group"><input type="text" id="email" name="emailAddress" placeholder="E-mail" class="form-control"></div> <div class="form-group"><textarea id="mensaje" name="message" placeholder="Mensaje" class="form-control"></textarea></div> <input type="submit" value="Enviar" id="btn-subscripcion" onclick="setCookie()" class="btn btn-default btn-subscribe"></form></div>
+    </div>
+
+    <!-- Btn mobile contacto form -->
+    <div class="inicio-tuhogar__icon-contact">
+      <img src="./assets/images/icon/icon-contact.svg" alt="Contacto">
+    </div>
+
+    <!-- Telcos modal on click -->
+    <div id="telcos-modal" class="modal fade">
+      <modal-telcos></modal-telcos>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div id="footer">
+        <my-footer></my-footer>
+      </div>
+      <hr class="divider">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <img src="./assets/images/logo/tamed-2017-gris-sl.svg" alt="Tamed" class="img-responsive footer__copyright--img">
+              <span class="footer__copyright text-center center-block">© 2017. TAMED<sup>®</sup>  SpA. Todos los derechos reservados.<br>
+                Distribuidor Oficial de FIBARO<sup>®</sup>  en Chile y Perú.</span>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/vendor/vendors.js"></script>
+    <script src="assets/js/main.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      if(window.location.href.indexOf("franky") > -1) {
+         alert("your url contains the name franky");
+      }
+    });
+    </script>
+  </body>
+</html>
