@@ -219,8 +219,8 @@ b {
   width: 100%;
 }
 
-#video-modal {
-  &.modal-video {
+
+.modal-video {
 
       .modal {
         &-content {
@@ -234,29 +234,29 @@ b {
         }
 
         &-dialog {
-          left: 50%;
-          margin: 0;
-          position: absolute;
-          transform: translate(-50%, -50%);
 
           @include xxs-device {
+            left: 50%;
+            margin: 0;
+            position: absolute;
             top: calc(50% - 5rem);
+            transform: translate(-50%, -50%) !important;
             width: 100vw;
-
           }
+
           @include sm-device {
-            transform: translate(-50%, -50%);
-            width: 90vw;
+            top: 50%;
+            transform: translate(-50%, -50%) !important;
+            width: 70vw;
           }
 
           @include md-device {
-            top: calc(50%);
-            width: 80vw;
+            width: 70vw;
           }
         }
       }
   }
-}
+
 
 .modal-backdrop {
   &.in { opacity: .8; }

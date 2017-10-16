@@ -288,11 +288,11 @@ jQuery(document).ready(function ($) {
 
 //-- Revisar si es ipad
 function is_iPad() {
-  return (navigator.platform.indexOf("iPad") != -1)
+  return (navigator.platform.indexOf("iPad") != -1);
 }
 
 function is_iPhone() {
-  return (navigator.platform.indexOf("iPhone") != -1)
+  return (navigator.platform.indexOf("iPhone") != -1);
 }
 
 if (is_iPad() || is_iPhone()) {
@@ -317,16 +317,13 @@ else {
 $('li.dropdown > a').on('click', function (event) {
   event.preventDefault();
   $(this).parent().toggleClass('open');
-  $(this).parent().children('li.dropdown').toggleClass('open')
+  $(this).parent().children('li.dropdown').toggleClass('open');
   $(this).parent().siblings().children('ul').removeClass('collapsed').addClass('collapse');
 });
 
 /* Guardar el menu si el usuario hace click fuera */
 $('body').on('click', function (e) {
-  if (!$('li.dropdown.yamm-fullwidth').is(e.target)
-      && $('li.dropdown.yamm-fullwidth').has(e.target).length === 0
-      && $('.open').has(e.target).length === 0
-  ) {
+  if (!$('li.dropdown.yamm-fullwidth').is(e.target) && $('li.dropdown.yamm-fullwidth').has(e.target).length === 0 && $('.open').has(e.target).length === 0 ) {
       $('li.dropdown.yamm-fullwidth').removeClass('open');
 
       // Remueve clase para que no queden desplegados 2 tab-content
@@ -355,7 +352,7 @@ $('.dropdown-menu--mobile > li.dropdown > ul').addClass('collapse');
 if ( checkWidth() || isTablet() || is_iPad())
 {
   $('.dropdown-menu--desktop').hide();
-  $('.dropdown-menu--mobile').addClass('collapse')
+  $('.dropdown-menu--mobile').addClass('collapse');
 } else {
   $('.dropdown-menu--mobile').hide();
 }
@@ -369,7 +366,7 @@ if ( checkWidth() || isTablet() || is_iPad())
 // Darle la clase open a la segunda generacion
 $('#menu-escrito li li.dropdown').on('click', function () {
   $(this).toggleClass('open');
-})
+});
 
 
   $('.dropdown-menu--mobile > li.dropdown').on('click',function () {
