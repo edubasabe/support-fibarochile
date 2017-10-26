@@ -22,6 +22,8 @@
 
           @include xxs-device {
             font-size: 1.4rem;
+            margin-bottom: calc(5rem / 2 - 2.8rem / 2);
+            margin-top: calc(5rem / 2 - 2.8rem / 2);
           }
 
           @include sm-device {
@@ -30,6 +32,8 @@
 
           @include md-device {
              font-size: 2rem;
+             margin-bottom: calc(5rem / 2 - 4rem / 2);
+             margin-top: calc(5rem / 2 - 4rem / 2);
           }
 
           // &::before {
@@ -127,7 +131,6 @@
 
 
 
-
   }
   //-- Fin del Header ----------------------------------------------------------
 
@@ -159,10 +162,21 @@
       & > {
         li > {
           a {
+
+            @include xxs-device {
+              margin: 1.5rem 1rem;
+              // padding: 0;
+            }
+
+            @include md-device {
+              margin: 1.5rem 1rem;
+            }
+
             color: $blanco;
             font-size: 1.4rem;
             font-weight: 300;
             transition: color 250ms;
+
 
             &:hover {
               color: $azul;
@@ -171,7 +185,7 @@
           }
         }
 
-        // Items del navbar activos 
+        // Items del navbar activos
         .active > {
           a {
             background: transparent;
@@ -209,12 +223,8 @@
             transition: background-color 250ms;
 
             @include xxs-device {
-              // border-bottom: 1px solid #e7e7e7;
-              margin: 0 1.5rem;
+              margin: 0 1rem;
 
-              &:last-child {
-                border-bottom: 0;
-              }
             }
 
             @include md-device {
@@ -224,6 +234,11 @@
 
           @include sm-device {
             border-bottom: 0;
+          }
+
+          &:last-child {
+            border-bottom: 0;
+
           }
         }
       }
@@ -275,5 +290,20 @@
 
   &::after {
     background: transparent !important;
+  }
+}
+
+.menu-superior {
+  @include xxs-device {
+    padding: .4rem 0;
+  }
+
+  @include sm-device {
+    padding: 0;
+  }
+
+
+  p {
+    margin-bottom: 0;
   }
 }

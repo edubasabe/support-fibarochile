@@ -142,9 +142,9 @@ function modalShutter(buttonId, modalId) {
 
 //-- Padding Nav  --------------------------------------------------------------
 /* Centrar los elementos del menu con el padding */
-calcularPadding('.navbar-brand.navbar__logo-text');
-calcularMargin('.navbar-brand .color-logo');
-calcularPaddingNav('.nav.navbar-nav > li > a');
+// calcularPadding('.navbar-brand.navbar__logo-text');
+// calcularMargin('.navbar-brand .color-logo');
+// calcularPaddingNav('.nav.navbar-nav > li > a');
 
 
 //-- jQuery for page scrolling feature - requires jQuery Easing plugin
@@ -633,7 +633,7 @@ $('#menu-escrito li li.dropdown').on('click', function () {
 
 if ( !checkWidth() || !isTablet() ) {
   // $('.dropdown.yamm-fullwidth .dropdown-toggle').append('<span class="arrow-down"></span>');
-  $('#menu-escrito > .dropdown .dropdown-toggle').append('<span class="arrow-down"></span>');
+  // $('#menu-escrito > .dropdown .dropdown-toggle').append('<span class="arrow-down"></span>');
 }
 
 

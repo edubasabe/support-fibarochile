@@ -555,24 +555,28 @@
 
 
 .tienda-link {
-  font-weight: 400 !important;
+  font-weight: 300 !important;
+
 
 
   @include xxs-device {
-    text-align: center;
     background: $azul;
     color: $blanco !important;
-    margin: 0 !important;
+    padding-left: 0;
+    text-align: center;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-right: 0;
   }
 
   @include sm-device {
-    margin: 0 -1.5rem!important;
+    // margin: 0 -1.5rem!important;
   }
 
   @include md-device {
     color: $azul !important;
     background: transparent;
-    margin: 0 1.5rem!important;
+    // margin: 0 1.5rem!important;
   }
 
   img {

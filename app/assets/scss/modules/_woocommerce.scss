@@ -1,23 +1,37 @@
 .woocommerce {
 
   //-- Estrellas de Rating
-  &-product-rating {
-      color: #ffc000 !important;
+  .star-rating {
+    @include xxs-device {
+      border-bottom: 0;
+      padding: 0;
     }
 
+    @include md-device {
+      padding-bottom: 0;
+    }
+
+    &::before {
+      color: #dedede;
+
+    }
+
+    span {
+      @include xxs-device {
+        color: #ffc000;
+        max-height: 1rem;
+      }
+    }
+  }
+
   //-- Link a Reviews
-  &-review-link {
+  .woocommerce-review-link {
     font-size: 1.4rem;
     font-weight: 300;
   }
 
-  //-- Precio del producto
-   div.product {
-      p.price,
-      span.price {
-        color: $azul;
-      }
-   }
+
+
 
    //-- Descripción Corta del producto
    &-product-details {
@@ -48,6 +62,135 @@
         &:hover {
           background-color: $azul;
 
+        }
+      }
+    }
+  }
+
+//-- Página Shop
+  &-page {
+    &.post-type-archive {
+
+
+
+      h1 {
+        @include xxs-device {
+          display: block;
+          font-weight: 300 !important;
+          text-align: center;
+        }
+
+        @include sm-device {
+          display: block;
+          text-align: left;
+        }
+      }
+
+      p {
+        &.woocommerce-result-count {
+          @include xxs-device {
+            display: block;
+            text-align: center;
+            width: 100%;
+          }
+
+          @include sm-device {
+          display: block;
+          text-align: left;
+          }
+        }
+      }
+
+      form {
+        &.woocommerce-ordering {
+          @include xxs-device {
+            text-align: center;
+            width: 100%;
+          }
+
+          @include sm-device {
+            width: auto;
+          }
+        }
+      }
+    }
+
+    .products {
+      div {
+        @include xxs-device {
+          border-bottom: thin dotted #bdbdbd;
+          padding-bottom: 2rem;
+          padding-top: 2rem;
+        }
+
+        @include sm-device {
+          border-bottom: 0;
+        }
+
+
+        a {
+          text-decoration: none;
+
+          //-- Imagen
+          img {
+            @include xxs-device {
+              float: left;
+              max-width: 10rem;
+            }
+
+            @include sm-device {
+              float: none;
+              max-width: 100%;
+            }
+          }
+
+          //-- Titulo
+          h2 {
+            @include xxs-device {
+              font-size: 1.6rem;
+              font-weight: 300;
+              margin-top: 0;
+            }
+
+            @include sm-device {
+              font-size: 2rem;
+            }
+          }
+
+          //-- Precio
+          span {
+            &.price {
+              @include xxs-device {
+                display: block;
+              }
+
+
+              .woocommerce-Price-amount {
+                &.amount {
+                  @include xxs-device {
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                  }
+
+                  @include md-device {
+                    font-size: 2rem;
+                  }
+                }
+              }
+            }
+
+            &.onsale {
+              @include xxs-device {
+                font-size: 1rem;
+              }
+            }
+          }
+
+          &.add_to_cart_button {
+            @include xxs-device {
+              font-size: 1.2rem;
+            }
+          }
         }
       }
     }

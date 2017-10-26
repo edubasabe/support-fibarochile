@@ -37,6 +37,7 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./app/assets/css'))
     // .pipe(gulp.dest('/Applications/MAMP/htdocs/tuhogar-inicio/wp-content/themes/tamed2017/assets/css'))
+    .pipe(gulp.dest('/Volumes/Archivos/DavidBasabe/2017/Accesos\ FTP/goddadyFTP/public_html/nueva.tuhogarinteligente.cl/wp-content/themes/tamed2017/assets/css'))
     .pipe(browserSync.reload({ stream:true }));
 });
 
