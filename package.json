@@ -1,7 +1,7 @@
 {
     "name": "fibaro-support",
     "version": "1.0.0",
-    "sasslintConfig": "app/.sass-lint.yml" ,
+    "sasslintConfig": "app/.sass-lint.yml",
     "description": "Página de Soporte",
     "main": "index.js",
     "scripts": {

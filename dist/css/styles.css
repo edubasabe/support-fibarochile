@@ -2437,14 +2437,12 @@ a:focus, a:hover {
   border-bottom: 1px solid transparent;
   font-weight: 300;
   text-decoration: none;
-  -webkit-transition: border-bottom 250ms;
   transition: border-bottom 250ms;
 }
 
 .link:hover {
   border-bottom: 1px solid #0090ff;
   text-decoration: none;
-  -webkit-transition: border-bottom 250ms;
   transition: border-bottom 250ms;
 }
 
@@ -2459,8 +2457,7 @@ a:focus, a:hover {
   content: '';
   display: inline-block;
   height: 8px;
-  -webkit-transform: rotate(45deg) translate(1px, -2px);
-          transform: rotate(45deg) translate(1px, -2px);
+  transform: rotate(45deg) translate(1px, -2px);
   width: 8px;
 }
 
@@ -2472,8 +2469,7 @@ a:focus, a:hover {
   overflow: hidden;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 5rem;
 }
 
@@ -2482,8 +2478,7 @@ a:focus, a:hover {
   left: 9rem;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .experto .nombre {
@@ -2503,12 +2498,10 @@ a:focus, a:hover {
 
 .navbar {
   margin-bottom: 0;
-  -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
 }
 
 .navbar-fixed-top {
-  -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
@@ -2539,13 +2532,11 @@ a:focus, a:hover {
   color: #111;
   font-size: 1.4rem;
   font-weight: 300;
-  -webkit-transition: color 250ms;
   transition: color 250ms;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
   color: #0090ff;
-  -webkit-transition: color 250ms;
   transition: color 250ms;
 }
 
@@ -2577,7 +2568,6 @@ a:focus, a:hover {
 
 .navbar-default .navbar-brand {
   color: #111;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -2606,7 +2596,6 @@ a:focus, a:hover {
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
-  -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
 
@@ -2619,7 +2608,6 @@ a:focus, a:hover {
 }
 
 .navbar-brand {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: auto;
@@ -2679,7 +2667,6 @@ a:focus, a:hover {
 
 .nav-pills > li.active a {
   background-color: #0090ff;
-  -webkit-transition: background 250ms;
   transition: background 250ms;
 }
 
@@ -2704,7 +2691,6 @@ a:focus, a:hover {
 }
 
 .nav li a {
-  -webkit-transition: background-color 250ms;
   transition: background-color 250ms;
 }
 
@@ -2713,7 +2699,6 @@ a:focus, a:hover {
 }
 
 .open-animation .icon-bar {
-  -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
 }
 
@@ -2727,7 +2712,6 @@ a:focus, a:hover {
 
 .hero {
   background-size: cover;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -2756,10 +2740,8 @@ a:focus, a:hover {
 }
 
 .hero__container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-flexbox;
   display: flex;
 }
@@ -2995,10 +2977,8 @@ a:focus, a:hover {
 }
 
 .page-section--ayuda__align {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-inline-box;
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-wrap: wrap;
@@ -3078,10 +3058,8 @@ a:focus, a:hover {
 }
 
 .page-section--garantia__align {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-inline-box;
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-wrap: wrap;
@@ -3307,7 +3285,6 @@ a:focus, a:hover {
 }
 
 .footer__menu {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -3364,7 +3341,6 @@ a:focus, a:hover {
 }
 
 .footer__social {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
@@ -3387,13 +3363,11 @@ a:focus, a:hover {
 }
 
 .footer__social ul li a {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   border: 0.1rem solid #999;
   border-radius: 3rem;
   color: #999;
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 3.6rem;
